@@ -54,7 +54,7 @@ Here we present our new effort at 3D reconstruction of the acinar air space in f
 			\path (val) -- node [midway] {YES} (fe);
 			\end{scope}
 		\end{tikzpicture}
-	\caption{Workflow diagram outlining protocol for high-resolution 3-dimensional (3D) reconstruction of the acinus}
+	\caption[Workflow for high-resolution 3-dimensional reconstruction of the acinus]{Workflow diagram outlining protocol for high-resolution 3-dimensional (3D) reconstruction of the acinus.}
 	\label{fig:workflow}
 \end{figure}
 
@@ -79,7 +79,7 @@ To achieve a tomographic image for each sample, 1500 projections were obtained o
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-02}
-	\caption{Imaging setup. The X-rays are coupled out of the storage ring via a wiggler. The monochromator is then used to select a desired wavelength of the incident
+	\caption[SRXTM imaging setup]{Imaging setup. The X-rays are coupled out of the storage ring via a wiggler. The monochromator is then used to select a desired wavelength of the incident
 X-rays. The sample is placed on a rotating sample holder inside the beam. While the X-rays penetrate the sample, the stage is rotated, and in total 1500 projections over \SI{180}{\degree} are recorded. Plot shows spectrum of TOMCAT (red and blue) compared with conventional X-ray tube (green).}
 	\label{fig:imaging setup}
 \end{figure}
@@ -107,7 +107,7 @@ the sake of simplicity and clarity, we will explain this algorithm in 2D as foll
 \begin{figure}[p]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-03}
-	\caption{Object connectivity analysis (OCA) shown in a 2-dimensional (2D) example. A: a binary distribution of ``black'' vs.\ ``white'' pixels at certain threshold level; B: object label number (OLN) is assigned for each black pixel on the basis of the color (black or white) of 4 adjacent pixels; C: onthe basis of a ``flag'' pixel, connectivity is identified between OLN=2 and OLN=4; D: small objects
+	\caption[Object connectivity analysis]{Object connectivity analysis (OCA) shown in a 2-dimensional (2D) example. A: a binary distribution of ``black'' vs.\ ``white'' pixels at certain threshold level; B: object label number (OLN) is assigned for each black pixel on the basis of the color (black or white) of 4 adjacent pixels; C: onthe basis of a ``flag'' pixel, connectivity is identified between OLN=2 and OLN=4; D: small objects
 less than cutoff (=4 pixels in this example) are removed.}
 	\label{fig:oca}
 \end{figure}
@@ -134,7 +134,7 @@ Let us consider an example in which we want to apply a threshold of 123 for the 
 \begin{figure}[p]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04}
-	\caption{Grid-based hexahedral algorithm A: 3D thresholded voxels (\textit{left}) and 2D representation of thresholded voxels (\textit{right}). The grayscale values are kept in the map of voxel. B: step 1: generation of uniform finite element (FE) mesh over the voxel map. For simplicity, FE nodes are positioned at the center of voxel. 3D FE meshing (\textit{left}) and 2D FE meshing (\textit{right}) are shown. Each node is assigned with the grayscale value from the corresponding voxel. C: step 2: moving nodes on the surface due to trilinear interpolation in 3D case (\textit{left}) and bilinear interpolation in 2D case (\textit{right}). The location of surface boundary is shown in the middle image for 2D case. A fast sub FE-voxel level algorithm is implemented to locate a surface boundary. White nodes are moving toward this surface boundary. D: step 3: Laplacian smoothing technique (LST). 3D and 2D before LST (\textit{left}), 3D and 2D after LST (\textit{right}).}
+	\caption[Grid-based hexahedral algorithm]{Grid-based hexahedral algorithm. A: 3D thresholded voxels (\textit{left}) and 2D representation of thresholded voxels (\textit{right}). The grayscale values are kept in the map of voxel. B: step 1: generation of uniform finite element (FE) mesh over the voxel map. For simplicity, FE nodes are positioned at the center of voxel. 3D FE meshing (\textit{left}) and 2D FE meshing (\textit{right}) are shown. Each node is assigned with the grayscale value from the corresponding voxel. C: step 2: moving nodes on the surface due to trilinear interpolation in 3D case (\textit{left}) and bilinear interpolation in 2D case (\textit{right}). The location of surface boundary is shown in the middle image for 2D case. A fast sub FE-voxel level algorithm is implemented to locate a surface boundary. White nodes are moving toward this surface boundary. D: step 3: Laplacian smoothing technique (LST). 3D and 2D before LST (\textit{left}), 3D and 2D after LST (\textit{right}).}
 	\label{fig:hexahedral}
 \end{figure}
 
@@ -156,7 +156,7 @@ To facilitate further processing of the image, different subregions of interest 
 \begin{figure}[p]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-05}
-	\caption{Overview of workflow for the selection of a region of interest (ROI). A: full perspective view of the sample R108C60C-07e with 6 selected orthogonal slices and
+	\caption[Overview of workflow for the selection of a region of interest]{Overview of workflow for the selection of a region of interest (ROI). A: full perspective view of the sample R108C60C-07e with 6 selected orthogonal slices and
 bounding box of the full sample in orange. The ROI selected for subfigures C and D is
 visible in the \textit{top left}. B: close-up of one slice of the full dataset with selected ROI (side-length of 256 pixels). C: ROI cut out of the full sample, 6 selected orthogonal slices are shown. D: close-up of the ROI in subfigure (B).}
 	\label{fig:srxtm}
@@ -168,7 +168,7 @@ As mentioned, the selection of a threshold level has significant affects on segm
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-06}
-	\caption{A: original slice from raw data; bar=\SI{50}{\micro\meter}. B: thresholded with a value of 130, meaning that all pixels below 130 are set to black, all pixels with a value of 130 or greater are set to white. Resulting alveolar walls are too thick. C: thresholded with a value of 139. Image looks correct. At this
+	\caption[Thresholding Influence]{A: original slice from raw data; bar=\SI{50}{\micro\meter}. B: thresholded with a value of 130, meaning that all pixels below 130 are set to black, all pixels with a value of 130 or greater are set to white. Resulting alveolar walls are too thick. C: thresholded with a value of 139. Image looks correct. At this
 threshold the observed thickness of the septa was smaller than \SI{10}{\micro\meter}. In the same animals \cite{Roth2005} the thickness of the septa was determined as they appeared on electron microscopical images. They measured a mean of \SI{8}{\micro\meter}. D: thresholded with a value of 148. Alveolar walls are too thin, and multiple erroneous holes (arrows) appear in the tissue}
 	\label{fig:segmentation}
 \end{figure}
@@ -184,17 +184,14 @@ The surface area density of air space (S\textsubscript{VS} [\centimetresquared\p
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-07}
-	\caption{3D reconstruction of tissue. A and D: threshold 130. B and E: threshold 139. C and F: threshold 148.}
+	\caption[Three-dimensional reconstruction of tissue]{Three-dimensional reconstruction of tissue. A and D: threshold 130. B and E: threshold 139. C and F: threshold 148.}
 	\label{fig:3dreconstruction}
 \end{figure}
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-08}
-	\caption{Average volume density of tissue (V\textsubscript{VS}) and surface area density of air
-space (S\textsubscript{VS}) of ROIs, plotted as a function of threshold level. Error bars
-represent standard error. Our V\textsubscript{VS} matches the gold standard value of 0.196 at
-a threshold value of 139. Bars include the standard error, n=5.}
+	\caption[Average volume density of tissue and surface area density of air space]{Average volume density of tissue (V\textsubscript{VS}) and surface area density of air space (S\textsubscript{VS}) of ROIs, plotted as a function of threshold level. Error bars represent standard error. Our V\textsubscript{VS} matches the gold standard value of 0.196 at a threshold value of 139. Bars include the standard error, n=5.}
 	\label{fig:VVSplot}
 \end{figure}
 
@@ -215,7 +212,7 @@ Synchrotron radiation (SR) is an electromagnetic wave emitted from electrons tra
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-09}
-	\caption{A: reconstruction of 3D air spaces separated by tissues from ROI. B: enlargement of a small alveolated air section isolated from the center of ROI.}
+	\caption[Three-dimensional reconstruction of air spaces]{A: reconstruction of 3D air spaces separated by tissues from ROI. B: enlargement of a small alveolated air section isolated from the center of ROI.}
 	\label{fig:3dalveolated}
 \end{figure}
 
@@ -233,10 +230,10 @@ A unique aspect of our work is that segmentation was done iteratively by searchi
 
 The key morphological parameter we tried to match was the volume density of tissue (V\textsubscript{VS}). The V\textsubscript{VS} is an easy to calculate parameter (i.e., the sum of FE volume belonging to tissue divided by the sum of all FE volume) and is relatively insensitive to the resolution of the measurement technique. The calculated V\textsubscript{VS} decreases almost linearly with an increase in the threshold level (i.e., a fraction of air volume relative to tissue volume) around the gold standard value (V\textsubscript{VS}=0.196 in our case, see Fig.~\ref{fig:VVSplot}). At the threshold value of 139, the calculated V\textsubscript{VS} was within \SI{2}{\percent} difference of the gold standard.
 
-\begin{figure}
+\begin{figure}[p]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-10}
-	\caption{3D FE shell model of acinus viewed from different angles. Top: ROI. Middle: top view (\textit{left}); side view (middle); bottom view (\textit{right}). Bottom: alveolar inside views (left and right).}
+	\caption[Three-dimensional FE shell model of a partial acinus]{Three-dimensional FE shell model of acinus viewed from different angles. Top: ROI. Middle: top view (\textit{left}); side view (middle); bottom view (\textit{right}). Bottom: alveolar inside views (left and right).}
 	\label{fig:alveolus}
 \end{figure}
 

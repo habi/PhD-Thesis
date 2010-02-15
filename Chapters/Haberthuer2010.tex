@@ -45,10 +45,11 @@ For parallel beam geometry, tomographic images are obtained at equidistant angle
 
 Samples twice as large as the field of view can be imaged using scanning protocols based on a \SI{360}{\degree} off center sample rotation as shown in Figure~\ref{fig:scanning-possibilities}(b). Images recorded between \SI{180}{\degree} and \SI{360}{\degree} have to be flipped after acquisition: the projections obtained at angular position $\theta$ and $\theta$+\SI{180}{\degree} ($I_{Pr_{\theta}}$ and $I_{Pr_{\theta+\SI{180}{\degree}}}$) have to be stitched to one projection. The resulting images cover twice the field of view of the camera.
 
-\begin{figure}
+\renewcommand{\imsize}{\linewidth}
+\begin{figure}[p]
 	\centering
-	\caption{Covering the field of view of differently sized samples with one \SI{180}{\degree} scan (a), one \SI{360}{\degree} scan (b) or---in the case of the so called wide field scanning---with multiple subscans (three subscans, c). The filled segments mark the region of the sample that is covered while scanning the respective positions (Position 1: magenta/checkerboard, Position 2: yellow, Position 3: cyan/striped).}
 	\includegraphics{img/Haberthuer2010/Fig01-FOV}
+	\caption[Covering the field of view of differently sized samples]{Covering the field of view of differently sized samples with one \SI{180}{\degree} scan (a), one \SI{360}{\degree} scan (b) or---in the case of the so called wide field scanning---with multiple subscans (three subscans, c). The filled segments mark the region of the sample that is covered while scanning the respective positions (Position 1: magenta/checkerboard, Position 2: yellow, Position 3: cyan/striped).}
 	\label{fig:scanning-possibilities}
 \end{figure}
 
@@ -62,12 +63,12 @@ Our goal was to find a good compromise between scanning time and image quality. 
 
 As a by-product, such an optimization of the individual number of projections $P_{i}$ for each subscan $i$ decreases the total acquisition time for one sample and thus the imparted radiation dose.
 
-\begin{figure}
+\begin{figure}[htb]
 	\centering
-	\caption{Wide field scan setup with three \SI{180}{\degree} scans; one central (yellow) and two lateral scans (magenta and cyan or top and bottom, respectively). In this drawing, four projections for the central and eight projections for each of the lateral scans have been recorded. The colors of the three positions correspond to the colors shown in Figure~\ref{fig:scanning-possibilities}(c). %
+	\includegraphics[width=\imsize]{img/Haberthuer2010/Fig02-Interpolation}
+	\caption[Wide field scan setup]{Wide field scan setup with three \SI{180}{\degree} scans; one central (yellow) and two lateral scans (magenta and cyan or top and bottom, respectively). In this drawing, four projections for the central and eight projections for each of the lateral scans have been recorded. The colors of the three positions correspond to the colors shown in Figure~\ref{fig:scanning-possibilities}(c). %
 	(a): scanned projections %
 	(b): scanned projections and additional interpolated projections (dotted) required to merge all projections.}
-	\includegraphics{img/Haberthuer2010/Fig02-Interpolation}
 	\label{fig:projections}
 \end{figure}	
 
@@ -77,16 +78,16 @@ Using a detector with a size of 1024 pixels, this desired field of view could be
 
 While the chosen field of view of 3072$\times$3072 pixels can be covered using a detector of the size of 3072 pixels in one scan, we can cover the desired field of view with a much smaller detector, using a scanning protocol with three subscans from which we obtain merged projections. Figure~\ref{fig:SubScan-Setup}(b) shows how the desired field of view of 3072 pixels can be covered with a wide field scan, composed of one central and two half ring-scans, recorded with a small detector with a size of 1024 pixels and 4825 projections per subscan (a total of 14475 projections) which are then subsequently merged to 4825 large projections spanning the whole field of view. A further increase in the field of view can be obtained by simple iteration. Figures~\ref{fig:SubScan-Setup}(c)--(f) show such a setup for a five- or seven-fold increase.
 
-\begin{figure}
+\begin{figure}[p]
 	\centering
-	\caption{Setup for different field of views. %
+	\includegraphics[width=.8\linewidth]{img/Haberthuer2010/Fig03-3-5-7}
+	\caption[Setup for different field of views]{Setup for different field of views. %
 		(a): Desired field of view of 3072 pixel diameter. %
 		(b): Wide field scanning protocol for covering the desired field of view of panel (a) with merged projections from one central and two half ring scans ($r_{1}$ and $r_{2}$). %
 		(c): Desired field of view of 5120 pixel diameter. %
 		(d): Wide field scanning protocol for covering the desired field of view of panel (c) with merged projections from one central and four half ring scans ($r_{1}$--$r_{4}$). %
 		(e): Desired field of view of 7168 pixel diameter. %
 		(f): Wide field scanning protocol for covering the desired field of view of panel (e) with merged projections from one central and six half ring scans ($r_{1}$--$r_{6}$).}%
-	\includegraphics[width=.8\linewidth]{img/Haberthuer2010/Fig03-3-5-7}
 	\label{fig:SubScan-Setup}
 \end{figure}
 
@@ -105,16 +106,16 @@ Protocols B--T have been linearly scaled down with a decreasing number of acquir
 
 All parameters of each protocol and each subscan (sample-position in relation to the beam, rotation angles and number of projections) were set in a preference-file, generated using aforementioned MATLAB-script. One rat lung sample was scanned using each of the 19 different protocols (B--T), without manual intervention, permitting a direct comparison of the reconstructed datasets.
 
-\begin{table}
-	\caption{Details of the 19 scanned protocols for this study (B--T): An unoptimized scan to cover the desired field of view of 3072 pixels with nine independent scans (with a detector width of 1024 pixels) would require to record a total of $P_{\textrm{Gold standard}}=9(1024)\frac{\pi}{2}=14476$ projections. The wide field scanning protocol (A) equivalent to this field of view only uses three subscans, resulting in a total number of projections of $P_{A} = 3(3072-200)\frac{\pi}{2}= 13534$. Three-dimensional reconstructions of the datasets marked with a light gray background are shown in Figure~\ref{fig:BvsT}.}
+\begin{threeparttable}
+	\caption[Details of the 19 scanned protocols]{Details of the 19 scanned protocols for this study (B--T): An unoptimized scan to cover the desired field of view of 3072 pixels with nine independent scans (with a detector width of 1024 pixels) would require to record a total of $P_{\textrm{Gold standard}}=9(1024)\frac{\pi}{2}=14476$ projections. The wide field scanning protocol (A) equivalent to this field of view only uses three subscans, resulting in a total number of projections of $P_{A} = 3(3072-200)\frac{\pi}{2}= 13534$. Three-dimensional reconstructions of the datasets marked with a light gray background are shown in Figure~\ref{fig:BvsT}.}
 	\label{tab:protocols}
 	\begin{tabular}{ccccccc}
 		\toprule
 		\multirow{2}{*}{Protocol} & \multicolumn{3}{c}{Projections for Subscan} & Total Number & Time/Radiation & Simulated\\
 			& $\textrm{s}_{1}$ & $\textrm{s}_{2}$ & $\textrm{s}_{3}$        & of Projections & Dose [\%] & Quality [\%]\\
 		\midrule
-		A\footnote{Wide field scan equivalent to an unoptimized scan covering the field of view with nine independent scans.} & & & & 13534 & 100 & \\
-		\rowcolor{lightgray} B\footnote{Gold Standard for this study} & 5244 & 5244 & 5244 & 15732 & 116 & 100\\
+		A\tnote{1} & & & & 13534 & 100 & \\
+		\rowcolor{lightgray} B\tnote{2} & 5244 & 5244 & 5244 & 15732 & 116 & 100\\
 		C & 5244 & 2622 & 5244 & 13110 &  97 & 89\\
 		D & 4370 & 4370 & 4370 & 13110 &  97 & 85\\
 		E & 4370 & 2185 & 4370 & 10925 &  81 & 87\\
@@ -135,7 +136,13 @@ All parameters of each protocol and each subscan (sample-position in relation to
 		\rowcolor{lightgray} T & 874  & 437  & 874  & 2185  &  16  & 20\\
 		\bottomrule
 	\end{tabular}
-\end{table}
+	\begin{tablenotes}
+		\footnotesize
+		\item[1] Wide field scan equivalent to an unoptimized scan covering the field of view with nine independent scans.
+		\item[2] Gold Standard for this study
+	\end{tablenotes}
+
+\end{threeparttable}
 
 \subsection{Projection merging and tomographic reconstruction}
 After acquisition of the three subscans per protocol, custom MATLAB functions read the parameters of the single subscans (e.\,g. sample name, amount of subscans, amount of dark and flat images) as well as the desired output-name and -suffix, and performed all necessary calculations, including: loading of the correct projections from each subscan; normalizing; interpolation; cutline detection; correct stitching of the images into wide field projections, and writing these merged projections as well as log files needed for the reconstruction to disk.
@@ -147,25 +154,24 @@ The merged projections were subsequently rearranged into sinograms, where the $n
 Figure~\ref{fig:wide-field-scan-results}(a) shows corrected projections from three overlapping subscans prior to merging, including regions where the subscans are overlapping. Figure~\ref{fig:wide-field-scan-results}(b) shows one merged projection prior to reconstruction and Figure~\ref{fig:wide-field-scan-results}(c) shows one slice of the reconstructed dataset. The example shown in Figure~\ref{fig:wide-field-scan-results} was obtained using the highest number of projections and is therefore protocol B. One reconstructed slice covers a field of view of 2792$\times$2792 pixels (4.13$\times$\SI{4.13}{\milli\meter}), which is almost three times the size of what can be achieved with one single binned scan (1024 pixels or \SI{1.52}{\milli\meter}). %1024 * 1.48 um/px = 1.51552mm
 The dashed circles on the reconstructed slice mark the start and the end of the overlap region.
 
-\begin{figure}
+\begin{figure}[p]
 	\centering
-	\caption{Workflow of a wide field scan. The images show a rat lung sample from a Sprague-Dawley rat, obtained 21 days after birth, scanned with the acquisition protocol B (Table~\ref{tab:protocols}). %
+	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig04-Workflow}
+	\caption[Workflow of a wide field scan]{Workflow of a wide field scan. The images show a rat lung sample from a Sprague-Dawley rat, obtained 21 days after birth, scanned with the acquisition protocol B (Table~\ref{tab:protocols}). %
 			(a): Three corrected and independently acquired projections from subscans $s_1$--$s_3$ are shown. Each one is 1024\(\times\)1024 pixels large and covers a field of view of \SI{1.52}{\milli\meter}. Subscans $s_1$ and $s_2$ overlap by 141 pixels (red and green overlay), subscans $s_2$ and $s_3$ overlap by 138 pixels (blue and yellow overlay). %
 			(b): Merged projection obtained from the three subscans shown in subfigure (a). Each merged projection has a size of 2792\(\times\)1024 pixels. Due to the overlap required to merge the projections, the width of the merged projections is slightly smaller than three times the width of the subscans. %
 			(c): Cropped slice of the reconstructed tomographic dataset. The dashed red circles mark the start and end of the overlap region.}
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig04-Workflow}
 	\label{fig:wide-field-scan-results}
 \end{figure}
 
 Figure~\ref{fig:s2-wfs} shows the advantages of the wide field acquisition scheme. With---in this particular case---an enlargement of the field of view by almost a factor of three, it is possible to visualize entire acini at high resolution. For a conventional scan (fig.~\ref{fig:s2-wfs}(a)), the airway segments in the sample are only partially contained inside the dataset (magenta and yellow). The semitransparent airway segments are contained in the sample, but are not visible in the field of view of a dataset obtained with a conventional scan. Increasing the field of view (fig.~\ref{fig:s2-wfs}(b)) allows the visualization of those segments to their full extent. A third acinus (cyan) which was not visible in Figure~\ref{fig:s2-wfs}(a) can now easily be visualized.
 
-\begin{figure}
+\begin{figure}[p]
 	\centering
-	\caption{Three-dimensional visualization of the distal-medial tip of the right lower rat lung lobe. The gray structure in the background shows a semitransparent view of the tomographic dataset with segmented airways. The foreground shows isosurfaces of terminal airways. The wireframe cube has a side length of 1024 pixels and encloses the field of view of one conventional scan. %
+	\includegraphics[width=.7\linewidth]{img/Haberthuer2010/Fig05-ConvVsWfs}
+	\caption[Three-dimensional visualization of the distal-medial tip of the right lower rat lung lobe]{Three-dimensional visualization of the distal-medial tip of the right lower rat lung lobe. The gray structure in the background shows a semitransparent view of the tomographic dataset with segmented airways. The foreground shows isosurfaces of terminal airways. The wireframe cube has a side length of 1024 pixels and encloses the field of view of one conventional scan. %
 	(a): Conventional scan; the extracted airway segments (magenta and yellow or left and right, respectively) are only partially contained inside the total sample volume. Airway segments not contained in the dataset, but present in the sample are shown semitransparent. This conventional scan corresponds to a reconstruction of the central of the three wide field scan subscans. %
 	(b): Wide field scan with increased field of view; the magenta (center) and yellow segment (right) show entire acini inside the dataset, the cyan segment (left) contains a partially cut acinus. All airway segments inside the sample are contained in the tomographic dataset.}
-	\includegraphics[width=.7\linewidth]{img/Haberthuer2010/Fig05-ConvVsWfs}
 	\label{fig:s2-wfs}
 \end{figure}
 
@@ -183,10 +189,10 @@ every fifth slice) of the full dataset. The mean ($\overline{E_{i_{norm_{k}}}}$)
 
 As expected, the calculated quality of the reconstructions representing the different protocols decreases as a function of total number of obtained projections (Figure~\ref{fig:NormalizedErrorPlot}). The calculated error of the different protocols (normalized difference value, blue diamonds) shows the experimental results obtained from actual scans of lung tissue. The plots for the simulation as defined in section~\ref{sec:quality guided protocols} (red dots) and the normalized difference value are not perfectly in agreement, but show the same trend. The linear regression for the simulation shows a steeper decrease for the quality ($y_{Sim}=0.6936x+26.891$) than the linear interpolation for the experimental data ($y_{Exp}=0.5833x+20.226$). The linear regression coefficient for both the linear interpolations are comparable ($R^{2}_{Sim}=0.8287$, $R^{2}_{Exp}=0.7868$).
 
-\begin{figure}
+\begin{figure}[htb]
 	\centering
-	\caption{Plot of normalized difference Value ($E_{i_{norm}}$, blue diamonds) for the 19 scanned protocols overlaid over Quality-plot (red dots) obtained from the simulation (described in section~\ref{sec:quality guided protocols}. The normalized Error has been calculated using the difference image of each protocol $i$ with protocol B. The error bars for each protocol show the standard deviation of the error calculated for 205 of the 1024 slices. Note that the scale of the error was normalized to 20--\SI{100}{\percent}, so that both the quality from the simulation and the error are directly comparable. The abscissa shows the scanning time in percentage of time used for the gold standard scan. Protocol T on the far left corresponds to the fastest scanning time, protocol B on the far right to the slowest. The protocols in between are shown from T--B for increasing percentage of the scanning time.}
 	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig06-Plot}
+	\caption[Plot of normalized difference Value for the scanned protocols overlaid over Quality-plot obtained from the simulation]{Plot of normalized difference Value ($E_{i_{norm}}$, blue diamonds) for the 19 scanned protocols overlaid over Quality-plot (red dots) obtained from the simulation (described in section~\ref{sec:quality guided protocols}. The normalized Error has been calculated using the difference image of each protocol $i$ with protocol B. The error bars for each protocol show the standard deviation of the error calculated for 205 of the 1024 slices. Note that the scale of the error was normalized to 20--\SI{100}{\percent}, so that both the quality from the simulation and the error are directly comparable. The abscissa shows the scanning time in percentage of time used for the gold standard scan. Protocol T on the far left corresponds to the fastest scanning time, protocol B on the far right to the slowest. The protocols in between are shown from T--B for increasing percentage of the scanning time.}
 	\label{fig:NormalizedErrorPlot}
 \end{figure}
 
@@ -200,23 +206,22 @@ Figure~\ref{fig:BvsT}(d)--(f) show isosurface visualizations of the border betwe
 
 Even with the higher magnification, the reconstruction of protocol L in Figure~\ref{fig:BvsT}(e) appears nearly identical to the reconstruction of the region of interest of protocol B (fig.~\ref{fig:BvsT}(d)). The isosurface of the region of interest of protocol T shown in Figure~\ref{fig:BvsT}(f) appears rougher than the isosurface of protocol B. This roughness is introduced through ray-like artifacts visible in the original slice of the dataset of protocol T (not shown). These artifacts are the consequence of a strong subsampling. With the acquisition of only 874 projections instead of the required 5139, the sampling theorem is far from being satisfied. However, even with this strong undersampling, segmentation, three-dimensional reconstruction and visualization of the sample is still possible.
 
-%\onecolumn
-\begin{figure}
+\begin{figure}[htb]
 	\centering
-	\caption{Comparison of three-dimensional visualizations. %
+	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig07-B-L-T}
+	\caption[Comparison of three-dimensional visualizations]{Comparison of three-dimensional visualizations. %
 			(a)--(c): Three independent airway segments (cyan, magenta, yellow) of tomographic datasets obtained with protocol B, L and T, extracted using a region growing algorithm. A cubic region of interest (blue) with a side length of 256 pixels (corresponding to \SI{379}{\micro\meter}) is marked inside the leftmost segment for all protocols. %
 			(d)--(f): Detailed view of isosurfaces of the lung tissue inside the blue ROIs for protocol B, L and T, respectively. Note the increasing surface roughness in the alveolar surfaces for subfigures (e) and (f).}%
-	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig07-B-L-T}
 	\label{fig:BvsT}
 \end{figure}%
 %\twocolumn%
 
 For further analysis four regions of interest with a side length of 256 pixels have been extracted for each of the protocols B, L and T. The three-dimensional location of these ROIs inside the sample is shown in Figure~\ref{fig:roi3d}.
 
-\begin{figure}
+\begin{figure}[htb]
 	\centering
-	\caption{Overview of the location of the four regions of interest where the histogram of the euclidean distance transformation distribution has been calculated. Grey: Semitransparent volume rendering of the lung tissue sample. Red: Four regions of interest, extracted to calculate the distance transformation. The labels of the ROIs conform to the legends in Figure~\ref{fig:DTFplots}.}%
 	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig08-ROIs}
+	\caption[Overview of the location of the four regions of interest in the sample]{Overview of the location of the four regions of interest where the histogram of the euclidean distance transformation distribution has been calculated. Grey: Semitransparent volume rendering of the lung tissue sample. Red: Four regions of interest, extracted to calculate the distance transformation. The labels of the ROIs conform to the legends in Figure~\ref{fig:DTFplots}.}%
 	\label{fig:roi3d}
 \end{figure}
 
@@ -224,10 +229,10 @@ Each of the ROIs has been binarized using an algorithmically determined threshol
 
 For comparison, the histogram of the euclidean distance transformation has been plotted for all four regions of interest in each protocol (B, L and T).
 
-\begin{figure}
+\begin{figure}[htb]
 	\centering
-	\caption{Histogram-Plots for each of the of four ROIs, each showing the histogram of the distance transformation for the protocols B, L and T.}%
 	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig09-DTF}
+	\caption[Histogram-Plots]{Histogram-Plots for each of the of four ROIs, each showing the histogram of the distance transformation for the protocols B, L and T.}%
 	\label{fig:DTFplots}
 \end{figure}
 

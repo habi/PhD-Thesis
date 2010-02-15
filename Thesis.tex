@@ -1,4 +1,5 @@
 \documentclass[%
+	%draft,%
 	twoside,%
 	openright,%
 	titlepage,%
@@ -26,13 +27,13 @@
 % ********************************************************************
 % Development Stuff
 % ********************************************************************
-\listfiles
+%\listfiles
 %\usepackage[l2tabu, orthodox, abort]{nag}
 %\usepackage[warning, all]{onlyamsmath}
 % ********************************************************************
 % Re-usable information
 % ********************************************************************
-\newcommand{\myTitle}{My Thesis\xspace}
+\newcommand{\myTitle}{Title\xspace}
 \newcommand{\myDegree}{Subtitle\xspace}
 \newcommand{\myName}{David Haberth\"ur\xspace}
 \newcommand{\myProf}{Prof.\ Dr.\ Johannes C.\ Schittny\xspace}
@@ -51,6 +52,7 @@
 \usepackage[ngerman,english]{babel}
 \usepackage[square,numbers]{natbib}
 \usepackage{multirow}
+\usepackage{threeparttable}
 \usepackage[fleqn]{amsmath} % math environments and more by the AMS 
 %*******************************************************
 \usepackage{classicthesis-ldpkg} 
@@ -162,7 +164,7 @@
 % Mainmatter
 %*******************************************************
 \pagenumbering{arabic}
-% use \cleardoublepage here to avoid problems with pdfbookmark
+%% use \cleardoublepage here to avoid problems with pdfbookmark
 \cleardoublepage\myPart{Multimodal imaging for the detection of sub-micron particles in the gas-exchange region of the mammalian lung}
 \include{Chapters/XRM2008}
 \cleardoublepage\myPart{Finite element 3D reconstruction of the pulmonary acinus imaged by synchrotron X-ray tomography}
@@ -185,4 +187,3 @@
 % Game Over: Restart, Restore or Quit?
 %*******************************************************
 \end{document}
-% ********************************************************************
