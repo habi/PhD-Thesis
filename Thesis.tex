@@ -14,9 +14,9 @@
 	cleardoubleempty,%
 	abstractoff % <--- obsolete, remove (todo)
     ]{scrreprt}
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % KOMA-Script setup http://www.komascript.de/betaKOMAoptions
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 %\KOMAoptions{%
 %    paper=a4,%
 %    fontsize=10pt,%
@@ -24,15 +24,15 @@
 %    %,footinclude=true%
 %    %,abstract=false%
 %}
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % Development Stuff
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 %\listfiles
 %\usepackage[l2tabu, orthodox, abort]{nag}
 %\usepackage[warning, all]{onlyamsmath}
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % Re-usable information
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\myTitle}{Title\xspace}
 \newcommand{\myDegree}{Subtitle\xspace}
 \newcommand{\myName}{David Haberth\"ur\xspace}
@@ -45,18 +45,19 @@
 \newcommand{\myLocation}{Bern, Switzerland\xspace}
 \newcommand{\myTime}{Mai 2010\xspace}
 \newcommand{\myVersion}{Version 2.6\xspace}
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % Packages with options that might require adjustments
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman,english]{babel}
 \usepackage[square,numbers]{natbib}
 \usepackage{multirow}
+\usepackage{lipsum}
 \usepackage{threeparttable}
 \usepackage[fleqn]{amsmath} % math environments and more by the AMS 
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{classicthesis-ldpkg} 
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % Options for classicthesis.sty:
 % tocaligned eulerchapternumbers drafting linedheaders listsseparated 
 % subfig nochapters beramono eulermath parts minionpro pdfspacing 
@@ -68,32 +69,32 @@
 \usepackage[version=3]{mhchem}
 \usepackage[alsoload=synchem,binary]{siunitx}
 \newcommand{\imsize}{\linewidth}
-%*******************************************************            
+%%%%%%%%%%%%%%%%%%%%%%%            
 %\usepackage[section,below]{placeins} <--- not everybody wants this
 %\usepackage[all]{hypcap} <--- does not work with MiKTeX 2.6
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % Language/strings for backrefs (change here, thanks, Lorenzo)
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 %\renewcommand{\backrefnotcitedstring}{\relax}%(Not cited.)
 %\renewcommand{\backrefcitedsinglestring}[1]{(Citato a pagina~#1.)}
 %\renewcommand{\backrefcitedmultistring}[1]{(Citato alle pagine~#1.)}
 %\renewcommand{\backreftwosep}{ e~}
 %\renewcommand{\backreflastsep}{ e~}
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % Setup and Finetuning
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 \newlength{\abcd} % for ab..z string length calculation
 \newcommand{\myfloatalign}{\centering} % how all the floats will be aligned
 \setlength{\extrarowheight}{3pt} % increase table row height
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % Captions look and feel
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 \captionsetup{format=hang,font=small}
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % Listings setup
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 %\lstset{emph={trueIndex,root},emphstyle=\color{BlueViolet}}%\underbar} % for special keywords
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 \lstset{language=[LaTeX]Tex,%C++,
     keywordstyle=\color{RoyalBlue},%\bfseries,
     basicstyle=\small\ttfamily,
@@ -109,14 +110,10 @@
     frameround=ftff,
     frame=single
     %frame=L
-} 
-% ********************************************************************
-% Where to look for graphics
-%*******************************************************
-%\graphicspath{{gfx/}{misc/}} % considered harmful according to l2tabu
-% ********************************************************************
+}
+%%%%%%%%%%%%%%%%%%%%%%%
 % Hyperreferences
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 \hypersetup{%
     colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
     % uncomment the following line if you want to have black links (e.g., for printing)
@@ -133,13 +130,9 @@
     pdfcreator={pdfLaTeX},%
     pdfproducer={LaTeX with hyperref and classicthesis}%
 }
-%********************************************************************
-% Hyphenation
-%*******************************************************
-%\hyphenation{put special hyphenation here}
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % GO!GO!GO! MOVE IT!
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \frenchspacing
 \raggedbottom
@@ -148,9 +141,9 @@
 %\setbibpreamble{}
 \pagenumbering{roman}
 \pagestyle{plain}
-%********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % Frontmatter
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 \include{FrontBackmatter/DirtyTitlepage}
 \include{FrontBackmatter/Titlepage}
 \include{FrontBackmatter/Titleback}
@@ -160,30 +153,34 @@
 \cleardoublepage\include{FrontBackmatter/Acknowledgments}
 \pagestyle{scrheadings}
 \cleardoublepage\include{FrontBackmatter/Contents}
-%********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % Mainmatter
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 \pagenumbering{arabic}
 %% use \cleardoublepage here to avoid problems with pdfbookmark
-\cleardoublepage\myPart{Multimodal imaging for the detection of sub-micron particles in the gas-exchange region of the mammalian lung}
+\cleardoublepage\myPart{Introduction}
+\include{Chapters/Introduction}
+%
+\cleardoublepage\myPart{Publications}
 \include{Chapters/XRM2008}
-\cleardoublepage\myPart{Finite element 3D reconstruction of the pulmonary acinus imaged by synchrotron X-ray tomography}
 \include{Chapters/Tsuda2008}
-\cleardoublepage\myPart{Radiation dose optimized lateral expansion of the field of view in synchrotron radiation x-ray tomographic microscopy}
 \include{Chapters/Haberthuer2010}
-% ********************************************************************
+%
+\cleardoublepage\myPart{Discussion and Outlook}
+\include{Chapters/DiscussionOutlook}
+%%%%%%%%%%%%%%%%%%%%%%%
 % Backmatter
-%*******************************************************
-%\appendix
-%\cleardoublepage\myPart{Appendix}
-%\include{Chapters/Appendix}
-%********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\cleardoublepage\myPart{Appendix}
+\include{Chapters/Appendix}
+%%%%%%%%%%%%%%%%%%%%%%%
 % Other Stuff in the Back
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\include{FrontBackmatter/Bibliography}
 \cleardoublepage\include{FrontBackmatter/Colophon}
 \cleardoublepage\include{FrontBackmatter/Declaration}
-% ********************************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 % Game Over: Restart, Restore or Quit?
-%*******************************************************
+%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
