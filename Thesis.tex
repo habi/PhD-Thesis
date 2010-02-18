@@ -4,32 +4,15 @@
 	openright,%
 	titlepage,%
 	fleqn,%
-	pointlessnumbers,%
+	numbers=noenddot,%
 	headinclude,
-	%1headlines,% 
 	10pt,%
 	a4paper,%
 	BCOR5mm,%
 	footinclude,%
-	cleardoubleempty,%
-	abstractoff % <--- obsolete, remove (todo)
+	cleardoublepage=empty,%
+	abstract=false%
     ]{scrreprt}
-%%%%%%%%%%%%%%%%%%%%%%%
-% KOMA-Script setup http://www.komascript.de/betaKOMAoptions
-%%%%%%%%%%%%%%%%%%%%%%%
-%\KOMAoptions{%
-%    paper=a4,%
-%    fontsize=10pt,%
-%    cleardoublepage=empty%
-%    %,footinclude=true%
-%    %,abstract=false%
-%}
-%%%%%%%%%%%%%%%%%%%%%%%
-% Development Stuff
-%%%%%%%%%%%%%%%%%%%%%%%
-%\listfiles
-%\usepackage[l2tabu, orthodox, abort]{nag}
-%\usepackage[warning, all]{onlyamsmath}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Re-usable information
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -54,38 +37,29 @@
 \usepackage{multirow}
 \usepackage{lipsum}
 \usepackage{threeparttable}
-\usepackage[fleqn]{amsmath} % math environments and more by the AMS 
-%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[fleqn]{amsmath}
 \usepackage{classicthesis-ldpkg} 
-%%%%%%%%%%%%%%%%%%%%%%%
-% Options for classicthesis.sty:
-% tocaligned eulerchapternumbers drafting linedheaders listsseparated 
-% subfig nochapters beramono eulermath parts minionpro pdfspacing 
-% listings dottedtoc
-\usepackage[eulerchapternumbers,drafting,listings,%pdfspacing,%
-            subfig,beramono,eulermath,parts]{classicthesis}
-\usepackage{tikz,pgflibraryshapes}
-	\usetikzlibrary{trees,arrows}
+\usepackage{tikz}
+	\usetikzlibrary{shapes,arrows}
 \usepackage[version=3]{mhchem}
 \usepackage[alsoload=synchem,binary]{siunitx}
-\newcommand{\imsize}{\linewidth}
-%%%%%%%%%%%%%%%%%%%%%%%            
-%\usepackage[section,below]{placeins} <--- not everybody wants this
-%\usepackage[all]{hypcap} <--- does not work with MiKTeX 2.6
-%%%%%%%%%%%%%%%%%%%%%%%
-% Language/strings for backrefs (change here, thanks, Lorenzo)
-%%%%%%%%%%%%%%%%%%%%%%%
-%\renewcommand{\backrefnotcitedstring}{\relax}%(Not cited.)
-%\renewcommand{\backrefcitedsinglestring}[1]{(Citato a pagina~#1.)}
-%\renewcommand{\backrefcitedmultistring}[1]{(Citato alle pagine~#1.)}
-%\renewcommand{\backreftwosep}{ e~}
-%\renewcommand{\backreflastsep}{ e~}
+\usepackage[%
+	eulerchapternumbers,%
+	listings,%
+	drafting,
+	%pdfspacing,%
+	subfig,%
+	beramono,%
+	eulermath,%
+	%dottedtoc,%
+	parts]{classicthesis}
+\usepackage[all]{hypcap}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Setup and Finetuning
 %%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\imsize}{\linewidth}
 \newlength{\abcd} % for ab..z string length calculation
 \newcommand{\myfloatalign}{\centering} % how all the floats will be aligned
-\setlength{\extrarowheight}{3pt} % increase table row height
 %%%%%%%%%%%%%%%%%%%%%%%
 % Captions look and feel
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -93,23 +67,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Listings setup
 %%%%%%%%%%%%%%%%%%%%%%%
-%\lstset{emph={trueIndex,root},emphstyle=\color{BlueViolet}}%\underbar} % for special keywords
-%%%%%%%%%%%%%%%%%%%%%%%
-\lstset{language=[LaTeX]Tex,%C++,
-    keywordstyle=\color{RoyalBlue},%\bfseries,
-    basicstyle=\small\ttfamily,
-    %identifierstyle=\color{NavyBlue},
-    commentstyle=\color{Green}\ttfamily,
-    stringstyle=\rmfamily,
-    numbers=none,%left,%
-    numberstyle=\scriptsize,%\tiny
-    stepnumber=5,
-    numbersep=8pt,
-    showstringspaces=false,
-    breaklines=true,
-    frameround=ftff,
-    frame=single
-    %frame=L
+\lstset{%
+	language=MATLAB,%C++,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{RoyalBlue},%\bfseries,
+	stringstyle=\rmfamily,
+	%identifierstyle=\color{Red},
+	commentstyle=\color{Green},
+	showspaces=false,
+	numbers=left,%
+	numberstyle=\tiny,
+	stepnumber=2,
+	numbersep=10pt,
+	breaklines=true,
+	backgroundcolor=\color{lightgray!20},
+	frame=leftline%,frameround=ftff
 }
 %%%%%%%%%%%%%%%%%%%%%%%
 % Hyperreferences
@@ -124,7 +96,7 @@
     urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen,% RoyalBlue Black Red
     %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
     pdftitle={\myTitle},%
-    pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
+    pdfauthor={\myName, \myUni, \myFaculty},%
     pdfsubject={},%
     pdfkeywords={},%
     pdfcreator={pdfLaTeX},%
@@ -134,7 +106,7 @@
 % GO!GO!GO! MOVE IT!
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\frenchspacing
+%\frenchspacing
 \raggedbottom
 \selectlanguage{english} % english ngerman
 %\renewcommand*{\bibname}{new name}
@@ -160,12 +132,12 @@
 %% use \cleardoublepage here to avoid problems with pdfbookmark
 \cleardoublepage\myPart{Introduction}
 \include{Chapters/Introduction}
-%
+%%
 \cleardoublepage\myPart{Publications}
 \include{Chapters/XRM2008}
 \include{Chapters/Tsuda2008}
 \include{Chapters/Haberthuer2010}
-%
+%%
 \cleardoublepage\myPart{Discussion and Outlook}
 \include{Chapters/DiscussionOutlook}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -180,7 +152,4 @@
 \cleardoublepage\include{FrontBackmatter/Bibliography}
 \cleardoublepage\include{FrontBackmatter/Colophon}
 \cleardoublepage\include{FrontBackmatter/Declaration}
-%%%%%%%%%%%%%%%%%%%%%%%
-% Game Over: Restart, Restore or Quit?
-%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
