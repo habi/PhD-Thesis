@@ -7,7 +7,7 @@ Federica Marone\footrecall{psi3}\\
 Johannes C. Schittny\footrecall{ana3}\\
 Marco Stampanoni\footrecall{psi3}\textsuperscript{,}\footrecall{eth3}\textsuperscript{,}\footnote{\href{mailto:marco.stampanoni@psi.ch}{marco.stampanoni@psi.ch}}\\\\
 First published in: Journal of Synchrotron Radiation, 2010\\
-\href{http://journals.iucr.org/s/}{Journal of Synchrotron Radiation}
+\href{http://journals.iucr.org/s/}{doi:10.1107/S101010}
 
 \section{Abstract}
 Volumetric data at micrometer level resolution can be acquired within a few minutes using synchrotron radiation based tomographic microscopy. The field of view along the rotation axis of the sample can easily be increased by stacking several tomograms, allowing  the investigation of long and thin objects at high resolution. On the contrary, an extension of the field of view in the perpendicular direction is non trivial. This paper presents an acquisition protocol which increases the field of view of the tomographic dataset perpendicular to its rotation axis. The acquisition protocol can be tuned as a function of the reconstruction quality and scanning time. Since the scanning time is proportional to the radiation dose imparted to the sample, this method can be used to increase the field of view of tomographic microscopy instruments while optimizing the radiation dose for radiation sensitive samples and keeping the quality of the tomographic dataset on the required level. This approach, dubbed wide field synchrotron radiation tomographic microscopy, can increase the lateral field of view up to five times. The method has been successfully applied for the three-dimensional imaging of entire rat lung acini with a diameter of \SI{4.1}{\milli\meter} at a voxel size of \SI{1.48}{\micro\meter}.
@@ -36,7 +36,7 @@ The samples were postfixed with \SI{1}{\percent} osmium tetroxide (\cf{OsO4}) an
 The handling of animals before and during the experiments, as well as the experiments themselves, were approved and supervised by the Swiss Agency for the Environment, Forests and Landscape and the Veterinary Service of the Canton of Bern, Switzerland.
 
 \subsection{Synchrotron radiation tomographic microscopy}
-The experiments were performed at the \ac{TOMCAT} beamline at the \acl{SLS}, Paul Scherrer Institut, Villigen, Switzerland. The samples were scanned at \SI{12.6}{\kilo\electronvolt}. After penetration through the sample, the x-rays were converted into visible light by a YAG:Ce scintillator (\SI{18}{\micro\meter} thickness, Crismatec Saint-Gobain, Nemours, France). Projections were magnified by diffraction limited microscope optics (10$\times$ magnification) and digitized by a high-resolution 2048$\times$2048 pixel \ac{ccd} camera (pco.2000, PCO AG, Kelheim, Germany) with 14 bit dynamic range. The detector was operated in 2$\times$2 binning mode. As a result, the pixel size was \SI{1.48}{\micro\meter} and the exposure time was \SI{175}{\milli\second}.
+The experiments were performed at the \ac{TOMCAT} beamline at the \acl{SLS}, Paul Scherrer Institut, Villigen, Switzerland. The samples were scanned at \SI{12.6}{\kilo\electronvolt}. After penetration through the sample, the x-rays were converted into visible light by a \acs{YAG}:Ce scintillator (\SI{18}{\micro\meter} thickness, Crismatec Saint-Gobain, Nemours, France). Projections were magnified by diffraction limited microscope optics (10$\times$ magnification) and digitized by a high-resolution 2048$\times$2048 pixel \ac{ccd} camera (pco.2000, PCO AG, Kelheim, Germany) with 14 bit dynamic range. The detector was operated in 2$\times$2 binning mode. As a result, the pixel size was \SI{1.48}{\micro\meter} and the exposure time was \SI{175}{\milli\second}.
 
 Projections $I_{Pr}$ were recorded at equiangular positions between \SI{0}{\degree} and \SI{180}{\degree}. The exact number of angular projections depended on the selected scan protocol, as described in section~\ref{subsec:increasing the field of view}. Additionally, for each protocol a set of dark ($I_{D}$) and flat images ($I_{F}$) were recorded for noise and baseline correction, respectively. Further details of the imaging and reconstruction workflow at the \ac{TOMCAT} beamline can be found in~\cite{Hintermueller2010}.
 
@@ -147,7 +147,7 @@ All parameters of each protocol and each subscan (sample-position in relation to
 \subsection{Projection merging and tomographic reconstruction}
 After acquisition of the three subscans per protocol, custom MATLAB functions read the parameters of the single subscans (e.\,g. sample name, amount of subscans, amount of dark and flat images) as well as the desired output-name and -suffix, and performed all necessary calculations, including: loading of the correct projections from each subscan; normalizing; interpolation; cutline detection; correct stitching of the images into wide field projections, and writing these merged projections as well as log files needed for the reconstruction to disk.
 
-The merged projections were subsequently rearranged into sinograms, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of every corrected projection. The $n$\textsuperscript{th} slice of the tomographic scan was reconstructed from the $n$\textsuperscript{th} sinogram using an FFT-based regridding algorithm~\cite{Dowd1999,Marone2008}. The 19 tomographic datasets were reconstructed on a computing cluster composed of five \SI{64}{\bit} Opteron machines with four cores and \SI{8}{\giga\byte} RAM each. The reconstructions resulted in an image stack covering a large sample volume of 2792$\times$2792$\times$1024 pixels, a nine-fold increase from the standard volume of 1024$\times$1024$\times$1024 pixels for one conventional scan.
+The merged projections were subsequently rearranged into sinograms, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of every corrected projection. The $n$\textsuperscript{th} slice of the tomographic scan was reconstructed from the $n$\textsuperscript{th} sinogram using an \acs{FFT}-based regridding algorithm~\cite{Dowd1999,Marone2008}. The 19 tomographic datasets were reconstructed on a computing cluster composed of five \SI{64}{\bit} Opteron machines with four cores and \SI{8}{\giga\byte} \acs{RAM} each. The reconstructions resulted in an image stack covering a large sample volume of 2792$\times$2792$\times$1024 pixels, a nine-fold increase from the standard volume of 1024$\times$1024$\times$1024 pixels for one conventional scan.
 
 \section{Results}\label{sec:Results}
 \subsection{Image Merging and Reconstruction}\label{sec:Image Merging and Reconstruction}
@@ -211,32 +211,32 @@ Even with the higher magnification, the reconstruction of protocol L in Figure~\
 	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig07-B-L-T}
 	\caption[Comparison of three-dimensional visualizations]{Comparison of three-dimensional visualizations. %
 			(a)--(c): Three independent airway segments (cyan, magenta, yellow) of tomographic datasets obtained with protocol B, L and T, extracted using a region growing algorithm. A cubic region of interest (blue) with a side length of 256 pixels (corresponding to \SI{379}{\micro\meter}) is marked inside the leftmost segment for all protocols. %
-			(d)--(f): Detailed view of isosurfaces of the lung tissue inside the blue ROIs for protocol B, L and T, respectively. Note the increasing surface roughness in the alveolar surfaces for subfigures (e) and (f).}%
+			(d)--(f): Detailed view of isosurfaces of the lung tissue inside the blue \ac{ROI}s for protocol B, L and T, respectively. Note the increasing surface roughness in the alveolar surfaces for subfigures (e) and (f).}%
 	\label{fig:BvsT}
 \end{figure}%
 %\twocolumn%
 
-For further analysis four regions of interest with a side length of 256 pixels have been extracted for each of the protocols B, L and T. The three-dimensional location of these ROIs inside the sample is shown in Figure~\ref{fig:roi3d}.
+For further analysis four regions of interest with a side length of 256 pixels have been extracted for each of the protocols B, L and T. The three-dimensional location of these \ac{ROI}s inside the sample is shown in Figure~\ref{fig:roi3d}.
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig08-ROIs}
-	\caption[Overview of the location of the four regions of interest in the sample]{Overview of the location of the four regions of interest where the histogram of the euclidean distance transformation distribution has been calculated. Grey: Semitransparent volume rendering of the lung tissue sample. Red: Four regions of interest, extracted to calculate the distance transformation. The labels of the ROIs conform to the legends in Figure~\ref{fig:DTFplots}.}%
+	\caption[Overview of the location of the four regions of interest in the sample]{Overview of the location of the four regions of interest where the histogram of the euclidean distance transformation distribution has been calculated. Grey: Semitransparent volume rendering of the lung tissue sample. Red: Four regions of interest, extracted to calculate the distance transformation. The labels of the \ac{ROI}s conform to the legends in Figure~\ref{fig:DTFplots}.}%
 	\label{fig:roi3d}
 \end{figure}
 
-Each of the ROIs has been binarized using an algorithmically determined threshold~\cite{Otsu1979} and small particles inside the segmented airspace lumen have been removed using a connected component analysis. Subsequently, the euclidean distance transformation~\cite{Danielsson1980} has been calculated for each thresholded ROI.
+Each of the \ac{ROI}s has been binarized using an algorithmically determined threshold~\cite{Otsu1979} and small particles inside the segmented airspace lumen have been removed using a connected component analysis. Subsequently, the euclidean distance transformation~\cite{Danielsson1980} has been calculated for each thresholded \ac{ROI}.
 
 For comparison, the histogram of the euclidean distance transformation has been plotted for all four regions of interest in each protocol (B, L and T).
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig09-DTF}
-	\caption[Histogram-Plots]{Histogram-Plots for each of the of four ROIs, each showing the histogram of the distance transformation for the protocols B, L and T.}%
+	\caption[Histogram-Plots]{Histogram-Plots for each of the of four \ac{ROI}s, each showing the histogram of the distance transformation for the protocols B, L and T.}%
 	\label{fig:DTFplots}
 \end{figure}
 
-Figure~\ref{fig:DTFplots} shows logarithmic plots of the histogram distributions for the four selected ROIs; the blue, green and red plot show the histograms of the distance transformation of Protocol B, L and T, respectively. For all four regions of interest, the distribution of the euclidean distance transformation is very similar, only for larger airway diameters (between 50--\SI{60}{\micro\meter}) we see a detectable difference in the regions of interest 1 and 4, located in the lateral parts of the sample. If we remember that the histogram is plotted with a logarithmic y-axis, we see that the difference of the histograms is only visible for several hundred voxels.
+Figure~\ref{fig:DTFplots} shows logarithmic plots of the histogram distributions for the four selected \ac{ROI}s; the blue, green and red plot show the histograms of the distance transformation of Protocol B, L and T, respectively. For all four regions of interest, the distribution of the euclidean distance transformation is very similar, only for larger airway diameters (between 50--\SI{60}{\micro\meter}) we see a detectable difference in the regions of interest 1 and 4, located in the lateral parts of the sample. If we remember that the histogram is plotted with a logarithmic y-axis, we see that the difference of the histograms is only visible for several hundred voxels.
 
 Even when reducing the sample acquisition time by \SI{84}{\percent} of the gold standard scan (T vs. B), the distance transformation histograms of the shown regions of interest are very similar and therefore no relevant structural differences are introduced.
 
