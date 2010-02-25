@@ -1,5 +1,5 @@
 \documentclass[%
-	%draft,%
+	% draft,%
 	twoside,%
 	openright,%
 	titlepage,%
@@ -43,6 +43,7 @@
 	\usetikzlibrary{shapes,arrows}
 \usepackage[version=3]{mhchem}
 \usepackage[alsoload=synchem,binary]{siunitx}
+\usepackage{epigraph}
 \usepackage[%
 	eulerchapternumbers,%
 	listings,%
@@ -130,8 +131,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 \pagenumbering{arabic}
 %% use \cleardoublepage here to avoid problems with pdfbookmark
-\cleardoublepage\myPart{Introduction}
+\cleardoublepage\myPart{Introduction and Theory}
 \include{Chapters/Introduction}
+\include{Chapters/TheMammalianLung}
+\include{Chapters/CTandTomcat}
 %%
 \cleardoublepage\myPart{Publications}
 \include{Chapters/XRM2008}
@@ -139,7 +142,8 @@
 \include{Chapters/Haberthuer2010}
 %%
 \cleardoublepage\myPart{Discussion and Outlook}
-\include{Chapters/DiscussionOutlook}
+\include{Chapters/Discussion}
+\include{Chapters/Outlook}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Backmatter
 %%%%%%%%%%%%%%%%%%%%%%%
