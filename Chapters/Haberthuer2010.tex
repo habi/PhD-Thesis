@@ -1,4 +1,5 @@
 % !TEX root = ../Thesis.tex
+\acresetall
 \myChapter{Radiation dose optimized lateral expansion of the field of view in synchrotron radiation x-ray tomographic microscopy}\label{ch:Haberthuer2010}
 
 David Haberthür\footremember{ana3}{Institute of Anatomy, University of Bern, Bern, Switzerland}\textsuperscript{,}\footnote{\href{mailto:haberthuer@ana.unibe.ch}{haberthuer@ana.unibe.ch}}\\
@@ -19,7 +20,7 @@ It is our goal to study the branching pattern of the acinar airways as well as t
 
 In order to visualize the thin sheets of tissue (alveolar septa) forming the gas-exchanging alveoli, a resolution in the order of one micron is required. An entire acinus is usually larger than the field of view of the tomographic microscope~\cite{Rodriguez1987,Weibel2009}, being the latest limited by the chosen optical configuration. Usually, a large field of view resulting in a large sample volume can only be acquired with low magnification and vice-versa. Lab-based \acf{uct} stations could potentially be used to study acini, but the resolution of such systems is too low to resolve all alveolar septa. Even if \ac{uct} stations are catching up, synchrotron radiation based tomographic microscopy beamlines provide the necessary high resolution combined with unmatched image quality.
 
-Up to now, the price to pay for this high resolution was a limited field of view. For instance at the \ac{TOMCAT} beamline \cite{Stampanoni2007} at the \acl{SLS}, Paul Scherrer Institute, Villigen, Switzerland, the field of view at a 10$\times$ magnification (\SI{0.74}{\micro\meter} voxel size) is limited to 1.52$\times$\SI{1.52}{\milli\meter}, insufficient for the imaging of an entire acini at high resolution.
+Up to now, the price to pay for this high resolution was a limited field of view. For instance at the beamline for \acf{TOMCAT} \cite{Stampanoni2007} at the \acl{SLS}, Paul Scherrer Institute, Villigen, Switzerland, the field of view at a 10$\times$ magnification (\SI{0.74}{\micro\meter} voxel size) is limited to 1.52$\times$\SI{1.52}{\milli\meter}, insufficient for the imaging of an entire acini at high resolution.
 
 Increasing the field of view perpendicular to the rotation axis of the sample cannot easily be achieved by placing tomographic datasets next to each other. It is instead necessary to merge several projections overlapping the desired field of view prior to tomographic reconstruction. Obviously, to satisfy the sampling theorem, increasing the field of view also requires to acquire more projections, finally resulting in an increased acquisition time.
 
@@ -211,32 +212,32 @@ Even with the higher magnification, the reconstruction of protocol L in Figure~\
 	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig07-B-L-T}
 	\caption[Comparison of three-dimensional visualizations]{Comparison of three-dimensional visualizations. %
 			(a)--(c): Three independent airway segments (cyan, magenta, yellow) of tomographic datasets obtained with protocol B, L and T, extracted using a region growing algorithm. A cubic region of interest (blue) with a side length of 256 pixels (corresponding to \SI{379}{\micro\meter}) is marked inside the leftmost segment for all protocols. %
-			(d)--(f): Detailed view of isosurfaces of the lung tissue inside the blue \ac{ROI}s for protocol B, L and T, respectively. Note the increasing surface roughness in the alveolar surfaces for subfigures (e) and (f).}%
+			(d)--(f): Detailed view of isosurfaces of the lung tissue inside the blue \acp{ROI} for protocol B, L and T, respectively. Note the increasing surface roughness in the alveolar surfaces for subfigures (e) and (f).}%
 	\label{fig:BvsT}
 \end{figure}%
 %\twocolumn%
 
-For further analysis four regions of interest with a side length of 256 pixels have been extracted for each of the protocols B, L and T. The three-dimensional location of these \ac{ROI}s inside the sample is shown in Figure~\ref{fig:roi3d}.
+For further analysis four regions of interest with a side length of 256 pixels have been extracted for each of the protocols B, L and T. The three-dimensional location of these \acp{ROI} inside the sample is shown in Figure~\ref{fig:roi3d}.
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig08-ROIs}
-	\caption[Overview of the location of the four regions of interest in the sample]{Overview of the location of the four regions of interest where the histogram of the euclidean distance transformation distribution has been calculated. Grey: Semitransparent volume rendering of the lung tissue sample. Red: Four regions of interest, extracted to calculate the distance transformation. The labels of the \ac{ROI}s conform to the legends in Figure~\ref{fig:DTFplots}.}%
+	\caption[Overview of the location of the four regions of interest in the sample]{Overview of the location of the four regions of interest where the histogram of the euclidean distance transformation distribution has been calculated. Grey: Semitransparent volume rendering of the lung tissue sample. Red: Four regions of interest, extracted to calculate the distance transformation. The labels of the \acp{ROI} conform to the legends in Figure~\ref{fig:DTFplots}.}%
 	\label{fig:roi3d}
 \end{figure}
 
-Each of the \ac{ROI}s has been binarized using an algorithmically determined threshold~\cite{Otsu1979} and small particles inside the segmented airspace lumen have been removed using a connected component analysis. Subsequently, the euclidean distance transformation~\cite{Danielsson1980} has been calculated for each thresholded \ac{ROI}.
+Each of the \acp{ROI} has been binarized using an algorithmically determined threshold~\cite{Otsu1979} and small particles inside the segmented airspace lumen have been removed using a connected component analysis. Subsequently, the euclidean distance transformation~\cite{Danielsson1980} has been calculated for each thresholded \ac{ROI}.
 
 For comparison, the histogram of the euclidean distance transformation has been plotted for all four regions of interest in each protocol (B, L and T).
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\linewidth]{img/Haberthuer2010/Fig09-DTF}
-	\caption[Histogram-Plots]{Histogram-Plots for each of the of four \ac{ROI}s, each showing the histogram of the distance transformation for the protocols B, L and T.}%
+	\caption[Histogram-Plots]{Histogram-Plots for each of the of four \acp{ROI}, each showing the histogram of the distance transformation for the protocols B, L and T.}%
 	\label{fig:DTFplots}
 \end{figure}
 
-Figure~\ref{fig:DTFplots} shows logarithmic plots of the histogram distributions for the four selected \ac{ROI}s; the blue, green and red plot show the histograms of the distance transformation of Protocol B, L and T, respectively. For all four regions of interest, the distribution of the euclidean distance transformation is very similar, only for larger airway diameters (between 50--\SI{60}{\micro\meter}) we see a detectable difference in the regions of interest 1 and 4, located in the lateral parts of the sample. If we remember that the histogram is plotted with a logarithmic y-axis, we see that the difference of the histograms is only visible for several hundred voxels.
+Figure~\ref{fig:DTFplots} shows logarithmic plots of the histogram distributions for the four selected \acp{ROI}; the blue, green and red plot show the histograms of the distance transformation of Protocol B, L and T, respectively. For all four regions of interest, the distribution of the euclidean distance transformation is very similar, only for larger airway diameters (between 50--\SI{60}{\micro\meter}) we see a detectable difference in the regions of interest 1 and 4, located in the lateral parts of the sample. If we remember that the histogram is plotted with a logarithmic y-axis, we see that the difference of the histograms is only visible for several hundred voxels.
 
 Even when reducing the sample acquisition time by \SI{84}{\percent} of the gold standard scan (T vs. B), the distance transformation histograms of the shown regions of interest are very similar and therefore no relevant structural differences are introduced.
 

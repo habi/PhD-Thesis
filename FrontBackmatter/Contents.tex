@@ -49,13 +49,13 @@
 	% List of Listings
 	%*******************************************************      
 	%\phantomsection 
-    \refstepcounter{dummy}
+	\refstepcounter{dummy}
     %\addcontentsline{toc}{chapter}{\lstlistlistingname}
     \pdfbookmark[1]{\lstlistlistingname}{lol}
     \lstlistoflistings 
 
     \vspace*{8ex}
-       
+
     %*******************************************************
     % Acronyms
     %*******************************************************
@@ -64,7 +64,7 @@
     \pdfbookmark[1]{Acronyms}{acronyms}
     \markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
     \chapter*{Acronyms}
-    \begin{acronym}
+	\begin{acronym}[ACRONYM]
 		\acro{CAD}[CAD]{Computer Aided Design}
 		\acro{ccd}[CCD]{charge-coupled device}
 		\acro{CFD}[CFD]{computational fluid dynamics}
@@ -89,11 +89,11 @@
 		\acro{SR}[SR]{Synchrotron radiation}
 		\acro{SRCT}[SRCT]{synchrotron radiation computed tomography}
 		\acro{SRXTM}[SRXTM]{synchrotron radiation based x-ray tomographic microscopy}
-		\acro{STL}[STL]{Surface Tesselation or Standard Triangulation Language or Standard Tesselation Language}: A file format used as a Quasi-Standard of many \acs{CAD}-systems.
-		\acro{VRML}[VRML]{Virtual Reality Modelling Language}
+		\acro{STL}[STL]{Surface Tessellation or Standard Triangulation Language or Standard Tessellation Language}: A file format used as a Quasi-Standard of many \acs{CAD}-systems.
+		\acro{VRML}[VRML]{Virtual Reality Modeling Language}
 		\acro{WF-SRXTM}[WF-SRXTM]{wide field synchrotron radiation based x-ray tomographic microscopy}
 		\acro{YAG}[YAG]{Yttrium aluminium garnet}
-    \end{acronym}                     
+	\end{acronym}
 \endgroup
 
 \cleardoublepage
