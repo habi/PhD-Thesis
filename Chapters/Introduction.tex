@@ -1,35 +1,38 @@
 % !TEX root = ../Thesis.tex
 \myChapter{Introduction}\label{ch:Introduction}
 \begin{flushright}{\slshape    
-		So Long, and Thanks for All the Fish} \\ \medskip
-    --- \defcitealias{Adams1984}{Douglas Adams}\citetalias{Adams1984} \citep{Adams1984}
+		It's a magical world, Hobbes, ol' buddy\dots\\
+		\dots Let's go exploring!}\\ \medskip
+		--- Calvin, by\defcitealias{Watterson1996}{Bill Watterson}\citetalias{Watterson1996} \citep{Watterson1996}
 \end{flushright}
+\bigskip
+
+Seeing the object of interest has alwas been a crucial part of the medical and biological research. If not by the naked eye, the object has been studied with ever-increasing resolution. In biomedical reasearch, state of the art imaging methods include light and electron microscopy\todo{Referenzen}. Even higher resolutions, down to \SI{10}{\nano\meter} \todo{how much?} can be reached with x-ray microscopy.
+
+One of the main problems with light and electron microscopy is the destructive sample preparation. For both methods, the sample has to be sectioned in thin slices\todo{wie dünn genau?}, which essentially destroys the three-dimensional structure of the sample to be studied.
 \begin{itemize}
-	\item Mammalian lung
 	\item Why \threed ?
 	\item Why \ac{SRXTM}?
 \end{itemize}
 
-\section{Outline of the Thesis}
-\begin{itemize}
-	\item Main goal of the PhD-Thesis
-	\item Part I of the Thesis is finished with 
-	\begin{itemize}
-		\item Lung Theory
-		\item Description of TOMCAT
-	\end{itemize}
-	\item Part II of this Thesis contains publications authored or co-authored by me.
-	\begin{itemize}
-		\item [Chapter~\ref{ch:XRM2008}] asdf
-		\item [Chapter~\ref{ch:Tsuda2008}] asdf
-		\item [Chapter~\ref{ch:Haberthuer2010}] asdf
-	\end{itemize}
+Confocal Microscopy could be used 
 
-	\item A final discussion and outlook are presented in chapter~\ref{ch:Discussion and Outlook}.
+\begin{itemize}
+	\item Why the Mammalian lung
+	\item see chapter~\ref{ch:lung}
 \end{itemize}
 
+\section{Outline of the Thesis}
+Main goal of the PhD-Thesis.
 
-\section{MyFirstSection} \label{marker}
-\section{MySecondSection}
-In section \nameref{marker} we defined...
+This thesis is structured into three parts:
+\begin{description}
+	\item[Part I] contains this introduction and gives a short overview over the lung development in chapter~\ref{ch:lung}. Chapter~\ref{ch:ct} explains the most important concepts in computed tomography and gives a short description of the \acf{TOMCAT} beamline, where all high resolution tomography experiments of this work have been performed.
+	\item[Part II] contains publications written during the time of my Ph.D.\ Thesis at the Institute of Anatomy. Chapter~\ref{ch:XRM2008} consists of a proceeding written for the 9\textsuperscript{th} \href{http://xrm2008.web.psi.ch/}{International Conference on X-Ray Microscopy} in Zürich, Switzerland, from the 21\textsuperscript{st} to the 25\textsuperscript{th} July 2008. This proceeding describes a method to precisely localise instilled sub-micron sized gold particles in rat lungs through a combination of high resolution synchrotron radiation tomographic microscopy and \acl{TEM}.
 
+Chapter~\ref{ch:Tsuda2008} consists of a paper submitted to the \href{http://jap.physiology.org/}{Journal of Applied Physiology} in which a new image processing method for accurate three dimensional reconstruction of the gas exchange region of the lung. This method is based on a finite element analysis of datasets obtained with high resolution synchrotron radiation tomographic microscopy.
+
+Chapter~\ref{ch:Haberthuer2010} presents a method to increase the field of view of synchrotron radiation tomographic microscopy while keeping the advantage of a high resolution, something which is generally not possible with such an increase in the field of view. Additionally---through optimization of the acquisition protocol---the radiation dose inflicted on the sample can be greatly reduced.
+
+	\item[Part III] contains two chapters. Chapter~\ref{ch:discussion} discusses an overview over the obtained results and chapter~\ref{ch:outlook} presents an outlook on further work based on this thesis.
+\end{description}
