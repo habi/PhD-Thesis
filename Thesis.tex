@@ -16,7 +16,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Re-usable information
 %%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\myTitle}{Title\xspace}
+\newcommand{\myTitle}{Ultrahigh Resolution Imaging of the mammalian lung\xspace}
 \newcommand{\myDegree}{Subtitle\xspace}
 \newcommand{\myName}{David Haberth\"ur\xspace}
 \newcommand{\myProf}{Prof.\ Dr.\ Johannes C.\ Schittny\xspace}
@@ -90,6 +90,21 @@
 	frame=leftline%,frameround=ftff
 }
 %%%%%%%%%%%%%%%%%%%%%%%
+% Hack to make \graffito work in Acknowledgements, as per Mail from Andre Miede from 03.03.2010
+%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\let\graffito\relax
+\def\graffito@setup{%
+  \slshape\footnotesize%
+  \parindent=0pt \lineskip=0pt \lineskiplimit=0pt %
+  \tolerance=2000 \hyphenpenalty=300 \exhyphenpenalty=300
+  \doublehyphendemerits=100000
+  \finalhyphendemerits=\doublehyphendemerits}
+\DeclareRobustCommand{\graffito}[1]{\marginpar
+ [\graffito@setup\raggedleft\hspace{0pt}{#1}]
+ {\graffito@setup\raggedright\hspace{0pt}{#1}}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%
 % Hyperreferences
 %%%%%%%%%%%%%%%%%%%%%%%
 \hypersetup{% http://www.jkrieger.de/tools/latex/hyperref.html helps!
@@ -142,9 +157,9 @@
 \include{Chapters/CTandTomcat}
 %%
 \cleardoublepage\myPart{Publications}
-\include{Chapters/XRM2008}
-\include{Chapters/Tsuda2008}
-\include{Chapters/Haberthuer2010}
+%\include{Chapters/XRM2008}
+%\include{Chapters/Tsuda2008}
+%\include{Chapters/Haberthuer2010}
 %%
 \cleardoublepage\myPart{Discussion and Outlook}
 \include{Chapters/Discussion}
