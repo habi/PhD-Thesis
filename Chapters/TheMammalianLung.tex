@@ -10,75 +10,106 @@ Why is the mammalian lung so interesting?
 \section{Lung Development}
 During lung development all the internal structures like the conducting airways, the blood vessel network and the gas exchange area are formed. The lung is specifically designed to provide this large gas exchange surface---in humans the alveolar gas exchange surface is in the order of \SI{130}{\meter\squared}, an area equivalent to about $\frac{3}{4}$ of a tennis court~\cite{Weibel2009}---where capillary blood efficiently gets in close contact to the air inside the lung structure. 
 
-Mammalian lung development can be divided into five overlapping stages~\cite{Schittny2004}, as shown in figure~\ref{fig:lung development stages}: Organogenesis starts with a outpouching of the foregut resulting in the appearance of the lung buds. Subsequently, the conducting and parts of the respiratory airways are formed by a successive cycle of branching and growth starting at the lung buds, which is called branching morphogenesis. Most of this process takes place during the pseudoglandular stage.
+Mammalian lung development can be divided into five overlapping stages~\cite{Schittny2004,Schittny2007a}, as shown in figure~\ref{fig:lung development stages}: Organogenesis starts with a outpouching of the foregut resulting in the appearance of the lung buds and formation of the major airways. Subsequently, the conducting and parts of the respiratory airways are formed by a successive cycle of branching and growth starting at the lung buds, which is called branching morphogenesis. Most of this process takes place during the pseudoglandular stage. In this stage the funcitional respiratory lung unit, the so-called acinus is ``born''. An acinus is defined as the complex of alveolated airways distal of a last purely conducting airway, the terminal bronchiole~\cite{Rodriguez1987}. The total of all acini forms the lung parenchyma, the area where the pulmonary gas-exchange takes place.
 
 \begin{figure}[htb]
 	\centering
 	\pgfplotsset{width=\linewidth,height=.5\linewidth}
 	\begin{tikzpicture}
+		\def\xmin{4}
+		\def\xmax{85}
+		\def\ymin{0}
+		\def\ymax{0.4}
 		\begin{axis}[xbar stacked,%
 			scale only axis,%
-			xmin=6,%
-			xmax=85,%
-			ymin=0,%
-			ymax=0.4,%
+			xmin=\xmin,%
+			xmax=\xmax,%
+			ymin=\ymin,%
+			ymax=\ymax,%
 			yticklabels={},%
-			xtick={1,...,85},%
+			axis x discontinuity=crunch,%
+			xtick={9,...,\xmax},%
 			xticklabels={},
 			xlabel=Days,%
 			axis y line=none]
 		\end{axis}
 		\begin{axis}[xbar stacked,%
 			scale only axis,%
-			xmin=6,%
-			xmax=85,%
-			ymin=0,%
-			ymax=0.4,%
+			xmin=\xmin,%
+			xmax=\xmax,%
+			ymin=\ymin,%
+			ymax=\ymax,%
 			yticklabels={},%
-			xtick={11,13,18.5,20,21,25,35,42,60},%
-			xticklabels={11,,,,Birth,4,14,21},
+			axis x discontinuity=crunch,%
+			xtick={11,13,18.5,20,21,25,35,42,57,81},%
+			xticklabels={11,,,,Birth,4,14,21,36,60},
 			xmajorgrids,%
 			xlabel=Days,%
 			%axis x line=bottom,%
 			axis y line=none]
 			\def\step{0.05}
-			\addplot [transparent] coordinates {(11,0)};
-			\addplot [fill=red] coordinates {(2,1*\step)};
-			\addplot [fill=cyan] coordinates {(5.5,2*\step)};
-			\addplot [fill=blue] coordinates {(1.5,3*\step)};
-			\addplot [fill=magenta] coordinates {(5,4*\step)};
-			\addplot [fill=yellow] coordinates {(10,5*\step)};
-			\addplot [fill=orange] coordinates {(7,6*\step)};
-			\addplot [fill=green] coordinates {(23,7*\step)};
+			\addplot [transparent]	coordinates {(11,0)};
+			\addplot [fill=red]		coordinates {(2,1*\step)};
+			\addplot [fill=cyan]		coordinates {(5.5,2*\step)};
+			\addplot [fill=blue]		coordinates {(1.5,3*\step)};
+			\addplot [fill=magenta]	coordinates {(5,4*\step)};
+			\addplot [fill=yellow]	coordinates {(10,5*\step)};
+			\addplot [fill=orange]	coordinates {(7,6*\step)};
+%			\addplot [fill=green]		coordinates {(39,7*\step)};
+			\addplot [fill=green]		coordinates {(\xmax-41,7*\step)};
 
 			\tikzstyle{every pin}=[%
 				%fill=white,%
 				%semitransparent,%
 				%draw=black,%
-				% text width=20em,%
+				%text width=10em,%
 				font=\footnotesize,
-				text centered,%
-				pin distance=2ex]
-			\node[coordinate, pin=right:{Embrionic Period (d 11--13)}] at (axis cs:13,0.05) {};
-			\node[coordinate, pin=right:{Pseudoglandular Stage (d 13--18.5)}] at (axis cs:18.5,0.1) {};
-			\node[coordinate, pin=right:{Canalicular Stage (d 18.5--20)}] at (axis cs:20,0.15) {};
-			\node[coordinate, pin=right:{Saccular Stage (-- postnatal day 4)}] at (axis cs:25,0.2) {};
-			\node[coordinate, pin=right:{Alveolarization (d 4--14)}] at (axis cs:35,0.25) {};
-			\node[coordinate, pin=right:{Microvascular maturation (d 14 -- 21)}] at (axis cs:42,0.3) {};
-			\node[coordinate, pin=left:{Lung Growth (d 21--\dots)}] at (axis cs:42,0.35) {};
+				%text centered,%
+				pin distance=3ex]
+			\node[coordinate, pin=right:{Embrionic Period (E11--E13)}] at (axis cs:13,0.05) {};
+			\node[coordinate, pin=right:{Pseudoglandular Stage (E13--E18.5)}] at (axis cs:18.5,0.1) {};
+			\node[coordinate, pin=right:{Canalicular Stage (E18.5--E20)}] at (axis cs:20,0.15) {};
+			\node[coordinate, pin=right:{Saccular Stage (E20--P4)}] at (axis cs:25,0.2) {};
+			\node[coordinate, pin=right:{Alveolarization (P4--P14)}] at (axis cs:35,0.25) {};
+			\node[coordinate, pin=right:{Microvascular maturation (P14--P21)}] at (axis cs:42,0.3) {};
+			\node[coordinate, pin=left:{Lung Growth (4 weeks--adulthood)}] at (axis cs:42,0.35) {};
 		\end{axis}
 	\end{tikzpicture}
-	\caption{Lung development stages for the rat lung (modified from \ldots). The first three stages (Embrionic Period, Pseudoglandular and Canalicular Stage) take place in the approximately 21 days from the beginning of gestation to birth. The stages are partially overlapping, which is not shown in this figure.}
-	\todo[inline]{Reference? really Rat?}
+	\caption[Lung development stages]{Lung development stages for the rat lung. The first three stages (Embrionic Period, Pseudoglandular and Canalicular Stage) take place in the approximately 21 days from the beginning of gestation to birth. E=embryonic day (days post-coitum), D=postnatal day. Figure adapted from~\cite{Schittny2007a}.}
 	\label{fig:lung development stages}
+	\todo[inline]{Reference correct? I've nicked it from p:/\#Talks/2009.07.02 2ndYearExamination/Imaging-Goe-090515.ppt}
 \end{figure}
 
-This stage is followed by intermediate stages, which are called ca\-na\-li\-cular and saccular. During the canalicular stage a first functional gas exchange surface---the air-blood barrier---is formed. The saccular stage marks the switch from branching to septation morphogenesis.
+The pseudoglandular stage is followed by intermediate stages, which are called canalicular and saccular. During the canalicular stage a first functional gas exchange surface---the air-blood barrier---is formed and the lung epithelium starts to differentiate. The saccular stage marks the switch from branching to septation morphogenesis.
 
-During the alveolar stage the distal part of the bronchial tree is enlarged by a lifting off of additional septa from already existing septa (septation/alveolarization). 
+During the alveolar stage the distal part of the bronchial tree is enlarged by the introduction of new alveoli through a formation of additional septa from already existing septa. 
 
-In order to optimize gas exchange after bulk alveolarization is completed, the interalveolar septa and their capillary networks are remodeled during the phase of microvascular maturation. At this point lung development is considered as being finished and normal growth of the organ follows.
-
-The time point of birth differs between mammals, relative to the state of lung development. In humans, birth happens at the beginning of the alveolar stage.
+In order to optimize gas exchange after bulk alveolarization is completed, the interalveolar septa and their capillary networks are remodeled during the phase of microvascular maturation. At this point lung development is considered as being finished and normal growth of the organ follows\graffito{The time point of birth differs between mammals, relative to the state of lung development. In humans, birth happens at the beginning of the alveolar stage.}.
 
 It was believed that lung developments comes to completion during the early postnatal period due to the reduction of a double- to a single-layered capillaries network inside the alveolar septa (microvasculature maturation postnatal days 14–-21 in rats). After this period, only growth of the organ should follow, and no more alveolar septa are built in the lung~\cite{Burri1999,Schittny2004}. \citet{Schittny2008} were able to show that so called late alveolarization happens, where alveolar septa are are formed until young adulthood (days 4–-60 in rats). A local duplication of the capillary network was detected as the basis of these newly forming septa.
+
+\section{The functional units}
+The mammalian lung is generally formed by dichotomous branching. From the Trachea on the conducting airways are always divided into two bronchi (fig.~\ref{subfig:lung diagram}). With reduced diameter, the bronchi are divided into bronchioles and further down the airway tree into terminal bronchioles. From the terminal bronchioles on respiratory bronchioles are formed and from this stage on the gas-exchange in the lung takes place, we reach the acinus and the so-called acinar airways. An acinus is---ongoing from the respiratory bronchioles---further subdivided into alveolar ducts, sacculi and alveoli (fig.~\ref{subfig:lung units}).
+
+\renewcommand{\imsize}{0.5\linewidth}
+\begin{figure}[htb]
+	\centering%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Lungs_diagram_detailed}%
+		\label{subfig:lung diagram}%
+		}%
+	\hfill%
+	\subfloat[]{%
+		\includegraphics[height=0.6392\linewidth]{img/Lungunits}%
+		\label{subfig:lung units}%
+		}%
+	\caption{Details of the human lung. \subref{subfig:lung diagram}: Lung diagram of the human lung~\cite{LungDiagram}. \subref{subfig:lung units}: Airway generations in the human lung \cite{Schittny2007a}}%
+	\label{fig:lung}%
+	\todo[inline]{\subref{subfig:lung units} really human?}
+\end{figure}
+
+\begin{itemize}
+	\item acinus
+	\item growing
+	\item leading to WF-SRXTM
+\end{itemize}
