@@ -40,12 +40,13 @@
 \usepackage[fleqn]{amsmath}
 \usepackage{classicthesis-ldpkg} 
 \usepackage{tikz}
-	\usetikzlibrary{shapes,arrows,fadings,patterns}
+	\usetikzlibrary{shapes,arrows,patterns}
 \usepackage{pgfplots}
 \usepackage[version=3]{mhchem}
 \usepackage[alsoload=synchem,binary]{siunitx}
 \usepackage{makeidx}
-\usepackage{todonotes}
+\usepackage{todonotes} % [obeyDraft] 
+\usepackage{pdfpages}
 \usepackage[%
 	eulerchapternumbers,%
 	listings,%
@@ -63,6 +64,15 @@
 \newcommand{\imsize}{\linewidth}
 \newlength{\abcd} % for ab..z string length calculation
 \newcommand{\myfloatalign}{\centering} % how all the floats will be aligned
+\newlength\imagewidth           % needed for scalebars
+\newlength\imagescale           % ditto
+%%%%%%%%%%%%%%%%%%%%%%%
+% Color (Re-Definition)
+%%%%%%%%%%%%%%%%%%%%%%%
+% according to http://is.gd/aOVVy
+\definecolor{Maroon}{RGB}{229,5,58} % redefine Maroon to unibe (Pantone 192, RGB 229,5,58)
+\definecolor{unibe-link}{RGB}{147,183,209} % define unibe-color for links (Pantone 543, RGB 147,183,209)
+\definecolor{unibe-citation}{RGB}{216,140,2} % define unibe-color for citations (Pantone 138, RGB 216,140,2)
 %%%%%%%%%%%%%%%%%%%%%%%
 % Captions look and feel
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -115,7 +125,7 @@
     breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
     plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
     hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
-    urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
+    urlcolor=Maroon, linkcolor=unibe-link, citecolor=unibe-citation, %pagecolor=RoyalBlue,%
     %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
     pdftitle={\myTitle},%
     pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
@@ -143,7 +153,6 @@
 \include{FrontBackmatter/Titleback}
 %\cleardoublepage\include{FrontBackmatter/Dedication}
 \cleardoublepage\include{FrontBackmatter/Abstract}
-%\cleardoublepage\include{FrontBackmatter/Publication}
 \cleardoublepage\include{FrontBackmatter/Acknowledgments}
 \pagestyle{scrheadings}
 \cleardoublepage\include{FrontBackmatter/Contents}
@@ -152,31 +161,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 \pagenumbering{arabic}
 %% use \cleardoublepage here to avoid problems with pdfbookmark
-\cleardoublepage\myPart{Introduction and Theory}
+\cleardoublepage\myPart{Introduction}\label{part:introduction}
 \include{Chapters/Introduction}
 \include{Chapters/TheMammalianLung}
 \include{Chapters/CTandTomcat}
 %%
-\cleardoublepage\myPart{Publications}
+\cleardoublepage\myPart{Results}\label{part:results}
+\include{Chapters/Publications}
 %\include{Chapters/XRM2008}
 %\include{Chapters/Tsuda2008}
 %\include{Chapters/Haberthuer2010}
 %%
-\cleardoublepage\myPart{Discussion and Outlook}
+\cleardoublepage\myPart{Discussion and Outlook}\label{part:discussion}
 \include{Chapters/Discussion}
 \include{Chapters/Outlook}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Backmatter
 %%%%%%%%%%%%%%%%%%%%%%%
-\appendix
-\cleardoublepage\myPart{Appendix}
-\include{Chapters/Appendix}
+%\appendix
+%\cleardoublepage\myPart{Appendix}
+%\include{Chapters/Appendix}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Other Stuff in the Back
 %%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage\myPart{Back Matter}\label{part:back matter}
+\cleardoublepage\include{FrontBackmatter/CurriculumVitae}
 \cleardoublepage\include{FrontBackmatter/Bibliography}
 %\cleardoublepage\include{FrontBackmatter/Index}
-\cleardoublepage\include{FrontBackmatter/Colophon}
 \cleardoublepage\include{FrontBackmatter/Declaration}
-\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
+\cleardoublepage\include{FrontBackmatter/Colophon}
+%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
 \end{document}
