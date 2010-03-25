@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{graphicx,tikz}
+	\usetikzlibrary{calc}
+\usepackage[graphics,tightpage,active]{preview}
+%\PreviewEnvironment{tikzpicture}
+\begin{document}
+\begin{preview}
+	\begin{tikzpicture}
+		% arc
+			\draw [<-] (0,0) arc (90:120:10) node [above] {$e^-$};
+			\draw [->] (0,0) arc (90:60:10);
+		% beam angle
+			\draw (5,0) arc (0:-25:2);
+			\draw (5,0) arc (0:25:2) node [right] {$\frac{1}{\gamma}$};
+		% beam
+			\def\alpha{3}
+			\def\length{6}
+			\def\arclength{0.31444667569824722423283494684391} % arclength = tan(\alpha)*\length
+			\fill [color=red,nearly opaque] (0,0) -- (\alpha:\length) arc (90+\alpha:-90-\alpha:\arclength) -- cycle; 
+			\draw (\alpha:\length) arc (90+\alpha:-90-\alpha:\arclength);
+			\node at (3,.5) {$\lambda$};
+		% arrows
+			\draw [->] (0,0) -- (\alpha:\length);
+			\draw [->] (0,0) -- (\length+\arclength,0);
+			\draw [->] (0,0) -- (-\alpha:\length);
+	\end{tikzpicture}
+\end{preview}
+\end{document}
