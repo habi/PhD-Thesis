@@ -1,13 +1,12 @@
 \documentclass{article}
 \usepackage{graphicx,tikz}
-	\usetikzlibrary{calc}
 \usepackage[graphics,tightpage,active]{preview}
-%\PreviewEnvironment{tikzpicture}
+\PreviewEnvironment{tikzpicture}
 \begin{document}
-\begin{preview}
 	\begin{tikzpicture}
+		%\draw [help lines] (0,0) grid (5,5);
 		% arc
-			\draw [<-] (0,0) arc (90:120:10) node [above] {$e^-$};
+			\draw [<-] (0,0) arc (90:110:10) node [above] {$e^-$} arc (110:120:10);
 			\draw [->] (0,0) arc (90:60:10);
 		% beam angle
 			\draw (5,0) arc (0:-25:2);
@@ -24,5 +23,4 @@
 			\draw [->] (0,0) -- (\length+\arclength,0);
 			\draw [->] (0,0) -- (-\alpha:\length);
 	\end{tikzpicture}
-\end{preview}
 \end{document}

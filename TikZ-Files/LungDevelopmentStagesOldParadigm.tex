@@ -1,0 +1,71 @@
+%\documentclass{article}
+%\usepackage{tikz,pgfplots}
+%\usepackage[graphics,tightpage,active]{preview}
+%\PreviewEnvironment{tikzpicture}
+%\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pgfplotsset{width=\linewidth,height=.5\linewidth}
+	\begin{tikzpicture}
+		\def\xmin{4}
+		\def\xmax{85}
+		\def\ymin{0}
+		\def\ymax{0.4}
+		\begin{axis}[xbar stacked,%
+			scale only axis,%
+			xmin=\xmin,%
+			xmax=\xmax,%
+			ymin=\ymin,%
+			ymax=\ymax,%
+			yticklabels={},%
+			axis x discontinuity=crunch,%
+			xtick={9,...,\xmax},%
+			xticklabels={},
+			xlabel=Days,%
+			axis y line=none]
+		\end{axis}
+		\begin{axis}[xbar stacked,%
+			scale only axis,%
+			xmin=\xmin,%
+			xmax=\xmax,%
+			ymin=\ymin,%
+			ymax=\ymax,%
+			yticklabels={},%
+			axis x discontinuity=crunch,%
+			xtick={11,13,18.5,20,21,25,35,42,57,81},%
+			xticklabels={11,,,,Birth,4,14,21,36,60},
+			xmajorgrids,%
+			xlabel=Days,%
+			%axis x line=bottom,%
+			axis y line=none]
+			\def\step{0.05}
+			%\node [font=\footnotesize] at (axis cs:42,0.35) {X};
+			%\node [font=\footnotesize] at (axis cs:85,0.35) {X};
+			%\node [font=\footnotesize] at (axis cs:63.5,0.35) {Lung Growth (4 weeks--adulthood)};
+			\addplot [transparent]	coordinates {(11,0)};
+			\addplot [fill=red]		coordinates {(2,1*\step)};
+			\addplot [fill=cyan]		coordinates {(5.5,2*\step)};
+			\addplot [fill=blue]		coordinates {(1.5,3*\step)};
+			\addplot [fill=magenta]	coordinates {(5,4*\step)};
+			\addplot [fill=yellow]	coordinates {(10,5*\step)};
+			\addplot [fill=orange]	coordinates {(7,6*\step)};
+			\addplot [fill=green]		coordinates {(\xmax-41,7*\step)};
+
+			\tikzstyle{every pin}=[%
+				%fill=white,%
+				%semitransparent,%
+				%draw=black,%
+				%text width=10em,%
+				font=\footnotesize,
+				%text centered,%
+				pin distance=3ex]
+			\node[coordinate, pin=right:{Embrionic Period (E11--E13)}] at (axis cs:13,0.05) {};
+			\node[coordinate, pin=right:{Pseudoglandular Stage (E13--E18.5)}] at (axis cs:18.5,0.1) {};
+			\node[coordinate, pin=right:{Canalicular Stage (E18.5--E20)}] at (axis cs:20,0.15) {};
+			\node[coordinate, pin=right:{Saccular Stage (E20--P4)}] at (axis cs:25,0.2) {};
+			\node[coordinate, pin=right:{Alveolarization (P4--P14)}] at (axis cs:35,0.25) {};
+			\node[coordinate, pin=right:{Microvascular maturation (P14--P21)}] at (axis cs:42,0.3) {};
+			\node[coordinate, pin=left:{Lung Growth (4 weeks--adulthood)}] at (axis cs:42,0.35) {};
+		\end{axis}
+	\end{tikzpicture}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\end{document}
