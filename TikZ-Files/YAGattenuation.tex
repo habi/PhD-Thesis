@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{tikz,pgfplots}
+\usepackage[graphics,tightpage,active]{preview}
+\PreviewEnvironment{tikzpicture}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pgfplotsset{every axis legend/.append style={
+	at={(1.02,0.5)},
+	anchor=west},legend plot pos=right}
+\begin{tikzpicture}
+	\begin{loglogaxis}[no markers,xmajorgrids,xminorgrids,ymajorgrids]
+		\addplot table [x=PhotonEnergy, y=ScatteringCoherent] {plotdata/yag.txt};
+		\addplot table [x=PhotonEnergy, y=ScatteringIncoherent] {plotdata/yag.txt};
+		\addplot table [x=PhotonEnergy, y=PhotoelectricAbsorption] {plotdata/yag.txt};
+		\addplot table [x=PhotonEnergy, y=PairNuclear] {plotdata/yag.txt};
+		\addplot table [x=PhotonEnergy, y=PairElectron] {plotdata/yag.txt};
+		\addplot table [x=PhotonEnergy, y=TotalWithCoherent] {plotdata/yag.txt};
+		\addplot table [x=PhotonEnergy, y=TotalWithoutCoherent] {plotdata/yag.txt};	
+		\legend{ScatteringCoherent,%
+			ScatteringIncoherent,%
+			ScatteringIncoherent,%
+			PhotoelectricAbsorption,%
+			PairNuclear,%
+			PairElectron,%
+			TotalWithCoherent,%
+			TotalWithoutCoherent}
+	\end{loglogaxis}
+\end{tikzpicture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
