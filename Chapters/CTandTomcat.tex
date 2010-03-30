@@ -11,19 +11,46 @@ around a single rotation axis. The word tomography is derived from the greek wor
 \section{History}
 Computed Tomography has come a long way since its commercial availability in the late 1970, where Sir Godfrey Hounsfield invented the first commercially available thanks to the upcoming availability of microcomputers.
 
-The basic idea of todays tomography was already described in a patent granted to \citet{Frank1942} in the 1940s and several experiments around 1960--1965 showed the feasibilty of three-dimensional reconstruction of an object which has been penetrated by radiation~\cite{Hsieh2003}. The first tomographic imagers produced radiographic images of selected sections of tissue by moving the x-ray source and the film over and under the patient in the opposite direction. This approach blurred structures lying under and over the selected region of interest. But this advance over conventional radiographies was insufficient to make two-dimensional tomographic images a useful diagnostic tool~\cite{Robb2003}.
+The basic idea of todays tomography was already described in a patent granted to \citet{Frank1942} in the 1940s and several experiments around 1960--1965 showed the feasibility of three-dimensional reconstruction of an object which has been penetrated by radiation~\cite{Hsieh2003}. The first tomographic imagers produced radiographic images of selected sections of tissue by moving the x-ray source and the film over and under the patient in the opposite direction. This approach blurred structures lying under and over the selected region of interest. But this advance over conventional radiographies was insufficient to make two-dimensional tomographic images a useful diagnostic tool~\cite{Robb2003}.
 
-While observing the planning of radiotherapy treatments, Allan M.\ Cormack realized that these treatments would greatly benefit if the x-ray attenuation coefficient distribution in the body would be known. In 1963 \citet{Cormack1963} reported about the investigation of a cylindrical disk with a diameter of \SI{20}{\centi\meter} which was made of two concentric aluminum cylinders embedded in an oak annulus. Using a collimated \isotope[60]{Co} source and a Geiger counter as a detector, \citeauthor{Cormack1963} was able to detect the absorption coefficients of the materials in the cylinder and repeated this experiments with an asymetrical phantom consisting of aluminum and plastic. But since the calculations necessary for the extraction of the attenuation coefficients were both time-consuming and difficult, the presented results never really caught on. Cormack remarked that \begin{quote} There was virtually no response. The most interesting request for a reprint came from a Swiss Centre for Avalanche Research\graffito{Sigi, this quote is especially for you!}. The method would work for deposits of snow on mountains if one could get either the detector or the source into the mountain under the snow! \cite{Cormack1979}\end{quote}
+While observing the planning of radiotherapy treatments, Allan M.\ Cormack realized that these treatments would greatly benefit if the x-ray attenuation coefficient distribution in the body would be known. In 1963 \citet{Cormack1963} reported about the investigation of a cylindrical disk with a diameter of \SI{20}{\centi\meter} which was made of two concentric aluminum cylinders embedded in an oak annulus. Using a collimated \isotope[60]{Co} source and a Geiger counter as a detector, \citeauthor{Cormack1963} was able to detect the absorption coefficients of the materials in the cylinder and repeated this experiments with an asymmetrical phantom consisting of aluminum and plastic. But since the calculations necessary for the extraction of the attenuation coefficients were both time-consuming and difficult, the presented results never really caught on. Cormack remarked that \begin{quote} There was virtually no response. The most interesting request for a reprint came from a Swiss Centre for Avalanche Research\graffito{Sigi, this quote is especially for you!}. The method would work for deposits of snow on mountains if one could get either the detector or the source into the mountain under the snow! \cite{Cormack1979}\end{quote}
 
-In 1967, Godfrey N.\ Hounsfield started to develop the first clinical tomography scanners at the EMI Central Resaerch Labroatories in the United Kingdom~\cite{Hsieh2003}. The first laboratory scanners took 9 days to acquire a scan of a slice of cow brain~\cite{Hounsfield1976}, but paved the path to the first clinically available \ac{ct} machines in hospitals and the scientific community. In 1979 Cormack and Hounsfield shared the Nobel Prize for Physiology and Medicine for their pioneering work in computed tomography.
+In 1967, Godfrey N.\ Hounsfield started to develop the first clinical tomography scanners at the EMI Central Research Laboratories in the United Kingdom~\cite{Hsieh2003}. The first laboratory scanners took 9 days to acquire a scan of a slice of cow brain~\cite{Hounsfield1976}, but paved the path to the first clinically available \ac{ct} machines in hospitals and the scientific community. In 1979 Cormack and Hounsfield shared the Nobel Prize for Physiology and Medicine for their pioneering work in computed tomography.
 
 From the early 1980s on, \ac{ct} imaging became an important tool to answer scientific questions both in medical and industrial applications.
 
-Nonetheless these medical \ac{ct} scanners are in widespread use, their images suffer from relatively low spatial resolution in the sub-micrometer scale, which is often not enough to detect the finest details in biological samples. Since the radiation dose limitations imposed for medical scans ofent do not apply for biological samples which are dried, frozen or embedded in paraffin or plastic, more intense and collimated x-ray sources can be used. Using such sources in \ac{uct} stations enables to reach resolutions in the submicron range\todo{Citation?}. The use of synchrotron radiation as an x-ray source to produce highly intensive beams for mivrotomography was first proposed by \citet{Grodzins1983,Grodzins1983a}.
+Nonetheless these medical \ac{ct} scanners are in widespread use, their images suffer from relatively low spatial resolution in the sub-micrometer scale, which is often not enough to detect the finest details in biological samples. Since the radiation dose limitations imposed for medical scans often do not apply for biological samples which are dried, frozen or embedded in paraffin or plastic, more intense and collimated x-ray sources can be used. Using such sources in \ac{uct} stations enables to reach resolutions in the submicron range\todo{Citation?}. The use of synchrotron radiation as an x-ray source to produce highly intensive beams for microtomography was first proposed by \citet{Grodzins1983,Grodzins1983a}.
 
-\section{Important physical Computed tomography principles}
-\subsection{Absorption}
-\subsection{Beer-Lambert}
+\section{Computed tomography principles}
+To be able to introduce the physical principles of \ac{ct}, some important interactions of x-rays with matter have to be introduced. The energy of the x-ray photons in this work is roughly around 10--\SI{20}{\kilo\electronvolt}, we can thus limit the explanation to the photoelectric absorption, the coherent and incoherent scattering.
+
+\subsection{Absorption}\todo{MOAR!}
+\subsection{Scattering}\todo{MOAR!}
+\subsubsection{Coherent scattering}\todo{MOAR!}
+\subsubsection{Incoherent scattering}\todo{MOAR!}
+
+\subsection{Attenuation}
+The net effect of the three effects described above can be summarized with the total linear attenuation coefficient shown in equation~\ref{eq:linear attenuation} below. This equation expresses the attenuation of a monochromatic\graffito{Monochromatic light is light of a single wavelength or energy, though in practice it often refers to a narrow wavelength range} beam as it passes through a material. The attenuation in this material of uniform density and atomic number can be expressed by an exponential relationship%
+\begin{equation}%
+	I=I_{0}e^{-(\tau+\sigma_{C}+\sigma_{R})x}%
+	\label{eq:linear attenuation}%
+\end{equation}%
+, where $I$ and $I_{0}$ are the incident and transmitted intensities of the x-rays and $x$ is the distance which the x-rays travel through the material. $\tau$, $\sigma_{C}$ and $\sigma_{R}$ are the attenuation coefficients of the photoelectric, incoherent (Compton) and coherent (Rayleigh) scattering interactions in the material, respectively. Equation~\ref{eq:linear attenuation} is often expressed as
+\begin{equation}
+	I/I_{0}=e^{-\mu x}
+	\label{eq:beer-lambert}
+\end{equation}%
+the so-called Beer-Lambert law, where $\mu$ is the attenuation coefficient of the material, which is depending on the incident x-ray photon energy~\cite{Hsieh2003}. 
+
+Figure~\ref{fig:yag attenuation} shows the composition of the attenuation coefficient for Cerium doped \ac{yag} (\cf{Y3Al5O12}), which is used as a material for converting the incident x-rays to visible light. This so-called scintillator is part of the microtomography station at \ac{tomcat} and is described in detail later in section~\ref{sec:tomcat}.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics{TikZ-Files/YAGattenuation}
+	\caption{Total attenuation coefficient of Ce:YAG (\cf{Y3Al5O12}), the scintillator material used for converting the incident x-rays to visible light in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010}. Note that pair production starts for energies above \SI{1}{\mega\electronvolt} and can thus be safely ignored for the energy-ranges in this work. Data obtained from the photon cross section database~\cite{XCOM}.}
+	\label{fig:yag attenuation}
+\end{figure}
+
 \subsection{Sampling Theorem}
 \subsection{Reconstruction (FBP, gridrec)}
 
@@ -48,22 +75,13 @@ One sinogram contains the information of one plane or slice of the reconstructed
 	\label{fig:sinogram}
 \end{figure}
 
-
-
-
-
-
-
-
-
-
 \section{Synchrotron Radiation}
-Synchrotron facilities use the fact that a accelerated particles travelling on a curved trajectory emit radiation. If charged particles at relativistic speed are undergo a change of direction (\ie in a magnetic field) socalled synchrotron radiation is emitted. 
+Synchrotron facilities use the fact that a accelerated particles travelling on a curved trajectory emit radiation. If charged particles at relativistic speed are undergo a change of direction (\ie in a magnetic field) so-called synchrotron radiation is emitted. 
 
-Synchrotron radiation was first observed as energy loss in electron storage rings used for high energy physics experiments. First sources for scientific use were beamports at such facilities, which utilized otherwise lost radiation. Dedicated second-generation synchrotron radiation sources have been built over the years; these were ring-like structures using a series of magnets to control the accelerated particles. Current---third-generation---synchrotron radiation facilites are composed of many straight sections of different lenghts, specially optimized to accomodate different magnetic structures used to generate the synchrotron radiation~\cite{Stampanoni2002a,Margaritondo2002,wwwsls}. 
+Synchrotron radiation was first observed as energy loss in electron storage rings used for high energy physics experiments. First sources for scientific use were beamports at such facilities, which utilized otherwise lost radiation. Dedicated second-generation synchrotron radiation sources have been built over the years; these were ring-like structures using a series of magnets to control the accelerated particles. Current---third-generation---synchrotron radiation facilities are composed of many straight sections of different lengths, specially optimized to accommodate different magnetic structures used to generate the synchrotron radiation~\cite{Stampanoni2002a,Margaritondo2002,wwwsls}. 
 
 \subsection{Bending Magnets, Undulators and Wigglers}
-The three magnetic structures used in synchrotron facilites are bending magnets, undulators and wigglers. All three emit radiation with different characteristics and intensities.
+The three magnetic structures used in synchrotron facilities are bending magnets, undulators and wigglers. All three emit radiation with different characteristics and intensities.
 
 Bending Magnets are used to create a homogeneous magnetic field over a defined distance. This forces accelerated particles injected into the bending magnet to travel on a circular trajectory. The result is a fan of radiation in the tangential direction of the bend\graffito{Such magnets are also used in traditional televisions, which contain a cathode ray tube, which is essentially a small particle accelerator. They move the electron beam over the screen of the TV tube in a controlled way.~\cite{wiki:dipolemagnet}}.
 
@@ -88,11 +106,11 @@ Bending Magnets are used to create a homogeneous magnetic field over a defined d
 			\draw [->] (0,0) -- (\length+\arclength,0);
 			\draw [->] (0,0) -- (-\alpha:\length);
 	\end{tikzpicture}
-	\caption[Bending magnet radiation]{Bending magnet radiation of wavelength $\lambda$ prduced by a relativistic electron in an uniform magnetic field. The emission angle is typically $\frac{1}{\gamma}$ where $\gamma$ is the Lorentz contraction factor. Adapted from~\cite{Attwood2007}.}
+	\caption[Bending magnet radiation]{Bending magnet radiation of wavelength $\lambda$ produced by a relativistic electron in an uniform magnetic field. The emission angle is typically $\frac{1}{\gamma}$ where $\gamma$ is the Lorentz contraction factor. Adapted from~\cite{Attwood2007}.}
 	\label{fig:bending magnets}
 \end{figure}
 
-Undulators consist of periodic structures of dipole magnets with relatively weak fields. The the alternating static magnetic field forces the electrons to harmonically oscillate as they move in the axial direction, resulting in an undulating motion of the particles in the structure. The weak magnetic fields cause small amplitude undulation which leads to a narrow radiation cone as a result. Through coherent addition of the tightly confined electron beam, the produced radiation is emitted with small angular divergece and concentrated in narrow energy bands~\cite{Stampanoni2002a}.
+Undulators consist of periodic structures of dipole magnets with relatively weak fields. The the alternating static magnetic field forces the electrons to harmonically oscillate as they move in the axial direction, resulting in an undulating motion of the particles in the structure. The weak magnetic fields cause small amplitude undulation which leads to a narrow radiation cone as a result. Through coherent addition of the tightly confined electron beam, the produced radiation is emitted with small angular divergence and concentrated in narrow energy bands~\cite{Stampanoni2002a}.
 
 Wigglers are the strong brothers of the undulators. Due to stronger magnetic fields the oscillation amplitude of the electrons and the emitted radiation power are larger and the radiation cone is broader.
 
@@ -109,16 +127,16 @@ The \ac{sls} at the \ac{psi} in Villigen, Switzerland is a third-generation sync
 	\label{fig:beamlines}
 \end{figure}
 
-\section{tomcat}
-At \acf{tomcat} the user can perform absorption as well as phase contrast imaging with an isotropic voxel size ranging from \SI{350}{\nano\meter} up to \SI{14.8}{\micro\meter} depending on the chosen magnification.Typical acquisition times are in the order of a few minutes for a full sample, depending on the selected energy and resolution. A detailed explanation of the beamline for \ac{tomcat}, where all the tomography data for this thesis has been presented by \citet{Stampanoni2006a}.
+\section{tomcat}\label{sec:tomcat}
+At \acf{tomcat} the user can perform absorption as well as phase contrast imaging with an isotropic voxel size ranging from \SI{350}{\nano\meter} up to \SI{14.8}{\micro\meter} depending on the chosen magnification. Typical acquisition times are in the order of a few minutes for a full sample, depending on the selected energy and resolution. A detailed explanation of the beamline for \ac{tomcat}, where all the tomography data for this thesis has been presented by \citet{Stampanoni2006a}.
 
 As a short rundown the most important features of the beamline are presented here: The \ac{tomcat} beamline is located at the X02DA port of the SLS and started regular user operation in June 2006. Synchrotron light is delivered by a \SI{2.9}{\tesla} superbend which is magnetic field approximately double the strength of the normal \ac{sls} bending magnets. This enables to have a high critical energy of the source \SI{11.1}{\kilo\electronvolt} and results in a considerable increase of flux at for hard X-rays. A double crystal multilayer monochromator is the main optical component of the beamline an is used to select the energy of the beam incident on the sample (Energy range from 6--\SI{45}{\kilo\electronvolt}, with a bandwidth of a few percent down to a few permille).
 
-Once inside the measuring hut, the beam is travelling through a pipe and collimated onto the sample. After penetration of the sample, the X-rays are converted to visible light by a so-called scintillator\graffito{The latin word \textit{scintillare} can be translated with sparkle or flicker.}. Charged particles excite the scintillator material and this excitation energy is then subsequently emitted by fluorescence photons at a longer wavelength, which enables the detection of the incident light with a \ac{ccd}-camera. The \ac{ccd}-camera at \ac{tomcat} featuers a detector with 2048$\times$2048 pixels with asize of 7.4$\times$\SI{7.4}{\micro\meter} each. Between the scintillator and the \ac{ccd}-sensor an interchangeable microscope objectives enable to choose a wide range of the pixel size, ranging from 350$\times$\SI{350}{\nano\meter\squared}\todo{What about the 40$\times$ magnification?} up to 5.6$\times$\SI{5.6}{\micro\meter}. The resulting field of view of a standard scan can thus easily be varied from 0.75$\times$\SI{0.75}{\milli\meter\squared} up to 11.45$\times$\SI{11.45}{\milli\meter\squared}\graffito{See chapter~\ref{ch:haberthuer2010} presenting a method for increasing the field of view of tomography endstations.}.
+Once inside the measuring hut, the beam is travelling through a pipe and collimated onto the sample. After penetration of the sample, the X-rays are converted to visible light by a so-called scintillator\graffito{The latin word \textit{scintillare} can be translated with sparkle or flicker.}. Charged particles excite the scintillator material and this excitation energy is then subsequently emitted by fluorescence photons at a longer wavelength, which enables the detection of the incident light with a \ac{ccd}-camera. The \ac{ccd}-camera at \ac{tomcat} features a detector with 2048$\times$2048 pixels with a size of 7.4$\times$\SI{7.4}{\micro\meter} each. Between the scintillator and the \ac{ccd}-sensor an interchangeable microscope objectives enable to choose a wide range of the pixel size, ranging from 350$\times$\SI{350}{\nano\meter\squared}\todo{What about the 40$\times$ magnification?} up to 5.6$\times$\SI{5.6}{\micro\meter}. The resulting field of view of a standard scan can thus easily be varied from 0.75$\times$\SI{0.75}{\milli\meter\squared} up to 11.45$\times$\SI{11.45}{\milli\meter\squared}\graffito{See chapter~\ref{ch:haberthuer2010} presenting a method for increasing the field of view of tomography endstations.}.
 
 \renewcommand{\imsize}{0.5\linewidth}
 \begin{figure}[htb]
-	\subfloat[Overview of the TOMCAT end-station: The blue structure behind the control laptop is the sample stage with the sample holder on the rotation stage on top of it. The black structure above contains the scintillator, the microscope optics and the camera.]{%
+	\subfloat[Overview of the TOMCAT end-station: The blue structure behind the control notebook is the sample stage with the sample holder on the rotation stage on top of it. The black structure above contains the scintillator, the microscope optics and the camera.]{%
 		\includegraphics[width=\imsize]{img/TOMCAT1}%
 		\label{subfig:TOMCAT1}%
 		}%
