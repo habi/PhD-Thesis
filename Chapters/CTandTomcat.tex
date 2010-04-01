@@ -22,19 +22,44 @@ From the early 1980s on, \ac{ct} imaging became an important tool to answer scie
 Nonetheless these medical \ac{ct} scanners are in widespread use, their images suffer from relatively low spatial resolution in the sub-micrometer scale, which is often not enough to detect the finest details in biological samples. Since the radiation dose limitations imposed for medical scans often do not apply for biological samples which are dried, frozen or embedded in paraffin or plastic, more intense and collimated x-ray sources can be used. Using such sources in \ac{uct} stations enables to reach resolutions in the submicron range\todo{Citation?}. The use of synchrotron radiation as an x-ray source to produce highly intensive beams for microtomography was first proposed by \citet{Grodzins1983,Grodzins1983a}.
 
 \section{Computed tomography principles}
-To be able to introduce the physical principles of \ac{ct}, some important interactions of x-rays with matter have to be introduced. The energy of the x-ray photons in this work is roughly around 10--\SI{20}{\kilo\electronvolt}, we can thus limit the explanation to absorption, coherent and incoherent scattering.
+To be able to introduce the physical principles of \ac{ct}, some important interactions of x-rays with matter have to be introduced. The energy of the x-ray photons in avalable at \ac{tomcat}, where all the experiments of this work have been performed is in the range of 6--\SI{45}{\kilo\electronvolt}\graffito{The experiments presented in part~\ref{part:results} have been performed between \SI{11.5}{\kilo\electronvolt} and \SI{12.6}{\kilo\electronvolt}.%
+% XRM 11.5 keV
+% Tsuda 12.398 keV
+% Haberthuer 12.6 keV
+}, we can thus limit the explanation to absorption, Rayleigh and Compton scattering. We neglect the description of electron-positron pair production, which occurs only for x-ray energies above \SI{1}{\mega\electronvolt}.
 
-\subsection{Absorption}
+\subsection{Absorption}\label{sec:absorption}
 In the relevant apsorption process---the so-called photoelectric effect---an incoming x-ray photon with energy $E_{\gamma}$ interacts with a bound atomic electron in a deep shell and is completely absorbed. This process only happens if $E_{\gamma}$ is greater than the binding energy $E_{Shell}$ of the shell electron and releases a photo-electron with the energy $\Delta E=E_{\gamma}-E_{Shell}$. This liberation creates a hole in the deep shell, which is immediately filled by electrons from outer shells of the atom. Since the electron from the outer shell is at a higher energy state than the inner shell electron, a cascade process is initated which results in the emision of radiation which is characteristic depending on the absorbing atom.
 
-\subsection{Scattering}\todo{MOAR!}
+\subsection{Scattering}
+\subsubsection{Compton scattering}
+\citet{Compton1923} first described this inelastic scattering\graffito{In inelastic scattering the kinetic energy of an incident particle is not conserved.} effect which is observed when an incident photon with an Energy $E=h\nu$ transfers parts of its energy to a scattering electron which is then ejected from the atom. 
+
+To conserve the overall momentum of the system, the electron recoils at an angle $\theta$ and the photon is scattered in a direction $\phi$ with a reduced energy $E=h\nu'$. If the photon still has enough energy left, the process may be repeated, if the photon is of lower energy, it can subsequently be absorbed as described above in section~\ref{sec:absorption}.
+
+The energy of the recoiled electron is $\Delta E=h(\nu-\nu')$, where $h\nu'$ is given by equation~\ref{eq:hnu}
+\begin{equation}
+	h\nu'=\frac{h\nu}{1+\frac{h\nu}{m_{e}c^{2}}(1-cos\theta)}
+	\label{eq:hnu}
+\end{equation}\todo[inline]{or use $\lambda' - \lambda = \frac{h}{m_e c}(1-\cos{\theta})$ as in \url{http://is.gd/b9wj1}?}
+
 \subsubsection{Coherent scattering}\todo{MOAR!}
-\subsubsection{Incoherent scattering}\todo{MOAR!}
+
+
+\def\width{0.8\linewidth}%
+\def\height{0.4944\linewidth}% =0.8*0.618
+\begin{figure}
+	\centering%
+	\input{TikZ-Files/InteractionPercentage-Big}%
+	\caption[Interaction types]{Percentage of the different interaction types specified above as a function of the beam energy in water. The grey marked region is the approximate energy-range relevant for this work. Data from~\cite[Table 5-5]{Johns1983}.}%
+	\label{fig:InteractionPercentage}%
+\end{figure}
 
 \begin{figure}
-	\missingfigure{Interaction Percentage -> Mohammed Tabelle}
-	\caption{Percentage of the different interaction types specified above as a function of the beam energy in water. Data from~\cite[Table 5-5]{Johns1983}.}
-	\label{fig:sinogram}
+	\centering%
+	\input{TikZ-Files/InteractionPercentage-Small}%
+	\caption[Interaction types, Detail]{Detailed view of the percentage of the different interaction types specified above as a function of the beam energy in water. The grey region is the approximate energy-range relevant for this work. Data from~\cite[Table 5-5]{Johns1983}. Unfortunately, the data below \SI{10}{\kilo\electronvolt} is missing.}%
+	\label{fig:InteractionPercentage}%
 \end{figure}
 
 \subsection{Attenuation}
@@ -54,8 +79,8 @@ Figure~\ref{fig:yag attenuation} shows the composition of the attenuation coeffi
 
 \begin{figure}[htb]
 	\centering
-	\includegraphics{TikZ-Files/YAGattenuation}
-	\caption{Total attenuation coefficient of Ce:YAG (\cf{Y3Al5O12}), the scintillator material used for converting the incident x-rays to visible light in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010}. Note that pair production starts for energies above \SI{1}{\mega\electronvolt} and can thus be safely ignored for the energy-ranges in this work. Data obtained from the photon cross section database~\cite{XCOM}.}
+	\input{TikZ-Files/YAGattenuation}
+	\caption[Total attenuation coefficient of Ce:YAG]{Total attenuation coefficient of Ce:YAG (\cf{Y3Al5O12}), the scintillator material used for converting the incident x-rays to visible light in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010}. Note that pair production starts for energies above \SI{1}{\mega\electronvolt} and can thus be safely ignored for the energy-ranges in this work. Data obtained from the photon cross section database~\cite{XCOM}.}
 	\label{fig:yag attenuation}
 \end{figure}
 

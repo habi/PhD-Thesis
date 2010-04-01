@@ -1,9 +1,12 @@
-\documentclass{article}
-\usepackage{tikz,pgfplots,siunitx}
-\usepackage[graphics,tightpage,active]{preview}
-\PreviewEnvironment{tikzpicture}
-\begin{document}
+% !TEX root = ../Thesis.tex
+%\documentclass{article}
+%\usepackage{tikz,pgfplots,siunitx}
+%\usepackage[graphics,tightpage,active]{preview}
+%\PreviewEnvironment{tikzpicture}
+%\begin{document}
+%\pgfplotstableread{plotdata/yag.txt}\table
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pgfplotstableread{TikZ-Files/plotdata/yag.txt}\table
 \pgfplotsset{
 	legend style={
  		%at={(1.02,0.5)}, anchor=west,%left
@@ -11,41 +14,35 @@
 		cells={anchor=west},
 		%font=\footnotesize,
 		},
-	xlabel=Photon Energy (\SI{}{\mega\electronvolt}),%
-	ylabel=\SI{}{\centi\meter\squared\per\gram}
+	xlabel=Photon Energy [\mega\electronvolt],%
+	ylabel=Attenuation [\centi\meter\squared\per\gram]
 	}
 \begin{tikzpicture}
 	\begin{loglogaxis}[%
+		width=\width,%
+		height=\height,%
 		scale only axis,%
 		no markers,
 		xmin=1e-3,%
 		xmax=1e3,%
 		ymin=1e-10,%
 		%ymax=1e3,%
-		xmajorgrids,xminorgrids,%
-		ymajorgrids,yminorgrids%
+		grid=both%
 		]
-		\addplot [red,thick]
-			table
-			[x=PhotonEnergy, y=ScatteringCoherent] {yag.txt};
+		\addplot [red,thick] 
+  			table [x=PhotonEnergy, y=ScatteringCoherent] from \table;
 		\addplot [blue,thick]
-			table
-			[x=PhotonEnergy, y=ScatteringIncoherent] {yag.txt};
+			table [x=PhotonEnergy, y=ScatteringIncoherent] from \table;
 		\addplot [green,thick]
-			table
-			[x=PhotonEnergy, y=PhotoelectricAbsorption] {yag.txt};
+			table [x=PhotonEnergy, y=PhotoelectricAbsorption] from \table;
 		\addplot [cyan,thick]
-			table
-			[x=PhotonEnergy, y=PairNuclear] {yag.txt};
+			table [x=PhotonEnergy, y=PairNuclear] from \table;
 		\addplot [magenta,thick]
-			table
-			[x=PhotonEnergy, y=PairElectron] {yag.txt};
+			table [x=PhotonEnergy, y=PairElectron] from \table;
 		\addplot [orange,dashed,thick]
-			table
-			[x=PhotonEnergy, y=TotalWithoutCoherent] {yag.txt};	
+			table [x=PhotonEnergy, y=TotalWithoutCoherent] from \table;
 		\addplot [black,densely dotted,thick]
-			table
-			[x=PhotonEnergy, y=TotalWithCoherent] {yag.txt};
+			table [x=PhotonEnergy, y=TotalWithCoherent] from \table;
 		\legend{%
 			Coherent (Rayleigh) scattering,%
 			Incoherend (Compton) scattering,%
@@ -58,4 +55,4 @@
 	\end{loglogaxis}
 \end{tikzpicture}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{document}
+%\end{document}

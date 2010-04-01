@@ -1,0 +1,51 @@
+% !TEX root = ../Thesis.tex
+%\documentclass{article}
+%\usepackage{tikz,pgfplots,siunitx}
+%\usepackage[graphics,tightpage,active]{preview}
+%\PreviewEnvironment{tikzpicture}
+%\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\pgfplotstableread{plotdata/InteractionPercentage-big.txt}\table
+\pgfplotstableread{TikZ-Files/plotdata/InteractionPercentage-big.txt}\table
+\pgfplotsset{
+	legend style={
+ 		%at={(1.02,0.5)}, anchor=west,%left
+ 		at={(0.5,-0.2)}, anchor=north,%bottom
+		cells={anchor=west},
+		%font=\footnotesize,
+		},
+	xlabel=Photon Energy [\kilo\electronvolt],%
+	ylabel=[\percent]
+	}
+\begin{tikzpicture}
+	\begin{semilogxaxis}[%
+		width=\width,%
+		height=\height,%
+		scale only axis,%
+		no markers,
+		xmin=0,%
+		xmax=1e5,%
+		ymin=0,%
+		ymax=100,%
+		grid=both%
+		]
+		\addplot [red, thick]
+			table [x=keV, y=IntCoherent] from \table;
+		\addplot [blue, thick]
+			table [x=keV, y=IntCompton] from \table;
+		\addplot [green, thick]
+			table [x=keV, y=IntPhoto] from \table;
+		\addplot [cyan, thick]
+			table [x=keV, y=IntPair] from \table;
+		\addplot [fill=gray, semitransparent]
+			coordinates
+			{(5,0) (5,100) (20,100) (20,0)}; 
+		\legend{%
+			Coherent (Rayleigh) scattering,%
+			Incoherend (Compton) scattering,%
+			Photoelectric absorption,%
+			}
+	\end{semilogxaxis}
+\end{tikzpicture}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\end{document}
