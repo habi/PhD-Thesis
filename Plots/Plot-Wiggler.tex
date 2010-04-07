@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{tikz,pgfplots,siunitx}
+\usepackage[graphics,tightpage,active]{preview}
+\PreviewEnvironment{tikzpicture}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pgfplotstableread{plotdata/graph_wiggler.txt}\table
+%\pgfplotstableread{Plots/plotdata/InteractionPercentage-big.txt}\table
+%\pgfplotsset{
+%	legend style={
+% 		%at={(1.02,0.5)}, anchor=west,%left
+% 		at={(0.5,-0.2)}, anchor=north,%bottom
+%		cells={anchor=west},
+%		%font=\footnotesize,
+%		},
+%	xlabel=Photon Energy [\kilo\electronvolt],%
+%	ylabel=[\percent]
+%	}
+\begin{tikzpicture}
+	\begin{axis}[%
+		%width=\width,%
+		%height=\height,%
+%		scale only axis,%
+		axis x line=bottom,%
+		axis y line=left,%
+		ticks=none,%
+%		grid=none%
+%		no markers,
+		xmin=0,%
+		%xmax=1e5,%
+		ymin=0,%
+		%ymax=100,%
+		]
+		\addplot [fill=lightgray,thick]
+			table [x=x, y=Curve1] from \table;
+		%\legend{Curve1	}
+	\end{axis}
+\end{tikzpicture}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

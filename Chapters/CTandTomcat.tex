@@ -50,15 +50,15 @@ The energy of the recoiled electron is $\Delta E=h(\nu-\nu')$, where $h\nu'$ is 
 \def\height{0.4944\linewidth}% =0.8*0.618
 \begin{figure}
 	\centering%
-	\input{TikZ-Files/InteractionPercentage-Big}%
-	\caption[Interaction types]{Percentage of the different interaction types specified above as a function of the beam energy in water. The grey marked region is the approximate energy-range relevant for this work. Data from~\cite[Table 5-5]{Johns1983}.}%
+	\input{Plots/InteractionPercentage-Big}%
+	\caption[Interaction types]{Percentage of the different interaction types specified above as a function of the beam energy in water. The lightgray marked region is the energy-range of \ac{tomcat}. Data from~\cite[Table 5-5]{Johns1983}.}%
 	\label{fig:InteractionPercentage}%
 \end{figure}
 
 \begin{figure}
 	\centering%
-	\input{TikZ-Files/InteractionPercentage-Small}%
-	\caption[Interaction types, Detail]{Detailed view of the percentage of the different interaction types specified above as a function of the beam energy in water. The grey region is the approximate energy-range relevant for this work. Data from~\cite[Table 5-5]{Johns1983}. Unfortunately, the data below \SI{10}{\kilo\electronvolt} is missing.}%
+	\input{Plots/InteractionPercentage-Small}%
+	\caption[Interaction types, Detail]{Detailed view of the percentage of the different interaction types specified above as a function of the beam energy in water. The lightgray marked region is the energy-range of \ac{tomcat}. Data from~\cite[Table 5-5]{Johns1983}. Unfortunately, data below \SI{10}{\kilo\electronvolt} is missing in the source.}%
 	\label{fig:InteractionPercentage}%
 \end{figure}
 
@@ -79,7 +79,7 @@ Figure~\ref{fig:yag attenuation} shows the composition of the attenuation coeffi
 
 \begin{figure}[htb]
 	\centering
-	\input{TikZ-Files/YAGattenuation}
+	\input{Plots/YAGattenuation}
 	\caption[Total attenuation coefficient of Ce:YAG]{Total attenuation coefficient of Ce:YAG (\cf{Y3Al5O12}), the scintillator material used for converting the incident x-rays to visible light in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010}. Note that pair production starts for energies above \SI{1}{\mega\electronvolt} and can thus be safely ignored for the energy-ranges in this work. Data obtained from the photon cross section database~\cite{XCOM}.}
 	\label{fig:yag attenuation}
 \end{figure}
@@ -120,27 +120,23 @@ Bending Magnets are used to create a homogeneous magnetic field over a defined d
 
 \begin{figure}[htb]
 	\centering
-	\begin{tikzpicture}[scale=0.8]
-		\def\alpha{3}
-		\def\length{7}
-		% arc
-			\draw [<-] (0,0) arc (90:110:10) node [above] {$e^-$} arc (110:120:10);
-			\draw [->] (0,0) arc (90:60:10);
-		% beam angle
-			\draw (\length-1,0) arc (0:-25:2);
-			\draw (\length-1,0) arc (0:25:2) node [right] {$\frac{1}{\gamma}$};
-		% beam
-			\def\arclength{0.36685445498128842827164077131789} % arclength = tan(\alpha)*\length
-			\fill [color=red,nearly opaque] (0,0) -- (\alpha:\length) arc (90+\alpha:-90-\alpha:\arclength) -- cycle; 
-			\draw (\alpha:\length) arc (90+\alpha:-90-\alpha:\arclength);
-			\node at (3,.5) {$\lambda$};
-		% arrows
-			\draw [->] (0,0) -- (\alpha:\length);
-			\draw [->] (0,0) -- (\length+\arclength,0);
-			\draw [->] (0,0) -- (-\alpha:\length);
-	\end{tikzpicture}
-	\caption[Bending magnet radiation]{Bending magnet radiation of wavelength $\lambda$ produced by a relativistic electron in an uniform magnetic field. The emission angle is typically $\frac{1}{\gamma}$ where $\gamma$ is the Lorentz contraction factor. Adapted from~\cite{Attwood2007}.}
+	\input{TikZ-Files/Radiation-BendingMagnet}
+	\caption[Bending magnet radiation]{Bending magnet radiation of wavelength $\lambda$ produced by a relativistic electron in an uniform magnetic field. The emission angle is typically $\frac{1}{\gamma}$ where $\gamma$ is the Lorentz contraction factor. Adapted from~\cite{Attwood2007}.}%Bending magnet radiation occcurs when a relativistic electron travels in a uniform magnetic field, executing a circular motion with acceleration directed toward the center. The radiation is directed tangentially outward in a narrow radiation cone, giving the appearance of a sweeping ``searchlight''.     The radiation spectrum is very broad, analogous to a ``white light'' x-ray light bulb. The emission angle is typically $\frac{1}{\gamma}$, where $\gamma$ is the Lorentz contraction factor. http://is.gd/biHF4
 	\label{fig:bending magnets}
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+	\input{TikZ-Files/Radiation-Undulator}
+	\caption[Undulator radiation]{Undulalor radiation is generated as a highly relativistic electron traverses a periodic magnetic field. In the undulator limit, the magnetic held is relatively weak and the resultant angular excursions of the electron are smaller than the angular width of the natural radiation cone, $\frac{1}{\gamma}$, normally associated with synchrotron radiation. The frequency spread of undulator radiation can be very narrow, and the radiation can be extremely bright and partially coherent, under certain circumstances. The characteristic emission angle is narrowed by a factor $\sqrt N$, where $N$ is the number of magnetic periods. Typically $N$ is of order 100. Depending on the magnet strength, harmonic radiation may be generated. Adapted from~\cite{Attwood2007}.}%http://is.gd/biHF4
+	\label{fig:undulator}
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+	\input{TikZ-Files/Radiation-Wiggler}
+	\caption[Wiggler radiation]{Wiggler radiation is also generated from a periodic magnet structure, but in the strong magnetic field limit where in at least one plane the angular excursions are significantly greater than the natural ($\frac{1}{\gamma}$) radiation cone. Because accelerations are stronger in this limit, the radiation generated peaks at higher photon energies and is more abundant (higher photon flux and more power). The radiation spectrum is very broad, similar to that of the bending magnet. Although more power is radiated, wiggler radiation is less bright because of the substantially increased radiation cone. Adapted from~\cite{Attwood2007}.}% http://is.gd/biHF4
+	\label{fig:wiggler}
 \end{figure}
 
 Undulators consist of periodic structures of dipole magnets with relatively weak fields. The the alternating static magnetic field forces the electrons to harmonically oscillate as they move in the axial direction, resulting in an undulating motion of the particles in the structure. The weak magnetic fields cause small amplitude undulation which leads to a narrow radiation cone as a result. Through coherent addition of the tightly confined electron beam, the produced radiation is emitted with small angular divergence and concentrated in narrow energy bands~\cite{Stampanoni2002a}.
