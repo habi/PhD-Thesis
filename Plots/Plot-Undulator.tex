@@ -1,40 +1,57 @@
-\documentclass{article}
-\usepackage{tikz,pgfplots,siunitx}
-\usepackage[graphics,tightpage,active]{preview}
-\PreviewEnvironment{tikzpicture}
-\begin{document}
+% !TEX root = ../Thesis.tex
+%\documentclass{article}
+%\usepackage{tikz,pgfplots,siunitx}
+%\usepackage[graphics,tightpage,active]{preview}
+%\PreviewEnvironment{tikzpicture}
+%\begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pgfplotstableread{plotdata/graph_undulator.txt}\table
-%\pgfplotstableread{Plots/plotdata/InteractionPercentage-big.txt}\table
-%\pgfplotsset{
-%	legend style={
-% 		%at={(1.02,0.5)}, anchor=west,%left
-% 		at={(0.5,-0.2)}, anchor=north,%bottom
-%		cells={anchor=west},
-%		%font=\footnotesize,
-%		},
-%	xlabel=Photon Energy [\kilo\electronvolt],%
-%	ylabel=[\percent]
-%	}
+%\pgfplotsset{xlabel=$\hbar \omega$,ylabel=F}
 \begin{tikzpicture}
 	\begin{axis}[%
-		%width=\width,%
-		%height=\height,%
-%		scale only axis,%
+		width=\width,%
+		height=\height,%
+		scale only axis,%
 		axis x line=bottom,%
 		axis y line=left,%
 		ticks=none,%
-%		grid=none%
-%		no markers,
 		xmin=0,%
-		%xmax=1e5,%
+		xmax=1.5,%
 		ymin=0,%
-		%ymax=100,%
+		ymax=1,%
+		%mark=triangle
 		]
 		\addplot [fill=lightgray,thick]
-			table [x=x, y=Curve1] from \table;
-		%\legend{Curve1	}
+			coordinates 
+				{
+	  				(0,0)
+					(0.30,0.00425626)
+					(0.333874,0.00950491)
+					(0.339687,0.0335484)
+					(0.341953,0.0870162)
+					(0.352407,0.62)
+					(0.385544,0.0681442)
+					(0.389051,0.0413938)
+					(0.40,0.0038593)
+					(0.392557,0.0146433)
+					(0.448396,0)
+					(0.695832,0.00286691)
+					(0.707956,0.0188665)
+					(0.716904,0.0402249)
+					(0.726472,0.02147439)
+					(0.73604,0)
+					(1.04534,0.00162091)
+					(1.05746,0.0176205)
+					(1.05973,0.0710883)
+					(1.06014,0.0443489)
+					(1.0624	,0.0978167)
+					(1.07164,0.100458)
+					(1.07515,0.0737071)
+					(1.07861,0.0496306)
+					(1.08212,0.0228801)
+					(1.08864,0)
+					(1.5,0)
+				};
 	\end{axis}
 \end{tikzpicture}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{document}
+%\end{document}

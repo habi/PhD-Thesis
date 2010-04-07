@@ -13,12 +13,12 @@
 		\def\c{-130}
 		\def\d{-50}
 		\def\length{0.75}
-		\def\start{-1.2}
+		\def\start{-0.8}
 		% travelling electron
 			\node [anchor=east] at (\start,0) {$e^{-}$};
 			\draw [->] (\start,0) arc (\a:\b:\length) arc (\c:\d:\length) arc (\a:\b:\length) arc (\c:-90:\length);
 		% beam angle
-		\clip (2.5,-1.5) rectangle (7,1.75);
+		\clip (3,-1.5) rectangle (7,1.75);
 			\draw (5,0) arc (0:-25:3);
 			\draw (5,0) arc (0:25:3) node [right] {$\gg\frac{1}{\gamma}$};
 		% beam

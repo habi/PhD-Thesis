@@ -22,14 +22,14 @@ From the early 1980s on, \ac{ct} imaging became an important tool to answer scie
 Nonetheless these medical \ac{ct} scanners are in widespread use, their images suffer from relatively low spatial resolution in the sub-micrometer scale, which is often not enough to detect the finest details in biological samples. Since the radiation dose limitations imposed for medical scans often do not apply for biological samples which are dried, frozen or embedded in paraffin or plastic, more intense and collimated x-ray sources can be used. Using such sources in \ac{uct} stations enables to reach resolutions in the submicron range\todo{Citation?}. The use of synchrotron radiation as an x-ray source to produce highly intensive beams for microtomography was first proposed by \citet{Grodzins1983,Grodzins1983a}.
 
 \section{Computed tomography principles}
-To be able to introduce the physical principles of \ac{ct}, some important interactions of x-rays with matter have to be introduced. The energy of the x-ray photons in avalable at \ac{tomcat}, where all the experiments of this work have been performed is in the range of 6--\SI{45}{\kilo\electronvolt}\graffito{The experiments presented in part~\ref{part:results} have been performed between \SI{11.5}{\kilo\electronvolt} and \SI{12.6}{\kilo\electronvolt}.%
+To be able to introduce the physical principles of \ac{ct}, some important interactions of x-rays with matter have to be introduced. The energy of the x-ray photons in available at \ac{tomcat}, where all the experiments of this work have been performed is in the range of 6--\SI{45}{\kilo\electronvolt}\graffito{The experiments presented in part~\ref{part:results} have been performed between \SI{11.5}{\kilo\electronvolt} and \SI{12.6}{\kilo\electronvolt}.%
 % XRM 11.5 keV
 % Tsuda 12.398 keV
 % Haberthuer 12.6 keV
 }, we can thus limit the explanation to absorption, Rayleigh and Compton scattering. We neglect the description of electron-positron pair production, which occurs only for x-ray energies above \SI{1}{\mega\electronvolt}.
 
 \subsection{Absorption}\label{sec:absorption}
-In the relevant apsorption process---the so-called photoelectric effect---an incoming x-ray photon with energy $E_{\gamma}$ interacts with a bound atomic electron in a deep shell and is completely absorbed. This process only happens if $E_{\gamma}$ is greater than the binding energy $E_{Shell}$ of the shell electron and releases a photo-electron with the energy $\Delta E=E_{\gamma}-E_{Shell}$. This liberation creates a hole in the deep shell, which is immediately filled by electrons from outer shells of the atom. Since the electron from the outer shell is at a higher energy state than the inner shell electron, a cascade process is initated which results in the emision of radiation which is characteristic depending on the absorbing atom.
+In the relevant absorption process---the so-called photoelectric effect---an incoming x-ray photon with energy $E_{\gamma}$ interacts with a bound atomic electron in a deep shell and is completely absorbed. This process only happens if $E_{\gamma}$ is greater than the binding energy $E_{Shell}$ of the shell electron and releases a photo-electron with the energy $\Delta E=E_{\gamma}-E_{Shell}$. This liberation creates a hole in the deep shell, which is immediately filled by electrons from outer shells of the atom. Since the electron from the outer shell is at a higher energy state than the inner shell electron, a cascade process is initiated which results in the emission of radiation which is characteristic depending on the absorbing atom.
 
 \subsection{Scattering}
 \subsubsection{Compton scattering}
@@ -120,21 +120,33 @@ Bending Magnets are used to create a homogeneous magnetic field over a defined d
 
 \begin{figure}[htb]
 	\centering
-	\input{TikZ-Files/Radiation-BendingMagnet}
+	\subfloat[]{\input{TikZ-Files/Radiation-BendingMagnet}}%
+	\hfill%
+	\def\width{.309\linewidth}%
+	\def\height{.309\linewidth}%
+	\subfloat[]{\input{Plots/Plot-BendingMagnet}}
 	\caption[Bending magnet radiation]{Bending magnet radiation of wavelength $\lambda$ produced by a relativistic electron in an uniform magnetic field. The emission angle is typically $\frac{1}{\gamma}$ where $\gamma$ is the Lorentz contraction factor. Adapted from~\cite{Attwood2007}.}%Bending magnet radiation occcurs when a relativistic electron travels in a uniform magnetic field, executing a circular motion with acceleration directed toward the center. The radiation is directed tangentially outward in a narrow radiation cone, giving the appearance of a sweeping ``searchlight''.     The radiation spectrum is very broad, analogous to a ``white light'' x-ray light bulb. The emission angle is typically $\frac{1}{\gamma}$, where $\gamma$ is the Lorentz contraction factor. http://is.gd/biHF4
 	\label{fig:bending magnets}
 \end{figure}
 
 \begin{figure}[htb]
 	\centering
-	\input{TikZ-Files/Radiation-Undulator}
-	\caption[Undulator radiation]{Undulalor radiation is generated as a highly relativistic electron traverses a periodic magnetic field. In the undulator limit, the magnetic held is relatively weak and the resultant angular excursions of the electron are smaller than the angular width of the natural radiation cone, $\frac{1}{\gamma}$, normally associated with synchrotron radiation. The frequency spread of undulator radiation can be very narrow, and the radiation can be extremely bright and partially coherent, under certain circumstances. The characteristic emission angle is narrowed by a factor $\sqrt N$, where $N$ is the number of magnetic periods. Typically $N$ is of order 100. Depending on the magnet strength, harmonic radiation may be generated. Adapted from~\cite{Attwood2007}.}%http://is.gd/biHF4
+	\subfloat[]{\input{TikZ-Files/Radiation-Undulator}}%
+	\hfill%
+	\def\width{.309\linewidth}%
+	\def\height{.309\linewidth}%
+	\subfloat[]{\input{Plots/Plot-Undulator}}
+	\caption[Undulator radiation]{Undulator radiation is generated as a highly relativistic electron traverses a periodic magnetic field. In the undulator limit, the magnetic held is relatively weak and the resultant angular excursions of the electron are smaller than the angular width of the natural radiation cone, $\frac{1}{\gamma}$, normally associated with synchrotron radiation. The frequency spread of undulator radiation can be very narrow, and the radiation can be extremely bright and partially coherent, under certain circumstances. The characteristic emission angle is narrowed by a factor $\sqrt N$, where $N$ is the number of magnetic periods. Typically $N$ is of order 100. Depending on the magnet strength, harmonic radiation may be generated. Adapted from~\cite{Attwood2007}.}%http://is.gd/biHF4
 	\label{fig:undulator}
 \end{figure}
 
 \begin{figure}[htb]
 	\centering
-	\input{TikZ-Files/Radiation-Wiggler}
+	\subfloat[]{\input{TikZ-Files/Radiation-Wiggler}}%
+	\hfill%
+	\def\width{.309\linewidth}%
+	\def\height{.309\linewidth}%
+	\subfloat[]{\input{Plots/Plot-Wiggler}}
 	\caption[Wiggler radiation]{Wiggler radiation is also generated from a periodic magnet structure, but in the strong magnetic field limit where in at least one plane the angular excursions are significantly greater than the natural ($\frac{1}{\gamma}$) radiation cone. Because accelerations are stronger in this limit, the radiation generated peaks at higher photon energies and is more abundant (higher photon flux and more power). The radiation spectrum is very broad, similar to that of the bending magnet. Although more power is radiated, wiggler radiation is less bright because of the substantially increased radiation cone. Adapted from~\cite{Attwood2007}.}% http://is.gd/biHF4
 	\label{fig:wiggler}
 \end{figure}

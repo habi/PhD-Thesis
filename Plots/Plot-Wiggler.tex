@@ -1,40 +1,59 @@
-\documentclass{article}
-\usepackage{tikz,pgfplots,siunitx}
-\usepackage[graphics,tightpage,active]{preview}
-\PreviewEnvironment{tikzpicture}
-\begin{document}
+%\documentclass{article}
+%\usepackage{tikz,pgfplots,siunitx}
+%\usepackage[graphics,tightpage,active]{preview}
+%\PreviewEnvironment{tikzpicture}
+%\begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pgfplotstableread{plotdata/graph_wiggler.txt}\table
-%\pgfplotstableread{Plots/plotdata/InteractionPercentage-big.txt}\table
-%\pgfplotsset{
-%	legend style={
-% 		%at={(1.02,0.5)}, anchor=west,%left
-% 		at={(0.5,-0.2)}, anchor=north,%bottom
-%		cells={anchor=west},
-%		%font=\footnotesize,
-%		},
-%	xlabel=Photon Energy [\kilo\electronvolt],%
-%	ylabel=[\percent]
-%	}
+%\pgfplotsset{xlabel=$\hbar \omega$,ylabel=F}
 \begin{tikzpicture}
 	\begin{axis}[%
-		%width=\width,%
-		%height=\height,%
-%		scale only axis,%
+		width=\width,%
+		height=\height,%
+		scale only axis,%
 		axis x line=bottom,%
 		axis y line=left,%
 		ticks=none,%
-%		grid=none%
-%		no markers,
 		xmin=0,%
-		%xmax=1e5,%
+		xmax=1.5,%
 		ymin=0,%
-		%ymax=100,%
+		ymax=1,%
+		%mark=triangle
 		]
 		\addplot [fill=lightgray,thick]
-			table [x=x, y=Curve1] from \table;
-		%\legend{Curve1	}
+			coordinates 
+				{
+ 					(0,0)
+					(0.0001	,0.495)
+					(0.533579,0.785344)
+					(0.560098,0.798666)
+					(0.58329,0.812012)
+					(0.609809,0.825335)
+					(0.636346,0.835954)
+					(0.662847,0.851979)
+					(0.689384,0.862599)
+					(0.719247,0.873195)
+					(0.749092,0.886493)
+					(0.778973,0.894386)
+					(0.808854,0.902279)
+					(0.842079,0.907444)
+					(0.871978,0.912634)
+					(0.905239,0.912395)
+					(0.93521,0.906773)
+					(0.965199,0.898449)
+					(0.995242,0.882016)
+					(1.01863,0.865631)
+					(1.04206,0.843841)
+					(1.05883,0.822099)
+					(1.07893,0.800332)
+					(1.0924	,0.775911)
+					(1.10587,0.751489)
+					(1.2934	,0.0582457)
+					(1.30022,0.0338723)
+					(1.31036,0.0094749)
+					(1.3304	,0)
+					(1.5,0)
+				};
 	\end{axis}
 \end{tikzpicture}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{document}
+%\end{document}
