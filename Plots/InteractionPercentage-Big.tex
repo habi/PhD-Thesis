@@ -10,7 +10,7 @@
 \pgfplotsset{
 	legend style={
  		%at={(1.02,0.5)}, anchor=west,%left
- 		at={(0.5,-0.2)}, anchor=north,%bottom
+ 		at={(0.5,-0.35)}, anchor=north,%bottom
 		cells={anchor=west},
 		%font=\footnotesize,
 		},
@@ -29,6 +29,12 @@
 		ymax=100,%
 		grid=both%
 		]
+		\addplot [fill=lightgray, semitransparent]
+			coordinates
+			{(6,0) (6,100) (45,100) (45,0)}; 
+		\addplot [fill=darkgray, semitransparent]
+			coordinates
+			{(11,0) (11,100) (13,100) (13,0)};
 		\addplot [red, thick]
 			table [x=keV, y=IntCoherent] from \table;
 		\addplot [blue, thick]
@@ -37,10 +43,9 @@
 			table [x=keV, y=IntPhoto] from \table;
 		\addplot [cyan, thick]
 			table [x=keV, y=IntPair] from \table;
-		\addplot [fill=lightgray, semitransparent]
-			coordinates
-			{(6,0) (6,100) (45,100) (45,0)}; 
+
 		\legend{%
+			,,%needed for not having marked regions in legend
 			Coherent (Rayleigh) scattering,%
 			Incoherend (Compton) scattering,%
 			Photoelectric absorption,%

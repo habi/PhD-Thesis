@@ -1,11 +1,11 @@
 % !TEX root = ../Thesis.tex
 \myChapter{Computed Tomography}\label{ch:ct}
-\begin{flushright}{\slshape    
-		So Long, and Thanks for All the Fish!} \\ \medskip
-    --- \defcitealias{Adams1984}{Douglas Adams}\citetalias{Adams1984} \citep{Adams1984}
+\begin{flushright}{\slshape If we're gonna move forward, this is the next logical step!} \\ \medskip
+    --- Kevin Bacon as\defcitealias{HollowMan}{Sebastian}\citetalias{HollowMan} \citep{HollowMan}
 \end{flushright}
 \bigskip
-Computed tomography (\acs{cs}) is an imaging method where a three-dimensional image of the internal structure of an object is generated from a large series of two-dimensional x-ray images---single radiographies---which have been taken at equidistant angles
+\bigskip
+Computed tomography (\acs{ct}) is an imaging method where a three-dimensional image of the internal structure of an object is generated from a large series of two-dimensional x-ray images---single radiographies---which have been taken at equidistant angles
 around a single rotation axis. The word tomography is derived from the greek words for tomos (\greektext tomos\latintext, slice) and grafia (\greektext graf'ia\latintext, describing).
 
 \section{History}
@@ -21,7 +21,7 @@ From the early 1980s on, \ac{ct} imaging became an important tool to answer scie
 
 Nonetheless these medical \ac{ct} scanners are in widespread use, their images suffer from relatively low spatial resolution in the sub-micrometer scale, which is often not enough to detect the finest details in biological samples. Since the radiation dose limitations imposed for medical scans often do not apply for biological samples which are dried, frozen or embedded in paraffin or plastic, more intense and collimated x-ray sources can be used. Using such sources in \ac{uct} stations enables to reach resolutions in the submicron range\todo{Citation?}. The use of synchrotron radiation as an x-ray source to produce highly intensive beams for microtomography was first proposed by \citet{Grodzins1983,Grodzins1983a}.
 
-\section{Computed tomography principles}
+\section{Interaction of radiation with Matter}
 To be able to introduce the physical principles of \ac{ct}, some important interactions of x-rays with matter have to be introduced. The energy of the x-ray photons in available at \ac{tomcat}, where all the experiments of this work have been performed is in the range of 6--\SI{45}{\kilo\electronvolt}\graffito{The experiments presented in part~\ref{part:results} have been performed between \SI{11.5}{\kilo\electronvolt} and \SI{12.6}{\kilo\electronvolt}.%
 % XRM 11.5 keV
 % Tsuda 12.398 keV
@@ -43,32 +43,38 @@ The energy of the recoiled electron is $\Delta E=h(\nu-\nu')$, where $h\nu'$ is 
 	\label{eq:hnu}
 \end{equation}\todo[inline]{or use $\lambda' - \lambda = \frac{h}{m_e c}(1-\cos{\theta})$ as in \url{http://is.gd/b9wj1}?}
 
-\subsubsection{Coherent scattering}\todo{MOAR!}
+\subsubsection{Coherent scattering}
+Coherent or Rayleigh scattering is an interaction process where no ionization occurs and no energy is converted into kinetic energy. The incident electromagnetic wave sets the electrons in the magnetic field into vibration with an oscillating electric field. The oscillating electrons emit coherent radiation, but since not all electrons are located at the same point inside the atom, the emitted radiation is not in phase~\cite{Hsieh2003,Stampanoni2002}.
 
+Figure~\ref{fig:InteractionPercentage} shows the relative percentages of interaction for the different interction types. Note that pair production is shown in the plots, but has not been described, since it is only relevant for energies much higher than the energies used in the experiments in this Thesis.
 
-\def\width{0.8\linewidth}%
-\def\height{0.4944\linewidth}% =0.8*0.618
-\begin{figure}
-	\centering%
-	\input{Plots/InteractionPercentage-Big}%
-	\caption[Interaction types]{Percentage of the different interaction types specified above as a function of the beam energy in water. The lightgray marked region is the energy-range of \ac{tomcat}. Data from~\cite[Table 5-5]{Johns1983}.}%
+\def\width{0.5\linewidth}%
+\def\height{0.309\linewidth}% =0.8*0.618
+\begin{figure}[htb]
+	\noindent\makebox[\textwidth]{%
+		\centering%
+		\subfloat[Overview]{%
+			\input{Plots/InteractionPercentage-Big}%
+			\label{subfig:Interaction-Big}%
+			}%
+		\subfloat[Detailed view]{%
+			\input{Plots/InteractionPercentage-Small}%
+			\label{subfig:Interaction-Small}%
+			}%
+		}%
+	\caption[Interaction types]{Percentage of the different interaction types specified above as a function of the beam energy in water. \subref{subfig:Interaction-Big}: Overview over the full given energy range. \subref{subfig:Interaction-Small}: Detailed view. The lightgray region is the energy-range of \ac{tomcat}, the darkgray region marks the energy range of the experiments described in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010} of this thesis. Data from~\cite[Table 5-5]{Johns1983}.}%
 	\label{fig:InteractionPercentage}%
 \end{figure}
 
-\begin{figure}
-	\centering%
-	\input{Plots/InteractionPercentage-Small}%
-	\caption[Interaction types, Detail]{Detailed view of the percentage of the different interaction types specified above as a function of the beam energy in water. The lightgray marked region is the energy-range of \ac{tomcat}. Data from~\cite[Table 5-5]{Johns1983}. Unfortunately, data below \SI{10}{\kilo\electronvolt} is missing in the source.}%
-	\label{fig:InteractionPercentage}%
-\end{figure}
+The experiment presented in this thesis have been performed around x-ray beam energies of \SI{12}{\kilo\electronvolt}, for this energy, the photoelectic absorption is the major interaction process, even if it rapidly decreases for higher energies. Not only the interaction rate is higher for the photoelectric effect, but also the major part of the energy is transferred due to the photoelectric effect, since more energy is transfererd in a photoelectric interaction than in a Compton interaction.
 
 \subsection{Attenuation}
-The net effect of the three effects described above can be summarized with the total linear attenuation coefficient shown in equation~\ref{eq:linear attenuation} below. This equation expresses the attenuation of a monochromatic\graffito{Monochromatic light is light of a single wavelength or energy, though in practice it often refers to a narrow wavelength range} beam as it passes through a material. The attenuation in this material of uniform density and atomic number can be expressed by an exponential relationship%
+The total effect of the three effects described above can be summarized with the total linear attenuation coefficient shown in equation~\ref{eq:linear attenuation} below. This equation expresses the attenuation of a monochromatic\graffito{Monochromatic light is light of a single wavelength or energy, though in practice it often refers to a narrow wavelength range} beam as it passes through a material. The attenuation in this material of uniform density and atomic number can be expressed by an exponential relationship%
 \begin{equation}%
 	I=I_{0}e^{-(\tau+\sigma_{C}+\sigma_{R})x}%
 	\label{eq:linear attenuation}%
 \end{equation}%
-, where $I$ and $I_{0}$ are the incident and transmitted intensities of the x-rays and $x$ is the distance which the x-rays travel through the material. $\tau$, $\sigma_{C}$ and $\sigma_{R}$ are the attenuation coefficients of the photoelectric, incoherent (Compton) and coherent (Rayleigh) scattering interactions in the material, respectively. Equation~\ref{eq:linear attenuation} is often expressed as
+where $I$ and $I_{0}$ are the incident and transmitted intensities of the x-rays and $x$ is the distance which the x-rays travel through the material. $\tau$, $\sigma_{C}$ and $\sigma_{R}$ are the attenuation coefficients of the photoelectric, incoherent (Compton) and coherent (Rayleigh) scattering interactions in the material, respectively. Equation~\ref{eq:linear attenuation} is often expressed as
 \begin{equation}
 	I/I_{0}=e^{-\mu x}
 	\label{eq:beer-lambert}
@@ -77,36 +83,82 @@ the so-called Beer-Lambert law, where $\mu$ is the attenuation coefficient of th
 
 Figure~\ref{fig:yag attenuation} shows the composition of the attenuation coefficient for Cerium doped \ac{yag} (\cf{Y3Al5O12}), which is used as a material for converting the incident x-rays to visible light. This so-called scintillator is part of the microtomography station at \ac{tomcat} and is described in detail later in section~\ref{sec:tomcat}.
 
-\begin{figure}[htb]
-	\centering
-	\input{Plots/YAGattenuation}
-	\caption[Total attenuation coefficient of Ce:YAG]{Total attenuation coefficient of Ce:YAG (\cf{Y3Al5O12}), the scintillator material used for converting the incident x-rays to visible light in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010}. Note that pair production starts for energies above \SI{1}{\mega\electronvolt} and can thus be safely ignored for the energy-ranges in this work. Data obtained from the photon cross section database~\cite{XCOM}.}
+\def\width{\linewidth}%
+\def\height{0.618\linewidth}%
+\begin{figure}[h]
+%	\noindent\makebox[\textwidth]{%
+		\centering
+		\input{Plots/YAGattenuation}%
+%		}
+	\caption[Total attenuation coefficient of Ce:YAG]{Total attenuation coefficient of Ce:YAG (\cf{Y3Al5O12}), the scintillator material used for converting the incident x-rays to visible light in the experiments presented in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010}. Note that pair production starts for energies above \SI{1}{\mega\electronvolt} and can thus be safely ignored for the energy-ranges in this work. Data obtained from the photon cross section database~\cite{XCOM}.}
 	\label{fig:yag attenuation}
 \end{figure}
 
-\subsection{Sampling Theorem}
-\subsection{Reconstruction (FBP, gridrec)}
+\section{From Projections to Slices: Computed tomography}
+In general, \ac{ct} refers to the cross-sectional imaging of a sample from transmission images or projections recorded at several equiangular positions around the sample~\cite{Kak2002}.
 
-In general, \ac{ct} refers to the cross-sectional imaging of a sample from transmission images or projections recorded at several angular positions around the sample~\cite{Kak2002}.
+In medical \ac{ct}-scanners, the transmission images are generally obtained while the radiation source and the detector rotate around the body part to be imaged. In micro-computed and synchrotron based tomography, the source and detector are fixed, while the sample to be imaged rotates around a chosen axis.
 
-In medical \ac{CT}-scanners, the transmission images are generally obtained while the radiation source and the detector rotate around the body part to be imaged. In micro-computed and synchrotron based tomography, the source and detector are fixed, while the sample to be imaged rotates around a chosen axis. During the imaging process multiple transmission images -- essentially single radiographic images -- are obtained at several angles over a \unit{180}{\degree} or \unit{360}{\degree} rotation. Before and after the scan, so-called dark and flat images (FI) are recorded. The dark images record the camera noise and dark current, while the flat images record the beam profile. After baseline correction of the projections (PI) the average of the dark images is subtracted. The projections are then normalized to the flat images as seen in equation~\ref{eq:cpr}, resulting in so-called corrected projections (CPR).
+During the imaging process multiple transmission images---essentially single radiographic images--are obtained at several angles over a \unit{180}{\degree} or \unit{360}{\degree} rotation. These projections can be understood as pictures of the distribution of the attenuation of the x-rays inside the sample. Regions with high attenuation show up as dark pixel, regions with low attenuatio inside the sample show up as light pixels on the \ac{ccd}-chip of the camera.
 
-\begin{equation}
-	CPR=-ln\left(\frac{PI}{FI}\right)=ln(FI)-ln(PI)
-	\label{eq:cpr}
-\end{equation}
+Before and after the scan, so-called dark and flat images (FI) are recorded. The dark images record the camera noise and dark current, while the flat images record the beam profile. After baseline correction of the projections (PI) the average of the dark images is subtracted. The projections are then normalized to the flat images as seen in equation~\ref{eq:cpr}, resulting in so-called corrected projections (CPR).%
+\begin{equation}%
+	CPR=-ln\left(\frac{PI}{FI}\right)=ln(FI)-ln(PI)%
+	\label{eq:cpr}%
+\end{equation}%
 
-The corrected projections are then transformed into so-called sinograms, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of each projection.
+Figure~\ref{fig:corrected projection} shows the results of correcting a raw projection obtained at \ac{tomcat} with a flat image into a corrected projection.
 
-The sinograms inherit their name because the Radon transformation\graffito{The Radon transformation was described in 1917 by Johann~\citet{Radon1917} and is the mathematical basis for tomographic imaging.} of a Dirac delta peak resembles a sine wave. The Radon transformation of a cluster of objects appears as an overlay of blurred sine waves with different amplitudes and phases.
-
-One sinogram contains the information of one plane or slice of the reconstructed tomographic image. We can thus reconstruct the $n$\textsuperscript{th} slice of the tomographic data-set from the $n$\textsuperscript{th} sinogram using different reconstructing algorithms, e.g.\ a standard filtered back-projection algorithm. In a reconstructed slice, the absorption properties of the sample at a certain height are encoded by the gray values of the image.
-
-\begin{figure}
-	\missingfigure{Sinogram?}
-	\caption{Sinogram}
-	\label{fig:sinogram}
+\renewcommand{\imsize}{0.333\linewidth}
+\begin{figure}[h]
+	\centering
+	\subfloat[Projection $PI$]{%
+		\includegraphics[width=\imsize]{img/tif-sin-rec/L-XXI-18_B50287-projection}%
+		\label{subfig:pi}%
+		}%
+	\subfloat[Flat Image $FI$]{%
+		\includegraphics[width=\imsize]{img/tif-sin-rec/L-XXI-18_B50006-flat}%
+		\label{subfig:fi}%
+		}%
+	\subfloat[Corrected projection $CPR$]{%
+		\includegraphics[width=\imsize]{img/tif-sin-rec/L-XXI-18_B50287-correctedprojection}%
+		\label{subfig:cpr}%
+		}%
+	\caption{Correction of the raw recorded projections with the flat images. \subref{subfig:pi}: Recorded projection image. A set of these is the output of one tomographic scanning session. \subref{subfig:fi}: Flat image; obtained at the start of the scan to record the beam profile. \subref{subfig:cpr}: Corrected projection obtained through the application of equation~\ref{eq:cpr} on the projection and flat image.}
+	\label{fig:corrected projection}
 \end{figure}
+
+The corrected projections are then transformed into so-called sinograms, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of each projection. From one tomographic scan with 1500 projections recorded with a camera with a size of 2048$\times$2048 pixels, we get a set of 1024 sinograms with a size of 1024$\times$1500 pixels.
+
+Sinograms inherit their name because the Radon transformation\graffito{The Radon transformation was described in 1917 by Johann \citet{Radon1917} and is the mathematical basis for tomographic imaging.} of a Dirac delta peak resembles a sine wave. The Radon transformation of a cluster of objects appears as an overlay of blurred sine waves with different amplitudes and phases, since any object  can be considered as a collection of many small points.
+
+One sinogram contains the total information of one plane or slice of the reconstructed tomographic image. We can thus reconstruct the $n$\textsuperscript{th} slice of the tomographic dataset from the $n$\textsuperscript{th} sinogram using different reconstructing algorithms, e.g.\ a standard filtered back-projection algorithm. In a reconstructed slice, the absorption properties of the sample at a certain height are encoded by the gray values of the image.
+
+\renewcommand{\imsize}{0.5\linewidth}
+\newsavebox{\tempbox}
+\begin{figure}%
+	\centering
+	\subfloat[Sinogram, resized]{%
+		\includegraphics[width=\imsize]{img/tif-sin-rec/L-XXI-18_B50501-sin-DMP-scaled}%
+		\label{subfig:sin}%
+		}%
+	\subfloat[Sinogram]{%
+		\includegraphics[width=\imsize]{img/tif-sin-rec/L-XXI-18_B50761-rec-8bit}%
+		\label{subfig:sin}%
+		}%
+	\caption{Sinogram and Reconstruction}
+	\label{fig:Sin Rec}
+\end{figure}
+
+The amount of scanned projections---the number of angles at which projections have been recorded---is defined by by the socalled sampling theorem. The sampling theorem as defined by \citet{Shannon1949} states that: \begin{quote} If a function $f(t)$ contains no frequencies higher than $W$ cps, it is completely determined by giving its ordinates at a series of points spaced $1/2\ W$ seconds apart. \cite{Shannon1949}\end{quote}
+
+Paraphrased to tomographic reconstruction, the sampling theorem states that the minimal number of recorded angles along the rotation of the sample must be at least equal to twice the highest frequency used to scan the sample.
+
+From calculations in polar coordinates one can deduce that for a detector with the size $N$ $M=\frac{\pi}{n}N$ angular projections are required to fulfill the sampling theorem for tomographic reconstruction. Generally, for well-balanced reconstructed image with a size of $N\times N$ pixels, recorded with a detector of the same size, total number of projections should be roughly equal to $N$~\cite{Kak2002}. In in layman's terms, we can thus say that if we scan a sample with a detector of 1024$\times$ pixels, we need to record approximately 1000 projections over a sample rotation of \SI{180}{\degree}.
+
+At \ac{tomcat} this rule of thumb is exactly obeyed in the case of a tomographic scan with a binned\graffito{Binning is the process where 2$\times$2 pixels on the camera are averaged to one pixel, both to reduce the image size and noise.} detector. For a scan with an unbinned detector---resulting in images with a size of 2048$\times$2048 pixels---only 1500 projections are acquired, thus violating the rule. But even with this seemingly undersampled data acquisition, reconstructions with very high quality are be obtained.
+
+Chapter~\ref{ch:haberthuer2010} a scanning method is presented where the sampling theorem is deliberately violated both for increasing the field of view of \ac{tomcat} and for reducing the radiation dose imparted on the sample.
 
 \section{Synchrotron Radiation}
 Synchrotron facilities use the fact that a accelerated particles travelling on a curved trajectory emit radiation. If charged particles at relativistic speed are undergo a change of direction (\ie in a magnetic field) so-called synchrotron radiation is emitted. 
@@ -116,38 +168,69 @@ Synchrotron radiation was first observed as energy loss in electron storage ring
 \subsection{Bending Magnets, Undulators and Wigglers}
 The three magnetic structures used in synchrotron facilities are bending magnets, undulators and wigglers. All three emit radiation with different characteristics and intensities.
 
-Bending Magnets are used to create a homogeneous magnetic field over a defined distance. This forces accelerated particles injected into the bending magnet to travel on a circular trajectory. The result is a fan of radiation in the tangential direction of the bend\graffito{Such magnets are also used in traditional televisions, which contain a cathode ray tube, which is essentially a small particle accelerator. They move the electron beam over the screen of the TV tube in a controlled way.~\cite{wiki:dipolemagnet}}.
+Bending magnets\graffito{Such magnets are also used in traditional televisions, which contain a cathode ray tube, which is essentially a small particle accelerator. They move the electron beam over the screen of the TV tube in a controlled way.~\cite{wiki:dipolemagnet}} are used to create a homogeneous magnetic field over a defined distance. The magnetic field inside forces accelerated particles injected into the bending magnet to travel on a circular trajectory. The result is a fan of radiation in the tangential direction of the bend.
 
 \begin{figure}[htb]
-	\centering
-	\subfloat[]{\input{TikZ-Files/Radiation-BendingMagnet}}%
-	\hfill%
-	\def\width{.309\linewidth}%
-	\def\height{.309\linewidth}%
-	\subfloat[]{\input{Plots/Plot-BendingMagnet}}
-	\caption[Bending magnet radiation]{Bending magnet radiation of wavelength $\lambda$ produced by a relativistic electron in an uniform magnetic field. The emission angle is typically $\frac{1}{\gamma}$ where $\gamma$ is the Lorentz contraction factor. Adapted from~\cite{Attwood2007}.}%Bending magnet radiation occcurs when a relativistic electron travels in a uniform magnetic field, executing a circular motion with acceleration directed toward the center. The radiation is directed tangentially outward in a narrow radiation cone, giving the appearance of a sweeping ``searchlight''.     The radiation spectrum is very broad, analogous to a ``white light'' x-ray light bulb. The emission angle is typically $\frac{1}{\gamma}$, where $\gamma$ is the Lorentz contraction factor. http://is.gd/biHF4
+	\noindent\makebox[\textwidth]{%
+		\centering%
+		\subfloat[]{%
+			\input{TikZ-Files/Radiation-BendingMagnet}%
+			\label{subfig:bend}%
+			}%
+		\hspace{4mm}%
+		\def\width{.309\linewidth}%
+		\def\height{.309\linewidth}%
+		\subfloat[]{%
+			\input{Plots/Plot-BendingMagnet}%
+			\label{subfig:bend-spectrum}%
+			}%
+		}
+	\caption[Bending magnet radiation]{Bending magnet radiation of wavelength $\lambda$ produced by a relativistic electron traveling in an uniform magnetic field. %
+		\subref{subfig:bend}: Electrons execute a circular motion with acceleration directed towards the center. The radiation is directed tangentially outward in a narrow radiation cone with an emission angle of typically $\frac{1}{\gamma}$ where $\gamma$ is the Lorentz contraction factor. %
+		\subref{subfig:bend-spectrum}: The radiation spectrum is very broad, analogous to a ``white light'' x-ray light bulb.%
+		Adapted from~\cite{Attwood2007}.}% http://is.gd/biHF4
 	\label{fig:bending magnets}
 \end{figure}
 
 \begin{figure}[htb]
-	\centering
-	\subfloat[]{\input{TikZ-Files/Radiation-Undulator}}%
-	\hfill%
-	\def\width{.309\linewidth}%
-	\def\height{.309\linewidth}%
-	\subfloat[]{\input{Plots/Plot-Undulator}}
-	\caption[Undulator radiation]{Undulator radiation is generated as a highly relativistic electron traverses a periodic magnetic field. In the undulator limit, the magnetic held is relatively weak and the resultant angular excursions of the electron are smaller than the angular width of the natural radiation cone, $\frac{1}{\gamma}$, normally associated with synchrotron radiation. The frequency spread of undulator radiation can be very narrow, and the radiation can be extremely bright and partially coherent, under certain circumstances. The characteristic emission angle is narrowed by a factor $\sqrt N$, where $N$ is the number of magnetic periods. Typically $N$ is of order 100. Depending on the magnet strength, harmonic radiation may be generated. Adapted from~\cite{Attwood2007}.}%http://is.gd/biHF4
+	\noindent\makebox[\textwidth]{%
+		\centering%
+		\subfloat[]{%
+			\input{TikZ-Files/Radiation-Undulator}%
+			\label{subfig:undulator}%
+			}%
+		\hspace{4mm}%
+		\def\width{.309\linewidth}%
+		\def\height{.309\linewidth}%
+		\subfloat[]{%
+			\input{Plots/Plot-Undulator}%
+			\label{subfig:undulator-spectrum}%
+			}%
+		}
+	\caption[Undulator radiation]{Undulator radiation is generated as a highly relativistic electron traverses a periodic magnetic field.%
+		\subref{subfig:undulator}: The magnetic field in an undulator is relatively weak and the resultant angular excursions of the electron are smaller than the angular width of the natural radiation cone, $\frac{1}{\gamma}$, normally associated with synchrotron radiation.%
+		\subref{subfig:undulator-spectrum}: The frequency spread of undulator radiation can be very narrow, and the radiation can be extremely bright and partially coherent, under certain circumstances. The characteristic emission angle is narrowed by a factor $\sqrt N$, where $N$ is the number of magnetic periods. Typically $N$ is of order 100. Depending on the magnet strength, harmonic radiation may be generated. Adapted from~\cite{Attwood2007}.}%http://is.gd/biHF4
 	\label{fig:undulator}
 \end{figure}
 
 \begin{figure}[htb]
-	\centering
-	\subfloat[]{\input{TikZ-Files/Radiation-Wiggler}}%
-	\hfill%
-	\def\width{.309\linewidth}%
-	\def\height{.309\linewidth}%
-	\subfloat[]{\input{Plots/Plot-Wiggler}}
-	\caption[Wiggler radiation]{Wiggler radiation is also generated from a periodic magnet structure, but in the strong magnetic field limit where in at least one plane the angular excursions are significantly greater than the natural ($\frac{1}{\gamma}$) radiation cone. Because accelerations are stronger in this limit, the radiation generated peaks at higher photon energies and is more abundant (higher photon flux and more power). The radiation spectrum is very broad, similar to that of the bending magnet. Although more power is radiated, wiggler radiation is less bright because of the substantially increased radiation cone. Adapted from~\cite{Attwood2007}.}% http://is.gd/biHF4
+	\noindent\makebox[\textwidth]{%
+		\centering
+		\subfloat[]{%
+			\input{TikZ-Files/Radiation-Wiggler}%
+			\label{subfig:wiggler}%
+			}%
+		\hspace{4mm}%
+		\def\width{.309\linewidth}%
+		\def\height{.309\linewidth}%
+		\subfloat[]{%
+			\input{Plots/Plot-Wiggler}%
+			\label{subfig:wiggler-spectrum}%
+			}%
+		}
+	\caption[Wiggler radiation]{Wiggler radiation is also generated from a periodic magnet structure. %
+		\ref{subfig:wiggler}: In the strong magnetic field the angular excursions are significantly greater than the natural ($\frac{1}{\gamma}$) radiation cone. Because accelerations are stronger in this limit, the radiation generated peaks at higher photon energies and has both a higher photon flux and more power. %
+		\ref{subfig:wiggler-spectrum}: The radiation spectrum is very broad, similar to that of the bending magnet. Although more power is radiated, wiggler radiation is less bright because of the substantially increased radiation cone. Adapted from~\cite{Attwood2007}.}% http://is.gd/biHF4
 	\label{fig:wiggler}
 \end{figure}
 

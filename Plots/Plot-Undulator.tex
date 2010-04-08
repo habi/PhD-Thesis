@@ -3,6 +3,8 @@
 %\usepackage{tikz,pgfplots,siunitx}
 %\usepackage[graphics,tightpage,active]{preview}
 %\PreviewEnvironment{tikzpicture}
+%\def\width{\linewidth}
+%\def\height{\linewidth}
 %\begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\pgfplotsset{xlabel=$\hbar \omega$,ylabel=F}
@@ -20,6 +22,7 @@
 		ymax=1,%
 		%mark=triangle
 		]
+		%% or use code on http://is.gd/bk66S to make a nicer plot...
 		\addplot [fill=lightgray,thick]
 			coordinates 
 				{
@@ -31,7 +34,6 @@
 					(0.352407,0.62)
 					(0.385544,0.0681442)
 					(0.389051,0.0413938)
-					(0.40,0.0038593)
 					(0.392557,0.0146433)
 					(0.448396,0)
 					(0.695832,0.00286691)
