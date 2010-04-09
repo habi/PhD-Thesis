@@ -1,6 +1,9 @@
 % !TEX root = ../Thesis.tex
 \myChapter[Finite element \threed reconstruction of the pulmonary acinus]{Finite element \threed reconstruction of the pulmonary acinus imaged by synchrotron X-ray tomography}\label{ch:tsuda2008}
 
+\newcommand{\footremember}[2]{\footnote{#2}\newcounter{#1}\setcounter{#1}{\value{footnote}}}%
+\newcommand{\footrecall}[1]{\footnotemark[\value{#1}]} 
+
 Akira Tsuda\footremember{boston}{School of Public Health, Harvard University, Boston, Massachusetts, USA}\textsuperscript{,}\footnote{Address for reprint requests and other correspondence: A. Tsuda, Molecular and Integrative Physiological Sciences, Harvard School of Public Health, 665 Huntington Ave., Boston, MA 02115 (e-mail: \href{mailto:atsuda@hsph.harvard.edu}{atsuda@hsph.harvard.edu}).}\\%
 Nenad Filipovic\footnote{University of Kragujevac, Kragujevac, Serbia}\\%
 David Haberthür\footremember{ana2}{Institute of Anatomy, University of Bern, Bern, Switzerland}\\%
@@ -24,7 +27,7 @@ Despite these difficulties, the motivations for reconstructing the \threed geome
 Here we present our new effort at \threed reconstruction of the acinar air space in fixed lung tissue using the novel technology of \ac{srxtm} and subsequent \threed modeling of the obtained images. Because of the large specimen volume that can be imaged at high resolution using this method, we anticipate that it will ultimately allow \threed reconstruction of the entire air space of one acinus. Such a detailed rendering and consequent \threed quantitative analysis of structural measures of acinar morphology will prove invaluable to many studies, including performing the computational fluid dynamics of aerosol deposition in the gas exchanging areas of the lung. In this paper, we demonstrate the ability of \ac{srxtm} to render greater volumes ($10^9$~\micro\meter$^3$) of lung tissue than is possible by confocal microscopy and to achieve greater resolution (voxel size=\SI{1.4}{\micro\meter\cubed}) than possible by traditional \ac{uct}. We describe state-of-the-art \acf{fe} technology for \threed reconstruction of both tissue and air spaces in the acinus in detail; the outcome would be ready for subsequent \ac{fe} computational analyses like fluid dynamics and skeletonization.
 
 \renewcommand{\imsize}{\linewidth}
-\begin{figure}[p]
+\begin{figure}[h]
 	\centering
 	\begin{tikzpicture}[,auto,%
 		decision/.style={diamond, draw, thick, text width=5em, text centered},%
@@ -104,7 +107,7 @@ We performed this iterative process until the calculated morphological parameter
 Depending on the threshold level selected, erroneous holes and isolated small areas/objects may appear in the segmented images. To avoid these artifacts and to maintain object connectivity, we needed to preprocess the segmented voxels. We first determined the number of isolated objects and their sizes in the \ac{roi} and then eliminated the objects below a reasonable size ($\sim$5 pixels) by reclassifying voxel values (from ``airway'' to ``tissue'', or vice versa). This \ac{oca} was performed by implementing label adjacent pixel analysis in \threed \cite{Ballard1982,Davies1990,Gonzalez1992}. For
 the sake of simplicity and clarity, we will explain this algorithm in \twod as follows.
 
-\begin{figure}[p]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-03}
 	\caption[Object connectivity analysis]{\acf{oca} shown in a 2-dimensional (\twod) example. A: a binary distribution of ``black'' vs.\ ``white'' pixels at certain threshold level; B: \acf{oln} is assigned for each black pixel on the basis of the color (black or white) of 4 adjacent pixels; C: onthe basis of a ``flag'' pixel, connectivity is identified between \ac{oln}=2 and \ac{oln}=4; D: small objects
@@ -130,11 +133,27 @@ Let us consider an example in which we want to apply a threshold of 123 for the 
 	\item[2. Surface smoothing I] Because the \ac{fe} mesh is located on the surface boundary, some of its nodes (shown as the white circles) are on the outside of the object. Additionally, the grayscale pixel values of those white nodes are lower than the chosen threshold value. By using a simple linear interpolation, we move these white nodes in the direction of the surface boundary toward the locations where the grayscale pixel value would exactly match the threshold value. There are multiple methods available to move the nodes by linear interpolation. We adapted the method developed by \citet{Schneiders1996} for our \threed case. It is important to note that in some cases, this linear interpolation might even move the node inside the object (see Fig.~\ref{fig:hexahedral}C for examples).
 	\item[3. Surface smoothing II] The translation of the nodes as described in \textit{step 2} may in some cases lead to a distorted (concave) \ac{fe} surface. The distortion of the \ac{fe} nodes can be evaluated with their Jacobian value. The Jacobian value is a matrix of the derivation of global to local \ac{fe} interpolation function and the quality of any mesh can be directly evaluated by its Jacobian value~\cite{Bathe1995}. Distorted \acp{fe}, which are not suitable for subsequent numerical calculations, show a negative Jacobian. To optimize the Jacobian, we implemented the standard \ac{lst}~\cite{Freitag2000}). The \ac{lst} usually takes a few loops (repetitions of \textit{step 2}) over all \acp{fe} to achieve positive Jacobian values for all \acp{fe}. The results of applying the \ac{lst} for \threed and \twod cases are shown, respectively, in Fig.~\ref{fig:hexahedral}D, \textit{right} (``After \ac{lst}'').
 \end{description}
-\renewcommand{\imsize}{0.618\linewidth}
-\begin{figure}[p]
+
+\renewcommand{\imsize}{\linewidth}
+\begin{figure}
 	\centering
-	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04}
-	\caption[Grid-based hexahedral algorithm]{Grid-based hexahedral algorithm. A: \threed thresholded voxels (\textit{left}) and \twod representation of thresholded voxels (\textit{right}). The grayscale values are kept in the map of voxel. B: step 1: generation of uniform \acl{fe} mesh over the voxel map. For simplicity, \ac{fe} nodes are positioned at the center of voxel. \threed \ac{fe} meshing (\textit{left}) and \twod \ac{fe} meshing (\textit{right}) are shown. Each node is assigned with the grayscale value from the corresponding voxel. C: step 2: moving nodes on the surface due to trilinear interpolation in \threed case (\textit{left}) and bilinear interpolation in \twod case (\textit{right}). The location of surface boundary is shown in the middle image for \twod case. A fast sub \ac{fe}-voxel level algorithm is implemented to locate a surface boundary. White nodes are moving toward this surface boundary. D: step 3: \acf{lst}. \threed and \twod before \ac{lst} (\textit{left}), \threed and \twod after \ac{lst} (\textit{right}).}
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04a}%
+		\label{subfig:tsuda-04a}%
+	}\\%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04b}%
+		\label{subfig:tsuda-04b}%
+	}\\%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04c}%
+		\label{subfig:tsuda-04c}%
+	}\\%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04d}%
+		\label{subfig:tsuda-04d}%
+	}%
+	\caption[Grid-based hexahedral algorithm]{Grid-based hexahedral algorithm. \subref{subfig:tsuda-04a}: \threed thresholded voxels (\textit{left}) and \twod representation of thresholded voxels (\textit{right}). The grayscale values are kept in the map of voxel. \subref{subfig:tsuda-04b}: step 1: generation of uniform \acl{fe} mesh over the voxel map. For simplicity, \ac{fe} nodes are positioned at the center of voxel. \threed \ac{fe} meshing (\textit{left}) and \twod \ac{fe} meshing (\textit{right}) are shown. Each node is assigned with the grayscale value from the corresponding voxel. \subref{subfig:tsuda-04c}: step 2: moving nodes on the surface due to trilinear interpolation in \threed case (\textit{left}) and bilinear interpolation in \twod case (\textit{right}). The location of surface boundary is shown in the middle image for \twod case. A fast sub \ac{fe}-voxel level algorithm is implemented to locate a surface boundary. White nodes are moving toward this surface boundary. \subref{subfig:tsuda-04d}: step 3: \acf{lst}. \threed and \twod before \ac{lst} (\textit{left}), \threed and \twod after \ac{lst} (\textit{right}).}
 	\label{fig:hexahedral}
 \end{figure}
 
@@ -152,13 +171,27 @@ The samples were scanned with \ac{srxtm} and a stack of 1024 raw images was reco
 
 To facilitate further processing of the image, different subregions of interest were extracted from the original raw data (one exemplary \ac{roi} is the orange small cube in Fig.~\ref{fig:srxtm}A), which is shown enlarged in Fig.~\ref{fig:srxtm}C). This \ac{roi} has a size of 196$\times$196$\times$196 pixels (\ie, an edge length of $\sim$\SI{275}{\micro\meter}) and contains $\sim$7.5 million voxels. This is a reasonable size of data that can easily be handled by a standard \acs{pc} (Duo Core 2 Pentium \SI{2.33}{\gigahertz}, \SI{2}{\giga\byte} \acs{ram}) for visualization and volume rendering. The aforementioned size is an intermediate \ac{roi}; depending on the need for visualization/volume rendering other sizes have been chosen. To validate the segmentation (see below), we split a big \ac{roi} inside the sample in the full dataset vertically into five subregions leading to a \ac{roi} size of 200$\times$200$\times$180 pixels.
 
-\renewcommand{\imsize}{\linewidth}
+\renewcommand{\imsize}{0.475\linewidth}
 \begin{figure}[p]
 	\centering
-	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-05}
-	\caption[Overview of workflow for the selection of a region of interest]{Overview of workflow for the selection of a \acf{roi}. A: full perspective view of the sample R108C60C-07e with 6 selected orthogonal slices and
-bounding box of the full sample in orange. The \ac{roi} selected for subfigures C and D is
-visible in the \textit{top left}. B: close-up of one slice of the full dataset with selected \ac{roi} (side-length of 256 pixels). C: \ac{roi} cut out of the full sample, 6 selected orthogonal slices are shown. D: close-up of the \ac{roi} in subfigure (B).}
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-05a}%
+		\label{subfig:tsuda-05a}%
+	}\hfill%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-05b}%
+		\label{subfig:tsuda-05b}%
+	}\\%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-05c}%
+		\label{subfig:tsuda-05c}%
+	}\hfill%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-05d}%
+		\label{subfig:tsuda-05d}%
+	}%
+	\caption[Overview of workflow for the selection of a region of interest]{Overview of workflow for the selection of a \acf{roi}. \subref{subfig:tsuda-05a}: full perspective view of the sample R108C60C-07e with 6 selected orthogonal slices and
+bounding box of the full sample in orange. The \ac{roi} selected for subfigures \subref{subfig:tsuda-05c} and \subref{subfig:tsuda-05d} is visible in the \textit{top left}. \subref{subfig:tsuda-05b}: close-up of one slice of the full dataset with selected \ac{roi} (side-length of 256 pixels). \subref{subfig:tsuda-05c}: \ac{roi} cut out of the full sample, 6 selected orthogonal slices are shown. \subref{subfig:tsuda-05d}: close-up of the \ac{roi} in subfigure \subref{subfig:tsuda-05b}.}
 	\label{fig:srxtm}
 \end{figure}
 

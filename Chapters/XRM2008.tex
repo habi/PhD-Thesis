@@ -27,25 +27,48 @@ We applied \SI{200}{\nano\meter} and \SI{700}{\nano\meter} gold particles to rat
 We have been able to observe single and clustered gold particles in alveoli, alveolar ducts, and small bronchioli while imaging them at a voxel side length of \SI{350}{\nano\meter} with the use of \ac{srxtm} (Fig.~\ref{subfig:imaris} and \ref{subfig:slice-srxtm}). We were able to verify the locations of the observed gold particles by \ac{tem} (Fig.~\ref{subfig:slice-em}). 
 
 Particles with a size of \SI{200}{\nano\meter}---a size smaller than the resolution achievable at \ac{tomcat}---were imaged using \ac{tem} after selecting a particular alveolus in three dimensional visualizations obtained from \ac{srxtm} data. Thirty minutes after instillation, particles were observed in cells --- mainly macrophages --- as well as in airspace. Most of the particles located in the airspace were in close contact to protein precipitations (Data not shown).
-\renewcommand{\imsize}{0.285\textwidth}
-\begin{figure}[htb]
-	\centering
-	\subfloat[]{\includegraphics[height=\imsize]{img/XRM2008/imaris}\label{subfig:imaris}}\hfill
-	\subfloat[]{\includegraphics[height=\imsize]{img/XRM2008/em/au900-1b-a}\label{subfig:slice-srxtm}}\hfill
-	\subfloat[]{\includegraphics[height=\imsize]{img/XRM2008/em/au900-1b-b}\label{subfig:slice-em}}
-	\caption[Three dimensional isosurface visualization of gold particles in the lung obtained from SRXTM data]{\subref{subfig:imaris}: Three dimensional isosurface visualization of gold particles in the lung obtained from \ac{srxtm} data. Gold grains (yellow) are deposited in terminal airspaces. The air-tissue interface was removed on top of the gold grains during the visualization process in order to show the gold particles (arrows). \subref{subfig:slice-srxtm}: Detailed view of virtual \ac{srxtm} section obtained at \ac{tomcat} containing two gold particles (arrows). The arrowheads are pointing to erythrocytes which are lighting up in the \ac{srxtm} images due to their high iron content of the hemoglobin. Due to the high contrast of gold the particles appear larger in the \ac{srxtm} images than they are in reality and we observed spiked image artifacts going out from the particles. \subref{subfig:slice-em}: Corresponding \ac{tem} section of the virtual \ac{srxtm} section. The thin black lines in \subref{subfig:slice-em} represent folds in the serial section. The white lines in \subref{subfig:slice-em} represent knife marks from the sectioning process.}
-	\label{fig:imaris}
+
+\renewcommand{\imsize}{\linewidth}%
+\begin{figure}%
+	\centering%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/XRM2008/imaris}%
+		\label{subfig:imaris}%
+		}\\%
+	\renewcommand{\imsize}{0.5\linewidth}%
+	\subfloat[]{%
+		\includegraphics[height=\imsize]{img/XRM2008/em/au900-1b-a}%
+		\label{subfig:slice-srxtm}%
+		}%
+	\subfloat[]{%
+		\includegraphics[height=\imsize]{img/XRM2008/em/au900-1b-b}%
+		\label{subfig:slice-em}%
+		}%
+	\caption[Three dimensional isosurface visualization of gold particles in the lung obtained from SRXTM data]{\subref{subfig:imaris}: Three dimensional isosurface visualization of gold particles in the lung obtained from \ac{srxtm} data. Gold grains (yellow) are deposited in terminal airspaces. The air-tissue interface was removed on top of the gold grains during the visualization process in order to show the gold particles (arrows). \subref{subfig:slice-srxtm}: Detailed view of virtual \ac{srxtm} section obtained at \ac{tomcat} containing two gold particles (arrows). The arrowheads are pointing to erythrocytes which are lighting up in the \ac{srxtm} images due to their high iron content of the hemoglobin. Due to the high contrast of gold the particles appear larger in the \ac{srxtm} images than they are in reality and we observed spiked image artifacts going out from the particles. \subref{subfig:slice-em}: Corresponding \ac{tem} section of the virtual \ac{srxtm} section. The thin black lines in \subref{subfig:slice-em} represent folds in the serial section. The white lines in \subref{subfig:slice-em} represent knife marks from the sectioning process.}%
+	\label{fig:imaris}%
 \end{figure}
 
-\renewcommand{\imsize}{0.250\textwidth}
-\begin{figure}[htb]
-\centering
-\subfloat[]{\includegraphics[width=\imsize]{img/XRM2008/em/au900-1b-c}\label{subfig:em-c}}\hfill
-\subfloat[]{\includegraphics[width=\imsize]{img/XRM2008/em/au900-1b-d}\label{subfig:em-d}}\hfill
-\subfloat[]{\includegraphics[width=\imsize]{img/XRM2008/em/au900-1b-e}\label{subfig:em-e}}\hfill
-\subfloat[]{\includegraphics[width=\imsize]{img/XRM2008/em/au900-1b-f}\label{subfig:em-f}}\hfill
-\caption[Transmission electron microscopy images of gold particles]{Transmission electron microscopy images of \SI{700}{\nano\meter} gold particles: \subref{subfig:em-c}--\subref{subfig:em-e}: Close-up view of square A of Fig.~\ref{subfig:slice-srxtm} showing a gold particle (arrows) in consecutive \ac{tem} sections which are \SI{80}{\nano\meter} apart. \subref{subfig:em-f}: Gold grain observed in square B in Fig.~\ref{subfig:slice-srxtm} (arrow). Roughly half of the gold grains observed were located inside the cells, \eg macrophages. The thin black lines visible in subfigures \subref{subfig:em-c}, \subref{subfig:em-e} and \subref{subfig:em-f} represent folds in the \ac{tem} section.}
-\label{fig:srxtm-em}
+\renewcommand{\imsize}{0.5\textwidth}%
+\begin{figure}[htb]%
+	\centering
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/XRM2008/em/au900-1b-c}%
+		\label{subfig:em-c}%
+		}%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/XRM2008/em/au900-1b-d}%
+		\label{subfig:em-d}%
+		}\\
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/XRM2008/em/au900-1b-e}%
+		\label{subfig:em-e}%
+		}%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/XRM2008/em/au900-1b-f}%
+		\label{subfig:em-f}%
+		}%
+	\caption[Transmission electron microscopy images of gold particles]{Transmission electron microscopy images of \SI{700}{\nano\meter} gold particles: \subref{subfig:em-c}--\subref{subfig:em-e}: Close-up view of square A of Fig.~\ref{subfig:slice-srxtm} showing a gold particle (arrows) in consecutive \ac{tem} sections which are \SI{80}{\nano\meter} apart. \subref{subfig:em-f}: Gold grain observed in square B in Fig.~\ref{subfig:slice-srxtm} (arrow). Roughly half of the gold grains observed were located inside the cells, \eg\ macrophages. The thin black lines visible in subfigures \subref{subfig:em-c}, \subref{subfig:em-e} and \subref{subfig:em-f} represent folds in the \ac{tem} section.}%
+	\label{fig:srxtm-em}%
 \end{figure}
 
 \section{Discussion}
