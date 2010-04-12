@@ -1,8 +1,8 @@
 % !TEX root = ../Thesis.tex
 \myChapter[Finite element \threed reconstruction of the pulmonary acinus]{Finite element \threed reconstruction of the pulmonary acinus imaged by synchrotron X-ray tomography}\label{ch:tsuda2008}
 
-\newcommand{\footremember}[2]{\footnote{#2}\newcounter{#1}\setcounter{#1}{\value{footnote}}}%
-\newcommand{\footrecall}[1]{\footnotemark[\value{#1}]} 
+%\newcommand{\footremember}[2]{\footnote{#2}\newcounter{#1}\setcounter{#1}{\value{footnote}}}%
+%\newcommand{\footrecall}[1]{\footnotemark[\value{#1}]} 
 
 Akira Tsuda\footremember{boston}{School of Public Health, Harvard University, Boston, Massachusetts, USA}\textsuperscript{,}\footnote{Address for reprint requests and other correspondence: A. Tsuda, Molecular and Integrative Physiological Sciences, Harvard School of Public Health, 665 Huntington Ave., Boston, MA 02115 (e-mail: \href{mailto:atsuda@hsph.harvard.edu}{atsuda@hsph.harvard.edu}).}\\%
 Nenad Filipovic\footnote{University of Kragujevac, Kragujevac, Serbia}\\%
@@ -18,7 +18,7 @@ First published in: J Appl Physiol 105: 964–976, 2008.\\
 The alveolated structure of the pulmonary acinus plays a vital role in gas exchange function. Three-dimensional (\threed) analysis of the parenchymal region is fundamental to understanding this structure-function relationship, but only a limited number of attempts have been conducted in the past because of technical limitations. In this study, we developed a new image processing methodology based on \ac{fe} analysis for accurate \threed structural reconstruction of the gas exchange regions of the lung. Stereologically well characterized rat lung samples~\cite{Tschanz2003} were imaged using high-resolution synchrotron radiation-based X-ray tomographic microscopy. A stack of 1024 images (each slice: 1024$\times$1024 pixels) with resolution of \SI{1.4}{\micro\meter\cubed} per voxel were generated. For the development of \ac{fe} algorithm, multiple regions of interest, containing 7.5 million voxels, were further extracted as a working subunit. \threed \acp{fe} were created overlaying the voxel map using a grid-based hexahedral algorithm. A proper threshold value for appropriate segmentation was iteratively determined to match the calculated volume density of tissue to the stereologically determined value~\cite{Tschanz2003}. The resulting \threed \acp{fe} are ready to be used for \threed structural analysis as well as for subsequent \ac{fe} computational analyses like fluid dynamics and skeletonization.
 
 \section{Introduction}
-The mammalian interthoracic respiratory tract can be divided into two areas: conducting airways and pulmonary parenchyma (\ie, the gas exchange region of the lung). The conducting airways are a bifurcating network of relatively well-defined conduits carrying the ambient air to the parenchyma. Airways within the parenchyma---customarily	called	acinar/alveolar ducts---on the other hand, are not pipelike; they are formed by entrance rings of alveoli opening into a common passageway. Currently, enormous efforts (\eg, \cite{Aykac2003,Chaturvedi2005,Cheng2007,Chooi2004,Dame2006,Driehuys2007,Kvistedal2005,Ley2008,Scadeng2007,Sera2003,Tawhai2004,VanErtbruggen2005}) are devoted to reconstructing the conducting airway network in three dimensions (\threed), facilitated by rapid advancement of imaging technologies (\eg, \ac{uct}, hyperpolarized-gas \ac{mri} (HHe-3 \ac{mri}), etc.), as well as a rapid increases in computing power.
+The mammalian interthoracic respiratory tract can be divided into two areas: conducting airways and pulmonary parenchyma (\ie, the gas exchange region of the lung). The conducting airways are a bifurcating network of relatively well-defined conduits carrying the ambient air to the parenchyma. Airways within the parenchyma---customarily called acinar/alveolar ducts---on the other hand, are not pipelike; they are formed by entrance rings of alveoli opening into a common passageway. Currently, enormous efforts (\eg, \cite{Aykac2003,Chaturvedi2005,Cheng2007,Chooi2004,Dame2006,Driehuys2007,Kvistedal2005,Ley2008,Scadeng2007,Sera2003,Tawhai2004,VanErtbruggen2005}) are devoted to reconstructing the conducting airway network in three dimensions (\threed), facilitated by rapid advancement of imaging technologies (\eg, \ac{uct}, hyperpolarized-gas \ac{mri} (\cf{HHe} 3 \ac{mri}, etc.), as well as a rapid increases in computing power.
 
 In contrast to conducting airways, lung parenchyma is harder to access; the structures are physically small and located distally in the respiratory tract. Basic structures of lung parenchyma are highly complex; this complexity can be easily envisioned by the fact that the enormously large surface area of lung parenchyma, as large as that of a tennis court in the case of human lungs~\cite{Gehr1978,Weibel1963}, for example, has to be folded in within the lung cavity. At the same time, the image resolution required to obtain reasonable details of this complexity is on the order of a few micrometers [considering, for instance, the thickness of alveolar septa (inter-air space septa) of roughly \SI{10}{\micro\meter} (\cite{Gehr1978}; P. Gehr, personal communication)]. This required resolution is much finer than the resolution of commonly available \ac{mri} or even \ac{uct} mentioned above, but can be obtained with \ac{srxtm}.
 
@@ -71,7 +71,7 @@ The left lung lobes were cut into 2$\times$2$\times$\SI{2}{\milli\meter} pieces,
 
 Handling of the animals before and during the experiments, as well as the experiments themselves, were approved and supervised by the Swiss Agency for the Environment, Forests and Landscape and the Veterinary Service of the Canton of Bern.
 
-\subsection{srxtm}
+\subsection{SRXTM}
 The Epon embedded samples were shaped down into rods of a diameter of \SI{1.2}{\milli\meter} using a watchmaker's lathe. They were glued on a rodlike sample holder of a diameter of \SI{3.0}{\milli\meter} using two-component epoxy resin-based glue (Araldite Rapid, Novartis, Basel, Switzerland). Special care was taken to ensure that the samples were mounted perpendicularly to the surface of the sample holder to fit exactly into the window of the camera (see Fig.~\ref{fig:imaging setup} for imaging setup).
 
 \subsubsection{Image acquisition}
@@ -79,7 +79,7 @@ The samples were scanned at an X-ray wave-length of \SI{1}{\angstrom} (correspon
 
 To achieve a tomographic image for each sample, 1500 projections were obtained over a sample rotation of \SI{180}{\degree}. The projections were then reconstructed on a 16-node server farm (Pentium 4, \SI{2.8}{\gigahertz} processor, \SI{512}{\mega\byte} \acs{ram}) using an optimized filtered back projection algorithm. This reconstruction results in an image stack of 1024 image slices in tif-format (a total size of \SI{2}{\giga\byte}). This image stack is later on referred to as the ``raw images''.
 
-\begin{figure}[htb]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-02}
 	\caption[SRXTM imaging setup]{Imaging setup. The X-rays are coupled out of the storage ring via a wiggler. The monochromator is then used to select a desired wavelength of the incident
@@ -107,31 +107,50 @@ We performed this iterative process until the calculated morphological parameter
 Depending on the threshold level selected, erroneous holes and isolated small areas/objects may appear in the segmented images. To avoid these artifacts and to maintain object connectivity, we needed to preprocess the segmented voxels. We first determined the number of isolated objects and their sizes in the \ac{roi} and then eliminated the objects below a reasonable size ($\sim$5 pixels) by reclassifying voxel values (from ``airway'' to ``tissue'', or vice versa). This \ac{oca} was performed by implementing label adjacent pixel analysis in \threed \cite{Ballard1982,Davies1990,Gonzalez1992}. For
 the sake of simplicity and clarity, we will explain this algorithm in \twod as follows.
 
-\begin{figure}[h]
+\def\scale{0.5}
+\begin{figure}
 	\centering
-	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-03}
-	\caption[Object connectivity analysis]{\acf{oca} shown in a 2-dimensional (\twod) example. A: a binary distribution of ``black'' vs.\ ``white'' pixels at certain threshold level; B: \acf{oln} is assigned for each black pixel on the basis of the color (black or white) of 4 adjacent pixels; C: onthe basis of a ``flag'' pixel, connectivity is identified between \ac{oln}=2 and \ac{oln}=4; D: small objects
-less than cutoff (=4 pixels in this example) are removed.}
-	\label{fig:oca}
+	\noindent\makebox[\textwidth]{%
+		\subfloat[]{%
+			\input{TikZ-Files/Tsuda-OCAa}%
+			\label{subfig:tsuda-03a}%
+		}%
+		\subfloat[]{%
+			\input{TikZ-Files/Tsuda-OCAb}%
+			\label{subfig:tsuda-03b}%
+		}%
+	}\\% end makebox
+	\noindent\makebox[\textwidth]{%
+		\subfloat[]{%
+			\input{TikZ-Files/Tsuda-OCAc}%
+			\label{subfig:tsuda-03c}%
+		}%
+		\subfloat[]{%
+			\input{TikZ-Files/Tsuda-OCAd}%
+			\label{subfig:tsuda-03d}%
+		}%
+	}%
+	\caption[Object connectivity analysis]{Object connectivity analysis shown in a 2-dimensional (\twod) example. \subref{subfig:tsuda-03a}: a binary distribution of ``black'' vs.\ ``white'' pixels at certain threshold level; \subref{subfig:tsuda-03b}: An object label number (\acs{oln}) is assigned for each black pixel on the basis of the color (black or white) of 4 adjacent pixels; \subref{subfig:tsuda-03c}: onthe basis of a ``flag'' pixel (red text in panel \subref{subfig:tsuda-03b}), connectivity is identified between \ac{oln}=2 and \ac{oln}=4; \subref{subfig:tsuda-03d}: small objects less than cutoff (=4 pixels in this example, light gray) are removed.}
+	\label{fig:tsuda-03}
 \end{figure}
 
-Let us assume that ``black'' and ``white'' pixels (voxels in a \threed case) are distributed as in the example shown in Fig.~\ref{fig:oca}A. Scanning pixels from top to bottom and from left to right, we will examine the connectivity of each black pixel, by checking the colors (black or white) of its four adjacent pixels [a pixel on its left and three pixels on its top (top left, top middle, top right)]. We will assign a tentative \acf{oln} (consecutively, 1, 2, 3, 4\ldots) to each black pixel and examine connections between identified objects. Four simple logical algorithms are involved.
+Let us assume that ``black'' and ``white'' pixels (voxels in a \threed case) are distributed as in the example shown in Fig.~\ref{subfig:tsuda-03a}. Scanning pixels from top to bottom and from left to right, we will examine the connectivity of each black pixel, by checking the colors (black or white) of its four adjacent pixels [a pixel on its left and three pixels on its top (top left, top middle, top right)]. We will assign a tentative \acf{oln} (consecutively, 1, 2, 3, 4\ldots) to each black pixel and examine connections between identified objects. Four simple logical algorithms are involved.
 \begin{enumerate}
-	\item If all four adjacent pixels are white, assign a new \ac{oln} to the current black pixel. [For instance, we assign \ac{oln}=1 to the pixel at (column 2; row 2); \ac{oln}=2 to the pixel at (9;3), etc. (Fig.~\ref{fig:oca}B).]
-	\item If only one of the adjacent pixels has already been assigned an \ac{oln}, assign the same \ac{oln} to the current black pixel. [For instance, we assign the \ac{oln}=3 to the pixel at (4;4) because the adjacent pixel on the left of it (at 3;4) has already been assigned with \ac{oln}=3 (Fig.~\ref{fig:oca}B).]
-	\item If more than one adjacent pixels have already been assigned an \ac{oln} and if those adjacent pixels have the same \ac{oln}, assign the same \ac{oln} to the current pixel. [For instance, we assign \ac{oln}=4 to the pixel at (6;6) because the adjacent pixels at (5;6) and at (6;5) have already been assigned with an \ac{oln}=4 (Fig.~\ref{fig:oca}B).]
-	\item If more than one adjacent pixel has already been assigned an \ac{oln} but if those adjacent pixels have different OLNs, assign one of the adjacent pixel's \ac{oln} and put a special marker (flag) on that pixel. The pixel with this flag will be re-examined in the next step. [For instance, we assign either \ac{oln}=2 or 4 to the pixel at (8;6) because the adjacent pixels at (9;5) and at (7;6) have already been assigned with \ac{oln}=2 and 4, respectively. Thus, the pixel is marked with a flag (Fig.~\ref{fig:oca}B).]
+	\item If all four adjacent pixels are white, assign a new \ac{oln} to the current black pixel. [For instance, we assign \ac{oln}=1 to the pixel at (column 2; row 2); \ac{oln}=2 to the pixel at (9;3), etc. (Fig.~\ref{subfig:tsuda-03b}).]
+	\item If only one of the adjacent pixels has already been assigned an \ac{oln}, assign the same \ac{oln} to the current black pixel. [For instance, we assign the \ac{oln}=3 to the pixel at (4;4) because the adjacent pixel on the left of it (at 3;4) has already been assigned with \ac{oln}=3 (Fig.~\ref{subfig:tsuda-03b}).]
+	\item If more than one adjacent pixels have already been assigned an \ac{oln} and if those adjacent pixels have the same \ac{oln}, assign the same \ac{oln} to the current pixel. [For instance, we assign \ac{oln}=4 to the pixel at (6;6) because the adjacent pixels at (5;6) and at (6;5) have already been assigned with an \ac{oln}=4 (Fig.~\ref{subfig:tsuda-03b}).]
+	\item If more than one adjacent pixel has already been assigned an \ac{oln} but if those adjacent pixels have different OLNs, assign one of the adjacent pixel's \ac{oln} and put a special marker (flag) on that pixel. The pixel with this flag will be re-examined in the next step. [For instance, we assign either \ac{oln}=2 or 4 to the pixel at (8;6) because the adjacent pixels at (9;5) and at (7;6) have already been assigned with \ac{oln}=2 and 4, respectively. Thus, the pixel is marked with a flag (shown red in Fig.~\ref{subfig:tsuda-03b}).]
 \end{enumerate}
-After assigning OLNs to all the black pixels, we then re-examine the flagged pixels, which indicate that two or more ``appeared-to-be separated'' objects are indeed connected. We reassign the same \ac{oln} to all of the connected pixels leaving from the flagged pixel. For instance, we assigned \ac{oln}=4 to the pixel at (8;6). This means that the pixels (9; 3), (10; 4) and (9; 5) are also assigned with the \ac{oln}=4 (Fig.~\ref{fig:oca}C). Finally, we remove small objects that are physically unreasonable in size ($<$5 pixels; Fig.~\ref{fig:oca}D), suppressing noise and artifacts from the image acquisition.
+After assigning OLNs to all the black pixels, we then re-examine the flagged pixels, which indicate that two or more ``appeared-to-be separated'' objects are indeed connected. We reassign the same \ac{oln} to all of the connected pixels leaving from the flagged pixel. For instance, we assigned \ac{oln}=4 to the pixel at (8;6). This means that the pixels (9; 3), (10; 4) and (9; 5) are also assigned with the \ac{oln}=4 (Fig.~\ref{subfig:tsuda-03c}). Finally, we remove small objects that are physically unreasonable in size ($<$5 pixels; Fig.~\ref{subfig:tsuda-03d}), suppressing noise and artifacts from the image acquisition.
 
 \subsubsection{\threed reconstruction of separated objects}
 Much of the currently available medical imaging software for \threed reconstruction treats objects (\ie, lung tissues in our case) as surfaces, and this is most often done by a triangulation of the voxel surface. However, to perform a complete \threed reconstruction, we use a different approach here; we reconstruct not only the surface of the boundary between the tissue and the air space, but also the volumes of tissues and air space by fitting \ac{fe} to the raw voxel data and hence inside the full volume. For this, we use a \ac{gbha}~\cite{Schneiders1996}, which is explained as follows.
 
-Let us consider an example in which we want to apply a threshold of 123 for the segmentation of our images. In Fig.~\ref{fig:hexahedral}A, at \textit{left} the thresholded voxels in a \threed representation is shown and, for the sake of discussion and clarity, a \twod representation is shown at \textit{right}.
+Let us consider an example in which we want to apply a threshold of 123 for the segmentation of our images. In Fig.~\ref{subfig:tsuda-04a}, at \textit{left} the thresholded voxels in a \threed representation is shown and, for the sake of discussion and clarity, a \twod representation is shown at \textit{right}.
 \begin{description}
-	\item[1. Mesh generation] A \ac{fe} mesh (Fig.~\ref{fig:hexahedral}B), initially uniform, is isotropically generated over all pixels. We position the nodes of the \ac{fe} mesh at the centers of the existing voxels (Fig.~\ref{fig:hexahedral}B, \textit{right}). This means that each \ac{fe} overlaps 2$\times$2 voxels in the \twod case. (Fig.~\ref{fig:hexahedral}B, \textit{right}) or 2$\times$2$\times$2 voxels in the \threed case (Fig.~\ref{fig:hexahedral}B, \textit{left}). The black circles represent nodes generated inside the object and the white circles denote nodes outside of the object. The nodes inside the object have a pixel or voxel value higher than the chosen threshold and the nodes outside the object have a value lower than the chosen threshold. Each \ac{fe} node is assigned the grayscale value of the corresponding voxel. Note that the boundary between the black and white nodes is not smooth at this stage.
-	\item[2. Surface smoothing I] Because the \ac{fe} mesh is located on the surface boundary, some of its nodes (shown as the white circles) are on the outside of the object. Additionally, the grayscale pixel values of those white nodes are lower than the chosen threshold value. By using a simple linear interpolation, we move these white nodes in the direction of the surface boundary toward the locations where the grayscale pixel value would exactly match the threshold value. There are multiple methods available to move the nodes by linear interpolation. We adapted the method developed by \citet{Schneiders1996} for our \threed case. It is important to note that in some cases, this linear interpolation might even move the node inside the object (see Fig.~\ref{fig:hexahedral}C for examples).
-	\item[3. Surface smoothing II] The translation of the nodes as described in \textit{step 2} may in some cases lead to a distorted (concave) \ac{fe} surface. The distortion of the \ac{fe} nodes can be evaluated with their Jacobian value. The Jacobian value is a matrix of the derivation of global to local \ac{fe} interpolation function and the quality of any mesh can be directly evaluated by its Jacobian value~\cite{Bathe1995}. Distorted \acp{fe}, which are not suitable for subsequent numerical calculations, show a negative Jacobian. To optimize the Jacobian, we implemented the standard \ac{lst}~\cite{Freitag2000}). The \ac{lst} usually takes a few loops (repetitions of \textit{step 2}) over all \acp{fe} to achieve positive Jacobian values for all \acp{fe}. The results of applying the \ac{lst} for \threed and \twod cases are shown, respectively, in Fig.~\ref{fig:hexahedral}D, \textit{right} (``After \ac{lst}'').
+	\item[1. Mesh generation] A \ac{fe} mesh (Fig.~\ref{subfig:tsuda-04b}), initially uniform, is isotropically generated over all pixels. We position the nodes of the \ac{fe} mesh at the centers of the existing voxels (Fig.~\ref{subfig:tsuda-04b}, \textit{right}). This means that each \ac{fe} overlaps 2$\times$2 voxels in the \twod case. (Fig.~\ref{subfig:tsuda-04b}, \textit{right}) or 2$\times$2$\times$2 voxels in the \threed case (Fig.~\ref{subfig:tsuda-04b}, \textit{left}). The black circles represent nodes generated inside the object and the white circles denote nodes outside of the object. The nodes inside the object have a pixel or voxel value higher than the chosen threshold and the nodes outside the object have a value lower than the chosen threshold. Each \ac{fe} node is assigned the grayscale value of the corresponding voxel. Note that the boundary between the black and white nodes is not smooth at this stage.
+	\item[2. Surface smoothing I] Because the \ac{fe} mesh is located on the surface boundary, some of its nodes (shown as the white circles) are on the outside of the object. Additionally, the grayscale pixel values of those white nodes are lower than the chosen threshold value. By using a simple linear interpolation, we move these white nodes in the direction of the surface boundary toward the locations where the grayscale pixel value would exactly match the threshold value. There are multiple methods available to move the nodes by linear interpolation. We adapted the method developed by \citet{Schneiders1996} for our \threed case. It is important to note that in some cases, this linear interpolation might even move the node inside the object (see Fig.~\ref{subfig:tsuda-04c} for examples).
+	\item[3. Surface smoothing II] The translation of the nodes as described in \textit{step 2} may in some cases lead to a distorted (concave) \ac{fe} surface. The distortion of the \ac{fe} nodes can be evaluated with their Jacobian value. The Jacobian value is a matrix of the derivation of global to local \ac{fe} interpolation function and the quality of any mesh can be directly evaluated by its Jacobian value~\cite{Bathe1995}. Distorted \acp{fe}, which are not suitable for subsequent numerical calculations, show a negative Jacobian. To optimize the Jacobian, we implemented the standard \ac{lst}~\cite{Freitag2000}). The \ac{lst} usually takes a few loops (repetitions of \textit{step 2}) over all \acp{fe} to achieve positive Jacobian values for all \acp{fe}. The results of applying the \ac{lst} for \threed and \twod cases are shown, respectively, in Fig.~\ref{subfig:tsuda-04d}, \textit{right} (``After \ac{lst}'').
 \end{description}
 
 \renewcommand{\imsize}{\linewidth}
@@ -154,7 +173,7 @@ Let us consider an example in which we want to apply a threshold of 123 for the 
 		\label{subfig:tsuda-04d}%
 	}%
 	\caption[Grid-based hexahedral algorithm]{Grid-based hexahedral algorithm. \subref{subfig:tsuda-04a}: \threed thresholded voxels (\textit{left}) and \twod representation of thresholded voxels (\textit{right}). The grayscale values are kept in the map of voxel. \subref{subfig:tsuda-04b}: step 1: generation of uniform \acl{fe} mesh over the voxel map. For simplicity, \ac{fe} nodes are positioned at the center of voxel. \threed \ac{fe} meshing (\textit{left}) and \twod \ac{fe} meshing (\textit{right}) are shown. Each node is assigned with the grayscale value from the corresponding voxel. \subref{subfig:tsuda-04c}: step 2: moving nodes on the surface due to trilinear interpolation in \threed case (\textit{left}) and bilinear interpolation in \twod case (\textit{right}). The location of surface boundary is shown in the middle image for \twod case. A fast sub \ac{fe}-voxel level algorithm is implemented to locate a surface boundary. White nodes are moving toward this surface boundary. \subref{subfig:tsuda-04d}: step 3: \acf{lst}. \threed and \twod before \ac{lst} (\textit{left}), \threed and \twod after \ac{lst} (\textit{right}).}
-	\label{fig:hexahedral}
+	\label{fig:tsuda-04}
 \end{figure}
 
 \subsection[Validation of Segmentation]{Validation of Segmentation and Image Processing}
@@ -167,12 +186,12 @@ Once the calculated morphological parameters met the gold standard, the resultin
 The Epon embedded lung tissue samples of a 60-day-old rat were selected from the ``lung tissue library'' of Peter Burri's lab (University of Bern). All morphological parameters of this particular rat, against which our data were compared, are available and published in~\citet{Tschanz2003}.
 
 \subsection{A Raw Image Stack and a Cubic Subregion}
-The samples were scanned with \ac{srxtm} and a stack of 1024 raw images was reconstructed in tiff format (Fig.~\ref{fig:srxtm}A: stack of images, \ref{fig:srxtm}B: one slice of the raw data). The resolution of the image was \SI{1.4}{\micro\meter} per pixel, thus the edge length of the cubic stack was \SI{1.4336}{\milli\meter}, containing approximately one billion isotropic voxels.
+The samples were scanned with \ac{srxtm} and a stack of 1024 raw images was reconstructed in tiff format (Fig.~\ref{subfig:tsuda-05a}: stack of images, \ref{subfig:tsuda-05b}: one slice of the raw data). The resolution of the image was \SI{1.4}{\micro\meter} per pixel, thus the edge length of the cubic stack was \SI{1.4336}{\milli\meter}, containing approximately one billion isotropic voxels.
 
-To facilitate further processing of the image, different subregions of interest were extracted from the original raw data (one exemplary \ac{roi} is the orange small cube in Fig.~\ref{fig:srxtm}A), which is shown enlarged in Fig.~\ref{fig:srxtm}C). This \ac{roi} has a size of 196$\times$196$\times$196 pixels (\ie, an edge length of $\sim$\SI{275}{\micro\meter}) and contains $\sim$7.5 million voxels. This is a reasonable size of data that can easily be handled by a standard \acs{pc} (Duo Core 2 Pentium \SI{2.33}{\gigahertz}, \SI{2}{\giga\byte} \acs{ram}) for visualization and volume rendering. The aforementioned size is an intermediate \ac{roi}; depending on the need for visualization/volume rendering other sizes have been chosen. To validate the segmentation (see below), we split a big \ac{roi} inside the sample in the full dataset vertically into five subregions leading to a \ac{roi} size of 200$\times$200$\times$180 pixels.
+To facilitate further processing of the image, different subregions of interest were extracted from the original raw data (one exemplary \ac{roi} is the orange small cube in Fig.~\ref{subfig:tsuda-05a}, which is shown enlarged in Fig.~\ref{subfig:tsuda-05c}. This \ac{roi} has a size of 196$\times$196$\times$196 pixels (\ie, an edge length of $\sim$\SI{275}{\micro\meter}) and contains $\sim$7.5 million voxels. This is a reasonable size of data that can easily be handled by a standard \acs{pc} (Duo Core 2 Pentium \SI{2.33}{\gigahertz}, \SI{2}{\giga\byte} \acs{ram}) for visualization and volume rendering. The aforementioned size is an intermediate \ac{roi}; depending on the need for visualization/volume rendering other sizes have been chosen. To validate the segmentation (see below), we split a big \ac{roi} inside the sample in the full dataset vertically into five subregions leading to a \ac{roi} size of 200$\times$200$\times$180 pixels.
 
-\renewcommand{\imsize}{0.475\linewidth}
-\begin{figure}[p]
+\renewcommand{\imsize}{0.5\linewidth}
+\begin{figure}[h]
 	\centering
 	\subfloat[]{%
 		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-05a}%
@@ -192,36 +211,92 @@ To facilitate further processing of the image, different subregions of interest 
 	}%
 	\caption[Overview of workflow for the selection of a region of interest]{Overview of workflow for the selection of a \acf{roi}. \subref{subfig:tsuda-05a}: full perspective view of the sample R108C60C-07e with 6 selected orthogonal slices and
 bounding box of the full sample in orange. The \ac{roi} selected for subfigures \subref{subfig:tsuda-05c} and \subref{subfig:tsuda-05d} is visible in the \textit{top left}. \subref{subfig:tsuda-05b}: close-up of one slice of the full dataset with selected \ac{roi} (side-length of 256 pixels). \subref{subfig:tsuda-05c}: \ac{roi} cut out of the full sample, 6 selected orthogonal slices are shown. \subref{subfig:tsuda-05d}: close-up of the \ac{roi} in subfigure \subref{subfig:tsuda-05b}.}
-	\label{fig:srxtm}
+	\label{fig:tsuda-05}
 \end{figure}
 
 \subsection{Segmentation}
-As mentioned, the selection of a threshold level has significant affects on segmentation. To demonstrate this, we have segmented a small crop of the original data (Fig.~\ref{fig:segmentation}A) with three different threshold values. With a low threshold level, for instance 130, the image would possess too many black voxels and the septa in the lung appear to be too thick (Fig.~\ref{fig:segmentation}B). On the other hand, with a higher threshold level, for instance 148, the image would possess too many white voxels and the lung tissue appears to be very thin, with multiple erroneous holes in the septal walls (Fig.~\ref{fig:segmentation}D). With an intermediate threshold, for instance 139, the lung structure appears to be reasonable, with a minor amount of holes (Fig.~\ref{fig:segmentation}C). The optimal value of the threshold level was iteratively determined by performing a ``readjustment-recalculation'' process to match some of the key morphological parameters in the resulting \threed reconstruction to the gold standard. This is explained below in detail.
+As mentioned, the selection of a threshold level has significant affects on segmentation. To demonstrate this, we have segmented a small crop of the original data (Fig.~\ref{subfig:tsuda-06a}) with three different threshold values. With a low threshold level, for instance 130, the image would possess too many black voxels and the septa in the lung appear to be too thick (Fig.~\ref{subfig:tsuda-06b}). On the other hand, with a higher threshold level, for instance 148, the image would possess too many white voxels and the lung tissue appears to be very thin, with multiple erroneous holes in the septal walls (Fig.~\ref{subfig:tsuda-06d}). With an intermediate threshold, for instance 139, the lung structure appears to be reasonable, with a minor amount of holes (Fig.~\ref{subfig:tsuda-06c}). The optimal value of the threshold level was iteratively determined by performing a ``readjustment-recalculation'' process to match some of the key morphological parameters in the resulting \threed reconstruction to the gold standard. This is explained below in detail.
 
-\begin{figure}[htb]
+\renewcommand{\imsize}{0.333\linewidth}
+\setlength{\fboxsep}{-\fboxrule}
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-06}
-	\caption[Thresholding Influence]{A: original slice from raw data; bar=\SI{50}{\micro\meter}. B: thresholded with a value of 130, meaning that all pixels below 130 are set to black, all pixels with a value of 130 or greater are set to white. Resulting alveolar walls are too thick. C: thresholded with a value of 139. Image looks correct. At this
-threshold the observed thickness of the septa was smaller than \SI{10}{\micro\meter}. In the same animals \cite{Roth2005} the thickness of the septa was determined as they appeared on electron microscopical images. They measured a mean of \SI{8}{\micro\meter}. D: thresholded with a value of 148. Alveolar walls are too thin, and multiple erroneous holes (arrows) appear in the tissue}
-	\label{fig:segmentation}
+	\subfloat[]{%
+		\pgfmathsetlength{\imagewidth}{\imsize}%
+		\pgfmathsetlength{\imagescale}{\imagewidth/238}%
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\def\x{127} % scalebar-x at golden ratio of x=238px
+			\def\y{214} % scalebar-y at 90% of height of y=238px
+			\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Tsuda2008/Tsuda-06a.png}};
+			% 238px = 0.37888mm > 100px = 159um > 314px = 500um, 63px = 100um
+			%\draw[white,|-|,thick] (1,112) -- (239,112) node [sloped,midway,above] {\SI{0.37888}{\milli\meter} (256px)};
+			\draw[white,|-|,thick] (\x,\y) -- (\x+31.4,\y) node [right] {\SI{50}{\micro\meter}};
+		\end{tikzpicture}%
+		\label{subfig:tsuda-06a}%
+	}\\
+	\subfloat[]{%
+		\fbox{%
+			\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-06b}%
+			\label{subfig:tsuda-06b}%
+			}%
+	}\hfill%
+	\subfloat[]{%
+		\fbox{%
+			\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-06c}%
+			\label{subfig:tsuda-06c}%
+			}%
+		}\hfill%
+	\subfloat[]{%
+		\fbox{%
+			\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-06d}%
+			\label{subfig:tsuda-06d}%
+			}%
+	}%
+	\caption[Thresholding Influence]{\subref{subfig:tsuda-06a}: original slice from raw data. \subref{subfig:tsuda-06b}: thresholded with a value of 130, meaning that all pixels below 130 are set to black, all pixels with a value of 130 or greater are set to white. Resulting alveolar walls are too thick. \subref{subfig:tsuda-06c}: thresholded with a value of 139. Image looks correct. At this threshold the observed thickness of the septa was smaller than \SI{10}{\micro\meter}. In the same animals \cite{Roth2005} the thickness of the septa was determined as they appeared on electron microscopical images. They measured a mean of \SI{8}{\micro\meter}. \subref{subfig:tsuda-06d}: thresholded with a value of 148. Alveolar walls are too thin, and multiple erroneous holes (arrows) appear in the tissue.}
+	\label{fig:tsuda-06}
 \end{figure}
 
 \subsection{FE \threed reconstruction}
-Prior to the \threed reconstruction, the \ was performed to screen small objects with unreasonable size; voxels of those unreasonably small objects were reclassified to match the surrounding voxels. After successful preprocessing, \threed reconstruction was performed using \ac{gbha}. The examples with three different values of threshold level (130, 139, 148), corresponding to those in Fig.~\ref{fig:segmentation}, are shown in Fig.~\ref{fig:3dreconstruction}. As is expected, the \threed reconstructed object appears to have thick tissue walls with the lower threshold value of 130, while it appears to be too thin, with many holes with the higher threshold value of 148. With the intermediate threshold value of 139, the structure appears to be reasonable. This will be tested quantitatively next.
+Prior to the \threed reconstruction, the \ was performed to screen small objects with unreasonable size; voxels of those unreasonably small objects were reclassified to match the surrounding voxels. After successful preprocessing, \threed reconstruction was performed using \ac{gbha}. The examples with three different values of threshold level (130, 139, 148), corresponding to those in Fig.~\ref{fig:tsuda-06}, are shown in Fig.~\ref{fig:tsuda-07}. As is expected, the \threed reconstructed object appears to have thick tissue walls with the lower threshold value of 130, while it appears to be too thin, with many holes with the higher threshold value of 148. With the intermediate threshold value of 139, the structure appears to be reasonable. This will be tested quantitatively next.
 
 \subsection{Validation of Segmentation and Image Processing}
 To perform a statistical analysis for the selection of the threshold value, five pieces of parenchymal sample (200$\times$200$\times$180 pixels) were selected. We calculated the V\textsubscript{VS} of each \ac{roi} after the \threed reconstruction, and the average value with \ac{se} was plotted as a function of threshold level (Fig.~\ref{fig:VVSplot}). Our calculated value of V\textsubscript{VS} nearly linearly decreased with increasing threshold level and our V\textsubscript{VS} matches the gold standard value of 0.196 at a threshold value of 139. In addition, the values of calculated SE were generally very small, indicating that each sample, although small in size, represented typical parenchymal structure. We determined to use a threshold value of 139 for this tissue sample.
 
 The surface area density of air space (S\textsubscript{VS} [\centimetresquared\per\centimetrecubed]) of each \ac{roi} sample was also calculated and plotted (Fig.~\ref{fig:VVSplot}). As we expected, however, S\textsubscript{VS} shows poor match with the reported value of \num[seperr]{904(84)}~(\acs{se}) over almost the entire range of threshold levels tested and especially at the threshold value of 139. The cause of this discrepancy will be discussed in detail in section~\ref{sec:discussion}.
 
-\begin{figure}[htb]
+\renewcommand{\imsize}{0.333\linewidth}
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-07}
-	\caption[Three-dimensional reconstruction of tissue]{Three-dimensional reconstruction of tissue. A and D: threshold 130. B and E: threshold 139. C and F: threshold 148.}
-	\label{fig:3dreconstruction}
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-07a}%
+		\label{subfig:tsuda-07a}%
+	}%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-07b}%
+		\label{subfig:tsuda-07b}%
+	}%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-07c}%
+		\label{subfig:tsuda-07c}%
+	}\\%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-07d}%
+		\label{subfig:tsuda-07d}%
+	}%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-07e}%
+		\label{subfig:tsuda-07e}%
+	}%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-07f}%
+		\label{subfig:tsuda-07f}%
+	}\\
+	\caption[Three-dimensional reconstruction of tissue]{Three-dimensional reconstruction of tissue. \subref{subfig:tsuda-07a} and \subref{subfig:tsuda-07d}: threshold 130. \subref{subfig:tsuda-07b} and \subref{subfig:tsuda-07e}: threshold 139. \subref{subfig:tsuda-07c} and \subref{subfig:tsuda-07f}: threshold 148.}
+	\label{fig:tsuda-07}
 \end{figure}
 
-\begin{figure}[htb]
+\renewcommand{\imsize}{\linewidth}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-08}
 	\caption[Average volume density of tissue and surface area density of air space]{Average volume density of tissue (V\textsubscript{VS}) and surface area density of air space (S\textsubscript{VS}) of \acp{roi}, plotted as a function of threshold level. Error bars represent standard error. Our V\textsubscript{VS} matches the gold standard value of 0.196 at a threshold value of 139. Bars include the standard error, n=5.}
@@ -229,7 +304,7 @@ The surface area density of air space (S\textsubscript{VS} [\centimetresquared\p
 \end{figure}
 
 \subsection{FE \threed Reconstruction of Air Space}
-\threed air spaces, separated by tissues, in the \ac{roi} were also constructed (Fig.~\ref{fig:3dalveolated}). To demonstrate air space configuration more clearly, a small alveolated air section was isolated from the center of \ac{roi} and was enlarged in an inset of Fig.~\ref{fig:3dalveolated}. These \threed air objects packed with several million \threed 8-node \acp{fe} (a mixture of structured and unstructured cubic elements) can be readily used for \ac{fe} calculations, including airflow \ac{cfd}, in the future.
+\threed air spaces, separated by tissues, in the \ac{roi} were also constructed (Fig.~\ref{fig:tsuda-09}). To demonstrate air space configuration more clearly, a small alveolated air section was isolated from the center of \ac{roi} and was enlarged in an inset of Fig.~\ref{fig:tsuda-09}. These \threed air objects packed with several million \threed 8-node \acp{fe} (a mixture of structured and unstructured cubic elements) can be readily used for \ac{fe} calculations, including airflow \ac{cfd}, in the future.
 
 \section{Discussion}\label{sec:discussion}
 We described our custom-made \ac{fe} methodology to reconstruct the acinar air space as well as septal tissue of rat lung in three dimensions. Approximately \SI{3}{\milli\meter\cubed} (=3$\times10^9$~\micro\meter$^3$) of fixed lung tissue was scanned with high resolution \ac{srxtm} (voxel size=\SI{1.4}{\micro\meter\cubed}) and a stack of 1024 image slices (1024$\times$1024~pixels) was prepared for \threed rendering. After preprocessing the raw voxel data with a tentative threshold level, \threed \acp{fe} were created overlaying the voxel map using a \ac{gbha}. A proper threshold value for adequate segmentation was iteratively determined to match the calculated volume density of tissue (V\textsubscript{VS}) to the stereological determined value \cite{Tschanz2003}. With the optimized algorithms (a combination of \ac{oca} and \ac{gbha} algorithms), \acs{cpu} time for one iteration for $\sim$8 million voxels was $\sim$90 min by a standard \acs{pc}.
@@ -242,11 +317,19 @@ Optical sectioning permits faster, less invasive, more thorough digital analysis
 \subsection{srxtm}
 \ac{sr} is an electromagnetic wave emitted from electrons traveling near the speed of light when their path is bent by a magnetic field \cite{Iida2003}. A synchrotron facility is an excellent source of the most useful electromagnetic waves to explore materials and biological systems: X-ray ultraviolet and infrared light. Here we limit our discussion particularly to the application of \ac{sr} for X-ray tomographic microscopy (Fig.~\ref{fig:imaging setup}) highlighting the following superb features.
 
-\begin{figure}[htb]
+\renewcommand{\imsize}{0.5\linewidth}
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-09}
-	\caption[Three-dimensional reconstruction of air spaces]{A: reconstruction of \threed air spaces separated by tissues from \ac{roi}. B: enlargement of a small alveolated air section isolated from the center of \ac{roi}.}
-	\label{fig:3dalveolated}
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-09a}%
+		\label{subfig:tsuda-09a}%
+	}\hfill%
+	\subfloat[]{%
+		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-09b}%
+		\label{subfig:tsuda-09b}%
+	}%
+	\caption[Three-dimensional reconstruction of air spaces]{\subref{subfig:tsuda-09a}: reconstruction of \threed air spaces separated by tissues from \ac{roi}. \subref{subfig:tsuda-09b}: enlargement of a small alveolated air section isolated from the center of the \ac{roi}.}
+	\label{fig:tsuda-09}
 \end{figure}
 
 \subsubsection{High power and high brilliance}
@@ -263,10 +346,11 @@ A unique aspect of our work is that segmentation was done iteratively by searchi
 
 The key morphological parameter we tried to match was the volume density of tissue (V\textsubscript{VS}). The V\textsubscript{VS} is an easy to calculate parameter (\ie, the sum of \ac{fe} volume belonging to tissue divided by the sum of all \ac{fe} volume) and is relatively insensitive to the resolution of the measurement technique. The calculated V\textsubscript{VS} decreases almost linearly with an increase in the threshold level (\ie, a fraction of air volume relative to tissue volume) around the gold standard value (V\textsubscript{VS}=0.196 in our case, see Fig.~\ref{fig:VVSplot}). At the threshold value of 139, the calculated V\textsubscript{VS} was within \SI{2}{\percent} difference of the gold standard.
 
-\begin{figure}[p]
+\renewcommand{\imsize}{\linewidth}
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-10}
-	\caption[Three-dimensional FE shell model of a partial acinus]{Three-dimensional \ac{fe} shell model of acinus viewed from different angles. Top: \ac{roi}. Middle: top view (\textit{left}); side view (middle); bottom view (\textit{right}). Bottom: alveolar inside views (left and right).}
+	\caption[Three-dimensional FE shell model of a partial acinus]{Three-dimensional \ac{fe} shell model of acinus viewed from different angles. Top: \ac{roi}. Middle: top view (\textit{left}); side view (\textit{middle}); bottom view (\textit{right}). Bottom: alveolar inside views.}
 	\label{fig:alveolus}
 \end{figure}
 
@@ -290,7 +374,7 @@ The main aim of this project is a direct elementalization of air (or tissue) spa
 	\item to reduce the number of \acp{fe} to a reasonable number but
 	\item to still produce a smooth surface boundary.
 \end{enumerate}
-We use hexahedral \ac{fe} for this. An air-tissue interface was smoothed by adjusting the locations of \ac{fe} nodal points near the interface based on their original grayscale pixel intensity values. The distortions of \ac{fe} elements, if this happened as a result of the initial nodal relocation, were corrected and refined (see section~\ref{sec:methods} for details). The resulting \threed \ac{fe} mesh (\eg, Figs.~\ref{fig:3dalveolated} and \ref{fig:alveolus}) demonstrates reasonable acinar volume rendering.
+We use hexahedral \ac{fe} for this. An air-tissue interface was smoothed by adjusting the locations of \ac{fe} nodal points near the interface based on their original grayscale pixel intensity values. The distortions of \ac{fe} elements, if this happened as a result of the initial nodal relocation, were corrected and refined (see section~\ref{sec:methods} for details). The resulting \threed \ac{fe} mesh (\eg, Figs.~\ref{fig:tsuda-09} and \ref{fig:alveolus}) demonstrates reasonable acinar volume rendering.
 
 Finally, for the type of image analysis discussed in this paper, the need for massive computation for \threed rendering as well as subsequent \ac{fe} computational analyses is unavoidable. In this regard, improving our computational capability, particularly by using parallel and grid computing algorithms, would be required in the near future.
 

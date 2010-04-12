@@ -1,0 +1,64 @@
+% !TEX root = ../Thesis.tex
+%\documentclass{article}
+%\usepackage{tikz}
+%\usepackage[graphics,tightpage,active]{preview}
+%\PreviewEnvironment{tikzpicture}
+%\begin{document}
+%\def\scale{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tikzpicture}[%
+	scale=\scale,%
+	number/.style ={white, text width=4em, text centered},%
+	]
+%%% fill
+	\fill [fill=lightgray] (1,-1) rectangle (2,-2);
+	\fill (8,-2) rectangle (9,-3);
+	\fill [fill=lightgray] (2,-3) rectangle (4,-4);
+	\fill (9,-3) rectangle (10,-4);
+	\fill (5,-4) rectangle (6,-5);
+	\fill (8,-4) rectangle (9,-5);
+	\fill (4,-5) rectangle (8,-7);
+	\fill [fill=lightgray] (1,-7) rectangle (2,-9);
+	\fill (4,-7) rectangle (7,-8);
+	\fill (5,-8) rectangle (7,-9);
+	\fill [fill=lightgray] (2,-9) rectangle (3,-10);
+%%% fill
+%%% grid
+	\draw [thick] (0,0) -- (-.6,.6) node [anchor= south west] {Column} node [rotate=90,anchor= south east] {Row};
+	\foreach \x in {0,...,11}
+		{\draw (\x,0) -- (\x,-11);}
+	\foreach \y in {0,...,-11}
+		{\draw (0,\y) -- (11,\y);}
+	\foreach \x in {1,...,11}
+		\foreach \y in {0.5}
+			{\draw (\x-.5,\y) node{\x};}
+	\foreach \y/\label in {0/1,-1/2,-2/3,-3/4,-4/5,-5/6,-6/7,-7/8,-8/9,-9/10,-10/11}
+		{\draw (-.5,\y-.5) node{\label};}
+%%% grid
+%%%% numbers
+%	\node [number] at (1.5,-1.5) {1};
+%	%
+%	\node [number] at (8.5,-2.5) {2};
+%	\node [number] at (9.5,-3.5) {2};
+%	\node [number] at (9.5,-3.5) {2};
+%	\node [number] at (8.5,-4.5) {\small 2/4};
+%	%
+%	\foreach \x in {2.5,3.5}
+%		{\node [number] at (\x,-3.5) {3};}
+%	%
+%	\node [number] at (5.5,-4.5) {4};
+%	\foreach \x in {4.5,...,6.5}
+%	\foreach \y in {5.5,...,7.5}
+%			{\node [number] at (\x,-\y) {4};}
+%	\node [number] at (7.5,-5.5) {\small 4/2};
+%	\node [number] at (7.5,-6.5) {4};
+%	\foreach \x in {5.5,6.5}
+%		{\node [number] at (\x,-8.5) {4};}
+%	%
+%	\foreach \y in {7.5,8.5}
+%		{\node [number] at (1.5,-\y) {5};}
+%	\node [number] at (2.5,-9.5) {5};
+%%%% numbers
+\end{tikzpicture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\end{document}

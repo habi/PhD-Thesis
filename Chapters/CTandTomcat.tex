@@ -124,7 +124,7 @@ Figure~\ref{fig:corrected projection} shows the results of correcting a raw proj
 		\includegraphics[width=\imsize]{img/tif-sin-rec/L-XXI-18_B50287-correctedprojection}%
 		\label{subfig:cpr}%
 		}%
-	\caption{Correction of the raw recorded projections with the flat images. \subref{subfig:pi}: Recorded projection image. A set of these is the output of one tomographic scanning session. \subref{subfig:fi}: Flat image; obtained at the start of the scan to record the beam profile. \subref{subfig:cpr}: Corrected projection obtained through the application of equation~\ref{eq:cpr} on the projection and flat image.}
+	\caption[Correction of the projections with flat images]{Correction of the raw recorded projections with the flat images. \subref{subfig:pi}: Recorded projection image. A set of these is the output of one tomographic scanning session. \subref{subfig:fi}: Flat image; obtained at the start of the scan to record the beam profile. \subref{subfig:cpr}: Corrected projection obtained through the application of equation~\ref{eq:cpr} on the projection and flat image.}
 	\label{fig:corrected projection}
 \end{figure}
 
@@ -259,7 +259,7 @@ As a short rundown the most important features of the beamline are presented her
 Once inside the measuring hut, the beam is travelling through a pipe and collimated onto the sample. After penetration of the sample, the X-rays are converted to visible light by a so-called scintillator\graffito{The latin word \textit{scintillare} can be translated with sparkle or flicker.}. Charged particles excite the scintillator material and this excitation energy is then subsequently emitted by fluorescence photons at a longer wavelength, which enables the detection of the incident light with a \ac{ccd}-camera. The \ac{ccd}-camera at \ac{tomcat} features a detector with 2048$\times$2048 pixels with a size of 7.4$\times$\SI{7.4}{\micro\meter} each. Between the scintillator and the \ac{ccd}-sensor an interchangeable microscope objectives enable to choose a wide range of the pixel size, ranging from 350$\times$\SI{350}{\nano\meter\squared}\todo{What about the 40$\times$ magnification?} up to 5.6$\times$\SI{5.6}{\micro\meter}. The resulting field of view of a standard scan can thus easily be varied from 0.75$\times$\SI{0.75}{\milli\meter\squared} up to 11.45$\times$\SI{11.45}{\milli\meter\squared}\graffito{See chapter~\ref{ch:haberthuer2010} presenting a method for increasing the field of view of tomography endstations.}.
 
 \renewcommand{\imsize}{0.5\linewidth}
-\begin{figure}[htb]
+\begin{figure}[p]
 	\subfloat[Overview of the TOMCAT end-station: The blue structure behind the control notebook is the sample stage with the sample holder on the rotation stage on top of it. The black structure above contains the scintillator, the microscope optics and the camera.]{%
 		\includegraphics[width=\imsize]{img/TOMCAT1}%
 		\label{subfig:TOMCAT1}%
