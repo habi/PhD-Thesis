@@ -1,15 +1,18 @@
 % !TEX root = ../Thesis.tex
 \myChapter{Computed Tomography}\label{ch:ct}
-\begin{flushright}{\slshape If we're gonna move forward, this is the next logical step!} \\ \medskip
-    --- Kevin Bacon as\defcitealias{HollowMan}{Sebastian}\citetalias{HollowMan} \citep{HollowMan}
+\begin{flushright}{\slshape More apparatus, please, nurse.\\
+				Get the EEG, the BP monitor, and the AVV.\\
+				And get the machine that goes "PING!"\\
+				And get the most expensive machine in case the Administrator comes.} \\ \medskip
+	--- John Cleese \& Graham Chapman as Obstetricians in\defcitealias{TheMeaningOfLife}{The Meaning of Life}\citetalias{TheMeaningOfLife} \citep{TheMeaningOfLife}
 \end{flushright}
-\bigskip
-\bigskip
+\vspace{52mm}
+
 Computed tomography (\acs{ct}) is an imaging method where a three-dimensional image of the internal structure of an object is generated from a large series of two-dimensional x-ray images---single radiographies---which have been taken at equidistant angles
 around a single rotation axis. The word tomography is derived from the greek words for tomos (\greektext tomos\latintext, slice) and grafia (\greektext graf'ia\latintext, describing).
 
 \section{History}
-Computed Tomography has come a long way since its commercial availability in the late 1970, where Sir Godfrey Hounsfield invented the first commercially available thanks to the upcoming availability of microcomputers.
+Computed Tomography has come a long way since the late 1970, where Sir Godfrey Hounsfield invented the first commercially available thanks to the upcoming availability of microcomputers.
 
 The basic idea of todays tomography was already described in a patent granted to \citet{Frank1942} in the 1940s and several experiments around 1960--1965 showed the feasibility of three-dimensional reconstruction of an object which has been penetrated by radiation~\cite{Hsieh2003}. The first tomographic imagers produced radiographic images of selected sections of tissue by moving the x-ray source and the film over and under the patient in the opposite direction. This approach blurred structures lying under and over the selected region of interest. But this advance over conventional radiographies was insufficient to make two-dimensional tomographic images a useful diagnostic tool~\cite{Robb2003}.
 
@@ -19,7 +22,7 @@ In 1967, Godfrey N.\ Hounsfield started to develop the first clinical tomography
 
 From the early 1980s on, \ac{ct} imaging became an important tool to answer scientific questions both in medical and industrial applications.
 
-Nonetheless these medical \ac{ct} scanners are in widespread use, their images suffer from relatively low spatial resolution in the sub-micrometer scale, which is often not enough to detect the finest details in biological samples. Since the radiation dose limitations imposed for medical scans often do not apply for biological samples which are dried, frozen or embedded in paraffin or plastic, more intense and collimated x-ray sources can be used. Using such sources in \ac{uct} stations enables to reach resolutions in the submicron range\todo{Citation?}. The use of synchrotron radiation as an x-ray source to produce highly intensive beams for microtomography was first proposed by \citet{Grodzins1983,Grodzins1983a}.
+Nonetheless these medical \ac{ct} scanners are in widespread use, their images suffer from relatively low spatial resolution in the sub-micrometer scale, which is often not enough to detect the finest details in biological samples. Since the radiation dose limitations imposed for medical scans often do not apply for biological samples which are dried, frozen or embedded in paraffin or plastic, more intense and collimated x-ray sources can be used. Using such sources in \ac{uct} stations enables to reach resolutions in the sub-micrometer range\todo{Citation?}. Since synchrotron radiation is even more powerful than the x-ray tubes used for \ac{uct}, its use as an x-ray source to produce highly intensive beams for microtomography has been proposed as early as in \citeyear{Grodzins1983} by \citet{Grodzins1983,Grodzins1983a}.
 
 \section{Interaction of radiation with Matter}
 To be able to introduce the physical principles of \ac{ct}, some important interactions of x-rays with matter have to be introduced. The energy of the x-ray photons in available at \ac{tomcat}, where all the experiments of this work have been performed is in the range of 6--\SI{45}{\kilo\electronvolt}\graffito{The experiments presented in part~\ref{part:results} have been performed between \SI{11.5}{\kilo\electronvolt} and \SI{12.6}{\kilo\electronvolt}.%
@@ -29,24 +32,24 @@ To be able to introduce the physical principles of \ac{ct}, some important inter
 }, we can thus limit the explanation to absorption, Rayleigh and Compton scattering. We neglect the description of electron-positron pair production, which occurs only for x-ray energies above \SI{1}{\mega\electronvolt}.
 
 \subsection{Absorption}\label{sec:absorption}
-In the relevant absorption process---the so-called photoelectric effect---an incoming x-ray photon with energy $E_{\gamma}$ interacts with a bound atomic electron in a deep shell and is completely absorbed. This process only happens if $E_{\gamma}$ is greater than the binding energy $E_{Shell}$ of the shell electron and releases a photo-electron with the energy $\Delta E=E_{\gamma}-E_{Shell}$. This liberation creates a hole in the deep shell, which is immediately filled by electrons from outer shells of the atom. Since the electron from the outer shell is at a higher energy state than the inner shell electron, a cascade process is initiated which results in the emission of radiation which is characteristic depending on the absorbing atom.
+In the relevant absorption process---the so-called photoelectric effect---an incoming x-ray photon with energy $E_{\gamma}$ interacts with a bound atomic electron in a deep shell of the atom and is completely absorbed. This process only happens if $E_{\gamma}$ is greater than the binding energy $E_{Shell}$ of the shell electron and releases a photo-electron with the energy $\Delta E=E_{\gamma}-E_{Shell}$. This liberation creates a hole in the deep shell, which is immediately filled by electrons from outer shells of the atom. Since the electron from the outer shell is at a higher energy state than the inner shell electron, a cascade process is initiated which results in the emission of radiation which is characteristic depending on the absorbing atom.
 
 \subsection{Scattering}
 \subsubsection{Compton scattering}
 \citet{Compton1923} first described this inelastic scattering\graffito{In inelastic scattering the kinetic energy of an incident particle is not conserved.} effect which is observed when an incident photon with an Energy $E=h\nu$ transfers parts of its energy to a scattering electron which is then ejected from the atom. 
 
-To conserve the overall momentum of the system, the electron recoils at an angle $\theta$ and the photon is scattered in a direction $\phi$ with a reduced energy $E=h\nu'$. If the photon still has enough energy left, the process may be repeated, if the photon is of lower energy, it can subsequently be absorbed as described above in section~\ref{sec:absorption}.
-
-The energy of the recoiled electron is $\Delta E=h(\nu-\nu')$, where $h\nu'$ is given by equation~\ref{eq:hnu}
+To conserve the overall momentum of the system, the electron recoils at an angle $\theta$ and the photon is scattered in a direction $\phi$ with a reduced energy $E=h\nu'$, where $h$ denotes the Planck constant\graffito{The Planck constant is named after Max Planck, one of the founders of quantum theory and describes the relation between the energy ($E$) of a photon and the frequency of its associated electromagnetic wave  ($\nu$)}. If the photon still has enough energy left, the process may be repeated, if the photon is of lower energy, it can subsequently be absorbed as described above in section~\ref{sec:absorption}. The reduction in the energy of the recoil electron leads to a shift in the wavelength $\Delta\lambda$ which can be calculated using equation~\ref{eq:hnu}
 \begin{equation}
-	h\nu'=\frac{h\nu}{1+\frac{h\nu}{m_{e}c^{2}}(1-cos\theta)}
+	%h\nu'=\frac{h\nu}{1+\frac{h\nu}{m_{e}c^{2}}(1-cos\theta)}
+	\Delta\lambda = \lambda' - \lambda = \frac{h}{m_e c}(1-\cos{\theta})
 	\label{eq:hnu}
-\end{equation}\todo[inline]{or use $\lambda' - \lambda = \frac{h}{m_e c}(1-\cos{\theta})$ as in \url{http://is.gd/b9wj1}?}
+\end{equation}
+where $m_e$ stands for the electron mass and $c$ for the speed of light.
 
 \subsubsection{Coherent scattering}
 Coherent or Rayleigh scattering is an interaction process where no ionization occurs and no energy is converted into kinetic energy. The incident electromagnetic wave sets the electrons in the magnetic field into vibration with an oscillating electric field. The oscillating electrons emit coherent radiation, but since not all electrons are located at the same point inside the atom, the emitted radiation is not in phase~\cite{Hsieh2003,Stampanoni2002}.
 
-Figure~\ref{fig:InteractionPercentage} shows the relative percentages of interaction for the different interction types. Note that pair production is shown in the plots, but has not been described, since it is only relevant for energies much higher than the energies used in the experiments in this Thesis.
+Figure~\ref{fig:InteractionPercentage} shows the relative percentages of interaction for the different interaction types. Note that pair production is shown in the plots, but has not been described, since it is only relevant for energies much higher than the energies used in the experiments in this Thesis.
 
 \def\width{0.5\linewidth}%
 \def\height{0.309\linewidth}% =0.8*0.618
@@ -62,11 +65,11 @@ Figure~\ref{fig:InteractionPercentage} shows the relative percentages of interac
 			\label{subfig:Interaction-Small}%
 			}%
 		}%
-	\caption[Interaction types]{Percentage of the different interaction types specified above as a function of the beam energy in water. \subref{subfig:Interaction-Big}: Overview over the full given energy range. \subref{subfig:Interaction-Small}: Detailed view. The lightgray region is the energy-range of \ac{tomcat}, the darkgray region marks the energy range of the experiments described in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010} of this thesis. Data from~\cite[Table 5-5]{Johns1983}.}%
+	\caption[Interaction types]{Percentage of the different interaction types specified above as a function of the beam energy in water. \subref{subfig:Interaction-Big}: Overview over the full given energy range. \subref{subfig:Interaction-Small}: Detailed view. The lightgray region is the energy-range of \ac{tomcat}, the dark gray region marks the energy range of the experiments described in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010} of this thesis. Data from~\cite[Table 5-5]{Johns1983}.}%
 	\label{fig:InteractionPercentage}%
 \end{figure}
 
-The experiment presented in this thesis have been performed around x-ray beam energies of \SI{12}{\kilo\electronvolt}, for this energy, the photoelectic absorption is the major interaction process, even if it rapidly decreases for higher energies. Not only the interaction rate is higher for the photoelectric effect, but also the major part of the energy is transferred due to the photoelectric effect, since more energy is transfererd in a photoelectric interaction than in a Compton interaction.
+The experiment presented in this thesis have been performed around x-ray beam energies of \SI{12}{\kilo\electronvolt}, for this energy, the photoelectric absorption is the major interaction process, even if it rapidly decreases for higher energies. Not only the interaction rate is higher for the photoelectric effect, but also the major part of the energy is transferred due to the photoelectric effect, since more energy is transferred in a photoelectric interaction than in a Compton interaction.
 
 \subsection{Attenuation}
 The total effect of the three effects described above can be summarized with the total linear attenuation coefficient shown in equation~\ref{eq:linear attenuation} below. This equation expresses the attenuation of a monochromatic\graffito{Monochromatic light is light of a single wavelength or energy, though in practice it often refers to a narrow wavelength range} beam as it passes through a material. The attenuation in this material of uniform density and atomic number can be expressed by an exponential relationship%
@@ -81,7 +84,7 @@ where $I$ and $I_{0}$ are the incident and transmitted intensities of the x-rays
 \end{equation}%
 the so-called Beer-Lambert law, where $\mu$ is the attenuation coefficient of the material, which is depending on the incident x-ray photon energy~\cite{Hsieh2003}. 
 
-Figure~\ref{fig:yag attenuation} shows the composition of the attenuation coefficient for Cerium doped \ac{yag} (\cf{Y3Al5O12}), which is used as a material for converting the incident x-rays to visible light. This so-called scintillator is part of the microtomography station at \ac{tomcat} and is described in detail later in section~\ref{sec:tomcat}.
+Figure~\ref{fig:yag attenuation} shows the composition of the attenuation coefficient for Cerium doped \ac{yag} (\cf{Y3Al5O12}), which is used as a material for converting the incident x-rays to visible light. The so-called scintillator composed of this material is part of the microtomography station at \ac{tomcat} and is described in detail in section~\ref{sec:tomcat}.
 
 \def\width{\linewidth}%
 \def\height{0.618\linewidth}%
@@ -99,7 +102,7 @@ In general, \ac{ct} refers to the cross-sectional imaging of a sample from trans
 
 In medical \ac{ct}-scanners, the transmission images are generally obtained while the radiation source and the detector rotate around the body part to be imaged. In micro-computed and synchrotron based tomography, the source and detector are fixed, while the sample to be imaged rotates around a chosen axis.
 
-During the imaging process multiple transmission images---essentially single radiographic images--are obtained at several angles over a \unit{180}{\degree} or \unit{360}{\degree} rotation. These projections can be understood as pictures of the distribution of the attenuation of the x-rays inside the sample. Regions with high attenuation show up as dark pixel, regions with low attenuatio inside the sample show up as light pixels on the \ac{ccd}-chip of the camera.
+During the imaging process multiple transmission images---essentially single radiographic images---are obtained at several equidistant angles over a \unit{180}{\degree} or \unit{360}{\degree} rotation. These projections can be understood as pictures of the distribution of the attenuation of the x-rays inside the sample. Regions with high attenuation show up as dark pixel, regions with low attenuation inside the sample show up as light pixels on the \ac{ccd}-chip of the camera.
 
 Before and after the scan, so-called dark and flat images (FI) are recorded. The dark images record the camera noise and dark current, while the flat images record the beam profile. After baseline correction of the projections (PI) the average of the dark images is subtracted. The projections are then normalized to the flat images as seen in equation~\ref{eq:cpr}, resulting in so-called corrected projections (CPR).%
 \begin{equation}%
@@ -124,44 +127,47 @@ Figure~\ref{fig:corrected projection} shows the results of correcting a raw proj
 		\includegraphics[width=\imsize]{img/tif-sin-rec/L-XXI-18_B50287-correctedprojection}%
 		\label{subfig:cpr}%
 		}%
-	\caption[Correction of the projections with flat images]{Correction of the raw recorded projections with the flat images. \subref{subfig:pi}: Recorded projection image. A set of these is the output of one tomographic scanning session. \subref{subfig:fi}: Flat image; obtained at the start of the scan to record the beam profile. \subref{subfig:cpr}: Corrected projection obtained through the application of equation~\ref{eq:cpr} on the projection and flat image.}
+	\caption[Correction of the projections with flat images]{Correction of the raw recorded projections with the flat images. \subref{subfig:pi}: Recorded projection image. A set of these is the output of one tomographic scanning session. \subref{subfig:fi}: Flat image; obtained at the start of the scan to record the beam profile. \subref{subfig:cpr}: Corrected projection obtained after equation~\ref{eq:cpr} has been applied on the projection and flat image shown in the first two panels.}
 	\label{fig:corrected projection}
+	\todo[inline]{scalebars!}
 \end{figure}
 
-The corrected projections are then transformed into so-called sinograms, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of each projection. From one tomographic scan with 1500 projections recorded with a camera with a size of 2048$\times$2048 pixels, we get a set of 1024 sinograms with a size of 1024$\times$1500 pixels.
+The corrected projections are then transformed into so-called sinograms, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of each projection. From one tomographic scan with 1500 projections recorded with a camera with a size of 2048$\times$2048 pixels, we get a set of 1024 sinograms with a size of 1024$\times$1500 pixels each.
 
-Sinograms inherit their name because the Radon transformation\graffito{The Radon transformation was described in 1917 by Johann \citet{Radon1917} and is the mathematical basis for tomographic imaging.} of a Dirac delta peak resembles a sine wave. The Radon transformation of a cluster of objects appears as an overlay of blurred sine waves with different amplitudes and phases, since any object  can be considered as a collection of many small points.
+Sinograms inherit their name because the Radon transformation\graffito{The Radon transformation was described in 1917 by Johann \citet{Radon1917} and is the mathematical basis for tomographic imaging.} of a Dirac delta peak resembles a sine wave. The Radon transformation of a cluster of objects appears as an overlay of blurred sine waves with different amplitudes and phases, since any object can be considered as a collection of many small points.
 
 One sinogram contains the total information of one plane or slice of the reconstructed tomographic image. We can thus reconstruct the $n$\textsuperscript{th} slice of the tomographic dataset from the $n$\textsuperscript{th} sinogram using different reconstructing algorithms, e.g.\ a standard filtered back-projection algorithm. In a reconstructed slice, the absorption properties of the sample at a certain height are encoded by the gray values of the image.
 
 \renewcommand{\imsize}{0.5\linewidth}
-\newsavebox{\tempbox}
-\begin{figure}%
+\begin{figure}[h]%
 	\centering
-	\subfloat[Sinogram, resized]{%
+	\subfloat[resized Sinogram]{%
 		\includegraphics[width=\imsize]{img/tif-sin-rec/L-XXI-18_B50501-sin-DMP-scaled}%
 		\label{subfig:sin}%
 		}%
-	\subfloat[Sinogram]{%
+	\subfloat[Reconstructed Slice]{%
 		\includegraphics[width=\imsize]{img/tif-sin-rec/L-XXI-18_B50761-rec-8bit}%
-		\label{subfig:sin}%
+		\label{subfig:rec}%
 		}%
-	\caption{Sinogram and Reconstruction}
+	\caption[Sinogram and Reconstruction]{Sinogram and Reconstruction of a rat lung sample. \subref{subfig:sin}: The $n$\textsuperscript{th} sinogram has been obtained after reordering the $n$\textsuperscript{th} line of each of the 1501 corrected projections. The sinogram has been rescaled to a square format for display purposes. \subref{subfig:rec}: The tomographic reconstruction of the complete set of sinograms results in a set of 1024 reconstructed slices with a size of 1024$\times$1024 pixels each. This slice can then be used for further processing, measuring and three dimensional visualization.}
 	\label{fig:Sin Rec}
+	\todo[inline]{Scalebars! Is L-XXI-18 really rat? }
 \end{figure}
 
-The amount of scanned projections---the number of angles at which projections have been recorded---is defined by by the socalled sampling theorem. The sampling theorem as defined by \citet{Shannon1949} states that: \begin{quote} If a function $f(t)$ contains no frequencies higher than $W$ cps, it is completely determined by giving its ordinates at a series of points spaced $1/2\ W$ seconds apart. \cite{Shannon1949}\end{quote}
+The amount of scanned projections---the number of angles at which projections have been recorded---is defined by the so-called sampling theorem. The sampling theorem as defined by \citet{Shannon1949} states that: \begin{quote}If a function $f(t)$ contains no frequencies higher than $W$ cps, it is completely determined by giving its ordinates at a series of points spaced $1/2\ W$ seconds apart. \cite{Shannon1949}\end{quote}
 
-Paraphrased to tomographic reconstruction, the sampling theorem states that the minimal number of recorded angles along the rotation of the sample must be at least equal to twice the highest frequency used to scan the sample.
+Paraphrased to tomographic imaging, the sampling theorem states that the minimal number of recorded angles along the rotation of the sample must be at least equal to twice the highest frequency used to scan the sample.
 
-From calculations in polar coordinates one can deduce that for a detector with the size $N$ $M=\frac{\pi}{n}N$ angular projections are required to fulfill the sampling theorem for tomographic reconstruction. Generally, for well-balanced reconstructed image with a size of $N\times N$ pixels, recorded with a detector of the same size, total number of projections should be roughly equal to $N$~\cite{Kak2002}. In in layman's terms, we can thus say that if we scan a sample with a detector of 1024$\times$ pixels, we need to record approximately 1000 projections over a sample rotation of \SI{180}{\degree}.
+From calculations in polar coordinates one can deduce that for a detector with the size $N$ $M=\frac{\pi}{n}N$ angular projections are required to fulfill the sampling theorem for tomographic reconstruction. Generally, for well-balanced reconstructed image with a size of $N\times N$ pixels, recorded with a detector of the same size, the total number of projections should be roughly equal to $N$~\cite{Kak2002}. In in layman's terms, we can thus say that if we scan a sample with a detector of 1024$\times$ pixels, we need to record approximately 1000 projections over a sample rotation of \SI{180}{\degree}.
 
 At \ac{tomcat} this rule of thumb is exactly obeyed in the case of a tomographic scan with a binned\graffito{Binning is the process where 2$\times$2 pixels on the camera are averaged to one pixel, both to reduce the image size and noise.} detector. For a scan with an unbinned detector---resulting in images with a size of 2048$\times$2048 pixels---only 1500 projections are acquired, thus violating the rule. But even with this seemingly undersampled data acquisition, reconstructions with very high quality are be obtained.
 
 Chapter~\ref{ch:haberthuer2010} a scanning method is presented where the sampling theorem is deliberately violated both for increasing the field of view of \ac{tomcat} and for reducing the radiation dose imparted on the sample.
 
+For classic tomographic imaging, an x-ray tube is used as a source of radiation. In \ac{srxtm}, which was used to obtain the tomographic data for this thesis---as the name suggests---x-rays from a synchrotron are used as a radiation source. The following sections give a short overview over the underlying theory of the synchrotron radiation and a quick rundown on the \ac{sls} and the beamline where all the presented experiments have been carried out.
+
 \section{Synchrotron Radiation}
-Synchrotron facilities use the fact that a accelerated particles travelling on a curved trajectory emit radiation. If charged particles at relativistic speed are undergo a change of direction (\ie\ in a magnetic field) so-called synchrotron radiation is emitted. 
+Synchrotron facilities use the fact that a accelerated particles travelling on a curved trajectory emit radiation. If charged particles at relativistic speed are undergo a change of direction (\ie in a magnetic field) so-called synchrotron radiation is emitted. 
 
 Synchrotron radiation was first observed as energy loss in electron storage rings used for high energy physics experiments. First sources for scientific use were beamports at such facilities, which utilized otherwise lost radiation. Dedicated second-generation synchrotron radiation sources have been built over the years; these were ring-like structures using a series of magnets to control the accelerated particles. Current---third-generation---synchrotron radiation facilities are composed of many straight sections of different lengths, specially optimized to accommodate different magnetic structures used to generate the synchrotron radiation~\cite{Stampanoni2002a,Margaritondo2002,wwwsls}. 
 
@@ -170,7 +176,7 @@ The three magnetic structures used in synchrotron facilities are bending magnets
 
 Bending magnets\graffito{Such magnets are also used in traditional televisions, which contain a cathode ray tube, which is essentially a small particle accelerator. They move the electron beam over the screen of the TV tube in a controlled way.~\cite{wiki:dipolemagnet}} are used to create a homogeneous magnetic field over a defined distance. The magnetic field inside forces accelerated particles injected into the bending magnet to travel on a circular trajectory. The result is a fan of radiation in the tangential direction of the bend.
 
-\begin{figure}[htb]
+\begin{figure}[h]
 	\noindent\makebox[\textwidth]{%
 		\centering%
 		\subfloat[]{%
@@ -192,7 +198,7 @@ Bending magnets\graffito{Such magnets are also used in traditional televisions, 
 	\label{fig:bending magnets}
 \end{figure}
 
-\begin{figure}[htb]
+\begin{figure}
 	\noindent\makebox[\textwidth]{%
 		\centering%
 		\subfloat[]{%
@@ -213,7 +219,7 @@ Bending magnets\graffito{Such magnets are also used in traditional televisions, 
 	\label{fig:undulator}
 \end{figure}
 
-\begin{figure}[htb]
+\begin{figure}
 	\noindent\makebox[\textwidth]{%
 		\centering
 		\subfloat[]{%
@@ -238,28 +244,28 @@ Undulators consist of periodic structures of dipole magnets with relatively weak
 
 Wigglers are the strong brothers of the undulators. Due to stronger magnetic fields the oscillation amplitude of the electrons and the emitted radiation power are larger and the radiation cone is broader.
 
-The relativistic electrons are usually produced by a hot filament. They are then pre-accelerated and injected into the storage ring by a linear accelerator. Bending magnets along the storage ring keep the electrons on their circular path. Quadrupole magnets along the ring are used to improve the geometrical characteristics of the electron beam, \ie\ reduce the transverse section and angular spread of the beam, hence improving the so-called brightness of the source~\cite{Margaritondo2002}.
+The relativistic electrons are usually produced by a hot filament. They are then pre-accelerated and injected into the storage ring by a linear accelerator. Bending magnets along the storage ring keep the electrons on their circular path. Quadrupole magnets along the ring are used to improve the geometrical characteristics of the electron beam, \ie reduce the transverse section and angular spread of the beam, hence improving the so-called brightness of the source~\cite{Margaritondo2002}.
 
 \section{The Swiss Light Source}
 The \ac{sls} at the \ac{psi} in Villigen, Switzerland is a third-generation synchrotron light source. With an energy of \SI{2.4}{\giga\electronvolt}, it provides photon beams of high brightness for research in materials science, biology and chemistry.
 
 \renewcommand{\imsize}{0.618\linewidth}%
-\begin{figure}[htb]
+\begin{figure}
 	\centering
 	\includegraphics[width=\imsize]{img/SLS_beamlines_2008}
 	\caption[Beamlines at the Swiss Light Source]{Beamlines at the \ac{sls}. Image from the \href{http://sls.web.psi.ch/view.php/beamlines/}{SLS Website}}
 	\label{fig:beamlines}
 \end{figure}
 
-\section{tomcat}\label{sec:tomcat}
+\section{TOMCAT}\label{sec:tomcat}
 At \acf{tomcat} the user can perform absorption as well as phase contrast imaging with an isotropic voxel size ranging from \SI{350}{\nano\meter} up to \SI{14.8}{\micro\meter} depending on the chosen magnification. Typical acquisition times are in the order of a few minutes for a full sample, depending on the selected energy and resolution. A detailed explanation of the beamline for \ac{tomcat}, where all the tomography data for this thesis has been presented by \citet{Stampanoni2006a}.
 
-As a short rundown the most important features of the beamline are presented here: The \ac{tomcat} beamline is located at the X02DA port of the SLS and started regular user operation in June 2006. Synchrotron light is delivered by a \SI{2.9}{\tesla} superbend which is magnetic field approximately double the strength of the normal \ac{sls} bending magnets. This enables to have a high critical energy of the source (\SI{11.1}{\kilo\electronvolt}, corresponding to a wavelength of \SI{1.22}{\angstrom}) and results in a considerable increase of flux at for hard X-rays. A double crystal multilayer monochromator is the main optical component of the beamline an is used to select the energy of the beam incident on the sample (Energy range from 6--\SI{45}{\kilo\electronvolt}, with a bandwidth of a few percent down to a few permille).
+As a short rundown the most important features of the beamline are presented here: The \ac{tomcat} beamline is located at the X02DA port of the SLS and started regular user operation in June 2006. Synchrotron light is delivered by a \SI{2.9}{\tesla} bending magnet which is a magnetic field approximately double the strength of the normal \ac{sls} bending magnets. This enables to have a high critical energy of the source (\SI{11.1}{\kilo\electronvolt}, corresponding to a wavelength of \SI{1.22}{\angstrom}) and results in a considerable increase of flux\graffito{Flux is defined as the amount of particles, mass or energy which flows through an area in a certain time and essentially describes the brightness of the beam} at the desired energy range. A double crystal multilayer monochromator is the main optical component of the beamline an is used to select the energy of the beam incident on the sample. The energy range can be selected from 6--\SI{45}{\kilo\electronvolt} with a bandwidth of a few percent down to a few permille.
 
-Once inside the measuring hut, the beam is travelling through a pipe and collimated onto the sample. After penetration of the sample, the X-rays are converted to visible light by a so-called scintillator\graffito{The latin word \textit{scintillare} can be translated with sparkle or flicker.}. Charged particles excite the scintillator material and this excitation energy is then subsequently emitted by fluorescence photons at a longer wavelength, which enables the detection of the incident light with a \ac{ccd}-camera. The \ac{ccd}-camera at \ac{tomcat} features a detector with 2048$\times$2048 pixels with a size of 7.4$\times$\SI{7.4}{\micro\meter} each. Between the scintillator and the \ac{ccd}-sensor an interchangeable microscope objectives enable to choose a wide range of the pixel size, ranging from 350$\times$\SI{350}{\nano\meter\squared}\todo{What about the 40$\times$ magnification?} up to 5.6$\times$\SI{5.6}{\micro\meter}. The resulting field of view of a standard scan can thus easily be varied from 0.75$\times$\SI{0.75}{\milli\meter\squared} up to 11.45$\times$\SI{11.45}{\milli\meter\squared}\graffito{See chapter~\ref{ch:haberthuer2010} presenting a method for increasing the field of view of tomography endstations.}.
+After collimation, the beam travels through an evacuated pipe into the measuring hut and is directed towards the sample. After penetration of the sample, the X-rays are converted to visible light by a so-called scintillator\graffito{The latin word \textit{scintillare} can be translated with sparkling or flickering.}. Charged particles excite the scintillator material and this excitation energy is then subsequently emitted by fluorescence photons at a longer wavelength. This fluorescence makes it possible to detect the incident beam using a \ac{ccd}-camera. The \ac{ccd}-camera at \ac{tomcat} features a detector with 2048$\times$2048 pixels with a size of 7.4$\times$\SI{7.4}{\micro\meter} each. Between the scintillator and the \ac{ccd}-sensor interchangeable microscope objectives enable to choose a wide pixel size range, from 350$\times$\SI{350}{\nano\meter\squared}\todo{What about the 40$\times$ magnification?} up to 5.6$\times$\SI{5.6}{\micro\meter}. The resulting field of view of a standard scan can thus easily be varied from 0.75$\times$\SI{0.75}{\milli\meter\squared} up to 11.45$\times$\SI{11.45}{\milli\meter\squared}\graffito{See chapter~\ref{ch:haberthuer2010} presenting a method for increasing the field of view of tomography endstations.}.
 
 \renewcommand{\imsize}{0.5\linewidth}
-\begin{figure}[p]
+\begin{figure}[h]
 	\subfloat[Overview of the TOMCAT end-station: The blue structure behind the control notebook is the sample stage with the sample holder on the rotation stage on top of it. The black structure above contains the scintillator, the microscope optics and the camera.]{%
 		\includegraphics[width=\imsize]{img/TOMCAT1}%
 		\label{subfig:TOMCAT1}%
@@ -269,8 +275,11 @@ Once inside the measuring hut, the beam is travelling through a pipe and collima
 		\label{subfig:TOMCAT2}%
 		}%
 	\caption{Images of the TOMCAT beamline.}
+	\label{fig:tomcat}
 \end{figure}
 
-The sample positioning in the beam and the scanning parameters are controlled from outside the measuring hut through an \ac{epics} by the national laboratory of \href{http://www.aps.anl.gov/epics/}{Argonne in the USA}. After the start of the scan sinograms (see chapter~\ref{ch:ct}) are calculated on the fly and the tomographic reconstruction can be initialised using a web-based interface. This interface and the general workflow has been described by \citet{Hintermueller2010}.
+The sample positioning in the beam (as shown in figure~\ref{fig:tomcat}) and the parameters of the scan---like exposure time, amount of projections, name, etc.---are controlled from outside the measuring hut through an \ac{epics}. After the start of the scan sinograms (see chapter~\ref{ch:ct}) are calculated on the fly and the tomographic reconstruction can be initialised using a web-based interface. This interface and the general workflow has been described by \citet{Hintermueller2010}.
 
 After the reconstruction of the tomographic datasets on a node computing cluster of five \SI{64}{\bit} Opteron machines with four cores and \SI{8}{\giga\byte} \acs{ram} each the resulting data can be transferred to the home laboratory immediately after the beam time shifts.
+
+This is where the real work begins\ldots
