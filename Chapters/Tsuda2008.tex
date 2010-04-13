@@ -1,4 +1,5 @@
 % !TEX root = ../Thesis.tex
+\acresetall
 \myChapter[Finite element \threed reconstruction of the pulmonary acinus]{Finite element \threed reconstruction of the pulmonary acinus imaged by synchrotron X-ray tomography}\label{ch:tsuda2008}
 
 %\newcommand{\footremember}[2]{\footnote{#2}\newcounter{#1}\setcounter{#1}{\value{footnote}}}%
@@ -83,8 +84,7 @@ To achieve a tomographic image for each sample, 1500 projections were obtained o
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-02}
-	\caption[SRXTM imaging setup]{Imaging setup. The X-rays are coupled out of the storage ring via a wiggler. The monochromator is then used to select a desired wavelength of the incident
-X-rays. The sample is placed on a rotating sample holder inside the beam. While the X-rays penetrate the sample, the stage is rotated, and in total 1500 projections over \SI{180}{\degree} are recorded. Plot shows spectrum of \ac{tomcat} (red and blue) compared with conventional X-ray tube (green).}
+	\caption[SRXTM imaging setup]{Imaging setup. The X-rays are coupled out of the storage ring via a wiggler. The monochromator is then used to select a desired wavelength of the incident X-rays. The sample is placed on a rotating sample holder inside the beam. While the X-rays penetrate the sample, the stage is rotated, and in total 1500 projections over \SI{180}{\degree} are recorded. Plot shows spectrum of \ac{tomcat} (red and blue) compared with conventional X-ray tube (green).}
 	\label{fig:imaging setup}
 \end{figure}
 
@@ -105,8 +105,7 @@ As indicated in Fig.~\ref{fig:workflow}, we determined the appropriate threshold
 We performed this iterative process until the calculated morphological parameters closely matched the values of the gold standard~\cite{Tschanz2003}.
 
 \subsubsection{Object connectivity analysis}
-Depending on the threshold level selected, erroneous holes and isolated small areas/objects may appear in the segmented images. To avoid these artifacts and to maintain object connectivity, we needed to preprocess the segmented voxels. We first determined the number of isolated objects and their sizes in the \ac{roi} and then eliminated the objects below a reasonable size ($\sim$5 pixels) by reclassifying voxel values (from ``airway'' to ``tissue'', or vice versa). This \ac{oca} was performed by implementing label adjacent pixel analysis in \threed \cite{Ballard1982,Davies1990,Gonzalez1992}. For
-the sake of simplicity and clarity, we will explain this algorithm in \twod as follows.
+Depending on the threshold level selected, erroneous holes and isolated small areas/objects may appear in the segmented images. To avoid these artifacts and to maintain object connectivity, we needed to preprocess the segmented voxels. We first determined the number of isolated objects and their sizes in the \ac{roi} and then eliminated the objects below a reasonable size ($\sim$5 pixels) by reclassifying voxel values (from ``airway'' to ``tissue'', or vice versa). This \ac{oca} was performed by implementing label adjacent pixel analysis in \threed \cite{Ballard1982,Davies1990,Gonzalez1992}. For the sake of simplicity and clarity, we will explain this algorithm in \twod as follows.
 
 \def\scale{0.5}
 \begin{figure}
@@ -210,8 +209,7 @@ To facilitate further processing of the image, different subregions of interest 
 		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-05d}%
 		\label{subfig:tsuda-05d}%
 	}%
-	\caption[Overview of workflow for the selection of a region of interest]{Overview of workflow for the selection of a \acf{roi}. \subref{subfig:tsuda-05a}: full perspective view of the sample R108C60C-07e with 6 selected orthogonal slices and
-bounding box of the full sample in orange. The \ac{roi} selected for subfigures \subref{subfig:tsuda-05c} and \subref{subfig:tsuda-05d} is visible in the \textit{top left}. \subref{subfig:tsuda-05b}: close-up of one slice of the full dataset with selected \ac{roi} (side-length of 256 pixels). \subref{subfig:tsuda-05c}: \ac{roi} cut out of the full sample, 6 selected orthogonal slices are shown. \subref{subfig:tsuda-05d}: close-up of the \ac{roi} in subfigure \subref{subfig:tsuda-05b}.}
+	\caption[Overview of workflow for the selection of a region of interest]{Overview of workflow for the selection of a \acf{roi}. \subref{subfig:tsuda-05a}: full perspective view of the sample R108C60C-07e with 6 selected orthogonal slices and bounding box of the full sample in orange. The \ac{roi} selected for subfigures \subref{subfig:tsuda-05c} and \subref{subfig:tsuda-05d} is visible in the \textit{top left}. \subref{subfig:tsuda-05b}: close-up of one slice of the full dataset with selected \ac{roi} (side-length of 256 pixels). \subref{subfig:tsuda-05c}: \ac{roi} cut out of the full sample, 6 selected orthogonal slices are shown. \subref{subfig:tsuda-05d}: close-up of the \ac{roi} in subfigure \subref{subfig:tsuda-05b}.}
 	\label{fig:tsuda-05}
 \end{figure}
 

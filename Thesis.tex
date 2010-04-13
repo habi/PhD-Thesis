@@ -48,6 +48,7 @@
 \usepackage{todonotes} % [obeyDraft] 
 \usepackage{pdfpages}
 \usepackage{isotope}
+\usepackage{enumerate}
 \usepackage[%
 	eulerchapternumbers,%
 	listings,%
@@ -158,19 +159,19 @@
 %\include{FrontBackmatter/Titlepage}
 %\include{FrontBackmatter/Titleback}
 %\cleardoublepage\include{FrontBackmatter/Dedication}
-%\cleardoublepage\include{FrontBackmatter/Abstract}
+\cleardoublepage\include{FrontBackmatter/Abstract}
 %\cleardoublepage\include{FrontBackmatter/Acknowledgments}
-%\pagestyle{scrheadings}
-%\cleardoublepage\include{FrontBackmatter/Contents}
+\pagestyle{scrheadings}
+\cleardoublepage\include{FrontBackmatter/Contents}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Mainmatter
 %%%%%%%%%%%%%%%%%%%%%%%
-%\pagenumbering{arabic}
+\pagenumbering{arabic}
 %% use \cleardoublepage here to avoid problems with pdfbookmark
-\cleardoublepage\myPart{Introduction}\label{part:introduction}
-\include{Chapters/Introduction}
-\include{Chapters/TheMammalianLung}
-\include{Chapters/CTandTomcat}
+%\cleardoublepage\myPart{Introduction}\label{part:introduction}
+%\include{Chapters/Introduction}
+%\include{Chapters/TheMammalianLung}
+%\include{Chapters/CTandTomcat}
 %%
 %\cleardoublepage\myPart{Results}\label{part:results}
 %\include{Chapters/Publications}
@@ -190,9 +191,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Other Stuff in the Back
 %%%%%%%%%%%%%%%%%%%%%%%
-%\cleardoublepage\myPart{Back Matter}\label{part:back matter}
+\cleardoublepage\myPart{Back Matter}\label{part:back matter}
 %\cleardoublepage\include{FrontBackmatter/CurriculumVitae}
-%\cleardoublepage\include{FrontBackmatter/Bibliography}
+\cleardoublepage\include{FrontBackmatter/Bibliography}
 %\cleardoublepage\include{FrontBackmatter/Index}
 %\cleardoublepage\include{FrontBackmatter/Declaration}
 %\cleardoublepage\include{FrontBackmatter/Colophon}
