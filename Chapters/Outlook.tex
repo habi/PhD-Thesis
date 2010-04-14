@@ -14,6 +14,25 @@
 	\item Acinar Growth
 \end{itemize}
 
+\renewcommand{\imsize}{\linewidth}
+\begin{figure}[ht]
+	\centering
+	\pgfmathsetlength{\imagewidth}{\imsize}%
+	\pgfmathsetlength{\imagescale}{\imagewidth/1541}%
+	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+		%\def\x{952} % scalebar-x at golden ratio of x=1541px
+		%\def\y{588} % scalebar-y at 90% of height of y=653px
+		\def\x{1300} % scalebar-x at golden ratio of x=1541px
+		\def\y{400} % scalebar-y at 90% of height of y=653px
+		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/R108C21b-skeleton}};
+		% 796px = 4.0138mm > 100px = 504um > 99px = 500um, 20px = 100um
+		%\draw[color=red,|-|,thick] (11,341) -- (807,339) node [sloped,midway,above] {\SI{4.0138}{\milli\meter} (2712px)};
+		\draw[|-|,thick] (\x,\y) -- (\x+99,\y) node [midway, above] {\SI{500}{\micro\meter}};
+	\end{tikzpicture}%
+	\caption{Visualization of rat lung sample obtained at postnatal day 21. Left: Three-dimensional view of the sample, Right: Four independent airway segments. Foreground: Extracted airway skeletons of the independent airways. The yellow skeleton contains \num{1133}, the green \num{7288}, the red \num{6513} and the blue skeleton \num{3278} nodes.}
+	\label{fig:skeleton}
+\end{figure}
+
 \renewcommand{\imsize}{0.618\linewidth}
 \begin{figure}
 	\centering

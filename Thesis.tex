@@ -135,7 +135,7 @@
     urlcolor=Maroon, linkcolor=unibe-link, citecolor=unibe-citation, %pagecolor=RoyalBlue,%
     %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
     pdftitle={\myTitle},%
-    pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
+    pdfauthor={\myName, \myUni, \myFaculty},%
     pdfsubject={},%
     pdfkeywords={},%
     pdfcreator={pdfLaTeX},%
@@ -156,10 +156,10 @@
 % Frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%
 %\include{FrontBackmatter/Titlepage}
-%\include{FrontBackmatter/Titlepage}
-%\include{FrontBackmatter/Titleback}
+%\cleardoublepage\include{FrontBackmatter/Titlepage}
+%\cleardoublepage\include{FrontBackmatter/Titleback}
 %\cleardoublepage\include{FrontBackmatter/Dedication}
-\cleardoublepage\include{FrontBackmatter/Abstract}
+%\cleardoublepage\include{FrontBackmatter/Abstract}
 %\cleardoublepage\include{FrontBackmatter/Acknowledgments}
 \pagestyle{scrheadings}
 \cleardoublepage\include{FrontBackmatter/Contents}
@@ -169,9 +169,9 @@
 \pagenumbering{arabic}
 %% use \cleardoublepage here to avoid problems with pdfbookmark
 %\cleardoublepage\myPart{Introduction}\label{part:introduction}
-%\include{Chapters/Introduction}
-%\include{Chapters/TheMammalianLung}
-%\include{Chapters/CTandTomcat}
+\include{Chapters/Introduction}
+\include{Chapters/TheMammalianLung}
+\include{Chapters/CTandTomcat}
 %%
 %\cleardoublepage\myPart{Results}\label{part:results}
 %\include{Chapters/Publications}
@@ -179,7 +179,7 @@
 %\include{Chapters/Tsuda2008}
 %\include{Chapters/Haberthuer2010}
 %%
-\cleardoublepage\myPart{Discussion and Outlook}\label{part:discussion}
+%\cleardoublepage\myPart{Discussion and Outlook}\label{part:discussion}
 \include{Chapters/Discussion}
 \include{Chapters/Outlook}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -191,7 +191,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Other Stuff in the Back
 %%%%%%%%%%%%%%%%%%%%%%%
-\cleardoublepage\myPart{Back Matter}\label{part:back matter}
+%\cleardoublepage\myPart{Back Matter}\label{part:back matter}
 %\cleardoublepage\include{FrontBackmatter/CurriculumVitae}
 \cleardoublepage\include{FrontBackmatter/Bibliography}
 %\cleardoublepage\include{FrontBackmatter/Index}
