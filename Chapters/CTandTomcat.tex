@@ -90,10 +90,10 @@ Figure~\ref{fig:yag attenuation} shows the composition of the attenuation coeffi
 \def\width{\linewidth}%
 \def\height{0.618\linewidth}%
 \begin{figure}[h]
-%	\noindent\makebox[\textwidth]{%
+	\noindent\makebox[\textwidth]{%
 		\centering
 		\input{Plots/YAGattenuation}%
-%		}
+		}
 	\caption[Total attenuation coefficient of Ce:YAG]{Total attenuation coefficient of Ce:YAG (\cf{Y3Al5O12}), the scintillator material used for converting the incident x-rays to visible light in the experiments presented in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010}. Note that pair production starts for energies above \SI{1}{\mega\electronvolt} and can thus be safely ignored for the energy-ranges in this work. Data obtained from the photon cross section database~\cite{XCOM}.}
 	\label{fig:yag attenuation}
 \end{figure}
@@ -179,7 +179,7 @@ One sinogram contains the total information of one plane or slice of the reconst
 		}%
 	\caption[Sinogram and Reconstruction]{Sinogram and Reconstruction of the projections of the rat lung sample shown in figure~\ref{fig:corrected projection}. \subref{subfig:sin}: The $n$\textsuperscript{th} sinogram has been obtained after reordering the $n$\textsuperscript{th} line of each of the 1501 corrected projections. The sinogram has been rescaled to a square format for display purposes, it would have a size of 1024$\times$1501 pixels. It doesn't really make sense to draw a scalebar on a sinogram, it has thus been omitted. \subref{subfig:rec}: The tomographic reconstruction of the complete set of sinograms results in a set of 1024 reconstructed slices with 1024$\times$1024 pixels of a size of \SI{1.48}{\micro\meter} each. This slice can then be used for further processing, measuring and three-dimensional visualization.}
 	\label{fig:Sin Rec}
-	\todo[inline]{Is L-XXI-18, beamtime 2010a, Matthias Roth (?) really rat? }
+	\todo[inline]{Is it really rat? (L-XXI-18, beamtime 2010a, Matthias Roth)}
 \end{figure}
 
 The amount of scanned projections---the number of angles at which projections have been recorded---is defined by the so-called sampling theorem. The sampling theorem as defined by \citet{Shannon1949} states that: \begin{quote}If a function $f(t)$ contains no frequencies higher than $W$ cps, it is completely determined by giving its ordinates at a series of points spaced $1/2\ W$ seconds apart. \cite{Shannon1949}\end{quote}
@@ -306,7 +306,7 @@ The x-rays which penetrated the sample are detected using a combination of a sci
 		\includegraphics[width=\imsize]{img/TOMCAT2}%
 		\label{subfig:TOMCAT2}%
 		}%
-	\caption{Images of the TOMCAT beamline.}
+	\caption{Overview of the TOMCAT beamline}
 	\label{fig:tomcat}
 \end{figure}
 

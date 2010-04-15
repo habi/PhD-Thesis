@@ -29,7 +29,7 @@
 		%\draw[color=red,|-|,thick] (11,341) -- (807,339) node [sloped,midway,above] {\SI{4.0138}{\milli\meter} (2712px)};
 		\draw[|-|,thick] (\x,\y) -- (\x+99,\y) node [midway, above] {\SI{500}{\micro\meter}};
 	\end{tikzpicture}%
-	\caption{Visualization of rat lung sample obtained at postnatal day 21. Left: Three-dimensional view of the sample, Right: Four independent airway segments. Foreground: Extracted airway skeletons of the independent airways. The yellow skeleton contains \num{1133}, the green \num{7288}, the red \num{6513} and the blue skeleton \num{3278} nodes.}
+	\caption[Visualization of rat lung sample obtained at postnatal day 21]{Visualization of rat lung sample obtained at postnatal day 21. Left: Three-dimensional view of the sample, Right: Four independent airway segments. Foreground: Extracted airway skeletons of the independent airways. The yellow skeleton contains \num{1133}, the green \num{7288}, the red \num{6513} and the blue skeleton \num{3278} nodes.}
 	\label{fig:skeleton}
 \end{figure}
 
@@ -39,4 +39,33 @@
 	\includegraphics[width=\imsize]{img/Acinus_Overlay}
 	\caption{Acinus Overlay}
 	\label{fig:acinus overlay}
+\end{figure}
+
+\begin{figure}[htb]
+	\noindent\makebox[\textwidth]{%
+		\centering
+		\begin{tikzpicture}
+		\begin{axis}[
+			width=\linewidth,%
+			height=0.618\linewidth,%
+			xmin=0,%
+			xmax=60,%
+			xtick={4,10,21,36,60},%
+			%ytick=data,%
+			xlabel=Days,%
+			ylabel={Alveoli per Volume [\micro\litre$^{-1}$]}%
+			]
+			\addplot
+				plot[error bars/.cd, y dir = both, y explicit]
+				coordinates{
+				 (4,830.227) +- (0,161.255)
+				 (10,2068.82) +- (0,704.672)
+				 (21,4257.62) +- (0,894.213)
+				 (36,1406.72) +- (0,200.641)
+				};
+		\end{axis}
+		\end{tikzpicture}%
+	}
+	\caption{Alveoleneingänge pro Volumen. Pro Tag wurden mehrere Segmente ausgezählt. Damit die Daten geplottet werden konnten, wurde ein Mittelwert aus diesen Segmenten gebildet. Die Fehlerbalken stellen die Standardabweichung des Mittelwerts aller gezählten Segmente dar.}
+	\label{fig:plot}
 \end{figure}
