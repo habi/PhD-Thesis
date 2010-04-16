@@ -15,7 +15,7 @@ Tomography in contrast offers a non-destructive insight into the lung, tomograph
 In this work three imaging methods based on ultrahigh resolution tomographic data of the terminal airway have been presented, the following sections discuss the major notable points of each of them.
 
 \section{Multimodal Imaging}
-The first method is a multimodal imaging method combining the advantages of tomographic imaging and \ac{em}. The tomographic data provides the unhindered three-dimensional information on the location of sub-micron particles in the terminal airway tree which is combined with the extremely high resolution of the detected particles for the precise analysis of those particles in the lung tissue.
+The method presented in chapter~\ref{ch:xrm2008} combinines the advantages of tomographic imaging and \ac{em} into a multimodal imaging approach for the analysis of inhaled particles in the lung. The tomographic data provides the unhindered three-dimensional information on the location of sub-micron particles in the terminal airway tree which is combined with the extremely high resolution of the detected particles for the precise analysis of those particles in the lung tissue.
 
 Exposure to ultra-fine particles and nanoparticles produces by environmental or industrial sources is an important health problem. It is expected that inhaled particles are deposited in specific locations in the lung. With currently available methods, the exact location of these deposition sites cannot easily be analyzed. 
 
@@ -64,9 +64,16 @@ Figure~\ref{fig:correlation} shows the three-dimensional situation of different 
 	\todo[inline]{Slice is not multimodal but from \ac{srxtm}-set, so essentially I'm lying\dots $\rightarrow$ Do we need to show a LM or EM-slice or is this enough for concept?}
 \end{figure}
 
-Current work in our group focuses on an automatic registration method taking into account all six degrees of freedom \ie rotation and translation in x, y and z-plane. First results have already been presented as a Master Thesis by Sébastien \citet{Barre2009}.
+Current work in our group focuses on an automatic registration method taking into account all six degrees of freedom \ie rotation and translation in the x, y and z-plane. First results have already been presented as a Master Thesis by Sébastien \citet{Barre2009}. Fully unrestricted three-dimensional information on the airway three from one imaging modality can be matched with highest resolution two-dimensional information about the particle location in or around the tissue in the lung\todo{what else can we discuss here?}.
 
 \section{Finite Element}
+The results presented in chapter~\ref{ch:tsuda2008} focus more on the structural analysis of the gas-exchange region of the lung. The alveolar structure of the pulmonary acinus plays a vital role in gas exchange function. Using an analytical method which mapped a \ac{fe} representation of the terminal airways over a three-dimensional reconstruction of a \ac{srxtm} dataset we accurately reconstructed the gas exchange regions of the lung in three dimensions.
+
+To our knowledge it has never before been possible to three-dimensionally analyze the structure-function relationship of the parenchymal region of the lung in such detail. \citet{Berend1991} performed an analysis of the peripheral region of one human lung using serial sections studied by light microscopy. They were able to analyze the structure of one partical acinus through formidable effort and stated that the process proved to be very difficult and time consuming. \citet{Litzlbauer2006} analyzed porcine lungs using \ac{uct} but suggested to favor \ac{srxtm} over \ac{uct} to enhance the quality of morphometric analysis of the terminal airway structure.
+
+Using \ac{srxtm} it has been not only been possible to visualize the alveolar region of rat lung samples, but also to assess and match morphological parameters of the computed three-dimensional reconstruction to prior stereologically assessed parameters of these lungs.
+
+Since the reconstructed datasets have been directly elementarized using a \ac{fe} mesh lung tissue and air space were not only three-dimensionally visualized, but also immediately prepared for further analysis of the terminal airway region. different morphological parameters were assessed and additionally the \ac{fe} meshing also prepared the resulting dataset for subsequent \ac{cfd} analysis of the airflow in the lung~\todo{moar?}.
 
 \section{Widefield SRXTM}
 \begin{itemize}
@@ -75,4 +82,3 @@ Current work in our group focuses on an automatic registration method taking int
 	\item skeletonization
 	\item acinus detection \threed, marking in \twod makes it ``more understandable'' than on classic slices, see outlook in chapter~\ref{ch:outlook} and figure~\ref{fig:acinus overlay}.
 \end{itemize}
-\vspace{52mm}
