@@ -1,5 +1,5 @@
 \documentclass[%
-	%draft,%
+	draft,%
 	twoside,%
 	openright,%
 	titlepage,%
@@ -139,7 +139,8 @@
     pdfsubject={},%
     pdfkeywords={},%
     pdfcreator={pdfLaTeX},%
-    pdfproducer={LaTeX with hyperref and classicthesis}%
+    pdfproducer={LaTeX with hyperref and classicthesis},%
+	bookmarks=true%
 }
 %%%%%%%%%%%%%%%%%%%%%%%
 % GO!GO!GO! MOVE IT!
@@ -155,12 +156,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%
-\include{FrontBackmatter/Titlepage}
-\cleardoublepage\include{FrontBackmatter/Titlepage}
-\cleardoublepage\include{FrontBackmatter/Titleback}
-\cleardoublepage\include{FrontBackmatter/Dedication}
-\cleardoublepage\include{FrontBackmatter/Abstract}
-\cleardoublepage\include{FrontBackmatter/Acknowledgments}
+%\include{FrontBackmatter/Titlepage}
+%\cleardoublepage\include{FrontBackmatter/Titlepage}
+%\cleardoublepage\include{FrontBackmatter/Titleback}
+%\cleardoublepage\include{FrontBackmatter/Dedication}
+%\cleardoublepage\include{FrontBackmatter/Abstract}
+%\cleardoublepage\include{FrontBackmatter/Acknowledgments}
 \pagestyle{scrheadings}
 \cleardoublepage\include{FrontBackmatter/Contents}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -175,9 +176,9 @@
 %%
 \cleardoublepage\myPart{Results}\label{part:results}
 \include{Chapters/Publications}
-\include{Chapters/XRM2008}
-\include{Chapters/Tsuda2008}
-\include{Chapters/Haberthuer2010}
+%\include{Chapters/XRM2008}
+%\include{Chapters/Tsuda2008}
+%\include{Chapters/Haberthuer2010}
 %%
 \cleardoublepage\myPart{Discussion and Outlook}\label{part:discussion}
 \include{Chapters/Discussion}
@@ -192,10 +193,10 @@
 % Other Stuff in the Back
 %%%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Back Matter}\label{part:back matter}
-\cleardoublepage\include{FrontBackmatter/CurriculumVitae}
+%\cleardoublepage\include{FrontBackmatter/CurriculumVitae}
 \cleardoublepage\include{FrontBackmatter/Bibliography}
 %\cleardoublepage\include{FrontBackmatter/Index}
-\cleardoublepage\include{FrontBackmatter/Declaration}
-\cleardoublepage\include{FrontBackmatter/Colophon}
+%\cleardoublepage\include{FrontBackmatter/Declaration}
+%\cleardoublepage\include{FrontBackmatter/Colophon}
 %\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
 \end{document}

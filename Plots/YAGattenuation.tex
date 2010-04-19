@@ -26,9 +26,15 @@
 		xmin=1e-3,%
 		xmax=1e4,%
 		ymin=1e-10,%
-		%ymax=1e3,%
+		ymax=1e4,%
 		grid=both%
 		]
+		\addplot [fill=lightgray, semitransparent]
+			coordinates
+			{(.006,1e-10) (.006,1e4) (0.045,1e4) (0.045,1e-10)};
+		\addplot [fill=darkgray, semitransparent]
+			coordinates
+			{(.011,1e-10) (.011,1e4) (.013,1e4) (.013,1e-10)};
 		\addplot [red,thick] 
   			table [x=PhotonEnergy, y=ScatteringCoherent] from \table;
 		\addplot [blue,thick]
@@ -44,6 +50,7 @@
 		\addplot [black,densely dotted,thick]
 			table [x=PhotonEnergy, y=TotalWithCoherent] from \table;
 		\legend{%
+			,,%needed for not having marked regions in legend
 			Coherent (Rayleigh) scattering,%
 			Incoherend (Compton) scattering,%
 			Photoelectric absorption,%
