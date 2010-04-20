@@ -26,9 +26,23 @@ From the beginning of my thesis at the Institute of Anatomy in September 2006 ne
 
 Developing methods to analyze the ultrahigh resolution tomographic images obtained through the close collaboration with the team of the \ac{tomcat} beamline has been the main focus of my work. Pushing the boundaries of the available computing infrastructure in our group accompanied most projects, be it small or big.
 
-Analyzing the lung with different methods \todo{xrm \& tsuda $\rightarrow$ skeleton, ATS2009-poster, etc.} led to...
+Analyzing the lung with different methods quickly resulted in interesting findings which I was able to present as posters or talks\graffito{See my work website for the different \href{http://www.ana.unibe.ch/~haberthuer/posters}{posters} or \href{http://www.ana.unibe.ch/~haberthuer/talks}{talks}.} at different conferences.
 
-While analyzing the structure of the airways during lung development using skeletonization algorithms we have seen that under certain circumstances the size of the functional lung unit---the so-called acinus---is bigger than the available field of view of the tomographic dataset resulting from a scan at \ac{tomcat}. More precisely, the acinus 
+Soon I was intrigued by the fractal geometry of the lung structure~\cite{Weibel1991,Tsuda2002} and dove into the analysis of the structure of the terminal airway ends using skeletonization algorithms which---applied to an arbitrary structure---extract the median line of this structure. The outlook in chapter~\ref{ch:outlook} presents an overlook on the achieved result and upcoming work.
+
+Other projects focused more on general structural parameters of the lung and on the  interaction of particles in the lung tissue\todo{Why did we want to this? Active formulation, not passive!}. We were able to localize instilled sub-micron sized particles in the lung structure and analyze their properties with a combination of \ac{srxtm} and \ac{em}.
+
+In a collaborative study we provided the tomographic data of the alveolar region in the rat lung to model the structural parameters of terminal airways. This data was then used for \ac{cfd} simulations of the air flow characteristics inside the alveoli (see figure~\ref{fig:alveoli}).
+
+\renewcommand{\imsize}{0.618\linewidth}
+\begin{figure}
+	\centering%
+	\includegraphics[width=\imsize]{img/Bronchial_anatomy}%
+	\caption{Bronchial anatomy detail of alveoli and lung circulation~\cite{Alveoli}.}%
+	\label{fig:alveoli}%
+\end{figure}
+
+Since the structure of the airways changes over the lung development\todo{citation?}, a lot of energy has been put into the analysis of several structural parameters of the terminal airways ends during my PhD-Thesis. While analyzing the structure of the airways during lung development using skeletonization algorithms we have seen that under certain circumstances the size of the functional lung unit---the so-called acinus---is bigger than the available field of view of the tomographic dataset resulting from a scan at \ac{tomcat}. More precisely, the acinus 
 \begin{enumerate}[i)]
 	\item is bigger than the field of view at the magnification needed to resolve the finest structures in the lung, the tissue septa between the alveoli in the terminal airway ends and
 	\item seems to be growing over lung development.
