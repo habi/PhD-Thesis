@@ -26,7 +26,7 @@ From the early 1980s on, \ac{ct} imaging became an important tool to answer scie
 Even if these medical \ac{ct} scanners are in widespread use, their images suffer from relatively low spatial resolution in the sub-millimeter scale, which is often not enough to detect the finest details in biological samples. Since the radiation dose limitations imposed for medical scans often do not apply for biological samples which are dried, frozen or embedded in paraffin or plastic, more intense and collimated x-ray sources can be used. Using such sources in \ac{uct} stations enables to reach resolutions in the sub-micrometer range\todo{citation?}. Since synchrotron radiation is even more powerful than the x-ray tubes used for \ac{uct}, its use as an x-ray source to produce highly intensive beams for microtomography has been proposed as early as in \citeyear{Grodzins1983} by \citet{Grodzins1983,Grodzins1983a}.
 
 \section{Interaction of radiation with Matter}
-To be able to introduce the physical principles of \ac{ct}, some important interactions of x-rays with matter have to be introduced. The energy of the x-ray photons available at \ac{tomcat}, where all the experiments of this work have been performed is in the range of 8--\SI{45}{\kilo\electronvolt}\graffito{The experiments presented in part~\ref{part:results} have been performed between \SI{11.5}{\kilo\electronvolt} and \SI{12.6}{\kilo\electronvolt}.%
+To be able to introduce the physical principles of \ac{ct}, some important interactions of x-rays with matter have to be introduced. The energy of the x-ray photons available at \ac{tomcat}, where all the experiments of this work have been performed is in the range of 8--\SI{45}{\kilo\electronvolt}\graffito{The experiments presented in \autoref{part:results} have been performed between \SI{11.5}{\kilo\electronvolt} and \SI{12.6}{\kilo\electronvolt}.%
 % XRM 11.5 keV
 % Tsuda 12.398 keV
 % Haberthuer 12.6 keV
@@ -39,7 +39,7 @@ In the relevant absorption process---the so-called photoelectric effect---an inc
 \subsubsection{Compton scattering}
 \citet{Compton1923} first described this inelastic scattering\graffito{In inelastic scattering the kinetic energy of an incident particle is not conserved.} effect which is observed when an incident photon with an Energy $E=h\nu$ transfers parts of its energy to a scattering electron which is subsequently ejected from the atom.
 
-To conserve the overall momentum of the system, the electron recoils at an angle $\theta$ and the photon is scattered in a direction $\phi$ with a reduced energy $E=h\nu'$, where $h$ denotes the Planck constant\graffito{The Planck constant is named after Max Planck, one of the founders of quantum theory and describes the relation between the energy ($E$) of a photon and the frequency of its associated electromagnetic wave  ($\nu$)}. If the photon still has enough energy left, the process may be repeated, if the photon is of lower energy, it can subsequently be absorbed as described above in section~\ref{sec:absorption}. The reduction in the energy of the recoil electron leads to a shift in the wavelength $\Delta\lambda$ which can be calculated using equation~\ref{eq:hnu}
+To conserve the overall momentum of the system, the electron recoils at an angle $\theta$ and the photon is scattered in a direction $\phi$ with a reduced energy $E=h\nu'$, where $h$ denotes the Planck constant\graffito{The Planck constant is named after Max Planck, one of the founders of quantum theory and describes the relation between the energy ($E$) of a photon and the frequency of its associated electromagnetic wave ($\nu$)}. If the photon still has enough energy left, the process may be repeated, if the photon is of lower energy, it can subsequently be absorbed as described above in \autoref{sec:absorption}. The reduction in the energy of the recoil electron leads to a shift in the wavelength $\Delta\lambda$ which can be calculated using \autoref{eq:hnu}
 \begin{equation}
 	%h\nu'=\frac{h\nu}{1+\frac{h\nu}{m_{e}c^{2}}(1-cos\theta)}
 	\Delta\lambda = \lambda' - \lambda = \frac{h}{m_e c}(1-\cos{\theta})
@@ -50,7 +50,7 @@ where $m_e$ stands for the electron mass and $c$ for the speed of light.
 \subsubsection{Coherent scattering}
 Coherent or Rayleigh scattering is an interaction process where no ionization occurs and no energy is converted into kinetic energy. The incident electromagnetic wave sets the electrons in the magnetic field into vibration with an oscillating electric field. The oscillating electrons emit coherent radiation, but since not all electrons are located at the same point inside the atom, the emitted radiation is not in phase~\cite{Hsieh2003,Stampanoni2002}.
 
-Figure~\ref{fig:InteractionPercentage} shows the relative percentages of interaction for the different interaction types. Note that albeit pair production albeit is shown in the plots, it has not been described, since it is only relevant for energies much higher than the energies used in the experiments in this thesis, performed around \SI{12}{\kilo\electronvolt}. For this energy, the photoelectric absorption is the major interaction process, even if it rapidly decreases for higher energies. Not only is the interaction rate higher for the photoelectric effect, but also the major part of the energy is transferred, since more energy is transferred in a photoelectric interaction than in a Compton interaction.
+\autoref{fig:InteractionPercentage} shows the relative percentages of interaction for the different interaction types. Note that albeit pair production albeit is shown in the plots, it has not been described, since it is only relevant for energies much higher than the energies used in the experiments in this thesis, performed around \SI{12}{\kilo\electronvolt}. For this energy, the photoelectric absorption is the major interaction process, even if it rapidly decreases for higher energies. Not only is the interaction rate higher for the photoelectric effect, but also the major part of the energy is transferred, since more energy is transferred in a photoelectric interaction than in a Compton interaction.
 
 \def\width{0.5\linewidth}%
 \def\height{0.309\linewidth}% =0.8*0.618
@@ -71,19 +71,19 @@ Figure~\ref{fig:InteractionPercentage} shows the relative percentages of interac
 \end{figure}
 
 \subsection{Attenuation}
-The total effect of the three effects described above can be summarized with the total linear attenuation coefficient shown in equation~\ref{eq:linear attenuation}. This equation expresses the attenuation of a monochromatic\graffito{Monochromatic light is light of a single wavelength or energy, though in practice it often refers to a narrow wavelength range} beam as it passes through a material. The attenuation in a material of uniform density and atomic number can be expressed by an exponential relationship%
+The total effect of the three effects described above can be summarized with the total linear attenuation coefficient shown in \autoref{eq:linear attenuation}. This equation expresses the attenuation of a monochromatic\graffito{Monochromatic light is light of a single wavelength or energy, though in practice it often refers to a narrow wavelength range} beam as it passes through a material. The attenuation in a material of uniform density and atomic number can be expressed by an exponential relationship%
 \begin{equation}%
 	I=I_{0}e^{-(\tau+\sigma_{C}+\sigma_{R})x}%
 	\label{eq:linear attenuation}%
 \end{equation}%
-where $I$ and $I_{0}$ are the incident and transmitted intensities of the x-rays and $x$ is the distance which the x-rays travel through the material. $\tau$, $\sigma_{C}$ and $\sigma_{R}$ are the attenuation coefficients of the photoelectric, incoherent (Compton) and coherent (Rayleigh) scattering interactions in the material, respectively. Equation~\ref{eq:linear attenuation} is often expressed as
+where $I$ and $I_{0}$ are the incident and transmitted intensities of the x-rays and $x$ is the distance which the x-rays travel through the material. $\tau$, $\sigma_{C}$ and $\sigma_{R}$ are the attenuation coefficients of the photoelectric, incoherent (Compton) and coherent (Rayleigh) scattering interactions in the material, respectively. \autoref{eq:linear attenuation} is often expressed as
 \begin{equation}
 	I/I_{0}=e^{-\mu x}
 	\label{eq:beer-lambert}
 \end{equation}%
 the so-called Beer-Lambert law, where $\mu$ is the attenuation coefficient of the material, which is depending on the incident x-ray photon energy~\cite{Hsieh2003}. 
 
-Figure~\ref{fig:yag attenuation} shows the composition of the attenuation coefficient for Cerium doped \ac{yag} (\cf{Y3Al5O12}), which is used as a material for converting the incident x-rays to visible light. This so-called scintillator is part of the microtomography station at \ac{tomcat} and is described in detail in section~\ref{sec:tomcat}.
+\autoref{fig:yag attenuation} shows the composition of the attenuation coefficient for Cerium doped \ac{yag} (\cf{Y3Al5O12}), which is used as a material for converting the incident x-rays to visible light. This so-called scintillator is part of the microtomography station at \ac{tomcat} and is described in detail in \autoref{sec:tomcat}.
 
 \def\width{\linewidth}%
 \def\height{0.618\linewidth}%
@@ -92,7 +92,7 @@ Figure~\ref{fig:yag attenuation} shows the composition of the attenuation coeffi
 		\centering
 		\input{Plots/YAGattenuation}%
 		}
-	\caption[Total attenuation coefficient of Ce:YAG]{Total attenuation coefficient of Ce:YAG (\cf{Y3Al5O12}), the scintillator material used for converting the incident x-rays to visible light in the experiments presented in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010}. The lightgray region is the energy-range of \ac{tomcat}, the dark gray region marks the energy range of the experiments described in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010} of this thesis. Data from the photon cross section database~\cite{XCOM}.}
+	\caption[Total attenuation coefficient of Ce:YAG]{Total attenuation coefficient of Ce:YAG (\cf{Y3Al5O12}), the scintillator material used for converting the incident x-rays to visible light in the experiments presented in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010}. The lightgray region is the energy-range of \ac{tomcat}, the dark gray region marks the energy range of the experiments described in chapters~\autoref{ch:xrm2008}--\ref{ch:haberthuer2010} of this thesis. Data from the photon cross section database~\cite{XCOM}.}
 	\label{fig:yag attenuation}
 \end{figure}
 
@@ -103,13 +103,13 @@ In medical \ac{ct}-scanners, the transmission images are generally obtained whil
 
 During the imaging process multiple transmission images---essentially single radiographic images---are obtained at several equidistant angles over a \unit{180}{\degree} or \unit{360}{\degree} rotation. These projections can be understood as pictures of the distribution of the attenuation of the x-rays inside the sample. Regions with high attenuation show up as dark pixel, regions with low attenuation inside the sample show up as light pixels on the \ac{ccd}-chip of the camera.
 
-Before and after the scan, so-called dark ($I_{D}$) and flat images ($I_{F}$) are recorded. The dark images record the camera noise and dark current, while the flat images record the beam profile. After baseline correction of the projections ($I_{P}$) the average of the dark images is subtracted. The projections are then normalized to the flat images as seen in equation~\ref{eq:cpr}, using the average dark and average flat images ($\overline{I_{D}}$ and $\overline{I_{F}}$, respectively) resulting in so-called corrected projections (CPR).%
+Before and after the scan, so-called dark ($I_{D}$) and flat images ($I_{F}$) are recorded. The dark images record the camera noise and dark current, while the flat images record the beam profile. After baseline correction of the projections ($I_{P}$) the average of the dark images is subtracted. The projections are then normalized to the flat images as seen in \autoref{eq:cpr}, using the average dark and average flat images ($\overline{I_{D}}$ and $\overline{I_{F}}$, respectively) resulting in so-called corrected projections (CPR).%
 \begin{equation}%
 	CPR=-ln\left(\frac{I_{P}}{\overline{I_{F}}}\right)=ln(\overline{I_{F}})-ln(I_{P})%
 	\label{eq:cpr}%
 \end{equation}%
 
-Figure~\ref{fig:corrected projection} shows the results of correcting a raw projection obtained at \ac{tomcat} with a flat image into a corrected projection.
+\autoref{fig:corrected projection} shows the results of correcting a raw projection obtained at \ac{tomcat} with a flat image into a corrected projection.
 
 \renewcommand{\imsize}{0.333\linewidth}
 \begin{figure}
@@ -145,16 +145,16 @@ Figure~\ref{fig:corrected projection} shows the results of correcting a raw proj
 		\end{tikzpicture}%			
 		\label{subfig:cpr}%
 		}%
-	\caption[Correction of the projections with flat images]{Correction of the raw recorded projections with the flat images. \subref{subfig:pi}: Recorded projection image. A set of these is the output of one tomographic scanning session. \subref{subfig:fi}: Flat image; obtained at the start of the scan to record the beam profile. \subref{subfig:cpr}: Corrected projection obtained after equation~\ref{eq:cpr} has been applied on the projection and flat image shown in panels \subref{subfig:pi} and \subref{subfig:fi}. All three images have a size of 1024$\times$1024 pixels with a size of \SI{1.48}{\micro\meter} each and are from a dataset of a rat lung.}
+	\caption[Correction of the projections with flat images]{Correction of the raw recorded projections with the flat images. \subref{subfig:pi}: Recorded projection image. A set of these is the output of one tomographic scanning session. \subref{subfig:fi}: Flat image; obtained at the start of the scan to record the beam profile. \subref{subfig:cpr}: Corrected projection obtained after \autoref{eq:cpr} has been applied on the projection and flat image shown in panels \subref{subfig:pi} and \subref{subfig:fi}. All three images have a size of 1024$\times$1024 pixels with a size of \SI{1.48}{\micro\meter} each and are from a dataset of a rat lung.}
 	\label{fig:corrected projection}
 	\todo[inline]{From L-XXI-18: details?}
 \end{figure}
 
 The corrected projections are then transformed into so-called sinograms, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of each projection. From one tomographic scan with 1500 projections recorded with a detector with a size of 2048$\times$2048 pixels, we get a set of 1024 sinograms with a size of 1024$\times$1500 pixels each.
 
-Sinograms inherit their name because the Radon transformation\graffito{The Radon transformation was described in 1917 by Johann \citet{Radon1917} and is the mathematical basis for tomographic imaging.} of a Dirac delta peak resembles a sine wave. The Radon transformation of a cluster of objects appears as an overlay of blurred sine waves with different amplitudes and phases, as shown in figure~\ref{subfig:sin}, since any object can be considered as a collection of many small points.
+Sinograms inherit their name because the Radon transformation\graffito{The Radon transformation was described in 1917 by Johann \citet{Radon1917} and is the mathematical basis for tomographic imaging.} of a Dirac delta peak resembles a sine wave. The Radon transformation of a cluster of objects appears as an overlay of blurred sine waves with different amplitudes and phases, as shown in \autoref{subfig:sin}, since any object can be considered as a collection of many small points.
 
-One sinogram contains the total information of one plane or slice of the reconstructed tomographic image. We can thus reconstruct the $n$\textsuperscript{th} slice of the tomographic dataset from the $n$\textsuperscript{th} sinogram using different reconstructing algorithms, e.g.\ a standard filtered back-projection algorithm. In a reconstructed slice, the absorption properties of the sample at a certain height are encoded by the gray values of the image, as shown in figure~\ref{subfig:rec}. This virtual slice into a rat lung sample is part of a dataset permitting a fully three-dimensional, unresticted view into the sample in a non-destructive way.
+One sinogram contains the total information of one plane or slice of the reconstructed tomographic image. We can thus reconstruct the $n$\textsuperscript{th} slice of the tomographic dataset from the $n$\textsuperscript{th} sinogram using different reconstructing algorithms, e.g.\ a standard filtered back-projection algorithm. In a reconstructed slice, the absorption properties of the sample at a certain height are encoded by the gray values of the image, as shown in \autoref{subfig:rec}. This virtual slice into a rat lung sample is part of a dataset permitting a fully three-dimensional, unresticted view into the sample in a non-destructive way.
 
 \renewcommand{\imsize}{0.5\linewidth}
 \begin{figure}%
@@ -176,7 +176,7 @@ One sinogram contains the total information of one plane or slice of the reconst
 		\end{tikzpicture}%
 		\label{subfig:rec}%
 		}%
-	\caption[Sinogram and Reconstruction]{Sinogram and Reconstruction of the projections of the rat lung sample shown in figure~\ref{fig:corrected projection}. \subref{subfig:sin}: The $n$\textsuperscript{th} sinogram has been obtained after reordering the $n$\textsuperscript{th} line of each of the 1501 corrected projections. The sinogram has been rescaled to a square format for display purposes, it would have a size of 1024$\times$1501 pixels. It doesn't really make sense to draw a scalebar on a sinogram, it has thus been omitted. \subref{subfig:rec}: The tomographic reconstruction of the complete set of sinograms results in a set of 1024 reconstructed slices with 1024$\times$1024 pixels of a size of \SI{1.48}{\micro\meter} each. This slice can then be used for further processing, measuring and three-dimensional visualization.}
+	\caption[Sinogram and Reconstruction]{Sinogram and Reconstruction of the projections of the rat lung sample shown in \autoref{fig:corrected projection}. \subref{subfig:sin}: The $n$\textsuperscript{th} sinogram has been obtained after reordering the $n$\textsuperscript{th} line of each of the 1501 corrected projections. The sinogram has been rescaled to a square format for display purposes, it would have a size of 1024$\times$1501 pixels. It doesn't really make sense to draw a scalebar on a sinogram, it has thus been omitted. \subref{subfig:rec}: The tomographic reconstruction of the complete set of sinograms results in a set of 1024 reconstructed slices with 1024$\times$1024 pixels of a size of \SI{1.48}{\micro\meter} each. This slice can then be used for further processing, measuring and three-dimensional visualization.}
 	\label{fig:Sin Rec}
 	\todo[inline]{Is it really rat? (L-XXI-18, beamtime 2010a, Matthias Roth)}
 \end{figure}
@@ -189,7 +189,7 @@ From calculations in polar coordinates one can deduce that for a detector with t
 
 At \ac{tomcat} this rule of thumb is exactly obeyed in the case of a tomographic scan with a binned\graffito{Binning is the process where 2$\times$2 pixels on the camera are averaged to one pixel, both to reduce the image size and noise.} detector. For a standard scan with an unbinned detector---resulting in images with a size of 2048$\times$2048 pixels---only 1500 projections are acquired, thus violating the rule. But even with this seemingly undersampled data acquisition, reconstructions with very high quality are obtained.
 
-Chapter~\ref{ch:haberthuer2010} presents a scanning method where the sampling theorem is deliberately violated both to increase the field of view of \ac{tomcat} and to reduce the radiation dose imparted on the sample.
+\autoref{ch:haberthuer2010} presents a scanning method where the sampling theorem is deliberately violated both to increase the field of view of \ac{tomcat} and to reduce the radiation dose imparted on the sample.
 
 For classic tomographic imaging, an x-ray tube is used as a source of radiation. In \ac{srxtm}, which was used to obtain the tomographic data for this thesis---as the name suggests---x-rays from a synchrotron are used as a radiation source. The following sections give a short overview over the underlying theory of the synchrotron radiation and a quick rundown on the \ac{sls} and the beamline where all the presented experiments have been carried out.
 
@@ -262,8 +262,8 @@ Bending magnets\graffito{Such magnets are also used in traditional televisions, 
 			}%
 		}
 	\caption[Wiggler radiation]{Wiggler radiation is also generated from a periodic magnet structure. %
-		\ref{subfig:wiggler}: In the strong magnetic field the angular excursions are significantly greater than the natural ($\frac{1}{\gamma}$) radiation cone. Because accelerations are stronger in this limit, the radiation generated peaks at higher photon energies and has both a higher photon flux and more power. %
-		\ref{subfig:wiggler-spectrum}: The radiation spectrum is very broad, similar to that of the bending magnet. Although more power is radiated, wiggler radiation is less bright because of the substantially increased radiation cone. Adapted from~\cite{Attwood2007}.}% http://is.gd/biHF4
+		\subref{subfig:wiggler}: In the strong magnetic field the angular excursions are significantly greater than the natural ($\frac{1}{\gamma}$) radiation cone. Because accelerations are stronger in this limit, the radiation generated peaks at higher photon energies and has both a higher photon flux and more power. %
+		\subref{subfig:wiggler-spectrum}: The radiation spectrum is very broad, similar to that of the bending magnet. Although more power is radiated, wiggler radiation is less bright because of the substantially increased radiation cone. Adapted from~\cite{Attwood2007}.}% http://is.gd/biHF4
 	\label{fig:wiggler}
 \end{figure}
 
@@ -293,9 +293,9 @@ At the beamline for \acf{tomcat} the user can perform absorption as well as phas
 
 Because of the high coherence of the used synchrotron radiation is desired to be kept until the radiation penetrates the sample, a minimization of the optical elements was targeted during the design of the beamline. A \SI{100}{\micro\meter} thick diamond window separates the ultra high vacuum (\SI{e-10}{\millibar}) from the vacuum section of the beamline (\SI{e-7}{\millibar}). After the beam passes the diamond window, its energy is selected using a double crystal multilayer monochromator (Strumenti Scientifici CINEL s.r.l., Padova, Italy). This main optical component of the beamline covers an energy range of 6--\SI{45}{\kilo\electronvolt} with a bandwidth of a few percent down to a few permille~\cite{Stampanoni2006a}.
 
-After collimation, the beam travels through an evacuated pipe into the measuring hut and is directed towards the sample. The sample sits atop a high precision sample manipulator (resolution better than \SI{1}{\micro\meter}, the manipulator is shown in figure~\ref{fig:tomcat}) which is used for centering the sample in the beam and for the rotation of the sample for tomographic imaging. 
+After collimation, the beam travels through an evacuated pipe into the measuring hut and is directed towards the sample. The sample sits atop a high precision sample manipulator (resolution better than \SI{1}{\micro\meter}, the manipulator is shown in \autoref{fig:tomcat}) which is used for centering the sample in the beam and for the rotation of the sample for tomographic imaging. 
 
-The x-rays which penetrated the sample are detected using a combination of a scintillator, microscope optics and a \ac{ccd}-camera. The scintillator\graffito{The latin word \textit{scintillare} can be translated with sparkling or flickering.} converts incident x-rays to visible light through fluorescence. Charged particles excite the scintillator material and this excitation energy is then subsequently emitted by fluorescence photons at a longer wavelength, which  makes it possible to detect the incident beam using a \ac{ccd}-camera. The camera at \ac{tomcat} features a detector with 2048$\times$2048 pixels with a size of 7.4$\times$\SI{7.4}{\micro\meter} each and can read out a full frame \SI{14}{\bit} image in \SI{260}{\millisecond}. Between the scintillator and the \ac{ccd}-sensor interchangeable microscope objectives enable to easily vary the pixel size range of the resulting tomographic reconstructions from 350$\times$\SI{350}{\nano\meter} up to 5.6$\times$\SI{5.6}{\micro\meter}. Depending on the chosen pixel size, the resulting field of view of a standard scan varies between 0.75$\times$\SI{0.75}{\milli\meter\squared} and 11.45$\times$\SI{11.45}{\milli\meter\squared}\graffito{See chapter~\ref{ch:haberthuer2010} for a method to increase the field of view of tomography endstations while keeping the small voxel size.}.
+The x-rays which penetrated the sample are detected using a combination of a scintillator, microscope optics and a \ac{ccd}-camera. The scintillator\graffito{The latin word \textit{scintillare} can be translated with sparkling or flickering.} converts incident x-rays to visible light through fluorescence. Charged particles excite the scintillator material and this excitation energy is then subsequently emitted by fluorescence photons at a longer wavelength, which makes it possible to detect the incident beam using a \ac{ccd}-camera. The camera at \ac{tomcat} features a detector with 2048$\times$2048 pixels with a size of 7.4$\times$\SI{7.4}{\micro\meter} each and can read out a full frame \SI{14}{\bit} image in \SI{260}{\millisecond}. Between the scintillator and the \ac{ccd}-sensor interchangeable microscope objectives enable to easily vary the pixel size range of the resulting tomographic reconstructions from 350$\times$\SI{350}{\nano\meter} up to 5.6$\times$\SI{5.6}{\micro\meter}. Depending on the chosen pixel size, the resulting field of view of a standard scan varies between 0.75$\times$\SI{0.75}{\milli\meter\squared} and 11.45$\times$\SI{11.45}{\milli\meter\squared}\graffito{See \autoref{ch:haberthuer2010} for a method to increase the field of view of tomography endstations while keeping the small voxel size.}.
 
 \renewcommand{\imsize}{0.5\linewidth}
 \begin{figure}
@@ -311,7 +311,7 @@ The x-rays which penetrated the sample are detected using a combination of a sci
 	\label{fig:tomcat}
 \end{figure}
 
-The sample positioning in the beam (using the sample stage shown in figure~\ref{fig:tomcat}) and the parameters of the scan---like exposure time, amount of projections, name, etc.---are controlled from outside the measuring hut through an \ac{epics}.
+The sample positioning in the beam (using the sample stage shown in \autoref{fig:tomcat}) and the parameters of the scan---like exposure time, amount of projections, name, etc.---are controlled from outside the measuring hut through an \ac{epics}.
 
 After the start has been started, sinograms are calculated on the fly and the tomographic reconstruction can be initialized using a web-based interface seconds after the scan has been finished. This interface and the general reconstruction workflow and management of the reconstruction cluster has been thoroughly described by \citet{Hintermueller2010}.
 

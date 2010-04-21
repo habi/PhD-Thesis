@@ -13,6 +13,12 @@
 
 \section{Skeletonization}
 \todo{ATS2009-Poster, 2\textsuperscript{nd} year examination, etc.}
+Multiple acinar airway skeletons have been generated from tomographic dataset as explained in my last progress report. Last year I worked on a manual method version of correcting loops and knots inside the extracted airway skeletons. Increasing both the volume of the datasets and resolution for the calculation of the airway skeletons resulted in airway descriptions containing more than \num{10000} nodes.
+
+Figure~\ref{fig:skeleton} shows a skeletonization of multiple acini in a rat lung sample obtained at postnatal day 21 containing multiple airway segments containing one or more acini (both shown in the background). The foreground of the image shows the extracted skeletons containing between \num{1100} and \num{7300} nodes.
+
+This big amount of skeleton points makes a manual method for correction no longer feasible. Current work on the extraction of structural information now focuses on the reproducibility of the skeleton extraction algorithm. We plan to conduct a morphological counting study for assessing the biological correctness of the computationally derived skeleton. Additionally, we started a collaboration with Fraunhofer MeVis\footnote{Which provide the visualization software MeVisLab, used for calculating the airway skeletons.} to adapt the skeletonization algorithm to segmentations obtained from our samples.
+
 \renewcommand{\imsize}{\linewidth}
 \begin{figure}[ht]
 	\centering
@@ -28,7 +34,7 @@
 		%\draw[color=red,|-|,thick] (11,341) -- (807,339) node [sloped,midway,above] {\SI{4.0138}{\milli\meter} (2712px)};
 		\draw[|-|,thick] (\x,\y) -- (\x+99,\y) node [midway, above] {\SI{500}{\micro\meter}};
 	\end{tikzpicture}%
-	\caption[Visualization of rat lung sample obtained at postnatal day 21]{Visualization of rat lung sample obtained at postnatal day 21. Left: Three-dimensional view of the sample, Right: Four independent airway segments. Foreground: Extracted airway skeletons of the independent airways. The yellow skeleton contains \num{1133}, the green \num{7288}, the red \num{6513} and the blue skeleton \num{3278} nodes.}
+	\caption[\threed Visualization of rat lung sample]{Three-dimensional visualization of rat lung sample obtained at postnatal day 21. Left: Three-dimensional view of the sample, Right: Four independent airway segments. Foreground: Extracted airway skeletons of the independent airways. The yellow skeleton contains \num{1133}, the green \num{7288}, the red \num{6513} and the blue skeleton \num{3278} nodes.}
 	\label{fig:skeleton}
 \end{figure}
 
@@ -68,7 +74,7 @@
 		\includegraphics[width=\imsize]{img/outlook/skeletonization/9-Skeleton-crop}%
 		\label{subfig:skel-e}%
 		}%
-	\caption[Two-dimensional skeletonization]{Two-dimensional skeletonization process: \subref{subfig:skel-a}: Wide field scanned tomographic slice from a rat lung sample obtained at postnatal day 21. The inset corresponds to the region of the images shown in the bottom row. \subref{subfig:skel-b}: Binarized \ac{roi} The data has been separated into tissue and airspace. \subref{subfig:skel-c}: The white segment represents one connected airway structure inside the \ac{roi} in two dimensions. \subref{subfig:skel-d}: Euclidean Distance transformation of the segment shown in panel \subref{subfig:skel-c}, where the gray level value of each pixel represents the distance to the tissue-airspace border. \subref{subfig:skel-e}: The local maxima of the distance transformation form the skeleton which is then overlayed on the binarized lung structure from panel \subref{subfig:skel-a}.}%
+	\caption[\twod skeletonization]{Two-dimensional skeletonization process: \subref{subfig:skel-a}: Wide field scanned tomographic slice from a rat lung sample obtained at postnatal day 21. The inset corresponds to the region of the images shown in the bottom row. \subref{subfig:skel-b}: Binarized \ac{roi} The data has been separated into tissue and airspace. \subref{subfig:skel-c}: The white segment represents one connected airway structure inside the \ac{roi} in two dimensions. \subref{subfig:skel-d}: Euclidean Distance transformation of the segment shown in panel \subref{subfig:skel-c}, where the gray level value of each pixel represents the distance to the tissue-airspace border. \subref{subfig:skel-e}: The local maxima of the distance transformation form the skeleton which is then overlayed on the binarized lung structure from panel \subref{subfig:skel-a}.}%
 	\label{fig:skeletonization}%
 \end{figure}
 
@@ -77,7 +83,7 @@
 \section{STEPanizer}
 Explain the STEPanizer~\cite{Tschanz2010}, which has been used by Lilian and the WahlPraktikums-Students for the analyis of the \# of acini per volume.
 
-Segmented slices (see fig.~\ref{fig:acinus overlay} after application of ``Manhole Cover''-method with MeVisLab made the relationship of the acini visible on the twodimensional slices. This subsequently made it possible to actually count the bridges---corresponding to the alveolar entrance rings---and make a plot of the relation of the $\frac{\textrm{Acini}}{\textrm{Volume}}$ over the lung development, as shown in figure~\ref{fig:plot}.
+Segmented slices (see \autoref{fig:acinus overlay} after application of ``Manhole Cover''-method with MeVisLab made the relationship of the acini visible on the twodimensional slices. This subsequently made it possible to actually count the bridges---corresponding to the alveolar entrance rings---and make a plot of the relation of the $\frac{\textrm{Acini}}{\textrm{Volume}}$ over the lung development, as shown in \autoref{fig:plot}.
 
 \renewcommand{\imsize}{0.618\linewidth}
 \begin{figure}

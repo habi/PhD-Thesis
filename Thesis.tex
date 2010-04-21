@@ -12,7 +12,7 @@
 	footinclude,%	
 	cleardoublepage=empty,%
 	abstract=false%
-    ]{scrreprt}
+	]{scrreprt}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Re-usable information
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -45,7 +45,7 @@
 \usepackage[version=3]{mhchem}
 \usepackage[alsoload=synchem,binary]{siunitx}
 \usepackage{makeidx}
-\usepackage{todonotes} % [obeyDraft] 
+\usepackage{todonotes}
 \usepackage{pdfpages}
 \usepackage{isotope}
 \usepackage{enumerate}
@@ -72,8 +72,9 @@
 \newcommand{\imsize}{\linewidth}
 \newlength{\abcd} % for ab..z string length calculation
 \newcommand{\myfloatalign}{\centering} % how all the floats will be aligned
-\newlength\imagewidth           % needed for scalebars
-\newlength\imagescale           % ditto
+\newlength\imagewidth % needed for scalebars
+\newlength\imagescale % ditto
+\newcommand{\subfigureautorefname}{\figureautorefname} % to have subfigures named using \autoref
 %%%%%%%%%%%%%%%%%%%%%%%
 % Color (Re-Definition)
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -114,33 +115,33 @@
 \makeatletter
 \let\graffito\relax
 \def\graffito@setup{%
-  \slshape\footnotesize%
-  \parindent=0pt \lineskip=0pt \lineskiplimit=0pt %
-  \tolerance=2000 \hyphenpenalty=300 \exhyphenpenalty=300
-  \doublehyphendemerits=100000
-  \finalhyphendemerits=\doublehyphendemerits}
+	\slshape\footnotesize%
+	\parindent=0pt \lineskip=0pt \lineskiplimit=0pt %
+	\tolerance=2000 \hyphenpenalty=300 \exhyphenpenalty=300
+	\doublehyphendemerits=100000
+	\finalhyphendemerits=\doublehyphendemerits}
 \DeclareRobustCommand{\graffito}[1]{\marginpar
- [\graffito@setup\raggedleft\hspace{0pt}{#1}]
- {\graffito@setup\raggedright\hspace{0pt}{#1}}}
+	[\graffito@setup\raggedleft\hspace{0pt}{#1}]
+	{\graffito@setup\raggedright\hspace{0pt}{#1}}}
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%
 % Hyperreferences
 %%%%%%%%%%%%%%%%%%%%%%%
 \hypersetup{% http://www.jkrieger.de/tools/latex/hyperref.html helps!
-    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
-    % uncomment the following line if you want to have black links (e.g., for printing)
-    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
-    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
-    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
-    hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
-    urlcolor=Maroon, linkcolor=unibe-link, citecolor=unibe-citation, %pagecolor=RoyalBlue,%
-    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
-    pdftitle={\myTitle},%
-    pdfauthor={\myName, \myUni, \myFaculty},%
-    pdfsubject={},%
-    pdfkeywords={},%
-    pdfcreator={pdfLaTeX},%
-    pdfproducer={LaTeX with hyperref and classicthesis},%
+	colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+	% uncomment the following line if you want to have black links (e.g., for printing)
+	%colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
+	breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+	plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+	hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true, %frenchlinks,%
+	urlcolor=Maroon, linkcolor=unibe-link, citecolor=unibe-citation, %pagecolor=RoyalBlue,%
+	%urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+	pdftitle={\myTitle},%
+	pdfauthor={\myName, \myUni, \myFaculty},%
+	pdfsubject={},%
+	pdfkeywords={},%
+	pdfcreator={pdfLaTeX},%
+	pdfproducer={LaTeX with hyperref and classicthesis},%
 	bookmarks=true%
 }
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -157,12 +158,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%
-%\include{FrontBackmatter/Titlepage}
-%\cleardoublepage\include{FrontBackmatter/Titlepage}
-%\cleardoublepage\include{FrontBackmatter/Titleback}
-%\cleardoublepage\include{FrontBackmatter/Dedication}
-%\cleardoublepage\include{FrontBackmatter/Abstract}
-%\cleardoublepage\include{FrontBackmatter/Acknowledgments}
+\include{FrontBackmatter/Titlepage}
+\cleardoublepage\include{FrontBackmatter/Titlepage}
+\cleardoublepage\include{FrontBackmatter/Titleback}
+\cleardoublepage\include{FrontBackmatter/Dedication}
+\cleardoublepage\include{FrontBackmatter/Abstract}
+\cleardoublepage\include{FrontBackmatter/Acknowledgments}
 \pagestyle{scrheadings}
 \cleardoublepage\include{FrontBackmatter/Contents}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -172,8 +173,8 @@
 %% use \cleardoublepage here to avoid problems with pdfbookmark
 \cleardoublepage\myPart{Introduction}\label{part:introduction}
 \include{Chapters/Introduction}
-\include{Chapters/TheMammalianLung}
-\include{Chapters/CTandTomcat}
+%\include{Chapters/TheMammalianLung}
+%\include{Chapters/CTandTomcat}
 %%
 \cleardoublepage\myPart{Results}\label{part:results}
 \include{Chapters/Publications}
@@ -198,6 +199,6 @@
 \cleardoublepage\include{FrontBackmatter/Bibliography}
 %\cleardoublepage\include{FrontBackmatter/Index}
 %\cleardoublepage\include{FrontBackmatter/Declaration}
-%\cleardoublepage\include{FrontBackmatter/Colophon}
+\cleardoublepage\include{FrontBackmatter/Colophon}
 %\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
 \end{document}
