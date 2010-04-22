@@ -8,7 +8,7 @@
 \end{flushright}
 \vspace{52mm}
 
-Seeing and observing the object of interest has always been a crucial part of medical and biological research. If not by the naked eye, the object has been studied with ever-increasing resolution. In biomedical research, state of the art imaging methods include light and electron microscopy. Using advanced imaging methods like electron or x-ray microscopy, resolutions down to \SI{10}{\nano\meter} \todo{how much exactly is reached for biological applications? do we need to mention further imaging methods like AFM?} can be reached, which enables an extremely accurate rendition of the sample to be examined.
+Seeing and observing the object of interest has always been a crucial part of medical and biological research. If not by the naked eye, the object has been studied with ever-increasing resolution. In biomedical research, state of the art imaging methods include light and electron microscopy. Using advanced imaging methods like electron or x-ray microscopy, resolutions down to \SI{10}{\nano\meter}~\todo{how much exactly is reached for biological applications? do we need to mention further imaging methods like AFM?} can be reached, which enables an extremely accurate rendition of the sample to be examined.
 
 \section{High resolution imaging}
 One of the main problems with light and electron microscopy is the destructive sample preparation. For both methods, the sample has to be sectioned into physical slices with a thickness between 10--\SI{300}{\nano\meter}\todo{how thin exactly? Citation?}. This process destroys the three-dimensional structure of the sample and makes it very time consuming to reconstruct the three-dimensional placement of the slices to extract the structural information. \citet{Woodward2005} have shown that a three-dimensional reconstruction of parts of the gas exchanging region of the avian lung is feasible, but the process is both extremely time-consuming and needs very precise registration of the stack of slices which are cut from the sample. An exception to this destructive sample preparation is offered by confocal microscopy~\cite{Minsky1961}\todo{Other Citation than original patent?}. In confocal microscopy, light originating from outside the focal plane is excluded using a spatial pinhole. This allows for the definition of a section through a sample which is thicker than the optical focal plane of the objective. By positioning the focal plane stepwise through the volume of interest, the three-dimensional information of the sample can be obtained. This method obviously only works for samples with a small enough thickness to still be translucent.
@@ -16,10 +16,13 @@ One of the main problems with light and electron microscopy is the destructive s
 In contrast to this, tomographic imaging makes it possible to non-destructively study the three-dimensional structure of a wide variety of samples, even opaque ones. Two-dimensional projections of the sample can be taken fairly easily using a multitude of electromagnetic radiation of different wavelengths (e.g.\ x-ray, infrared and visible light). These two-dimensional images include partial three-dimensional information of the sample volume which has been transversed in the projection. If several projection images are acquired from different directions through the sample, the full three-dimensional information can be reconstructed sing computed tomography~\cite{Hounsfield1976a}. The theory and concepts behind the tomographic reconstruction are explained in depth in~\autoref{ch:ct}.
 
 \section{The mammalian lung}
-\begin{itemize}
-	\item Why the Mammalian lung?
-	\item see \autoref{ch:lung}
-\end{itemize}
+Oxygen is a life-supporting element for nearly every living multicellular organism\graffito{One exception being three newly discovered species of the animal phylum Loricifera which live inside permanently anoxic sediments~\cite{Danovaro2010}.}. The mammalian lung is the organ that transports this life-supporting element into the body and provided the structure and function for the gas-exchange between the inhaled air and the blood. In the human body a tissue volume of approximately half a litre separates roughly the same amount of blood from an air volume of several litres~\cite{Weibel2009}, the lung is thus mostly built ``out of thin air''. The actual tissue portion of the lung is stretched up in the chest cavity and fills it with a delicate structure. The larger, purely conducting airways are built of multi-layer epithelial tissue and the finest parts, the alveolar septa are built of two thin cytoplasmic lamell\ae\ of epithelial cells separated by a single basement membrane; the average thickness of this tissue barrier is only about \SI{1.6}{\micro\meter} in the human lung\graffito{An overview of the development and the relevant structures of the lung is given in \autoref{ch:lung}.}~\cite{Weibel2009}.
+
+The structure of the lung and the characteristics of the airways are vital for the function as an air conducting organ. Studying this structure makes it possible to gain important insights into both the development~\todo{Citations?} and function of the lung~\cite{Tsuda2002}. Three-dimensional imaging methods like \ac{ct} make an insight into the structural relationships inside the lung possible, but---through limitation in the resolution---cannot visualize the gas-exchange region of the lung.
+
+Higher resolution tomographic imaging methods like \ac{uct}~\todo{Citation for lung study?} and \ac{srxtm}~\cite{Bayat2006,Bayat2009,Mund2008,Schittny2008,Tsuda2008}~\todo{Other citations than Bayat, Mund, Schittny2008 and Tsuda2008?} make it possible to extend the analysis deep into the lung, down to the gas-exchange region.
+
+Certain structural parameters of the lung and especially of the terminal airway region cannot be assessed using classical morphological methods based on histological slices of the lung tissue, since this slicing essentially destroys the three-dimensional structure of the lung. For example, extracting a three-dimensional view of multiple\graffito{With formidable effort, \citet{Woodward2005} managed to visualize components of the gas-exchange region of a duck.} functional units of the lung, the so-called acini and their interrelation is not possible only with the information from light or electron microscopy slices. But a study of their relations and structural changes is needed to characterize the changes the acini and lung structure undergo over the time-course of lung development. Using an imaging method like tomography that provides a full, unhindered and non-destructive view inside the lung makes it possible to reach this goal.
 
 \section{Main goal of the Thesis}
 From the beginning of my thesis at the Institute of Anatomy in September 2006 nearly everything I have worked on revolved around non-destructive tomographic imaging and detection of the finest structures in the mammalian lung.
@@ -32,13 +35,13 @@ Soon I was intrigued by the fractal geometry of the lung structure~\cite{Weibel1
 
 In a collaborative study we provided the tomographic data of the alveolar region in the rat lung to model the structural parameters of terminal airways. This data was then used for \ac{cfd} simulations of the air flow characteristics inside the alveoli (spherical gas-exchange structures in the mammalian lung, see \autoref{fig:alveoli}).
 
-\renewcommand{\imsize}{\linewidth}
-\begin{figure}
+\renewcommand{\imsize}{\linewidth}%
+\begin{figure}[htb]%
 	\centering%
 	\includegraphics[width=\imsize]{img/Bronchial_anatomy_edit}%
 	\caption[Bronchial anatomy detail]{Bronchial anatomy detail of alveoli and lung circulation. Adapted from~\cite{Alveoli}.}%
 	\label{fig:alveoli}%
-\end{figure}
+\end{figure}%
 
 Another project was focused on the interaction of particles in the lung tissue. To have a basis for the simulation of the deposition of sub-micron sized particles in the gas-exchange region of the lung, we sought an imaging method to analyze both the exact localization of such particles in the three-dimensional structure of the lung and additionally exactly analyze their properties in relation to the lung tissue. Using a multimodal approach combining images of \ac{srxtm} and \ac{tem} datasets this goal was reached.
 
@@ -65,5 +68,5 @@ This thesis is structured into the following parts:
 		\item [\autoref{ch:haberthuer2010}] presents a method to increase the field of view of synchrotron radiation tomographic microscopy while keeping the advantage of a high resolution, something which is generally not possible with such an increase in the field of view. Additionally---through optimization of the acquisition protocol---the radiation dose inflicted on the sample can be greatly reduced. This paper has been published in the \href{http://journals.iucr.org/s/}{Journal of Synchrotron Radiation}.
 	\end{itemize}
 	\item [\autoref{part:discussion}] contains two chapters with a conclusive discussion of the obtained results and an outlook on further work.
-	\item [\autoref{part:back matter}] finishes this thesis with the necessary documents for the \href{http://www.gcb.unibe.ch}{Graduate School for Cellular and Biomedical Sciences}, the bibliography, index \todo{do we have an index?} and appendix\todo{do we have an appendix?}.
+	\item [\autoref{part:back matter}] finishes this thesis with the necessary documents for the \href{http://www.gcb.unibe.ch}{Graduate School for Cellular and Biomedical Sciences}, the bibliography, index~\todo{do we have an index?} and appendix\todo{do we have an appendix?}.
 \end{itemize}
