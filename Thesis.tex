@@ -1,4 +1,208 @@
 \documentclass[%
+	%draft,%
+	twoside,%
+	openright,%
+	titlepage,%
+	fleqn,%
+	numbers=noenddot,%
+	headinclude,
+	10pt,%
+	a4paper,%
+	BCOR5mm,%
+	footinclude,%	
+	cleardoublepage=empty,%
+	abstract=false%
+	]{scrreprt}
+%%%%%%%%%%%%%%%%%%%%%%%
+% Re-usable information
+%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\myTitle}{Ultrahigh Resolution Imaging of the mammalian lung\xspace}
+\newcommand{\myDegree}{Subtitle\xspace}
+\newcommand{\myName}{David Haberth\"ur\xspace}
+\newcommand{\myProf}{Prof.\ Dr.\ Johannes C.\ Schittny\xspace}
+\newcommand{\myOtherProf}{Dr.\ Mauricio Reyes\xspace}
+\newcommand{\mySupervisor}{Prof.\ Dr.\ Martin Frenz\xspace}
+\newcommand{\myFaculty}{Faculty of Medicine\xspace}
+\newcommand{\myDepartment}{Institute of Anatomy\xspace}
+\newcommand{\myUni}{\protect{University of Bern}\xspace}
+\newcommand{\myLocation}{Bern, Switzerland\xspace}
+\newcommand{\myTime}{Mai 2010\xspace}
+\newcommand{\myVersion}{Version 2.6\xspace}
+%%%%%%%%%%%%%%%%%%%%%%%
+% Packages with options that might require adjustments
+%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[greek,ngerman,english]{babel}
+\usepackage[square,numbers]{natbib}
+\usepackage{multirow}
+\usepackage{lipsum}
+\usepackage{threeparttable}
+\usepackage[fleqn]{amsmath}
+\usepackage{classicthesis-ldpkg} 
+\usepackage{tikz}
+	\usetikzlibrary{shapes,arrows,patterns}
+\usepackage{pgfplots}
+\usepackage[version=3]{mhchem}
+\usepackage[alsoload=synchem,binary]{siunitx}
+\usepackage{makeidx}
+\usepackage{todonotes}
+\usepackage{pdfpages}
+\usepackage{isotope}
+\usepackage{enumerate}
+%\usepackage{minionpro}
+\usepackage[%
+	eulerchapternumbers,%
+	listings,%
+	drafting,
+	%pdfspacing,%
+	subfig,%
+	beramono,%
+	eulermath,%
+	%dottedtoc,%
+	parts]{classicthesis}
+%\usepackage{setspace}
+	%\singlespacing
+	%\onehalfspacing
+	%\doublespacing
+	%\spacing{4}
+\usepackage[all]{hypcap}
+%%%%%%%%%%%%%%%%%%%%%%%
+% Setup and Finetuning
+%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\imsize}{\linewidth}
+\newlength{\abcd} % for ab..z string length calculation
+\newcommand{\myfloatalign}{\centering} % how all the floats will be aligned
+\newlength\imagewidth % needed for scalebars
+\newlength\imagescale % ditto
+\newcommand{\subfigureautorefname}{\figureautorefname} % to have subfigures named using \autoref
+%%%%%%%%%%%%%%%%%%%%%%%
+% Color (Re-Definition)
+%%%%%%%%%%%%%%%%%%%%%%%
+% according to http://is.gd/aOVVy
+\definecolor{Maroon}{RGB}{229,5,58} % redefine Maroon to unibe (Pantone 192, RGB 229,5,58)
+\definecolor{unibe-link}{RGB}{147,183,209} % define unibe-color for links (Pantone 543, RGB 147,183,209)
+\definecolor{unibe-citation}{RGB}{216,140,2} % define unibe-color for citations (Pantone 138, RGB 216,140,2)
+%%%%%%%%%%%%%%%%%%%%%%%
+% Captions look and feel
+%%%%%%%%%%%%%%%%%%%%%%%
+\captionsetup{format=hang,font=small}
+%%%%%%%%%%%%%%%%%%%%%%%
+% Index Generation
+%%%%%%%%%%%%%%%%%%%%%%%
+\makeindex
+%%%%%%%%%%%%%%%%%%%%%%%
+% Listings setup
+%%%%%%%%%%%%%%%%%%%%%%%
+\lstset{%
+	language=MATLAB,%C++,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{RoyalBlue},%\bfseries,
+	stringstyle=\rmfamily,
+	%identifierstyle=\color{Red},
+	commentstyle=\color{Green},
+	showspaces=false,
+	numbers=left,%
+	numberstyle=\tiny,
+	stepnumber=2,
+	numbersep=10pt,
+	breaklines=true,
+	backgroundcolor=\color{lightgray!20},
+	frame=leftline%,frameround=ftff
+}
+%%%%%%%%%%%%%%%%%%%%%%%
+% Hack to make \graffito work in Acknowledgements, as per Mail from Andre Miede from 03.03.2010
+%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\let\graffito\relax
+\def\graffito@setup{%
+	\slshape\footnotesize%
+	\parindent=0pt \lineskip=0pt \lineskiplimit=0pt %
+	\tolerance=2000 \hyphenpenalty=300 \exhyphenpenalty=300
+	\doublehyphendemerits=100000
+	\finalhyphendemerits=\doublehyphendemerits}
+\DeclareRobustCommand{\graffito}[1]{\marginpar
+	[\graffito@setup\raggedleft\hspace{0pt}{#1}]
+	{\graffito@setup\raggedright\hspace{0pt}{#1}}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%
+% Hyperreferences
+%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{% http://www.jkrieger.de/tools/latex/hyperref.html helps!
+	colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+	% uncomment the following line if you want to have black links (e.g., for printing)
+	%colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
+	breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+	plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+	hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true, %frenchlinks,%
+	urlcolor=Maroon, linkcolor=unibe-link, citecolor=unibe-citation, %pagecolor=RoyalBlue,%
+	%urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+	pdftitle={\myTitle},%
+	pdfauthor={\myName, \myUni, \myFaculty},%
+	pdfsubject={},%
+	pdfkeywords={},%
+	pdfcreator={pdfLaTeX},%
+	pdfproducer={LaTeX with hyperref and classicthesis},%
+	bookmarks=true%
+}
+%%%%%%%%%%%%%%%%%%%%%%%
+% GO!GO!GO! MOVE IT!
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%\frenchspacing
+\raggedbottom
+\selectlanguage{english} % english ngerman
+%\renewcommand*{\bibname}{new name}
+%\setbibpreamble{}
+\pagenumbering{roman}
+\pagestyle{plain}
+%%%%%%%%%%%%%%%%%%%%%%%
+% Frontmatter
+%%%%%%%%%%%%%%%%%%%%%%%
+\include{FrontBackmatter/Titlepage}
+\cleardoublepage\include{FrontBackmatter/Titlepage}
+\cleardoublepage\include{FrontBackmatter/Titleback}
+\cleardoublepage\include{FrontBackmatter/Dedication}
+\cleardoublepage\include{FrontBackmatter/Abstract}
+\cleardoublepage\include{FrontBackmatter/Acknowledgments}
+\pagestyle{scrheadings}
+\cleardoublepage\include{FrontBackmatter/Contents}
+%%%%%%%%%%%%%%%%%%%%%%%
+% Mainmatter
+%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+%% use \cleardoublepage here to avoid problems with pdfbookmark
+\cleardoublepage\myPart{Introduction}\label{part:introduction}
+\include{Chapters/Introduction}
+%\include{Chapters/TheMammalianLung}
+%\include{Chapters/CTandTomcat}
+%%
+\cleardoublepage\myPart{Results}\label{part:results}
+\include{Chapters/Publications}
+%\include{Chapters/XRM2008}
+%\include{Chapters/Tsuda2008}
+%\include{Chapters/Haberthuer2010}
+%%
+\cleardoublepage\myPart{Discussion and Outlook}\label{part:discussion}
+\include{Chapters/Discussion}
+\include{Chapters/Outlook}
+%%%%%%%%%%%%%%%%%%%%%%%
+% Backmatter
+%%%%%%%%%%%%%%%%%%%%%%%
+%\appendix
+%\cleardoublepage\myPart{Appendix}
+%\include{Chapters/Appendix}
+%%%%%%%%%%%%%%%%%%%%%%%
+% Other Stuff in the Back
+%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage\myPart{Back Matter}\label{part:back matter}
+%\cleardoublepage\include{FrontBackmatter/CurriculumVitae}
+\cleardoublepage\include{FrontBackmatter/Bibliography}
+%\cleardoublepage\include{FrontBackmatter/Index}
+%\cleardoublepage\include{FrontBackmatter/Declaration}
+\cleardoublepage\include{FrontBackmatter/Colophon}
+%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
+=======
+\documentclass[%
 	draft,%
 	twoside,%
 	openright,%
@@ -199,4 +403,5 @@
 %\cleardoublepage\include{FrontBackmatter/Declaration}
 %\cleardoublepage\include{FrontBackmatter/Colophon}
 %\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
+>>>>>>> .r37
 \end{document}
