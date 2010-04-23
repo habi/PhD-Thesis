@@ -1,5 +1,5 @@
 \documentclass[%
-	draft,%
+	%draft,%
 	twoside,%
 	openright,%
 	titlepage,%
@@ -45,7 +45,7 @@
 \usepackage[version=3]{mhchem}
 \usepackage[alsoload=synchem,binary]{siunitx}
 \usepackage{makeidx}
-\usepackage{todonotes}
+\usepackage[]{todonotes}
 \usepackage{pdfpages}
 \usepackage{isotope}
 \usepackage{enumerate}
@@ -85,7 +85,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Captions look and feel
 %%%%%%%%%%%%%%%%%%%%%%%
-\captionsetup{format=hang,font=small}
+\captionsetup{format=hang, font=small}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Index Generation
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -141,9 +141,8 @@
 	pdfsubject={},%
 	pdfkeywords={},%
 	pdfcreator={pdfLaTeX},%
-	pdfproducer={LaTeX with hyperref and classicthesis},%
-	bookmarks=true%
-}
+	pdfproducer={LaTeX with hyperref and classicthesis}%
+	}
 %%%%%%%%%%%%%%%%%%%%%%%
 % GO!GO!GO! MOVE IT!
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -197,7 +196,7 @@
 \cleardoublepage\myPart{Back Matter}\label{part:back matter}
 \cleardoublepage\include{FrontBackmatter/CurriculumVitae}
 \cleardoublepage\include{FrontBackmatter/Bibliography}
-\cleardoublepage\include{FrontBackmatter/Index}
+%\cleardoublepage\include{FrontBackmatter/Index}
 \cleardoublepage\include{FrontBackmatter/Declaration}
 \cleardoublepage\include{FrontBackmatter/Colophon}
 %\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
