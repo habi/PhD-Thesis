@@ -1,11 +1,12 @@
+% !TEX root = ../Thesis.tex
 %\documentclass{article}
 %\usepackage{tikz,pgfplots}
 %\usepackage[graphics,tightpage,active]{preview}
 %\PreviewEnvironment{tikzpicture}
 %\begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\pgfplotsset{width=\linewidth,height=.5\linewidth}
 	\begin{tikzpicture}
+	\pgfplotsset{width=\linewidth,height=.5\linewidth}
 		\def\xmin{4}
 		\def\xmax{85}
 		\def\ymin{0}
@@ -46,8 +47,8 @@
 			\addplot [fill=cyan]		coordinates {(5.5,2*\step)};
 			\addplot [fill=blue]		coordinates {(1.5,3*\step)};
 			\addplot [fill=magenta]	coordinates {(5,4*\step)};
-			\addplot [fill=yellow]	coordinates {(10,5*\step)};
-			\addplot [fill=orange]	coordinates {(7,6*\step)};
+			\addplot [fill=yellow]		coordinates {(10,5*\step)};
+			\addplot [fill=orange]		coordinates {(7,6*\step)};
 			\addplot [fill=green]		coordinates {(\xmax-41,7*\step)};
 
 			\tikzstyle{every pin}=[%
