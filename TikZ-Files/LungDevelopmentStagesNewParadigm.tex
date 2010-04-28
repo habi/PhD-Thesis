@@ -1,3 +1,4 @@
+% !TEX root = ../Thesis.tex
 %\documentclass{article}
 %\usepackage{tikz,pgfplots}
 %\usepackage[graphics,tightpage,active]{preview}
@@ -32,7 +33,7 @@
 			yticklabels={},%
 			axis x discontinuity=crunch,%
 			xtick={11,13,18.5,20,21,25,35,42,57,81},%
-			xticklabels={11,,,,Birth,4,14,21,36,60},
+			xticklabels={11,,,,Birth,4,14,21,36,$\sim$60},
 			xmajorgrids,%
 			xlabel=Days,%
 			%axis x line=bottom,%
@@ -48,11 +49,10 @@
 			\addplot [fill=blue]		coordinates {(1.5,3*\step)};
 			\addplot [fill=magenta]	coordinates {(5,4*\step)};
 			\addplot [fill=yellow]	coordinates {(56,5*\step)};
-			\addplot [fill=orange]	coordinates {(-56,6*\step)};
+			\addplot [transparent]	coordinates {(-56,5.5*\step)};
 			\addplot [fill=orange]	coordinates {(56,6*\step)};
-%			\addplot [fill=green]		coordinates {(39,7*\step)};
-			\addplot [fill=green]		coordinates {(\xmax-80,7*\step)};
-
+			\addplot [transparent]	coordinates {(-5,5.5*\step)};
+			\addplot [fill=green]		coordinates {(\xmax-75,7*\step)};
 			\tikzstyle{every pin}=[%
 				%fill=white,%
 				%semitransparent,%
@@ -65,7 +65,7 @@
 			\node[coordinate, pin=right:{Pseudoglandular Stage (E13--E18.5)}] at (axis cs:18.5,0.1) {};
 			\node[coordinate, pin=right:{Canalicular Stage (E18.5--E20)}] at (axis cs:20,0.15) {};
 			\node[coordinate, pin=right:{Saccular Stage (E20--P4)}] at (axis cs:25,0.2) {};
-			\node[coordinate, pin=left:{Lung Growth (P60--adulthood)}] at (axis cs:81,0.35) {};
+			\node[coordinate, pin=left:{Lung Growth (P60--adulthood)}] at (axis cs:76,0.35) {};
 		\end{axis}
 	\end{tikzpicture}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

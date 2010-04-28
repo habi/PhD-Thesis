@@ -33,7 +33,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[utf8]{inputenc}
 \usepackage[greek,ngerman,english]{babel}
-\usepackage[square,numbers]{natbib}
+\usepackage[square,numbers,sort&compress]{natbib}
 \usepackage{multirow}
 \usepackage{lipsum}
 \usepackage{threeparttable}
@@ -43,12 +43,13 @@
 	\usetikzlibrary{shapes,arrows,patterns}
 \usepackage{pgfplots}
 \usepackage[version=3]{mhchem}
-\usepackage[alsoload=synchem,binary]{siunitx}
+\usepackage[alsoload=synchem,binary,obeyall]{siunitx}
 \usepackage{makeidx}
 \usepackage[shadow]{todonotes}
 \usepackage{pdfpages}
 \usepackage{isotope}
 \usepackage{enumerate}
+\usepackage{xfrac}
 %\usepackage{minionpro}
 \usepackage[%
 	eulerchapternumbers,%
@@ -61,6 +62,7 @@
 	%dottedtoc,%
 	parts]{classicthesis}
 %\usepackage{setspace}
+%\usepackage{fullpage}
 	%\singlespacing
 	%\onehalfspacing
 	%\doublespacing
@@ -128,14 +130,14 @@
 % Hyperreferences
 %%%%%%%%%%%%%%%%%%%%%%%
 \hypersetup{% http://www.jkrieger.de/tools/latex/hyperref.html helps!
-	colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
-	% uncomment the following line if you want to have black links (e.g., for printing)
-	%colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,%
-	breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
-	plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
-	hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true, %frenchlinks,%
-	urlcolor=Maroon, linkcolor=unibe-link, citecolor=unibe-citation, %pagecolor=RoyalBlue,%
-	%urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+%	colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+%	% uncomment the following line if you want to have black links (e.g., for printing)
+%	%colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,%
+%	breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+%	plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+%	hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true, %frenchlinks,%
+%	urlcolor=Maroon, linkcolor=unibe-link, citecolor=unibe-citation, %pagecolor=RoyalBlue,%
+%	%urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
 	pdftitle={\myTitle},%
 	pdfauthor={\myName, \myUni, \myFaculty},%
 	pdfsubject={},%
@@ -163,7 +165,7 @@
 %\cleardoublepage\include{FrontBackmatter/Dedication}
 %\cleardoublepage\include{FrontBackmatter/Abstract}
 %\cleardoublepage\include{FrontBackmatter/Acknowledgments}
-\pagestyle{scrheadings}
+%\pagestyle{scrheadings}
 \cleardoublepage\include{FrontBackmatter/Contents}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Mainmatter

@@ -7,15 +7,14 @@
 				And get the most expensive machine in case the Administrator comes.} \\ \medskip
 	--- John Cleese \& Graham Chapman as Obstetricians in\defcitealias{TheMeaningOfLife}{The Meaning of Life}\citetalias{TheMeaningOfLife} \citep{TheMeaningOfLife}
 \end{flushright}
-
-\vfill
+\vspace{74mm}
 
 \ac{ct} is an imaging method where a three-dimensional image of the internal structure of an object is generated from a series of two-dimensional x-ray images---single radiographs---which have been taken at equidistant angles around a single rotation axis. The word tomography is derived from the greek words for tomos (\greektext tomos\latintext, slice) and grafia (\greektext graf'ia\latintext, describing). Combining tomographic image acquisition with x-ray microscopy based on synchrotron radiation allows to obtain volumetric information of a specimen at sub-micron resolution with only minimal sample preparation~\cite{Stampanoni2006a} in a matter of minutes~\cite{Hintermueller2010}.
 
-This chapter presents a short rundown on the history of \ac{ct} and the underlying principles of the interaction of radiation with matter. Subsequently, the theory behind tomographic reconstruction is presented. The chapter ends with a short description of the machine that goes ``PING''---the beamline for \ac{tomcat} at the \ac{sls} in Villigen, Switzerland---where all experiments of this thesis have been performed.
+This chapter presents a short rundown on the history of \ac{ct} and the underlying principles of the interaction of radiation with matter. Subsequently, the theory behind tomographic reconstruction is presented. The chapter ends with a short description of the machine that goes ``PING!''---the beamline for \ac{tomcat} at the \ac{sls} in Villigen, Switzerland---where all experiments of this thesis have been performed.
 
 \section{History}
-\acl{ct} has come a long way since the late 1970, where Sir Godfrey Hounsfield invented the first commercially available thanks to the upcoming availability of microcomputers\todo{citation?}.
+\acl{ct} has come a long way since the late 1970, where Sir Godfrey Hounsfield invented the first commercially available thanks to the upcoming availability of microcomputers~\cite{Hounsfield1976a}.
 
 The basic idea of todays tomography was already described in a patent granted to \citet{Frank1942} in the 1940s and several experiments around 1960--1965 showed the feasibility of three-dimensional reconstruction of an object which has been penetrated by radiation~\cite{Hsieh2003}. The first tomographic imagers produced radiographic images of selected sections of tissue by moving the x-ray source and the film over and under the patient in the opposite direction. This approach blurred structures lying out of the selected region of interest. But this advance over conventional radiographies was insufficient to make two-dimensional tomographic images a useful diagnostic tool~\cite{Robb2003}.
 
@@ -25,7 +24,7 @@ In 1967, Godfrey N.\ Hounsfield started to develop the first clinical tomography
 
 From the early 1980s on, \ac{ct} imaging became an important tool to answer scientific questions both in medical and industrial applications.
 
-Even if these medical \ac{ct} scanners are in widespread use, their images suffer from relatively low spatial resolution in the sub-millimeter scale, which is often not enough to detect the finest details in biological samples. Since the radiation dose limitations imposed for medical scans often do not apply for biological samples which are dried, frozen or embedded in paraffin or plastic, more intense and collimated x-ray sources can be used. Using such sources in \ac{uct} stations enables to reach resolutions in the sub-micrometer range\todo{citation?}. Since synchrotron radiation is even more powerful than the x-ray tubes used for \ac{uct}, its use as an x-ray source to produce highly intensive beams for microtomography has been proposed as early as in \citeyear{Grodzins1983} by \citet{Grodzins1983,Grodzins1983a}.
+Even if these medical \ac{ct} scanners are in widespread use, their images suffer from relatively low spatial resolution in the sub-millimeter scale, which is often not enough to detect the finest details in biological samples. Since the radiation dose limitations imposed for medical scans often do not apply for biological samples which are dried, frozen or embedded in paraffin or plastic, more intense and collimated x-ray sources can be used. Using such sources in \ac{uct} stations enables to reach resolutions in the sub-micrometer range~\cite{Bonse2008}. Since synchrotron radiation is even more powerful than the x-ray tubes used for \ac{uct}, its use as an x-ray source to produce highly intensive beams for microtomography has been proposed as early as in \citeyear{Grodzins1983} by \citet{Grodzins1983,Grodzins1983a}.
 
 \section{Interaction of radiation with Matter}
 To be able to introduce the physical principles of \ac{ct}, some important interactions of x-rays with matter have to be introduced. The energy of the x-ray photons available at \ac{tomcat}, where all the experiments of this work have been performed is in the range of 8--\SI{45}{\kilo\electronvolt}\graffito{The experiments presented in \autoref{part:results} have been performed between \SI{11.5}{\kilo\electronvolt} and \SI{12.6}{\kilo\electronvolt}.%
@@ -113,44 +112,44 @@ Before and after the scan, so-called dark ($I_{D}$) and flat images ($I_{F}$) ar
 
 \autoref{fig:corrected projection} shows the results of correcting a raw projection obtained at \ac{tomcat} with a flat image into a corrected projection.
 
-\renewcommand{\imsize}{0.333\linewidth}
-\begin{figure}
-	\centering
-	\pgfmathsetlength{\imagewidth}{\imsize}%
-	\pgfmathsetlength{\imagescale}{\imagewidth/1024}%
-	\def\x{633}% scalebar-x at golden ratio of x=1024px
-	\def\y{922}% scalebar-y at 90% of height of y=1024px
-	\subfloat[Projection $PI$]{%
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/tif-sin-rec/L-XXI-18_B50287-projection}};
-			% 1024px = 1.5155mm > 100px = 148um > 338px = 500um, 68px = 100um
-			%\draw[|-|,thick] (0,512) -- (1024,512) node [sloped,midway,above] {\SI{1.5155}{\milli\meter} (1024px)};
-			\draw[white,|-|,thick] (\x,\y) -- (\x+338,\y) node [midway, above] {\SI{500}{\micro\meter}};
-		\end{tikzpicture}%			
-		\label{subfig:pi}%
-		}%
-	\subfloat[Flat Image $FI$]{%
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/tif-sin-rec/L-XXI-18_B50006-flat}};
-			% 1024px = 1.5155mm > 100px = 148um > 338px = 500um, 68px = 100um
-			%\draw[|-|,thick] (0,512) -- (1024,512) node [sloped,midway,above] {\SI{1.5155}{\milli\meter} (1024px)};
-			\draw[white,|-|,thick] (\x,\y) -- (\x+338,\y) node [midway, above] {\SI{500}{\micro\meter}};
-		\end{tikzpicture}%			
-		\label{subfig:fi}%
-		}%
-	\subfloat[Corrected projection $CPR$]{%
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/tif-sin-rec/L-XXI-18_B50287-correctedprojection}};
-			% 1024px = 1.5155mm > 100px = 148um > 338px = 500um, 68px = 100um
-			%\draw[|-|,thick] (0,512) -- (1024,512) node [sloped,midway,above] {\SI{1.5155}{\milli\meter} (1024px)};
-			\draw[white,|-|,thick] (\x,\y) -- (\x+338,\y) node [midway, above] {\SI{500}{\micro\meter}};
-		\end{tikzpicture}%			
-		\label{subfig:cpr}%
-		}%
+\renewcommand{\imsize}{0.5393\linewidth}% =1.618/3
+\begin{figure}	
+	\noindent\makebox[\textwidth]{%
+		\pgfmathsetlength{\imagewidth}{\imsize}%
+		\pgfmathsetlength{\imagescale}{\imagewidth/1024}%
+		\def\x{633}% scalebar-x at golden ratio of x=1024px
+		\def\y{922}% scalebar-y at 90% of height of y=1024px
+		\subfloat[Projection $I_{P}$]{%
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/tif-sin-rec/L-XXI-18_B50287-projection}};
+				% 1024px = 1.5155mm > 100px = 148um > 338px = 500um, 68px = 100um
+				%\draw[|-|,thick] (0,512) -- (1024,512) node [sloped,midway,above] {\SI{1.5155}{\milli\meter} (1024px)};
+				\draw[white,|-|,thick] (\x,\y) -- (\x+338,\y) node [midway, above] {\SI{500}{\micro\meter}};
+			\end{tikzpicture}%			
+			\label{subfig:pi}%
+			}%
+		\subfloat[Flat Image $I_{F}$]{%
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/tif-sin-rec/L-XXI-18_B50006-flat}};
+				% 1024px = 1.5155mm > 100px = 148um > 338px = 500um, 68px = 100um
+				%\draw[|-|,thick] (0,512) -- (1024,512) node [sloped,midway,above] {\SI{1.5155}{\milli\meter} (1024px)};
+				\draw[white,|-|,thick] (\x,\y) -- (\x+338,\y) node [midway, above] {\SI{500}{\micro\meter}};
+			\end{tikzpicture}%			
+			\label{subfig:fi}%
+			}%
+		\subfloat[Corrected projection $CPR$]{%
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/tif-sin-rec/L-XXI-18_B50287-correctedprojection}};
+				% 1024px = 1.5155mm > 100px = 148um > 338px = 500um, 68px = 100um
+				%\draw[|-|,thick] (0,512) -- (1024,512) node [sloped,midway,above] {\SI{1.5155}{\milli\meter} (1024px)};
+				\draw[white,|-|,thick] (\x,\y) -- (\x+338,\y) node [midway, above] {\SI{500}{\micro\meter}};
+			\end{tikzpicture}%			
+			\label{subfig:cpr}%
+			}%
+	}%
 	\caption[Correction of the projections with flat images]{Correction of the raw recorded projections with the flat images. \subref{subfig:pi}: Recorded projection image. A set of these is the output of one tomographic scanning session. \subref{subfig:fi}: Flat image; obtained at the start of the scan to record the beam profile. \subref{subfig:cpr}: Corrected projection obtained after \autoref{eq:cpr} has been applied on the projection and flat image shown in panels \subref{subfig:pi} and \subref{subfig:fi}. All three images have a size of 1024$\times$1024 pixels with a size of \SI{1.48}{\micro\meter} each and are from a dataset of a rat lung.}
 	\label{fig:corrected projection}
-	\todo[inline]{From L-XXI-18: details?}
-\end{figure}
+	\todo[inline]{L-XXI-18, beamtime 2010a, Matthias Roth --> Details in Caption}\end{figure}
 
 The corrected projections are then transformed into so-called sinograms, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of each projection. From one tomographic scan with 1500 projections recorded with a detector with a size of 2048$\times$2048 pixels, we get a set of 1024 sinograms with a size of 1024$\times$1500 pixels each.
 
@@ -158,29 +157,30 @@ Sinograms inherit their name because the Radon transformation\graffito{The Radon
 
 One sinogram contains the total information of one plane or slice of the reconstructed tomographic image. We can thus reconstruct the $n$\textsuperscript{th} slice of the tomographic dataset from the $n$\textsuperscript{th} sinogram using different reconstructing algorithms, e.g.\ a standard filtered back-projection algorithm. In a reconstructed slice, the absorption properties of the sample at a certain height are encoded by the gray values of the image, as shown in \autoref{subfig:rec}. This virtual slice into a rat lung sample is part of a dataset permitting a fully three-dimensional, unrestricted view into the sample in a non-destructive way.
 
-\renewcommand{\imsize}{0.5\linewidth}
+\renewcommand{\imsize}{0.809\linewidth}%1.618/2
 \begin{figure}%
-	\centering
-	\subfloat[resized Sinogram]{%
-		\includegraphics[width=\imsize]{img/tif-sin-rec/L-XXI-18_B50501-sin-DMP-scaled}%
-		\label{subfig:sin}%
+	\noindent\makebox[\textwidth]{%
+		\subfloat[resized Sinogram]{%
+			\includegraphics[width=\imsize]{img/tif-sin-rec/L-XXI-18_B50501-sin-DMP-scaled}%
+			\label{subfig:sin}%
 		}%
-	\subfloat[Reconstructed Slice]{%
-		\pgfmathsetlength{\imagewidth}{\imsize}%
-		\pgfmathsetlength{\imagescale}{\imagewidth/1024}%
-		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\def\x{633} % scalebar-x at golden ratio of x=1024px
-			\def\y{922} % scalebar-y at 90% of height of y=1024px
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/tif-sin-rec/L-XXI-18_B50761-rec-8bit}};
-			% 1024px = 1.5155mm > 100px = 148um > 338px = 500um, 68px = 100um
-			%\draw[white,|-|,thick] (0,512) -- (1024,512) node [sloped,midway,above] {\SI{1.5155}{\milli\meter} (1024px)};
-			\draw[white,|-|,thick] (\x,\y) -- (\x+338,\y) node [midway, above] {\SI{500}{\micro\meter}};
-		\end{tikzpicture}%
-		\label{subfig:rec}%
+		\subfloat[Reconstructed Slice]{%
+			\pgfmathsetlength{\imagewidth}{\imsize}%
+			\pgfmathsetlength{\imagescale}{\imagewidth/1024}%
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+				\def\x{633} % scalebar-x at golden ratio of x=1024px
+				\def\y{922} % scalebar-y at 90% of height of y=1024px
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/tif-sin-rec/L-XXI-18_B50761-rec-8bit}};
+				% 1024px = 1.5155mm > 100px = 148um > 338px = 500um, 68px = 100um
+				%\draw[white,|-|,thick] (0,512) -- (1024,512) node [sloped,midway,above] {\SI{1.5155}{\milli\meter} (1024px)};
+				\draw[white,|-|,thick] (\x,\y) -- (\x+338,\y) node [midway, above] {\SI{500}{\micro\meter}};
+			\end{tikzpicture}%
+			\label{subfig:rec}%
 		}%
+	}%
 	\caption[Sinogram and Reconstruction]{Sinogram and Reconstruction of the projections of the rat lung sample shown in \autoref{fig:corrected projection}. \subref{subfig:sin}: The $n$\textsuperscript{th} sinogram has been obtained after reordering the $n$\textsuperscript{th} line of each of the 1501 corrected projections. The sinogram has been rescaled to a square format for display purposes, it would have a size of 1024$\times$1501 pixels. It doesn't really make sense to draw a scalebar on a sinogram, it has thus been omitted. \subref{subfig:rec}: The tomographic reconstruction of the complete set of sinograms results in a set of 1024 reconstructed slices with 1024$\times$1024 pixels of a size of \SI{1.48}{\micro\meter} each. This slice can then be used for further processing, measuring and three-dimensional visualization.}
 	\label{fig:Sin Rec}
-	\todo[inline]{Is it really rat? (L-XXI-18, beamtime 2010a, Matthias Roth)}
+	\todo[inline]{L-XXI-18, beamtime 2010a, Matthias Roth --> Details in Caption}
 \end{figure}
 
 The amount of scanned projections---the number of angles at which projections have been recorded---is defined by the so-called sampling theorem. The sampling theorem as defined by \citet{Shannon1949} states that: \begin{quote}If a function $f(t)$ contains no frequencies higher than $W$ cps, it is completely determined by giving its ordinates at a series of points spaced $1/2\ W$ seconds apart. \cite{Shannon1949}\end{quote}
@@ -299,16 +299,18 @@ After collimation, the beam travels through an evacuated pipe into the measuring
 
 The x-rays which penetrated the sample are detected using a combination of a scintillator, microscope optics and a \ac{ccd}-camera. The scintillator\graffito{The latin word \textit{scintillare} can be translated with sparkling or flickering.} converts incident x-rays to visible light through fluorescence. Charged particles excite the scintillator material and this excitation energy is then subsequently emitted by fluorescence photons at a longer wavelength, which makes it possible to detect the incident beam using a \ac{ccd}-camera. The camera at \ac{tomcat} features a detector with 2048$\times$2048 pixels with a size of 7.4$\times$\SI{7.4}{\micro\meter} each and can read out a full frame \SI{14}{\bit} image in \SI{260}{\millisecond}. Between the scintillator and the \ac{ccd}-sensor interchangeable microscope objectives enable to easily vary the pixel size range of the resulting tomographic reconstructions from 350$\times$\SI{350}{\nano\meter} up to 5.6$\times$\SI{5.6}{\micro\meter}. Depending on the chosen pixel size, the resulting field of view of a standard scan varies between 0.75$\times$\SI{0.75}{\milli\meter\squared} and 11.45$\times$\SI{11.45}{\milli\meter\squared}\graffito{See \autoref{ch:haberthuer2010} for a method to increase the field of view of tomography endstations while keeping the small voxel size.}.
 
-\renewcommand{\imsize}{0.5\linewidth}
+\renewcommand{\imsize}{0.5\linewidth}%
 \begin{figure}
-	\subfloat[Overview]{%
-		\includegraphics[width=\imsize]{img/TOMCAT1}%
-		\label{subfig:TOMCAT1}%
+	\noindent\makebox[\textwidth]{%
+		\subfloat[Overview]{%
+			\includegraphics[width=\imsize]{img/TOMCAT1}%
+			\label{subfig:TOMCAT1}%
 		}%
-	\subfloat[Detail]{%
-		\includegraphics[width=\imsize]{img/TOMCAT2}%
-		\label{subfig:TOMCAT2}%
+		\subfloat[Detail]{%
+			\includegraphics[width=\imsize]{img/TOMCAT2}%
+			\label{subfig:TOMCAT2}%
 		}%
+	}%
 	\caption[The TOMCAT end station]{The \ac{tomcat} end station. \subref{subfig:TOMCAT1}: Overview: The blue structure behind the control notebook is the sample stage with the sample holder on the rotation stage on top of it. The black structure above contains the scintillator, the microscope optics and the camera. \subref{subfig:TOMCAT2}: Detail of the microscope optics: The sample holder with a mounted standard electron microscopy sample table is carrying a small piece of a rat lung which can be seen in the reflection. The round structure behind the sample contains the different objectives. The reflecting rectangle visible under the label on the objective revolver is the scintillator which is used to convert the x-ray beam into visible light, which after magnification is then recorded with the \ac{ccd}-camera.}%
 	\label{fig:tomcat}
 \end{figure}
