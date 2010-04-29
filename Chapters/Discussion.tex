@@ -7,7 +7,25 @@
 
 \vfill
 
-The tomographic data obtained at the beamline for \ac{tomcat} offers an unmatched three-dimensional insight into the mammalian lung. Even if higher resolution images of the terminal airway ends than the ones obtained at \ac{tomcat} have been obtained with scanning \ac{em}\todo{citation/nice image? $\rightarrow$ Schrank!}, these images only provide a view of the surface structure of a sample and are not suited for a full three-dimensional reconstruction of the terminal airway ends. Using standard \ac{em} is impossible to visualize the larger three-dimensional structure of the terminal airway ends inside the lung since the sample has to be cut prior to acquiring images using this method, which essentially destroys the full three-dimensional information of the sample. Using \ac{em}-tomography, ultrahigh three-dimensional information from a sample can be obtained, but the available sample volumes\todo{citation?} are much too small for the structural analyis of the terminal airway ends.
+The tomographic data obtained at the beamline for \ac{tomcat} offers an unmatched three-dimensional insight into the mammalian lung. Even if higher resolution images of the terminal airway ends than the ones obtained at \ac{tomcat} have been obtained with \ac{sem}, these images only provide a view of the surface structure of a sample as shown in \autoref{fig:sem} and are not suited for a full three-dimensional reconstruction of the terminal airway ends. Using \ac{sem} or \ac{tem} it is impossible to visualize the larger three-dimensional structure of the terminal airway ends inside the lung since the sample has to be cut prior to acquiring images using this method, which essentially destroys the full three-dimensional information of the sample. Using \ac{em}-tomography, ultrahigh three-dimensional information from a sample can be obtained, but the available sample volumes \todo{Citation! $\rightarrow$ asked Dimitri} are much too small for the structural analysis of the terminal airway ends.
+
+\begin{figure}
+	\noindent\makebox[\textwidth]{%
+		\pgfmathsetlength{\imagewidth}{\imsize}%
+		\pgfmathsetlength{\imagescale}{\imagewidth/3996}%
+		\def\x{2470}% scalebar-x at golden ratio of x=3996px
+		\def\y{2326}% scalebar-y at 90% of height of y=2928px
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/SEM_crop_overlay}};
+			% 572px = 0.1mm > 100px = 17um > 2860px = 500um, 572px = 100um
+			%\draw[|-|,thick] (1347,2782) -- (1918,2774) node [sloped,midway,above] {\SI{0.1}{\milli\meter} (100px)};
+			\draw[|-|,thick] (\x,\y) -- (\x+572,\y) node [midway, above] {\SI{100}{\micro\meter}};
+	\end{tikzpicture}%
+	}%
+	\caption[\acs{sem} image of a rat lung sample]{\ac{sem} image of a rat lung sample obtained at postnatal day 8. Single alveoli are clearly visible, but the full three-dimensional information cannot be extracted from this type of images. The blue overlay marks two alveolar ducts, the red overlay marks a blood vessel, probably a vein.}%
+	\todo[inline]{Johannes; die Regionen sind erstmals extrem grob eingezeichnet. Stimmen diese?}
+	\label{fig:sem}%
+\end{figure}
 
 Tomography in contrast offers a non-destructive insight into the lung, tomographic microscopy using \ac{uct} enables the study of the major airways of swine~\cite{Litzlbauer2006}, rat~\cite{Langheinrich2004a,Sharif2010} or mice lung~\cite{Langheinrich2004,Ritman2005} and while \ac{srxtm} and \ac{wf-srxtm} enable the study of the functional lung units of the lung, the so-called acini with unmatched resolution and precision.
 
@@ -16,7 +34,7 @@ In this work three imaging methods based on ultrahigh resolution tomographic dat
 \section{Multimodal Imaging}
 The method presented in \autoref{ch:xrm2008} combines the advantages of tomographic imaging and \ac{em} into a multimodal imaging approach for the analysis of inhaled particles in the lung. The tomographic data provides the unrestricted three-dimensional information on the location of sub-micron particles in the terminal airway tree which is combined with the extremely high resolution of the \ac{em}-images for the precise analysis of those particles in the lung tissue.
 
-Exposure to ultra-fine particles and nanoparticles produces by environmental or industrial sources is an important health problem. It is expected that inhaled particles are deposited in specific locations in the lung\todo{citation $\rightarrow$ Christian Mühlfeld, Barbara Rothen? $\rightarrow$ bug JCS!}. With currently available methods, the exact location of these deposition sites in relation to the airways tree cannot easily be analyzed. 
+Exposure to ultra-fine particles and nanoparticles produces by environmental or industrial sources is an important health problem. It is expected that inhaled particles are deposited in specific locations in the lung\todo{Citation! Evtl.\ Christian Mühlfeld or Barbara Rothen? $\rightarrow$ bug JCS!}. With currently available methods, the exact location of these deposition sites in relation to the airways tree cannot easily be analyzed. 
 
 Classic histological sections analyzed using light and electron microscopy allow for a precise location of the inhaled particles in relation to the tissue, \ie make it possible to analyze the interaction of the particles with alveolar macrophages and epithelial cells~\cite{Muhlfeld2008}. But the precise localization of these interaction sites inside the airway tree are impossible to extract using histological sections since the three-dimensional structure of the sample is destroyed.
 
@@ -26,7 +44,7 @@ Registration of classic histological slices with the three-dimensional data obta
 
 Figures~\ref{subfig:correlation-arbitrary1} and \ref{subfig:correlation-arbitrary3} depict situations where the two datasets are arbitrarily orientated with one or multiple degrees of rotation, respectively.
 
-\renewcommand{\imsize}{1.618\linewidth}%
+\renewcommand{\imsize}{1.41\linewidth}%
 \begin{figure}
 	\pgfmathsetlength{\imagewidth}{\imsize}%
 	\pgfmathsetlength{\imagescale}{\imagewidth/1586}%
@@ -90,60 +108,64 @@ We routinely performed more than 70 \ac{wf-srxtm} scans of different rat lung sa
 \subsection{Skeletonization}
 A skeletonization of a structure is performed to extract the underlying information of said structure. The skeleton of a structure corresponds to the local maxima of the distance transformation of this structure, which transforms a binarized image into an image where each pixel gray value corresponds to the distance of this pixel to the nearest boundary. \autoref{fig:skeletonization} explains the whole process in a two-dimensional example. An in-depth explanation of the skeletonization algorithm built into MeVisLab is presented by \citet{Selle2002}, an application of the algorithm for the morphometric quantification of vessels is presented by \citet{Boskamp2004}.
 
-\renewcommand{\imsize}{\linewidth}%
+\renewcommand{\imsize}{1.41\linewidth}%
 \begin{figure}
-	\centering
-	\pgfmathsetlength{\imagewidth}{\imsize}%
-	\pgfmathsetlength{\imagescale}{\imagewidth/2707}%
-	\subfloat[Original slice]{%
-		\begin{tikzpicture}[remember picture,x=\imagescale,y=-\imagescale]%
-			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imsize]{img/outlook/skeletonization/1-R108C21Cb-mrg1024}};%
-      		\def\x{2300}%
-			\def\y{750}%
-			\draw[|-|,white, thick] (\x,\y) -- (356+\x,\y) node [midway, above] {\SI{500}{\micro\meter}};%
-			\def\OLX{970} \def\OLY{356}%
-			\def\URX{1504} \def\URY{820}%
-			\draw[color=white, thick] (\OLX,\OLY) rectangle (\URX,\URY);%
-    	\end{tikzpicture}%
-		\label{subfig:skel-a}%
+	\noindent\makebox[\textwidth]{%
+		\pgfmathsetlength{\imagewidth}{\imsize}%
+		\pgfmathsetlength{\imagescale}{\imagewidth/2707}%
+		\subfloat[Original slice]{%
+			\begin{tikzpicture}[remember picture,x=\imagescale,y=-\imagescale]%
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imsize]{img/outlook/skeletonization/1-R108C21Cb-mrg1024}};%
+	      		\def\x{2300}%
+				\def\y{750}%
+				\draw[|-|,white, thick] (\x,\y) -- (356+\x,\y) node [midway, above] {\SI{500}{\micro\meter}};%
+				\def\OLX{970} \def\OLY{356}%
+				\def\URX{1504} \def\URY{820}%
+				\draw[color=white, thick] (\OLX,\OLY) rectangle (\URX,\URY);%
+	    	\end{tikzpicture}%
+			\label{subfig:skel-a}%
+		}%
 	}%
 	\\%
-	\renewcommand{\imsize}{0.25\columnwidth}%
-	\subfloat[Binarized]{%
-		\includegraphics[width=\imsize]{img/outlook/skeletonization/4-crop-R108C21Cb-mrg1024}%
-		\label{subfig:skel-b}%
-		}%
-	\subfloat[Segmented]{%
-	 	\includegraphics[width=\imsize]{img/outlook/skeletonization/5-fill-R108C21Cb-mrg1024}%
-		\label{subfig:skel-c}%
-		}%
-	\subfloat[Distance Transformation]{%
-		\includegraphics[width=\imsize]{img/outlook/skeletonization/6-dtf-R108C21Cb-mrg1024}%
-		\label{subfig:skel-d}%
-		}%
-	\subfloat[Skeleton]{%
-		\includegraphics[width=\imsize]{img/outlook/skeletonization/9-Skeleton-crop}%
-		\label{subfig:skel-e}%
-		}%
+	\renewcommand{\imsize}{0.3525\columnwidth}%
+	\noindent\makebox[\textwidth]{%
+		\subfloat[Binarized]{%
+			\includegraphics[width=\imsize]{img/outlook/skeletonization/4-crop-R108C21Cb-mrg1024}%
+			\label{subfig:skel-b}%
+			}%
+		\subfloat[Segmented]{%
+		 	\includegraphics[width=\imsize]{img/outlook/skeletonization/5-fill-R108C21Cb-mrg1024}%
+			\label{subfig:skel-c}%
+			}%
+		\subfloat[Distance Transformation]{%
+			\includegraphics[width=\imsize]{img/outlook/skeletonization/6-dtf-R108C21Cb-mrg1024}%
+			\label{subfig:skel-d}%
+			}%
+		\subfloat[Skeleton]{%
+			\includegraphics[width=\imsize]{img/outlook/skeletonization/9-Skeleton-crop}%
+			\label{subfig:skel-e}%
+			}%
+	}%
 	\caption[\twod skeletonization]{Two-dimensional skeletonization process: \subref{subfig:skel-a}: Wide field scanned tomographic slice from a rat lung sample obtained at postnatal day 21. The inset corresponds to the region of the images shown in the bottom row. \subref{subfig:skel-b}: Binarized \ac{roi} The data has been separated into tissue and airspace. \subref{subfig:skel-c}: The white segment represents one connected airway structure inside the \ac{roi} in two dimensions. \subref{subfig:skel-d}: Euclidean Distance transformation of the segment shown in panel \subref{subfig:skel-c}, where the gray level value of each pixel represents the distance to the tissue-airspace border. \subref{subfig:skel-e}: The local maxima of the distance transformation form the skeleton which is then overlaid on the binarized lung structure from panel \subref{subfig:skel-a}.}%
 	\label{fig:skeletonization}%
 \end{figure}
 
 MeVisLab can export the information of the skeleton to an \acsu{xml}-file from which we can obtain the amount of skeleton nodes and their position in space for further analysis. The example in \autoref{fig:skeleton} shows a successful three-dimensional skeletonization of multiple acini in a rat lung sample obtained at postnatal day 21 containing multiple airway segments which each contain one or more acini. Both these structures are shown in the background. The foreground of the image shows the extracted skeletons containing between \num{1100} and \num{7300} nodes.
 
-\renewcommand{\imsize}{\linewidth}
+\renewcommand{\imsize}{1.41\linewidth}
 \begin{figure}
-	\centering
-	\pgfmathsetlength{\imagewidth}{\imsize}%
-	\pgfmathsetlength{\imagescale}{\imagewidth/1541}%
-	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-		\def\x{1300}
-		\def\y{400}
-		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/R108C21b-skeleton}};
-		% 796px = 4.0138mm > 100px = 504um > 99px = 500um, 20px = 100um
-		%\draw[color=red,|-|,thick] (11,341) -- (807,339) node [sloped,midway,above] {\SI{4.0138}{\milli\meter} (2712px)};
-		\draw[|-|,thick] (\x,\y) -- (\x+99,\y) node [midway, above] {\SI{500}{\micro\meter}};
-	\end{tikzpicture}%
+	\noindent\makebox[\textwidth]{%
+		\pgfmathsetlength{\imagewidth}{\imsize}%
+		\pgfmathsetlength{\imagescale}{\imagewidth/1541}%
+		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+			\def\x{1300}
+			\def\y{400}
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/R108C21b-skeleton}};
+			% 796px = 4.0138mm > 100px = 504um > 99px = 500um, 20px = 100um
+			%\draw[color=red,|-|,thick] (11,341) -- (807,339) node [sloped,midway,above] {\SI{4.0138}{\milli\meter} (2712px)};
+			\draw[|-|,thick] (\x,\y) -- (\x+99,\y) node [midway, above] {\SI{500}{\micro\meter}};
+		\end{tikzpicture}%
+	}%
 	\caption[\threed Visualization of rat lung sample]{Three-dimensional visualization of rat lung sample obtained at postnatal day 21. Left: Three-dimensional view of the sample, Right: Four independent airway segments. Foreground: Extracted airway skeletons of the independent airways. The yellow skeleton contains \num{1133}, the green \num{7288}, the red \num{6513} and the blue skeleton \num{3278} nodes.}
 	\label{fig:skeleton}
 \end{figure}
@@ -161,7 +183,6 @@ Using morphological criteria like appearance of alveoli in the airway walls, the
 
 \begin{figure}
 	\noindent\makebox[\textwidth]{%
-		\centering
 		\renewcommand{\imsize}{0.355\linewidth}
 		\subfloat[Three-dimensional view]{%
 			\pgfmathsetlength{\imagewidth}{\imsize}%
@@ -225,34 +246,34 @@ Using morphological criteria like appearance of alveoli in the airway walls, the
 
 The acini segmented as described above have been overlaid over the tomographic data (as shown in \autoref{subfig:manhole-804} and \ref{subfig:manhole-1168}), which made it possible to easily understand the interrelation of the acini even on the two-dimensional slices. 
 
-\autoref{ch:haberthuer2010} presents a method to increase the field of view of tomographic imaging in horizontal direction, for the analysis of multiple acini in our lung samples we also needed to increase the field of view in vertical direction. To achieve this, we performed a so-called stacked widefieldscan, where multiple \ac{wf-srxtm} datasets are sequentially recorded on top of each other, so that the resulting total dataset covers an increased field of view in horizontal and vertical direction. \autoref{subfig:stacked} shows how the stacked scans are aligned in respect to each other. Using a python script at the \ac{tomcat} beamline, all the necessary subscans for the lateral increase in field of view have been recorded for each vertical position (as shown in \autoref{subfig:wfs}), making an un-attended tomographic batch scan of greatly increased sample volume posiible. The subsequently presented analysis was performed on such stacked \ac{wf-srxtm} datasets with a size of approximately 3000$\times$3000$\times$3000 pixels at an isometric voxel size of \SI{1.48}{\micro\meter}.
+\autoref{ch:haberthuer2010} presents a method to increase the field of view of tomographic imaging in horizontal direction, for the analysis of multiple acini in our lung samples we needed to increase the field of view in vertical direction, too. To achieve this, we performed a so-called stacked widefieldscan, where multiple \ac{wf-srxtm} datasets are sequentially recorded on top of each other, so that the resulting total dataset covers an increased field of view in horizontal and vertical direction. Using a python script at the \ac{tomcat} beamline, all the necessary subscans for the lateral increase in field of view have been recorded for each vertical position, making an un-attended tomographic batch scan of greatly increased sample volume posiible. The subsequently presented analysis was performed on such stacked \ac{wf-srxtm} datasets with a size of approximately 3000$\times$3000$\times$3000 pixels at an isometric voxel size of \SI{1.48}{\micro\meter}.
 
-\def\scale{0.618}
-\begin{figure}
-	\noindent\makebox[\textwidth]{%
-		\centering
-		\subfloat[Stacked Scan]{%
-			\input{TikZ-Files/wfs-stacking}%
-			\label{subfig:stacked}%
-			}%
-		\hspace{4mm}%
-		\subfloat[Widefield Scan]{%
-			\input{TikZ-Files/wfs-widefieldscanning}%
-			\label{subfig:wfs}%
-			}%
-	}%
-	\caption[Stacked vs.\ Widefield Scan]{Stacked vs.\ Widefield Scan. \subref{subfig:stacked}: Vertical increase of the field of view; Stacking two or more tomographic scans on top of each other can be achieved fairly easily with precise sample positioning. \subref{subfig:wfs}: The method presented in \autoref{ch:haberthuer2010} laterally increases the field of view. Multiple widefield scans can be stacked on top of each other as shown in panel \subref{subfig:stacked} to increase the field of view both in horizontal and vertical direction.}%
-	\label{fig:stack}%
-\end{figure}
+%\def\scale{0.618}
+%\begin{figure}
+%	\noindent\makebox[\textwidth]{%
+%		\centering
+%		\subfloat[Stacked Scan]{%
+%			\input{TikZ-Files/wfs-stacking}%
+%			\label{subfig:stacked}%
+%			}%
+%		\hspace{4mm}%
+%		\subfloat[Widefield Scan]{%
+%			\input{TikZ-Files/wfs-widefieldscanning}%
+%			\label{subfig:wfs}%
+%			}%
+%	}%
+%	\caption[Stacked vs.\ Widefield Scan]{Stacked vs.\ Widefield Scan. \subref{subfig:stacked}: Vertical increase of the field of view; Stacking two or more tomographic scans on top of each other can be achieved fairly easily with precise sample positioning. \subref{subfig:wfs}: The method presented in \autoref{ch:haberthuer2010} laterally increases the field of view. Multiple widefield scans can be stacked on top of each other as shown in panel \subref{subfig:stacked} to increase the field of view both in horizontal and vertical direction.}%
+%	\label{fig:stack}%
+%\end{figure}
 
 \subsection{STEPanizer}
 Tomographic data obtained at \ac{tomcat} is inherently isotropic, \ie the voxel have an equal side length and are small cubes. This makes tomographic data well suited for morphological analysis using a stereological approach, even if stereology and tomography completely differ in their approach of obtaining a description of the three-dimensional characteristics of the studied sample.
 
 Using tomographic slices of rat lung samples obtained at different postnatal days we assessed the number of alveoli per volume of the segmented acini. Using the aforementioned manhole cover method in a custom MeVisLab-Network, several acini have been three-dimensionally extracted and overlaid over the two-dimensional tomographic slices, as shown in Figures~\ref{subfig:manhole-804} and \label{subfig:manhole-1168}. The volume of the extracted acini (as shown in \autoref{subfig:manhole-3d}) has been calculated according to the voxel size.
 
-Using a beta-version of the STEPanizer~\cite[available \href{http://stepanizer.com/}{online}]{Tschanz2010}, the number of alveoli per acinar segment has been counted. The STEPanizer is a simple, web-based tool for manual stereological assessment of digital images which has been developed by Stefan Tschanz at our institute. The beta-version of the STEPanizer with enabled disector\graffito{A physical disector consists of two parallel histological sections generated a known distance apart from the same tissue block. An optical disector is generated by focusing a known distance through the z-plane of a thick section; \eg parallel focal planes using high numerical aperture microscopy objectives, confocal microscopy or tomographic imaging~\cite{Hsia2010}. Since tomographic images are inherently isometric, adjacent slices can be used for disector-type analysis.} was used to count the appearance or disappearance of septal bridges in the tomographic datasets. Counting these septal bridges correctly estimates the amount of alveolar entrance rings which in terms corresponds to the number of alveoli in the volume.
+Using a beta-version of the STEPanizer~\cite[available \href{http://stepanizer.com/}{online}]{Tschanz2010}, the number of alveoli per acinar segment has been counted. The STEPanizer is a simple, web-based tool for manual stereological assessment of digital images developed by Dr.\ Stefan Tschanz at our institute. The beta-version of the STEPanizer with enabled disector\graffito{A physical disector consists of two parallel histological sections generated a known distance apart from the same tissue block. An optical disector is generated by focusing a known distance through the z-plane of a thick section; \eg parallel focal planes using high numerical aperture microscopy objectives, confocal microscopy or tomographic imaging~\cite{Hsia2010}. Since tomographic images are inherently isometric, adjacent slices can be used for disector-type analysis.} was used to count the appearance or disappearance of septal bridges in the tomographic datasets. Counting these septal bridges correctly estimates the amount of alveolar entrance rings which in terms corresponds to the number of alveoli in the volume. Details on the counting process have been described by \citet{Hyde2004} and \citet{Ochs2004}.
 
-Using the number of bridges and the volume of the alveolar segments, the alveoli per volume have been plotted as shown in \autoref{fig:alveoli per volume}. A statistically significant increase of the alveolar number per volume is observed until postnatal day 21,  until day 60 we subsequently detected a significant decrease in alveolar number per volume. Generally, stereological data should be presented as number per unit \eg alveoli per single acinus or alveoli per lung. Since the volume of the so far extracted acinar segments\todo{Can we make a plot of \# Alveoli per Acinus or show acinar size?} greatly varies, we are currently evaluating other well suited methods to present the obtained data.
+Using the number of bridges and the volume of the alveolar segments, the alveoli per volume have been plotted as shown in \autoref{fig:alveoli per volume}. A statistically significant increase of the alveolar number per volume is observed until postnatal day 21,  until day 60 we subsequently detected a significant decrease in alveolar number per volume. Generally, stereological data should be presented as number per unit \eg alveoli per single acinus or alveoli per lung. Since the volume of the so far extracted acinar segments\todo{Can we make a plot of Number of Alveoli per Acinus or show acinar size?} greatly varies, we are currently evaluating other well suited methods to present the obtained data.
 
 \begin{figure}
 	\centering
@@ -280,7 +301,7 @@ Using the number of bridges and the volume of the alveolar segments, the alveoli
 		\draw node at (axis cs:60,1072.860829)	[anchor=south] {*};
 	\end{axis}
 	\end{tikzpicture}%
-	\caption[Alveolar entrances per volume]{Alveolar entrances per volume. Multiple airway segments per day have been counted using the STEPanizer. Volumes of the segments have been evaluated using MeVisLab. The average of the alveoli (bridges) per volume for each day has been plotted. The error bars show the calculated standard deviation based on the entire population. The probability associated with a Student's t-Test $p$ calculated between the single days is $p_{4:10}=0.0056$, $p_{10:21}=0.0007$, $p_{21:36}=0.0017$ and $p_{36:60}=0.0358$. ** denotes a p-value $p<0.01$, * denotes $p<0.05$.}
+	\caption[Alveolar entrance rings per volume]{Alveolar entrance rings per volume. Multiple airway segments per day have been counted using the STEPanizer. Volumes of the segments have been evaluated using MeVisLab. The average of the alveoli (bridges) per volume for each day has been plotted. The error bars show the calculated standard deviation based on the entire population. The probability associated with a Student's t-Test $p$ calculated between the single days is $p_{4:10}=0.0056$, $p_{10:21}=0.0007$, $p_{21:36}=0.0017$ and $p_{36:60}=0.0358$. ** denotes a p-value $p<0.01$, * denotes $p<0.05$.}
 	\label{fig:alveoli per volume plot}
 \end{figure}
 

@@ -112,7 +112,7 @@ Before and after the scan, so-called dark ($I_{D}$) and flat images ($I_{F}$) ar
 
 \autoref{fig:corrected projection} shows the results of correcting a raw projection obtained at \ac{tomcat} with a flat image into a corrected projection.
 
-\renewcommand{\imsize}{0.5393\linewidth}% =1.618/3
+\renewcommand{\imsize}{.47\linewidth}%=sqrt(2)/3
 \begin{figure}	
 	\noindent\makebox[\textwidth]{%
 		\pgfmathsetlength{\imagewidth}{\imsize}%
@@ -148,8 +148,9 @@ Before and after the scan, so-called dark ($I_{D}$) and flat images ($I_{F}$) ar
 			}%
 	}%
 	\caption[Correction of the projections with flat images]{Correction of the raw recorded projections with the flat images. \subref{subfig:pi}: Recorded projection image. A set of these is the output of one tomographic scanning session. \subref{subfig:fi}: Flat image; obtained at the start of the scan to record the beam profile. \subref{subfig:cpr}: Corrected projection obtained after \autoref{eq:cpr} has been applied on the projection and flat image shown in panels \subref{subfig:pi} and \subref{subfig:fi}. All three images have a size of 1024$\times$1024 pixels with a size of \SI{1.48}{\micro\meter} each and are from a dataset of a rat lung.}
-	\label{fig:corrected projection}
-	\todo[inline]{L-XXI-18, beamtime 2010a, Matthias Roth --> Details in Caption}\end{figure}
+	\label{fig:corrected projection}%
+	\todo[inline]{L-XXI-18, beamtime 2010a, Matthias Roth --> Add details in Caption}%
+\end{figure}
 
 The corrected projections are then transformed into so-called sinograms, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of each projection. From one tomographic scan with 1500 projections recorded with a detector with a size of 2048$\times$2048 pixels, we get a set of 1024 sinograms with a size of 1024$\times$1500 pixels each.
 
@@ -157,7 +158,7 @@ Sinograms inherit their name because the Radon transformation\graffito{The Radon
 
 One sinogram contains the total information of one plane or slice of the reconstructed tomographic image. We can thus reconstruct the $n$\textsuperscript{th} slice of the tomographic dataset from the $n$\textsuperscript{th} sinogram using different reconstructing algorithms, e.g.\ a standard filtered back-projection algorithm. In a reconstructed slice, the absorption properties of the sample at a certain height are encoded by the gray values of the image, as shown in \autoref{subfig:rec}. This virtual slice into a rat lung sample is part of a dataset permitting a fully three-dimensional, unrestricted view into the sample in a non-destructive way.
 
-\renewcommand{\imsize}{0.809\linewidth}%1.618/2
+\renewcommand{\imsize}{0.705\linewidth}%sqrt(2)/2
 \begin{figure}%
 	\noindent\makebox[\textwidth]{%
 		\subfloat[resized Sinogram]{%
@@ -180,7 +181,7 @@ One sinogram contains the total information of one plane or slice of the reconst
 	}%
 	\caption[Sinogram and Reconstruction]{Sinogram and Reconstruction of the projections of the rat lung sample shown in \autoref{fig:corrected projection}. \subref{subfig:sin}: The $n$\textsuperscript{th} sinogram has been obtained after reordering the $n$\textsuperscript{th} line of each of the 1501 corrected projections. The sinogram has been rescaled to a square format for display purposes, it would have a size of 1024$\times$1501 pixels. It doesn't really make sense to draw a scalebar on a sinogram, it has thus been omitted. \subref{subfig:rec}: The tomographic reconstruction of the complete set of sinograms results in a set of 1024 reconstructed slices with 1024$\times$1024 pixels of a size of \SI{1.48}{\micro\meter} each. This slice can then be used for further processing, measuring and three-dimensional visualization.}
 	\label{fig:Sin Rec}
-	\todo[inline]{L-XXI-18, beamtime 2010a, Matthias Roth --> Details in Caption}
+		\todo[inline]{L-XXI-18, beamtime 2010a, Matthias Roth --> Add details in Caption}%
 \end{figure}
 
 The amount of scanned projections---the number of angles at which projections have been recorded---is defined by the so-called sampling theorem. The sampling theorem as defined by \citet{Shannon1949} states that: \begin{quote}If a function $f(t)$ contains no frequencies higher than $W$ cps, it is completely determined by giving its ordinates at a series of points spaced $1/2\ W$ seconds apart. \cite{Shannon1949}\end{quote}
@@ -286,6 +287,7 @@ The \ac{sls} at the \ac{psi} in Villigen, Switzerland is a third-generation sync
 	\includegraphics[width=\imsize]{img/SLS_beamlines_2008}
 	\caption[Beamlines at the Swiss Light Source]{Beamlines at the \ac{sls}. Image from the \href{http://sls.web.psi.ch/view.php/beamlines/}{SLS Website}}
 	\label{fig:beamlines}
+	\todo[inline]{I've asked Marco for higher resolution image}%
 \end{figure}
 
 \section{TOMCAT}\label{sec:tomcat}
@@ -299,8 +301,16 @@ After collimation, the beam travels through an evacuated pipe into the measuring
 
 The x-rays which penetrated the sample are detected using a combination of a scintillator, microscope optics and a \ac{ccd}-camera. The scintillator\graffito{The latin word \textit{scintillare} can be translated with sparkling or flickering.} converts incident x-rays to visible light through fluorescence. Charged particles excite the scintillator material and this excitation energy is then subsequently emitted by fluorescence photons at a longer wavelength, which makes it possible to detect the incident beam using a \ac{ccd}-camera. The camera at \ac{tomcat} features a detector with 2048$\times$2048 pixels with a size of 7.4$\times$\SI{7.4}{\micro\meter} each and can read out a full frame \SI{14}{\bit} image in \SI{260}{\millisecond}. Between the scintillator and the \ac{ccd}-sensor interchangeable microscope objectives enable to easily vary the pixel size range of the resulting tomographic reconstructions from 350$\times$\SI{350}{\nano\meter} up to 5.6$\times$\SI{5.6}{\micro\meter}. Depending on the chosen pixel size, the resulting field of view of a standard scan varies between 0.75$\times$\SI{0.75}{\milli\meter\squared} and 11.45$\times$\SI{11.45}{\milli\meter\squared}\graffito{See \autoref{ch:haberthuer2010} for a method to increase the field of view of tomography endstations while keeping the small voxel size.}.
 
-\renewcommand{\imsize}{0.5\linewidth}%
+\renewcommand{\imsize}{1.41\linewidth}%
 \begin{figure}
+	\noindent\makebox[\textwidth]{%
+		\subfloat[Panoramic view]{%
+			\includegraphics[width=\imsize]{img/TOMCAT_DSC_6725-DSC_6760_fused}%
+			\label{subfig:TOMCATpano}%
+		}%
+	}%
+	\\%
+	\renewcommand{\imsize}{0.705\linewidth}%
 	\noindent\makebox[\textwidth]{%
 		\subfloat[Overview]{%
 			\includegraphics[width=\imsize]{img/TOMCAT1}%
@@ -311,7 +321,7 @@ The x-rays which penetrated the sample are detected using a combination of a sci
 			\label{subfig:TOMCAT2}%
 		}%
 	}%
-	\caption[The TOMCAT end station]{The \ac{tomcat} end station. \subref{subfig:TOMCAT1}: Overview: The blue structure behind the control notebook is the sample stage with the sample holder on the rotation stage on top of it. The black structure above contains the scintillator, the microscope optics and the camera. \subref{subfig:TOMCAT2}: Detail of the microscope optics: The sample holder with a mounted standard electron microscopy sample table is carrying a small piece of a rat lung which can be seen in the reflection. The round structure behind the sample contains the different objectives. The reflecting rectangle visible under the label on the objective revolver is the scintillator which is used to convert the x-ray beam into visible light, which after magnification is then recorded with the \ac{ccd}-camera.}%
+	\caption[The \acs{tomcat} end station]{The \ac{tomcat} end station. \subref{subfig:TOMCATpano}: \SI{180}{\degree} panoramic view of the endstation. \subref{subfig:TOMCAT1}: Overview: The blue structure behind the control notebook is the sample stage with the sample holder on the rotation stage on top of it. The black structure above contains the scintillator, the microscope optics and the camera. \subref{subfig:TOMCAT2}: Detail of the microscope optics: The sample holder with a mounted standard electron microscopy sample table is carrying a small piece of a rat lung which can be seen in the reflection. The round structure behind the sample contains the different objectives. The reflecting rectangle visible under the label on the objective revolver is the scintillator which is used to convert the x-ray beam into visible light, which after magnification is then recorded with the \ac{ccd}-camera.}%
 	\label{fig:tomcat}
 \end{figure}
 
