@@ -1,0 +1,41 @@
+% !TEX root = ../../Thesis.tex
+%\documentclass{article}
+%\usepackage[demo]{graphicx}
+%\usepackage{subfig}
+%\usepackage{tikz}
+%\usepackage{multirow}
+%\usepackage{siunitx}
+%\begin{document}
+%\begin{figure}
+%\centering
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\radius{1}%
+\def\gap{0.05}%
+\begin{tikzpicture}%[,scale=.75]%
+	\foreach \ang in {22.5,67.5,...,359}%
+		{%
+		\draw [ultra thick, dotted] (\ang:0) -- (\ang:\radius);%
+		}%
+	\foreach \ang in {0,45,...,359}%
+		{%
+		\draw [ultra thick] (\ang:0) -- (\ang:\radius);%
+		}%
+	\foreach \ang in {0,45,...,359}%
+		{%
+		\draw [very thick, color=yellow, shorten >=0.25pt] (\ang:0) -- (\ang:\radius);%
+		}%
+	\foreach \ang in {0,22.5,...,179}%
+		{%
+		\draw [ultra thick] (\ang:\radius+\gap) -- (\ang:3*\radius+\gap);%		
+		\draw [very thick, color=magenta, shorten >=0.25pt,shorten <=0.25pt] (\ang:\radius+\gap) -- (\ang:3*\radius+\gap);%
+		}%
+	\foreach \ang in {180,202.5,...,359}%
+		{%
+		\draw [ultra thick] (\ang:\radius+\gap) -- (\ang:3*\radius+\gap);%
+		\draw [very thick, color=cyan, shorten >=0.25pt,shorten <=0.25pt] (\ang:\radius+\gap) -- (\ang:3*\radius+\gap);%
+		}%
+\end{tikzpicture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+%\caption{Projection Setup}
+%\end{figure}
+%\end{document}

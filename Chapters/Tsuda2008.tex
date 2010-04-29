@@ -80,7 +80,7 @@ The samples were scanned at an X-ray wave-length of \SI{1}{\angstrom} (correspon
 
 To achieve a tomographic image for each sample, 1500 projections were obtained over a sample rotation of \SI{180}{\degree}. The projections were then reconstructed on a 16-node server farm (Pentium 4, \SI{2.8}{\gigahertz} processor, \SI{512}{\mega\byte} \acsu{ram}) using an optimized filtered back projection algorithm. This reconstruction results in an image stack of 1024 image slices in tif-format (a total size of \SI{2}{\giga\byte}). This image stack is later on referred to as the ``raw images''.
 
-\renewcommand{\imsize}{1.618\linewidth}%
+\renewcommand{\imsize}{1.41\linewidth}%
 \begin{figure}%
 	\noindent\makebox[\textwidth]{%
 		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-02}%
@@ -191,7 +191,7 @@ The samples were scanned with \ac{srxtm} and a stack of 1024 raw images was reco
 
 To facilitate further processing of the image, different subregions of interest were extracted from the original raw data (one exemplary \ac{roi} is the orange small cube in \autoref{subfig:tsuda-05a}, which is shown enlarged in \autoref{subfig:tsuda-05c}. This \ac{roi} has a size of 196$\times$196$\times$196 pixels (\ie, an edge length of $\sim$\SI{275}{\micro\meter}) and contains $\sim$7.5 million voxels. This is a reasonable size of data that can easily be handled by a standard \acsu{pc} (Duo Core 2 Pentium \SI{2.33}{\gigahertz}, \SI{2}{\giga\byte} \acs{ram}) for visualization and volume rendering. The aforementioned size is an intermediate \ac{roi}; depending on the need for visualization/volume rendering other sizes have been chosen. To validate the segmentation (see below), we split a big \ac{roi} inside the sample in the full dataset vertically into five subregions leading to a \ac{roi} size of 200$\times$200$\times$180 pixels.
 
-\renewcommand{\imsize}{0.809\linewidth}%
+\renewcommand{\imsize}{0.705\linewidth}%
 \begin{figure}
 	\noindent\makebox[\textwidth]{%
 		\subfloat[]{%
@@ -221,7 +221,7 @@ To facilitate further processing of the image, different subregions of interest 
 \subsection{Segmentation}
 As mentioned, the selection of a threshold level has significant affects on segmentation. To demonstrate this, we have segmented a small crop of the original data (\autoref{subfig:tsuda-06a}) with three different threshold values. With a low threshold level, for instance 130, the image would possess too many black voxels and the septa in the lung appear to be too thick (\autoref{subfig:tsuda-06b}). On the other hand, with a higher threshold level, for instance 148, the image would possess too many white voxels and the lung tissue appears to be very thin, with multiple erroneous holes in the septal walls (\autoref{subfig:tsuda-06d}). With an intermediate threshold, for instance 139, the lung structure appears to be reasonable, with a minor amount of holes (\autoref{subfig:tsuda-06c}). The optimal value of the threshold level was iteratively determined by performing a ``readjustment-recalculation'' process to match some of the key morphological parameters in the resulting \threed reconstruction to the gold standard. This is explained below in detail.
 
-\renewcommand{\imsize}{0.5393\linewidth}
+\renewcommand{\imsize}{0.47\linewidth}
 \setlength{\fboxsep}{-\fboxrule}
 \begin{figure}
 	\noindent\makebox[\textwidth]{%
@@ -272,7 +272,7 @@ To perform a statistical analysis for the selection of the threshold value, five
 
 The surface area density of air space (S\textsubscript{VS} [\centimetresquared\per\centimetrecubed]) of each \ac{roi} sample was also calculated and plotted (\autoref{fig:VVSplot}). As we expected, however, S\textsubscript{VS} shows poor match with the reported value of \num[seperr]{904(84)}~(\acs{se}) over almost the entire range of threshold levels tested and especially at the threshold value of 139. The cause of this discrepancy will be discussed in detail in \autoref{sec:discussion}.
 
-\renewcommand{\imsize}{0.5393\linewidth}
+\renewcommand{\imsize}{0.47\linewidth}
 \begin{figure}
 	\noindent\makebox[\textwidth]{%
 		\subfloat[]{%
@@ -329,7 +329,7 @@ Optical sectioning permits faster, less invasive, more thorough digital analysis
 \subsection{srxtm}
 \ac{sr} is an electromagnetic wave emitted from electrons traveling near the speed of light when their path is bent by a magnetic field \cite{Iida2003}. A synchrotron facility is an excellent source of the most useful electromagnetic waves to explore materials and biological systems: X-ray ultraviolet and infrared light. Here we limit our discussion particularly to the application of \ac{sr} for X-ray tomographic microscopy (\autoref{fig:imaging setup}) highlighting the following superb features.
 
-\renewcommand{\imsize}{0.809\linewidth}
+\renewcommand{\imsize}{0.705\linewidth}
 \begin{figure}
 	\noindent\makebox[\textwidth]{%
 		\subfloat[]{%
@@ -362,8 +362,21 @@ The key morphological parameter we tried to match was the volume density of tiss
 \renewcommand{\imsize}{\linewidth}
 \begin{figure}
 	\centering
-	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-10}
-	\caption[Three-dimensional FE shell model of a partial acinus]{Three-dimensional \ac{fe} shell model of acinus viewed from different angles. Top: \ac{roi}. Middle: top view (\textit{left}); side view (\textit{middle}); bottom view (\textit{right}). Bottom: alveolar inside views.}
+	\pgfmathsetlength{\imagewidth}{\imsize}%
+	\pgfmathsetlength{\imagescale}{\imagewidth/1500}%
+	\def\x{927}%
+	\def\y{800}% scalebar-y at 90% of height of y=1715px
+	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+		\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Tsuda2008/Tsuda-10_edit}};
+		% 95px = 0.01mm > 100px = 11um > 4752px = 500um, 950px = 100um
+		%\draw[red,|-|,thick] (881,1100) -- (976,1100) node [sloped,midway,above] {\SI{0.01}{\milli\meter} (100px)};
+		\draw[|-|,thick] (\x-47.5,\y) -- (\x+95,\y) node [midway, above] {\SI{10}{\micro\meter}};
+		\draw[->,thick] (750,540) -- (750,690);%length of 150
+		\def\a{106.06601717798212866012665431573}%=sin(45)*150
+		\draw[->,thick] (825,1220) -- (825+\a,1220+\a);
+		\draw[->,thick] (675,1220) -- (675-\a,1220+\a);
+	\end{tikzpicture}%
+	\caption[Three-dimensional \acs{fe} shell model of a partial acinus]{Three-dimensional \ac{fe} shell model of acinus viewed from different angles. Top: \ac{roi}. Middle: top view (\textit{left}); side view (\textit{middle}); bottom view (\textit{right}). Bottom: alveolar inside views.}
 	\label{fig:alveolus}
 \end{figure}
 
