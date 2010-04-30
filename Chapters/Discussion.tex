@@ -7,7 +7,9 @@
 
 \vfill
 
-The tomographic data obtained at the beamline for \ac{tomcat} offers an unmatched three-dimensional insight into the mammalian lung. Even if higher resolution images of the terminal airway ends than the ones obtained at \ac{tomcat} have been obtained with \ac{sem}, these images only provide a view of the surface structure of a sample as shown in \autoref{fig:sem} and are not suited for a full three-dimensional reconstruction of the terminal airway ends. Using \ac{sem} or \ac{tem} it is impossible to visualize the larger three-dimensional structure of the terminal airway ends inside the lung since the sample has to be cut prior to acquiring images using this method, which essentially destroys the full three-dimensional information of the sample. Using \ac{em}-tomography, ultrahigh three-dimensional information from a sample can be obtained, but the available sample volumes \todo{Citation! $\rightarrow$ asked Dimitri} are much too small for the structural analysis of the terminal airway ends.
+The application of tomographic imaging permits an unprecedented insight into the mammalian lung. Tomographic imaging enables us to see and observe the object of interest to gain insight into the details of the sample to be studied. Besides the pretty images of the beautiful biological samples which spur the interest in this line of work, biological question can be scientifically answered using tomographic images as a base.
+
+The tomographic data obtained at the beamline for \ac{tomcat} offers an unmatched high-resolution three-dimensional insight into the mammalian lung. Even if higher resolution images of the terminal airway ends than the ones obtained at \ac{tomcat} have been obtained with \ac{sem}, these images only provide a view of the surface structure of a sample as shown in \autoref{fig:sem} and are not suited for a full three-dimensional reconstruction of the terminal airway ends. Using \ac{sem} or \ac{tem} it is impossible to visualize the larger three-dimensional structure of the terminal airway ends inside the lung since the sample has to be cut prior to acquiring images using this method, which essentially destroys the full three-dimensional information of the sample. Using \ac{em}-tomography, ultrahigh three-dimensional information from a sample can be obtained, but the available sample volumes of maximally \SI{64}{\micro\meter\cubed} and generally around \SI{1}{\micro\meter\cubed} (personal communication with Dr.\ Dimitri Vanhecke\graffito{For a review on \ac{em} tomography see \cite{Lucic2005}}) are much too small for the structural analysis of the terminal airway ends.
 
 \begin{figure}
 	\noindent\makebox[\textwidth]{%
@@ -16,10 +18,10 @@ The tomographic data obtained at the beamline for \ac{tomcat} offers an unmatche
 		\def\x{2470}% scalebar-x at golden ratio of x=3996px
 		\def\y{2326}% scalebar-y at 90% of height of y=2928px
 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-			\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/SEM_crop_overlay}};
+			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/discussion/SEM_crop_overlay}};
 			% 572px = 0.1mm > 100px = 17um > 2860px = 500um, 572px = 100um
 			%\draw[|-|,thick] (1347,2782) -- (1918,2774) node [sloped,midway,above] {\SI{0.1}{\milli\meter} (100px)};
-			\draw[|-|,thick] (\x,\y) -- (\x+572,\y) node [midway, above] {\SI{100}{\micro\meter}};
+			\draw[white,|-|,thick] (\x,\y) -- (\x+572,\y) node [midway, above] {\SI{100}{\micro\meter}};
 	\end{tikzpicture}%
 	}%
 	\caption[\acs{sem} image of a rat lung sample]{\ac{sem} image of a rat lung sample obtained at postnatal day 8. Single alveoli are clearly visible, but the full three-dimensional information cannot be extracted from this type of images. The blue overlay marks two alveolar ducts, the red overlay marks a blood vessel, probably a vein.}%
@@ -85,7 +87,7 @@ Registration of classic histological slices with the three-dimensional data obta
 			\label{subfig:correlation-arbitrary3}%
 			}%
 		}%
-	\caption[Multimodal Imaging]{Multimodal Imaging: Alignment of datasets from two imaging modalities. Left: Sample from \ac{srxtm} with overlaid \ac{em} image (gray-scale inverted, thus dark slice). Center: Five independent airway segments have been extracted and are three-dimensionally visualized with overlaid \ac{em}-image. Right: \ac{em}-image shown with three-dimensional orientation in relation to the \ac{srxtm} dataset. \subref{subfig:correlation-planar}: Planar orientation of the slice obtained with the second imaging modality. Through careful orientation of the sample prior to histological cutting, a registration is straightforward, since only the rotation in the plane of the slice and the different magnification have to be taken into account. \subref{subfig:correlation-arbitrary3}: Pitch-angle~\cite{YawPitchRoll} rotation between the two datasets. \subref{subfig:correlation-arbitrary3}: Pitch and roll rotation between the two datasets. Note that the shown slice is from the original tomographic dataset and not a light or elctron microscopy slice, as described by \cite{Barre2009}.}%
+	\caption[Multimodal Imaging]{Multimodal Imaging: Alignment of datasets from two imaging modalities. Left: Sample from \ac{srxtm} with overlaid \ac{em} image (gray-scale inverted, thus dark slice). Center: Five independent airway segments have been extracted and are three-dimensionally visualized with overlaid \ac{em}-image. Right: \ac{em}-image shown with three-dimensional orientation in relation to the \ac{srxtm} dataset. \subref{subfig:correlation-planar}: Planar orientation of the slice obtained with the second imaging modality. Through careful orientation of the sample prior to histological cutting, a registration is straightforward, since only the rotation in the plane of the slice and the different magnification have to be taken into account. \subref{subfig:correlation-arbitrary3}: Pitch-angle~\cite{YawPitchRoll} rotation between the two datasets. \subref{subfig:correlation-arbitrary3}: Pitch and roll rotation between the two datasets. Note that the shown slice is from the original tomographic dataset and not a light or electron microscopy slice, as described by \cite{Barre2009}.}%
 	\label{fig:correlation}%
 \end{figure}
 
@@ -100,7 +102,7 @@ Using \ac{srxtm} it has not only been possible to visualize the alveolar region 
 
 Since the reconstructed datasets have been directly elementalized using a \ac{fe} mesh lung tissue and air space were not only three-dimensionally visualized, but also immediately prepared for further analysis of the terminal airway region. Different morphological parameters were assessed and the \ac{fe} meshing prepared the resulting dataset for subsequent \ac{cfd} analysis of the airflow in the lung.
 
-\section[WF-SRXTM]{Widefield synchrotron radiation based x-ray tomographic microscopy}
+\section[WF-SRXTM]{Wide field synchrotron radiation based x-ray tomographic microscopy}
 The \ac{wf-srxtm} results presented in \autoref{ch:haberthuer2010} make it possible to image much larger lung samples than with conventional \ac{srxtm}. Prior to the presented \ac{wf-srxtm} scanning method, obtaining tomographic datasets of entire acini in the lung relied on luck, with the increase in field of view tomographic images of full acini in the terminal airways can be routinely obtained. Since the results presented in \autoref{ch:haberthuer2010} almost exclusively focus on the engineering and technical background of the method, I would like to additionally highlight biological results achieved applying \ac{wf-srxtm} on rat lung samples in the following sections of this chapter instead of an additional discussion of the method.
 
 We routinely performed more than 70 \ac{wf-srxtm} scans of different rat lung samples. Using a region growing algorithm multiple independent airway segments have been extracted from those datasets and the structure of these airway segments has been visualized using a skeletonization algorithm built into MeVisLab~\cite{Bitter2007}, the development environment for medical image processing and visualization which I have been using almost exclusively for the analysis and visualization of the tomographic datasets during my work.
@@ -172,8 +174,8 @@ MeVisLab can export the information of the skeleton to an \acsu{xml}-file from w
 
 Extracting the independent airway segments as shown in \autoref{fig:skeleton} would not have been possible using classic tomography at \ac{tomcat}. Enhancing the field of view of the tomographic scans enabled the visualization of multiple acini in the lung and made additional results possible; a stereological analysis of the \ac{wf-srxtm} datasets is presented in the following section.
 
-\subsection{Stereological analysis of the tomographic data}
-As mentioned in \autoref{ch:Introduction}, the interrelation of the acini in the lung tissue cannot be analyzed using classical sectioning methods, since the three-dimensional information of the airway structure is destroyed. Using a region growing method multiple independent airway segments were extracted from the three-dimensional \ac{wf-srxtm} datasets.
+\subsection{Stereological analysis of the tomographic data\label{subsec:stereological analyis}}
+As mentioned in \autoref{ch:introduction}, the interrelation of the acini in the lung tissue cannot be analyzed using classical sectioning methods, since the three-dimensional information of the airway structure is destroyed. Using a region growing method multiple independent airway segments were extracted from the three-dimensional \ac{wf-srxtm} datasets.
 
 Using a method coined ``man hole covering'' the airway segments have been subdivided into single acini, \ie the entrance of the acinus or the border between the purely conducting and the gas-exchanging region has been closed. 
 
@@ -246,7 +248,7 @@ Using morphological criteria like appearance of alveoli in the airway walls, the
 
 The acini segmented as described above have been overlaid over the tomographic data (as shown in \autoref{subfig:manhole-804} and \ref{subfig:manhole-1168}), which made it possible to easily understand the interrelation of the acini even on the two-dimensional slices. 
 
-\autoref{ch:haberthuer2010} presents a method to increase the field of view of tomographic imaging in horizontal direction, for the analysis of multiple acini in our lung samples we needed to increase the field of view in vertical direction, too. To achieve this, we performed a so-called stacked widefieldscan, where multiple \ac{wf-srxtm} datasets are sequentially recorded on top of each other, so that the resulting total dataset covers an increased field of view in horizontal and vertical direction. Using a python script at the \ac{tomcat} beamline, all the necessary subscans for the lateral increase in field of view have been recorded for each vertical position, making an un-attended tomographic batch scan of greatly increased sample volume posiible. The subsequently presented analysis was performed on such stacked \ac{wf-srxtm} datasets with a size of approximately 3000$\times$3000$\times$3000 pixels at an isometric voxel size of \SI{1.48}{\micro\meter}.
+\autoref{ch:haberthuer2010} presents a method to increase the field of view of tomographic imaging in horizontal direction, for the analysis of multiple acini in our lung samples we needed to increase the field of view in vertical direction, too. To achieve this, we performed a so-called stacked wide field scan, where multiple \ac{wf-srxtm} datasets are sequentially recorded on top of each other, so that the resulting total dataset covers an increased field of view in horizontal and vertical direction. Using a python script at the \ac{tomcat} beamline, all the necessary subscans for the lateral increase in field of view have been recorded for each vertical position, making an un-attended tomographic batch scan of greatly increased sample volume possible. The subsequently presented analysis was performed on such stacked \ac{wf-srxtm} datasets with a size of approximately 3000$\times$3000$\times$3000 pixels at an isometric voxel size of \SI{1.48}{\micro\meter}.
 
 %\def\scale{0.618}
 %\begin{figure}
@@ -257,23 +259,23 @@ The acini segmented as described above have been overlaid over the tomographic d
 %			\label{subfig:stacked}%
 %			}%
 %		\hspace{4mm}%
-%		\subfloat[Widefield Scan]{%
+%		\subfloat[Wide field Scan]{%
 %			\input{TikZ-Files/wfs-widefieldscanning}%
 %			\label{subfig:wfs}%
 %			}%
 %	}%
-%	\caption[Stacked vs.\ Widefield Scan]{Stacked vs.\ Widefield Scan. \subref{subfig:stacked}: Vertical increase of the field of view; Stacking two or more tomographic scans on top of each other can be achieved fairly easily with precise sample positioning. \subref{subfig:wfs}: The method presented in \autoref{ch:haberthuer2010} laterally increases the field of view. Multiple widefield scans can be stacked on top of each other as shown in panel \subref{subfig:stacked} to increase the field of view both in horizontal and vertical direction.}%
+%	\caption[Stacked vs.\ Wide field Scan]{Stacked vs.\ Wide field Scan. \subref{subfig:stacked}: Vertical increase of the field of view; Stacking two or more tomographic scans on top of each other can be achieved fairly easily with precise sample positioning. \subref{subfig:wfs}: The method presented in \autoref{ch:haberthuer2010} laterally increases the field of view. Multiple wide field scans can be stacked on top of each other as shown in panel \subref{subfig:stacked} to increase the field of view both in horizontal and vertical direction.}%
 %	\label{fig:stack}%
 %\end{figure}
 
-\subsection{STEPanizer}
+\subsubsection{STEPanizer}
 Tomographic data obtained at \ac{tomcat} is inherently isotropic, \ie the voxel have an equal side length and are small cubes. This makes tomographic data well suited for morphological analysis using a stereological approach, even if stereology and tomography completely differ in their approach of obtaining a description of the three-dimensional characteristics of the studied sample.
 
-Using tomographic slices of rat lung samples obtained at different postnatal days we assessed the number of alveoli per volume of the segmented acini. Using the aforementioned manhole cover method in a custom MeVisLab-Network, several acini have been three-dimensionally extracted and overlaid over the two-dimensional tomographic slices, as shown in \autoref{subfig:manhole-804} and \ref{subfig:manhole-1168}. The volume of the extracted acini (as shown in \autoref{subfig:manhole-3d}) has been calculated according to the voxel size.
+Using tomographic slices of rat lung samples obtained at different postnatal days we assessed the number of alveoli per volume of the segmented acini. Using the aforementioned manhole cover method in a custom MeVisLab-Network, several acini have been three-dimensionally extracted and overlaid over the two-dimensional tomographic slices, as shown in \autoref{subfig:manhole-804} and \ref{subfig:manhole-1168}. The volume of the extracted acini which are shown in \autoref{subfig:manhole-3d} has been calculated according to the voxel size.
 
 Using a beta-version of the STEPanizer~\cite[available \href{http://stepanizer.com/}{online}]{Tschanz2010}, the number of alveoli per acinar segment has been counted. The STEPanizer is a simple, web-based tool for manual stereological assessment of digital images developed by Dr.\ Stefan Tschanz at our institute. The beta-version of the STEPanizer with enabled disector\graffito{A physical disector consists of two parallel histological sections generated a known distance apart from the same tissue block. An optical disector is generated by focusing a known distance through the z-plane of a thick section; \eg parallel focal planes using high numerical aperture microscopy objectives, confocal microscopy or tomographic imaging~\cite{Hsia2010}. Since tomographic images are inherently isometric, adjacent slices can be used for disector-type analysis.} was used to count the appearance or disappearance of septal bridges in the tomographic datasets. Counting these septal bridges correctly estimates the amount of alveolar entrance rings which in terms corresponds to the number of alveoli in the volume. Details on the counting process have been described by \citet{Hyde2004} and \citet{Ochs2004}.
 
-Using the number of bridges and the volume of the alveolar segments, the alveoli per volume have been plotted as shown in \autoref{fig:alveoli per volume}. A statistically significant increase of the alveolar number per volume is observed until postnatal day 21,  until day 60 we subsequently detected a significant decrease in alveolar number per volume. Generally, stereological data should be presented as number per unit \eg alveoli per single acinus or alveoli per lung. Since the volume of the so far extracted acinar segments\todo{Can we make a plot of Number of Alveoli per Acinus or show acinar size?} greatly varies, we are currently evaluating other well suited methods to present the obtained data.
+Using the number of bridges and the volume of the alveolar segments, the alveoli per volume have been plotted as shown in \autoref{fig:alveoli per volume plot}. A statistically significant increase of the alveolar number per volume is observed until postnatal day 21,  until day 60 we subsequently detected a significant decrease in alveolar number per volume. Generally, stereological data should be presented as number per unit \eg alveoli per single acinus or alveoli per lung. Since the volume of the so far extracted acinar segments \todo{Can we make a plot of Number of Alveoli per Acinus or show acinar size?} greatly varies, we are currently evaluating other well suited methods to present the obtained data.
 
 \begin{figure}
 	\centering
@@ -294,7 +296,7 @@ Using the number of bridges and the volume of the alveolar segments, the alveoli
 			 (36, 1405.273483) +- (0,199.9066289)
 			 (60, 1072.860829) +- (0,75.20238908)
 			};
-		\draw node at (axis cs:4,830.227199)	[anchor=south] {**};
+		\draw node at (axis cs:4,830.227199)		[anchor=south] {**};
 		\draw node at (axis cs:10,2137.703946)	[anchor=south] {**};
 		\draw node at (axis cs:21,4257.621073)	[anchor=south] {**};
 		\draw node at (axis cs:36,1405.273483)	[anchor=south] {**};
@@ -305,4 +307,4 @@ Using the number of bridges and the volume of the alveolar segments, the alveoli
 	\label{fig:alveoli per volume plot}
 \end{figure}
 
-Stereologically evaluation parameters on tomographic data offers an increased insight into the strucutre of the lung. Using classic histological sections a correct assignment of the different alveoli to their appropriate acinus is not possible. Using a three-dimensional region growing segmentation of the acini makes this task easily feasible, even on the resulting two-dimensional slices.
+Stereologically evaluation parameters on tomographic data offers an increased insight into the structure of the lung. Using classic histological sections a correct assignment of the different alveoli to their appropriate acinus is not possible. Using a three-dimensional region growing segmentation of the acini makes this task easily feasible, even on the resulting two-dimensional slices.

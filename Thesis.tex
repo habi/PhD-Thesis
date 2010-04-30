@@ -1,5 +1,5 @@
 \documentclass[%
-	draft,%
+	%draft,%
 	twoside,%
 	openright,%
 	titlepage,%
@@ -127,7 +127,7 @@
 \hypersetup{% http://www.jkrieger.de/tools/latex/hyperref.html helps!
 	colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
 	% uncomment the following line for black links for printing
-	%colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,%
+	colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,%
 	breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
 	plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
 	hypertexnames=true, pdfhighlight=/O,%
@@ -154,7 +154,7 @@
 % Frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%
 \include{FrontBackmatter/Titlepage}
-\cleardoublepage\include{FrontBackmatter/Titlepage}
+\cleardoublepage\include{FrontBackmatter/DirtyTitlepage}
 \cleardoublepage\include{FrontBackmatter/Titleback}
 \cleardoublepage\include{FrontBackmatter/Dedication}
 \cleardoublepage\include{FrontBackmatter/Abstract}
@@ -165,19 +165,18 @@
 % Mainmatter
 %%%%%%%%%%%%%%%%%%%%%%%
 \pagenumbering{arabic}
-%% use \cleardoublepage here to avoid problems with pdfbookmark
 \cleardoublepage\myPart{Introduction}\label{part:introduction}
 \include{Chapters/Introduction}
 \include{Chapters/TheMammalianLung}
 \include{Chapters/CTandTomcat}
-%
+%%%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Results}\label{part:results}
 \include{Chapters/Publications}
 \include{Chapters/XRM2008}
 \include{Chapters/Tsuda2008}
 \include{Chapters/Haberthuer2010}
-%%
-\cleardoublepage\myPart{Discussion and Outlook}\label{part:discussion}
+%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage\myPart{Discussion \& Outlook}\label{part:discussion}
 \include{Chapters/Discussion}
 \include{Chapters/Outlook}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -192,8 +191,8 @@
 \cleardoublepage\myPart{Back Matter}\label{part:back matter}
 \cleardoublepage\include{FrontBackmatter/CurriculumVitae}
 \cleardoublepage\include{FrontBackmatter/Bibliography}
-%\cleardoublepage\include{FrontBackmatter/Index}
+\cleardoublepage\include{FrontBackmatter/Index}
 \cleardoublepage\include{FrontBackmatter/Declaration}
 \cleardoublepage\include{FrontBackmatter/Colophon}
-%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
+\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
 \end{document}

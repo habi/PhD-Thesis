@@ -19,7 +19,7 @@ First published in: J Appl Physiol 105: 964–976, 2008.\\
 The alveolated structure of the pulmonary acinus plays a vital role in gas exchange function. Three-dimensional (\threed) analysis of the parenchymal region is fundamental to understanding this structure-function relationship, but only a limited number of attempts have been conducted in the past because of technical limitations. In this study, we developed a new image processing methodology based on \ac{fe} analysis for accurate \threed structural reconstruction of the gas exchange regions of the lung. Stereologically well characterized rat lung samples~\cite{Tschanz2003} were imaged using high-resolution synchrotron radiation-based X-ray tomographic microscopy. A stack of 1024 images (each slice: 1024$\times$1024 pixels) with resolution of \SI{1.4}{\micro\meter\cubed} per voxel were generated. For the development of \ac{fe} algorithm, multiple regions of interest, containing 7.5 million voxels, were further extracted as a working subunit. \threed \acp{fe} were created overlaying the voxel map using a grid-based hexahedral algorithm. A proper threshold value for appropriate segmentation was iteratively determined to match the calculated volume density of tissue to the stereologically determined value~\cite{Tschanz2003}. The resulting \threed \acp{fe} are ready to be used for \threed structural analysis as well as for subsequent \ac{fe} computational analyses like fluid dynamics and skeletonization.
 \clearpage
 \section{Introduction}
-The mammalian interthoracic respiratory tract can be divided into two areas: conducting airways and pulmonary parenchyma (\ie, the gas exchange region of the lung). The conducting airways are a bifurcating network of relatively well-defined conduits carrying the ambient air to the parenchyma. Airways within the parenchyma---customarily called acinar/alveolar ducts---on the other hand, are not pipelike; they are formed by entrance rings of alveoli opening into a common passageway. Currently, enormous efforts (\eg, \cite{Aykac2003,Chaturvedi2005,Cheng2007,Chooi2004,Dame2006,Driehuys2007,Kvistedal2005,Ley2008,Scadeng2007,Sera2003,Tawhai2004,VanErtbruggen2005}) are devoted to reconstructing the conducting airway network in three dimensions (\threed), facilitated by rapid advancement of imaging technologies (\eg, \ac{uct}, hyperpolarized-gas \ac{mri} (\cf{HHe} 3 \ac{mri}, etc.), as well as a rapid increases in computing power.
+The mammalian interthoracic respiratory tract can be divided into two areas: conducting airways and pulmonary parenchyma (\ie, the gas exchange region of the lung). The conducting airways are a bifurcating network of relatively well-defined conduits carrying the ambient air to the parenchyma. Airways within the parenchyma---customarily called acinar/alveolar ducts---on the other hand, are not pipelike; they are formed by entrance rings of alveoli opening into a common passageway. Currently, enormous efforts (\eg, \cite{Aykac2003,Chaturvedi2005,Cheng2007,Chooi2004,Dame2006,Driehuys2007,Kvistedal2006,Ley2008,Scadeng2007,Sera2003,Tawhai2004,VanErtbruggen2005}) are devoted to reconstructing the conducting airway network in three dimensions (\threed), facilitated by rapid advancement of imaging technologies (\eg, \ac{uct}, hyperpolarized-gas \ac{mri} (\cf{HHe} 3 \ac{mri}, etc.), as well as a rapid increases in computing power.
 
 In contrast to conducting airways, lung parenchyma is harder to access; the structures are physically small and located distally in the respiratory tract. Basic structures of lung parenchyma are highly complex; this complexity can be easily envisioned by the fact that the enormously large surface area of lung parenchyma, as large as that of a tennis court in the case of human lungs~\cite{Gehr1978,Weibel1963}, for example, has to be folded in within the lung cavity. At the same time, the image resolution required to obtain reasonable details of this complexity is on the order of a few micrometers [considering, for instance, the thickness of alveolar septa (inter-air space septa) of roughly \SI{10}{\micro\meter} (\cite{Gehr1978}; P. Gehr, personal communication)]. This required resolution is much finer than the resolution of commonly available \ac{mri} or even \ac{uct} mentioned above, but can be obtained with \ac{srxtm}.
 
@@ -154,24 +154,31 @@ Let us consider an example in which we want to apply a threshold of 123 for the 
 	\item[3. Surface smoothing II] The translation of the nodes as described in \textit{step 2} may in some cases lead to a distorted (concave) \ac{fe} surface. The distortion of the \ac{fe} nodes can be evaluated with their Jacobian value. The Jacobian value is a matrix of the derivation of global to local \ac{fe} interpolation function and the quality of any mesh can be directly evaluated by its Jacobian value~\cite{Bathe1995}. Distorted \acp{fe}, which are not suitable for subsequent numerical calculations, show a negative Jacobian. To optimize the Jacobian, we implemented the standard \ac{lst}~\cite{Freitag2000}). The \ac{lst} usually takes a few loops (repetitions of \textit{step 2}) over all \acp{fe} to achieve positive Jacobian values for all \acp{fe}. The results of applying the \ac{lst} for \threed and \twod cases are shown, respectively, in \autoref{subfig:tsuda-04d}, \textit{right} (``After \ac{lst}'').
 \end{description}
 
-\renewcommand{\imsize}{\linewidth}
+\renewcommand{\imsize}{.75\linewidth}
 \begin{figure}
-	\centering
-	\subfloat[]{%
-		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04a}%
-		\label{subfig:tsuda-04a}%
+	\noindent\makebox[\textwidth]{%
+		\subfloat[]{%
+			\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04a}%
+			\label{subfig:tsuda-04a}%
+		}%
 	}\\%
-	\subfloat[]{%
-		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04b}%
-		\label{subfig:tsuda-04b}%
+	\noindent\makebox[\textwidth]{%
+		\subfloat[]{%
+			\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04b}%
+			\label{subfig:tsuda-04b}%
+		}%
 	}\\%
-	\subfloat[]{%
-		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04c}%
-		\label{subfig:tsuda-04c}%
+	\noindent\makebox[\textwidth]{%
+		\subfloat[]{%
+			\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04c}%
+			\label{subfig:tsuda-04c}%
+		}%
 	}\\%
-	\subfloat[]{%
-		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04d}%
-		\label{subfig:tsuda-04d}%
+	\noindent\makebox[\textwidth]{%
+		\subfloat[]{%
+			\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04d}%
+			\label{subfig:tsuda-04d}%
+		}%
 	}%
 	\caption[Grid-based hexahedral algorithm]{Grid-based hexahedral algorithm. \subref{subfig:tsuda-04a}: \threed thresholded voxels (\textit{left}) and \twod representation of thresholded voxels (\textit{right}). The grayscale values are kept in the map of voxel. \subref{subfig:tsuda-04b}: step 1: generation of uniform \acl{fe} mesh over the voxel map. For simplicity, \ac{fe} nodes are positioned at the center of voxel. \threed \ac{fe} meshing (\textit{left}) and \twod \ac{fe} meshing (\textit{right}) are shown. Each node is assigned with the grayscale value from the corresponding voxel. \subref{subfig:tsuda-04c}: step 2: moving nodes on the surface due to trilinear interpolation in \threed case (\textit{left}) and bilinear interpolation in \twod case (\textit{right}). The location of surface boundary is shown in the middle image for \twod case. A fast sub \ac{fe}-voxel level algorithm is implemented to locate a surface boundary. White nodes are moving toward this surface boundary. \subref{subfig:tsuda-04d}: step 3: \acf{lst}. \threed and \twod before \ac{lst} (\textit{left}), \threed and \twod after \ac{lst} (\textit{right}).}
 	\label{fig:tsuda-04}
