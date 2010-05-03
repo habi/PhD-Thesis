@@ -11,12 +11,11 @@
 		\def\xmax{85}
 		\def\ymin{0}
 		\def\ymax{0.4}
+		\def\step{0.05}
 		\begin{axis}[xbar stacked,%
 			scale only axis,%
-			xmin=\xmin,%
-			xmax=\xmax,%
-			ymin=\ymin,%
-			ymax=\ymax,%
+			xmin=\xmin,xmax=\xmax,%
+			ymin=\ymin,ymax=\ymax,%
 			yticklabels={},%
 			axis x discontinuity=crunch,%
 			xtick={9,...,\xmax},%
@@ -24,21 +23,31 @@
 			xlabel=Days,%
 			axis y line=none]
 		\end{axis}
-		\begin{axis}[xbar stacked,%
-			scale only axis,%
+		\begin{axis}[scale only axis,%
 			xmin=\xmin,%
 			xmax=\xmax,%
 			ymin=\ymin,%
 			ymax=\ymax,%
+			axis y line=none,%
+			axis x line=none]
+			\addplot [fill=gray,nearly transparent]
+				coordinates
+				{(12,1.5*\step) (12,6.5*\step) (45,6.5*\step) (45,1.5*\step)};
+		\end{axis}
+		\begin{axis}[xbar stacked,%
+			scale only axis,%
+			xmin=\xmin,xmax=\xmax,%
+			ymin=\ymin,ymax=\ymax,%
 			yticklabels={},%
 			axis x discontinuity=crunch,%
 			xtick={11,13,18.5,20,21,25,35,42,57,81},%
-			xticklabels={11,,,,Birth,4,14,21,36,60},
+			xticklabels={-11,,,,,4,14,21,36,$\sim$60},
 			xmajorgrids,%
-			xlabel=Days,%
-			%axis x line=bottom,%
+			extra x ticks={21},%
+			extra x tick style={major tick length=5cm,%
+				tick label	style={	rotate=90,anchor=east}},%
+			extra x tick labels={Birth},%
 			axis y line=none]
-			\def\step{0.05}
 			%\node [font=\footnotesize] at (axis cs:42,0.35) {X};
 			%\node [font=\footnotesize] at (axis cs:85,0.35) {X};
 			%\node [font=\footnotesize] at (axis cs:63.5,0.35) {Lung Growth (4 weeks--adulthood)};
@@ -48,8 +57,8 @@
 			\addplot [fill=blue]		coordinates {(1.5,3*\step)};
 			\addplot [fill=magenta]	coordinates {(5,4*\step)};
 			\addplot [fill=yellow]	coordinates {(10,5*\step)};
-			\addplot [fill=orange]	coordinates {(9,6*\step)};
-			\addplot [transparent]	coordinates {(-4,6.5*\step)};
+			\addplot [fill=orange]	coordinates {(9.5,6*\step)};
+			\addplot [transparent]	coordinates {(-5,6.5*\step)};
 			\addplot [fill=green]		coordinates {(\xmax-39,7*\step)};
 			\tikzstyle{every pin}=[%
 				%fill=white,%
@@ -64,8 +73,8 @@
 			\node[coordinate, pin=right:{Canalicular Stage (E18.5--E20)}] at (axis cs:20,0.15) {};
 			\node[coordinate, pin=right:{Saccular Stage (E20--P4)}] at (axis cs:25,0.2) {};
 			\node[coordinate, pin=right:{Alveolarization (P4--P14)}] at (axis cs:35,0.25) {};
-			\node[coordinate, pin=right:{Microvascular maturation (P14--$\sim$P21)}] at (axis cs:44,0.3) {};
-			\node[coordinate, pin=left:{Lung Growth ($\sim$P21--adulthood)}] at (axis cs:40,0.35) {};
+			\node[coordinate, pin=right:{Microvascular maturation (P14--$\sim$P21)}] at (axis cs:44.5,0.3) {};
+			\node[coordinate, pin=left:{Lung Growth ($\sim$P21--adulthood)}] at (axis cs:39.5,0.35) {};
 		\end{axis}
 	\end{tikzpicture}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
