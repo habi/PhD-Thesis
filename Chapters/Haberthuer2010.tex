@@ -136,7 +136,7 @@ Samples twice as large as the field of view can be imaged using scanning protoco
 	\end{tikzpicture}
 		\label{subfig:wfswfs}		
 	}%
-	\caption[Covering the field of view of differently sized samples]{Covering the field of view of differently sized samples with one \SI{180}{\degree} scan \subref{subfig:wfs180}, one \SI{360}{\degree} scan \subref{subfig:wfs180} or---in the case of the so called wide field scanning---with multiple subscans (three subscans, \subref{subfig:wfswfs}). The filled segments mark the region of the sample that is covered while scanning the respective positions (Position 1: magenta/checkerboard, Position 2: yellow, Position 3: cyan/striped).}
+	\caption[Covering the field of view of different samples]{Covering the field of view of differently sized samples with one \SI{180}{\degree} scan \subref{subfig:wfs180}, one \SI{360}{\degree} scan \subref{subfig:wfs180} or---in the case of the so called wide field scanning---with multiple subscans (three subscans, \subref{subfig:wfswfs}). The filled segments mark the region of the sample that is covered while scanning the respective positions (Position 1: magenta/checkerboard, Position 2: yellow, Position 3: cyan/striped).}
 	\label{fig:scanning-possibilities}
 \end{figure}
 
@@ -339,13 +339,13 @@ The dashed circles on the reconstructed slice mark the start and the end of the 
 	\noindent\makebox[\textwidth]{%
 		\subfloat[Projections from subscans]{%
 			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-				\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Haberthuer2010/R108C21Cb_s13358_normalize}};%
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Haberthuer2010/R108C21Cb_s13358_normalize}};%
 				\def\overlap{141}%
 				\fill [red, nearly transparent] (1024-\overlap,1) rectangle (1024,1024);%
 				\draw (1024-\overlap,1) rectangle (1024,1024);%
 			\end{tikzpicture}%
 			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-				\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Haberthuer2010/R108C21Cb_s23358_normalize}};%
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Haberthuer2010/R108C21Cb_s23358_normalize}};%
 				\def\overlap{141}%
 				\fill [green, nearly transparent] (1,1) rectangle (\overlap,1024);%
 				\draw (1,1) rectangle (\overlap,1024);%
@@ -354,14 +354,14 @@ The dashed circles on the reconstructed slice mark the start and the end of the 
 				\draw (1024-\overlap,1) rectangle (1024,1024);%
 			\end{tikzpicture}%
 			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
-				\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Haberthuer2010/R108C21Cb_s33358_normalize}};%
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Haberthuer2010/R108C21Cb_s33358_normalize}};%
 				\def\overlap{138}%
 				\fill [yellow, nearly transparent] (1,1) rectangle (\overlap,1024);%
 				\draw (1,1) rectangle (\overlap,1024);%
 				\def\x{924}% 1024 - 100
 				\def\y{922}% 1024 * .9 = 921.6
 				\def\bar{338}% 100 px = 148 um
-				\draw[|-|,thick,color=white] (\x-\bar,\y) -- (\x,\y) node [midway,above] {\SI{500}{\micro\meter}};%
+				\draw[|-|,thick, color=white] (\x-\bar,\y) -- (\x,\y) node [midway, above] {\SI{500}{\micro\meter}};%
 			\end{tikzpicture}%
 			\label{subfig:workflow-projections}%
 		}%
@@ -434,7 +434,7 @@ The dashed circles on the reconstructed slice mark the start and the end of the 
 	\noindent\makebox[\textwidth]{%
 		\subfloat[Conventional scan]{%
 			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-				\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Haberthuer2010/scan-conventional}};
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Haberthuer2010/scan-conventional}};
 				% 1292px = 4.0641mm > 100px = 315um > 159px = 500um, 32px = 100um
 				\draw[|-|,thick] (\x,\y) -- (\x+159,\y) node [fill=white, semitransparent, midway, above] {\SI{500}{\micro\meter}} node [midway, above] {\SI{500}{\micro\meter}};
 			\end{tikzpicture}%
@@ -445,14 +445,14 @@ The dashed circles on the reconstructed slice mark the start and the end of the 
 	\noindent\makebox[\textwidth]{%
 		\subfloat[Wide field scan]{%
 			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-				\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Haberthuer2010/scan-widefield}};
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Haberthuer2010/scan-widefield}};
 				% 1292px = 4.0641mm > 100px = 315um > 159px = 500um, 32px = 100um
 				\draw[|-|,thick] (\x,\y) -- (\x+159,\y) node [fill=white, semitransparent, midway, above] {\SI{500}{\micro\meter}} node [midway, above] {\SI{500}{\micro\meter}};
 			\end{tikzpicture}%
 			\label{subfig:convvswfs_wfs}%
 		}%
 	}%
-	\caption[Three-dimensional visualization of the distal-medial tip of the right lower rat lung lobe]{Three-dimensional visualization of the distal-medial tip of the right lower rat lung lobe. The gray structure in the background shows a semitransparent view of the tomographic dataset with segmented airways. The foreground shows isosurfaces of terminal airways. The wireframe cube has a side length of 1024 pixels and encloses the field of view of one conventional scan. %
+	\caption[\threed visualization of the tip of a rat lung lobe]{Three-dimensional visualization of the distal-medial tip of the right lower rat lung lobe. The gray structure in the background shows a semitransparent view of the tomographic dataset with segmented airways. The foreground shows isosurfaces of terminal airways. The wireframe cube has a side length of 1024 pixels and encloses the field of view of one conventional scan. %
 	\subref{subfig:convvswfs_conv}: Conventional scan; the extracted airway segments (magenta and yellow or left and right, respectively) are only partially contained inside the total sample volume. Airway segments not contained in the dataset, but present in the sample are shown semitransparent. This conventional scan corresponds to a reconstruction of the central of the three wide field scan subscans. %
 	\subref{subfig:convvswfs_wfs}: Wide field scan with increased field of view; the magenta (center) and yellow segment (right) show entire acini inside the dataset, the cyan segment (left) contains a partially cut acinus. All airway segments inside the sample are contained in the tomographic dataset.}
 	\label{fig:s2-wfs}
@@ -476,7 +476,7 @@ As expected, the calculated quality of the reconstructions representing the diff
 	\noindent\makebox[\textwidth]{%
 		\input{img/Haberthuer2010/Fig06-2008c-MeanNormalizedErrorPlot.tex}%
 	}%
-	\caption[Plot of normalized difference Value for the scanned protocols overlaid over Quality-plot obtained from the simulation]{Plot of normalized difference Value ($E_{i_{norm}}$, blue diamonds) for the 19 scanned protocols overlaid over Quality-plot (red dots) obtained from the simulation (described in \autoref{sec:quality guided protocols}). The normalized Error has been calculated using the difference image of each protocol $i$ with protocol B. The error bars for each protocol show the standard deviation of the error calculated for 205 of the 1024 slices. Note that the scale of the error was normalized to 20--\SI{100}{\percent}, so that both the quality from the simulation and the error are directly comparable. The abscissa shows the scanning time in percentage of time used for the gold standard scan. Protocol T on the far left corresponds to the fastest scanning time, protocol B on the far right to the slowest. The protocols in between are shown from T--B for increasing percentage of the scanning time.}%
+	\caption[Plot normalized difference value]{Plot of normalized difference Value ($E_{i_{norm}}$, blue diamonds) for the 19 scanned protocols overlaid over Quality-plot (red dots) obtained from the simulation (described in \autoref{sec:quality guided protocols}). The normalized Error has been calculated using the difference image of each protocol $i$ with protocol B. The error bars for each protocol show the standard deviation of the error calculated for 205 of the 1024 slices. Note that the scale of the error was normalized to 20--\SI{100}{\percent}, so that both the quality from the simulation and the error are directly comparable. The abscissa shows the scanning time in percentage of time used for the gold standard scan. Protocol T on the far left corresponds to the fastest scanning time, protocol B on the far right to the slowest. The protocols in between are shown from T--B for increasing percentage of the scanning time.}%
 	\label{fig:NormalizedErrorPlot}%
 \end{figure}
 
@@ -580,7 +580,7 @@ For further analysis four regions of interest with a side length of 256 pixels h
 			\draw (1080,350) node [fill=white, semitransparent] {ROI 4} node {ROI 4}; % 1863-237-604
 		\end{tikzpicture}%
 	}%
-	\caption[Overview of the location of the four regions of interest in the sample]{Overview of the location of the four regions of interest where the histogram of the euclidean distance transformation distribution has been calculated. Grey: Semitransparent volume rendering of the lung tissue sample. Red: Four regions of interest, extracted to calculate the distance transformation. The labels of the \acp{roi} conform to the legends in \autoref{fig:DTFplots}.}%
+	\caption[Location of the four \acsp{roi} in the sample]{Overview of the location of the four regions of interest where the histogram of the euclidean distance transformation distribution has been calculated. Grey: Semitransparent volume rendering of the lung tissue sample. Red: Four regions of interest, extracted to calculate the distance transformation. The labels of the \acp{roi} conform to the legends in \autoref{fig:DTFplots}.}%
 	\label{fig:roi3d}
 \end{figure}
 

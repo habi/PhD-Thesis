@@ -3,7 +3,7 @@
 \myChapter{Computed Tomography}\label{ch:ct}
 \begin{flushright}{\slshape More apparatus, please, nurse.\\
 				Get the EEG, the BP monitor, and the AVV.\\
-				And get the machine that goes "PING!"\\
+				And get the machine that goes ``PING!''\\
 				And get the most expensive machine in case the Administrator comes.} \\ \medskip
 	--- John Cleese \& Graham Chapman\\as Obstetricians in\defcitealias{TheMeaningOfLife}{The Meaning of Life}\citetalias{TheMeaningOfLife} \citep{TheMeaningOfLife}
 \end{flushright}
@@ -93,7 +93,7 @@ the so-called Beer-Lambert law, where $\mu$ is the attenuation coefficient of th
 		\centering
 		\input{Plots/YAGattenuation}%
 		}
-	\caption[Total attenuation coefficient of Ce:YAG]{Total attenuation coefficient of Ce:YAG (\cf{Y3Al5O12}), the scintillator material used for converting the incident x-rays to visible light in the experiments presented in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010}. The lightgray region is the energy-range of \ac{tomcat}, the dark gray region marks the energy range of the experiments described in chapters~\autoref{ch:xrm2008}--\ref{ch:haberthuer2010} of this thesis. Data from the photon cross section database~\cite{XCOM}.}
+	\caption[Total attenuation coefficient of Ce:\acs{yag}]{Total attenuation coefficient of Ce:\acs{yag} (\cf{Y3Al5O12}), the scintillator material used for converting the incident x-rays to visible light in the experiments presented in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010}. The lightgray region is the energy-range of \ac{tomcat}, the dark gray region marks the energy range of the experiments described in chapters~\autoref{ch:xrm2008}--\ref{ch:haberthuer2010} of this thesis. Data from the photon cross section database~\cite{XCOM}.}
 	\label{fig:yag attenuation}
 \end{figure}
 
@@ -102,7 +102,7 @@ In general, \ac{ct} refers to the cross-sectional imaging of a sample from trans
 
 In medical \ac{ct}-scanners, the transmission images are generally obtained while the radiation source and the detector rotate around the body part to be imaged. In micro-computed and synchrotron based tomography, the source and detector are fixed, while the sample to be imaged rotates around a chosen axis.
 
-During the imaging process multiple transmission images---essentially single radiographic images---are obtained at several equidistant angles over a \unit{180}{\degree} or \unit{360}{\degree} rotation. These projections can be understood as pictures of the distribution of the attenuation of the x-rays inside the sample. Regions with high attenuation show up as dark pixel, regions with low attenuation inside the sample show up as light pixels on the \ac{ccd}-chip of the camera.
+During the imaging process multiple transmission images---essentially single radiographic images---are obtained at several equidistant angles over a \unit{180}{\degree} or \unit{360}{\degree} rotation. These projections can be understood as pictures of the distribution of the attenuation of the x-rays inside the sample. Regions with high attenuation show up as dark pixels, regions with low attenuation inside the sample show up as light pixels on the \ac{ccd}-chip of the camera.
 
 Before and after the scan, so-called dark ($I_{D}$) and flat images ($I_{F}$) are recorded. The dark images record the camera noise and dark current, while the flat images record the beam profile. After baseline correction of the projections ($I_{P}$) the average of the dark images is subtracted. The projections are then normalized to the flat images as seen in \autoref{eq:cpr}, using the average dark and average flat images ($\overline{I_{D}}$ and $\overline{I_{F}}$, respectively) resulting in so-called corrected projections (CPR).%
 \begin{equation}%
@@ -223,7 +223,7 @@ Bending magnets\graffito{Such magnets are also used in traditional televisions, 
 		}
 	\caption[Bending magnet radiation]{Bending magnet radiation of wavelength $\lambda$ produced by a relativistic electron traveling in an uniform magnetic field. %
 		\subref{subfig:bend}: Electrons execute a circular motion with acceleration directed towards the center. The radiation is directed tangentially outward in a narrow radiation cone with an emission angle of typically $\frac{1}{\gamma}$ where $\gamma$ is the Lorentz contraction factor. %
-		\subref{subfig:bend-spectrum}: The radiation spectrum is very broad, analogous to a ``white light'' x-ray light bulb.%
+		\subref{subfig:bend-spectrum}: The radiation spectrum is very broad, analogous to a white light x-ray light bulb.%
 		Adapted from~\cite{Attwood2007}.}% http://is.gd/biHF4
 	\label{fig:bending magnets}
 \end{figure}
@@ -290,7 +290,7 @@ The \ac{sls} at the \ac{psi} in Villigen, Switzerland is a third-generation sync
 \end{figure}
 
 \section{TOMCAT}\label{sec:tomcat}
-At the beamline for \acf{tomcat} the user can perform absorption as well as phase contrast imaging with an isotropic voxel\graffito{A voxel or volumetric pixel is the \threed analogy to a \twod pixel.} size ranging from \SI{350}{\nano\meter} up to \SI{14.8}{\micro\meter}, depending on the chosen magnification. Typical acquisition times are in the order of a few minutes for a full sample, depending on the selected energy and resolution.
+At the beamline for \acf{tomcat} the user can perform absorption as well as phase contrast imaging with an isotropic voxel size ranging from \SI{350}{\nano\meter} up to \SI{14.8}{\micro\meter}, depending on the chosen magnification. Typical acquisition times are in the order of a few minutes for a full sample, depending on the selected energy and resolution.
 
 \citet{Stampanoni2006a} described the \ac{tomcat} beamline in detail, a short rundown on the most important features are presented here: The beamline is located at the X02DA port of the SLS and started regular user operation in June 2006. Synchrotron light is delivered by a \SI{2.9}{\tesla} bending magnet with a magnetic field more than double the strength of the normal \ac{sls} bending magnets. This enables to have a high critical energy of the source (\SI{11.1}{\kilo\electronvolt}, corresponding to a wavelength of \SI{1.22}{\angstrom}) and results in a considerable increase of flux\graffito{Flux is defined as the amount of particles, mass or energy which flows through an area in a certain time and essentially describes the brightness of the beam} at the desired energy range.
 
@@ -298,7 +298,7 @@ Because of the high coherence of the used synchrotron radiation is desired to be
 
 After collimation, the beam travels through an evacuated pipe into the measuring hut and is directed towards the sample. The sample sits atop a high precision sample manipulator (resolution better than \SI{1}{\micro\meter}, the manipulator is shown in \autoref{fig:tomcat}) which is used for centering the sample in the beam and for the rotation of the sample for tomographic imaging. 
 
-The x-rays which penetrated the sample are detected using a combination of a scintillator, microscope optics and a \ac{ccd}-camera. The scintillator\graffito{The latin word \textit{scintillare} can be translated with sparkling or flickering.} converts incident x-rays to visible light through fluorescence. Charged particles excite the scintillator material and this excitation energy is then subsequently emitted by fluorescence photons at a longer wavelength, which makes it possible to detect the incident beam using a \ac{ccd}-camera. The camera at \ac{tomcat} features a detector with 2048$\times$2048 pixels with a size of 7.4$\times$\SI{7.4}{\micro\meter} each and can read out a full frame \SI{14}{\bit} image in \SI{260}{\millisecond}. Between the scintillator and the \ac{ccd}-sensor interchangeable microscope objectives enable to easily vary the pixel size range of the resulting tomographic reconstructions from 350$\times$\SI{350}{\nano\meter} up to 5.6$\times$\SI{5.6}{\micro\meter}. Depending on the chosen pixel size, the resulting field of view of a standard scan varies between 0.75$\times$\SI{0.75}{\milli\meter\squared} and 11.45$\times$\SI{11.45}{\milli\meter\squared}\graffito{See \autoref{ch:haberthuer2010} for a method to increase the field of view of tomography endstations while keeping the small voxel size.}.
+The x-rays which penetrated the sample are detected using a combination of a scintillator, microscope optics and a \ac{ccd}-camera. The scintillator\graffito{The latin word \emph{scintillare} can be translated with sparkling or flickering.} converts incident x-rays to visible light through fluorescence. Charged particles excite the scintillator material and this excitation energy is then subsequently emitted by fluorescence photons at a longer wavelength, which makes it possible to detect the incident beam using a \ac{ccd}-camera. The camera at \ac{tomcat} features a detector with 2048$\times$2048 pixels with a size of 7.4$\times$\SI{7.4}{\micro\meter} each and can read out a full frame \SI{14}{\bit} image in \SI{260}{\millisecond}. Between the scintillator and the \ac{ccd}-sensor interchangeable microscope objectives enable to easily vary the pixel size range of the resulting tomographic reconstructions from 350$\times$\SI{350}{\nano\meter} up to 5.6$\times$\SI{5.6}{\micro\meter}. Depending on the chosen pixel size, the resulting field of view of a standard scan varies between 0.75$\times$\SI{0.75}{\milli\meter\squared} and 11.45$\times$\SI{11.45}{\milli\meter\squared}\graffito{See \autoref{ch:haberthuer2010} for a method to increase the field of view of tomography endstations while keeping the small voxel size.}.
 
 \renewcommand{\imsize}{1.41\linewidth}%
 \begin{figure}
@@ -320,7 +320,7 @@ The x-rays which penetrated the sample are detected using a combination of a sci
 			\label{subfig:TOMCAT2}%
 		}%
 	}%
-	\caption[The \acs{tomcat} end station]{The \ac{tomcat} end station. \subref{subfig:TOMCATpano}: \SI{180}{\degree} panoramic view of the endstation. \subref{subfig:TOMCAT1}: Overview: The blue structure behind the control notebook is the sample stage with the sample holder on the rotation stage on top of it. The black structure above contains the scintillator, the microscope optics and the camera. \subref{subfig:TOMCAT2}: Detail of the microscope optics: The sample holder with a mounted standard electron microscopy sample table is carrying a small piece of a rat lung which can be seen in the reflection. The round structure behind the sample contains the different objectives. The reflecting rectangle visible under the label on the objective revolver is the scintillator which is used to convert the x-ray beam into visible light, which after magnification is then recorded with the \ac{ccd}-camera.}%
+	\caption[The \acs{tomcat} endstation]{The \ac{tomcat} endstation. \subref{subfig:TOMCATpano}: \SI{180}{\degree} panoramic view of the endstation. \subref{subfig:TOMCAT1}: Overview: The blue structure behind the control notebook is the sample stage with the sample holder on the rotation stage on top of it. The black structure above contains the scintillator, the microscope optics and the camera. \subref{subfig:TOMCAT2}: Detail of the microscope optics: The sample holder with a mounted standard electron microscopy sample table is carrying a small piece of a rat lung which can be seen in the reflection. The round structure behind the sample contains the different objectives. The reflecting rectangle visible under the label on the objective revolver is the scintillator which is used to convert the x-ray beam into visible light, which after magnification is then recorded with the \ac{ccd}-camera.}%
 	\label{fig:tomcat}
 \end{figure}
 
