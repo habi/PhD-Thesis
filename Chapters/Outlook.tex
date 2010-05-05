@@ -16,28 +16,10 @@ At the moment, the merging of one dataset with in total \num{10734} takes a bit 
 
 Nonetheless of these unresolved small issues, the feasibility of the enlargement of the horizontal field of view of tomographic endstations has been demonstrated and the resulting datasets have been used for the analysis of large volumes of the terminal airways with ultrahigh resolution. Future work will focus on the use of \ac{wf-srxtm} dataset for the extraction and analysis of the acini, as presented in \autoref{subsec:stereological analysis}. The presented method which uses so-called manhole covers to separate single acini from a central airway has been applied to multiple rat lung datasets recorded over the course of the postnatal development from day 4 to day 60. The definition of the location of the manhole covers in the airway tree is a process relying on manually locating the position of the junction in the airway based on morphological criteria like the changes in the airway wall and subsequent drawing of the manhole cover at these locations. Using the airway structure obtained from a prior skeletonization process as a guideline for the placements of these manhole covers is planned for the future. Such a guideline would both speed up the process of locating the exact positioning of the manhole covers and reduce the needed a priori morphological knowledge of the airway tree.
 
-Using a combination of the manhole cover method for separating the acini with the skeletonization of the airway tree would make it possible to extract and segment large amounts of acini for the analysis in relatively short time. Currently achieved results hint towards a larger change of the acinar size during lung development than previously assumed\todo{or is it simply that the segmentation at D60 is not as easily possible? or do we really have much larger acini than at D36?}\todo{Citation about acinar size change?}.
+Using a combination of the aforementioned manhole cover method with the skeletonization of the airway tree would make it possible to extract and segment large numbers of acini for the analysis in relatively short time. Currently achieved results hint towards a larger change of the acinar size during lung development than previously assumed. The segmentation of single acini at the timepoints of day 36 and 60 after birth is much more complicated than at the earlier timepoints. The results achieved up to now hint towards a clear distinction between the conducting and the gas-exchanging airways (as described in \autoref{sec:functional units of the lung}) for days 4, 10 and 21, while for days 36 and 60 the change between those two points seems more gradual. Segmenting more acini on the already present datasets will help to describe this change in more detail. 
 
-Additionally, we plan to use the obtained \ac{wf-srxtm} datasets for the extraction of larger regions of the terminal airways than previously and currently available. These extracted regions will be used to improve currently available models of airflow inside the terminal airways \cite{Sznitman2007,Sznitman2009} \todo{What about ``Sznitman, Sutter, Altorfer, Tsuda, Stampanoni, Roesgen \& Schittny. Acinar flow simulations based on \threed terminal alveolar\ldots, submitted.''? $\rightarrow$ bug JCS!} using \ac{cfd}.
+Additionally, we plan to use the obtained \ac{wf-srxtm} datasets for the extraction of larger regions of the terminal airways than previously and currently available. These extracted regions will be used to improve currently available models of airflow inside the terminal airways \cite{Sznitman2007,Sznitman2009} \todo{What about ``Sznitman, Sutter, Altorfer, Tsuda, Stampanoni, Roesgen \& Schittny. Acinar flow simulations based on \threed terminal alveolar\ldots, submitted.''? $\rightarrow$ bug JCS!} using \ac{cfd}. 
 
-\section{Sebastien multimodal}
-\begin{itemize}
-	\item Automatic registration of multimodal datasets
-	\item No longer relying on ``luck''
-	\item Maybe even multimodal registration of \ac{em}-tomography
-\end{itemize}
+Using the STEPanizer (described in \autoref{sec:stepanizer}) we plan to further stereologically analyize the tomographic datasets. With the first results presented in \autoref{ch:outlook} we have shown that---as expected---analyzing tomographic data yields results which match stereological results obtained from classic histological sections. Since tomographic data can be obtained without destroying the sample and yields a fully unrestricted three-dimensional view inside the sample, the analyisis in employed to advantage on these virtual slices instead of real classic histological slices.
 
-\section{Structural/Morphological Analysis of the lung}
-\begin{itemize}
-	\item Further work needs to be done with STEPanizer for the stereological analysis of the huge amount of scanned samples we now have\ldots
-	\item Acinar size analysis of \ac{wf-srxtm} data
-	\item Further proof of viability of tomographic imaging, not only \cite{Tsuda2008}, which has been taken up with mixed feelings\ldots
-\end{itemize}
-
-\section{Skeletonization}
-\begin{itemize}
-	\item ATS2009-Poster
-	\item 2\textsuperscript{nd} year examination
-	\item Collaboration with MeVis or even artorg.unibe.ch?
-\end{itemize}
-
+The work on the multimodal imaging approach presented in \autoref{ch:xrm2008} is carried on by our former Master- and now Ph.D.-Student Sébastien Barré; he is developing a method to automatically register two different multimodal datasets as presented in \autoref{sec:multimodal imaging}.
