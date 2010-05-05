@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage[graphics,tightpage,active]{preview}
+\PreviewEnvironment{tikzpicture}
+\newcommand{\imsize}{\linewidth}
+\newlength\imagewidth           % needed for scalebars
+\newlength\imagescale           % ditto
+\begin{document}%
+%-------------
+\pgfmathsetlength{\imagewidth}{\imsize}%
+\pgfmathsetlength{\imagescale}{\imagewidth/2048}%
+\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+	\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{SEM_crop}};
+	\def\x{4}
+	\def\y{4}
+	%blood vessel
+	\draw node [darkgray] at (52+\x,160+\y) {\huge$\star$};
+	\draw node [darkgray] at (626+\x,916+\y) {\huge$\star$};
+	\draw node [darkgray] at (728+\x,1186+\y) {\huge$\star$};
+	\draw node [red] at (52,160) {\huge$\star$};
+	\draw node [red] at (626,916) {\huge$\star$};
+	\draw node [red] at (728,1186) {\huge$\star$};
+	%alveoli
+	\draw node [darkgray] at (532+\x,542+\y) {\huge$\diamond$};
+	\draw node [darkgray] at (704+\x,550+\y) {\huge$\diamond$};
+	\draw node [darkgray] at (686+\x,730+\y) {\huge$\diamond$};
+	\draw node [darkgray] at (236+\x,586+\y) {\huge$\diamond$};
+	\draw node [green] at (532,542) {\huge$\diamond$};
+	\draw node [green] at (704,550) {\huge$\diamond$};
+	\draw node [green] at (686,730) {\huge$\diamond$};
+	\draw node [green] at (236,586) {\huge$\diamond$};
+	%alveolar duct
+	\draw node [darkgray] at (1868+\x,310+\y) {\huge$\bigodot$};
+	\draw node [darkgray] at (1850+\x,620+\y) {\huge$\bigodot$};
+	\draw node [darkgray] at (1576+\x,604+\y) {\huge$\bigodot$};
+	\draw node [darkgray] at (1198+\x,486+\y) {\huge$\bigodot$};
+	\draw node [darkgray] at (884+\x,362+\y) {\huge$\bigodot$};
+	\draw node [darkgray] at (636+\x,298+\y) {\huge$\bigodot$};
+	\draw node [cyan] at (1868,310) {\huge$\bigodot$};
+	\draw node [cyan] at (1850,620) {\huge$\bigodot$};
+	\draw node [cyan] at (1576,604) {\huge$\bigodot$};
+	\draw node [cyan] at (1198,486) {\huge$\bigodot$};
+	\draw node [cyan] at (884,362) {\huge$\bigodot$};
+	\draw node [cyan] at (636,298) {\huge$\bigodot$};
+\end{tikzpicture}%
+%-------------
+\end{document}%

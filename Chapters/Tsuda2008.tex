@@ -28,7 +28,7 @@ Despite these difficulties, the motivations for reconstructing the \threed geome
 Here we present our new effort at \threed reconstruction of the acinar air space in fixed lung tissue using the novel technology of \ac{srxtm} and subsequent \threed modeling of the obtained images. Because of the large specimen volume that can be imaged at high resolution using this method, we anticipate that it will ultimately allow \threed reconstruction of the entire air space of one acinus. Such a detailed rendering and consequent \threed quantitative analysis of structural measures of acinar morphology will prove invaluable to many studies, including performing the computational fluid dynamics of aerosol deposition in the gas exchanging areas of the lung. In this paper, we demonstrate the ability of \ac{srxtm} to render greater volumes ($10^9$~\micro\meter$^3$) of lung tissue than is possible by confocal microscopy and to achieve greater resolution (voxel size=\SI{1.4}{\micro\meter\cubed}) than possible by traditional \ac{uct}. We describe state-of-the-art \acf{fe} technology for \threed reconstruction of both tissue and air spaces in the acinus in detail; the outcome would be ready for subsequent \ac{fe} computational analyses like fluid dynamics and skeletonization.
 
 \renewcommand{\imsize}{\linewidth}
-\begin{figure}%[h]
+\begin{figure}[h]%
 	\centering
 	\begin{tikzpicture}[,auto,%
 		decision/.style={diamond, draw, thick, text width=5em, text centered},%
@@ -76,12 +76,12 @@ Handling of the animals before and during the experiments, as well as the experi
 The Epon embedded samples were shaped down into rods of a diameter of \SI{1.2}{\milli\meter} using a watchmaker's lathe. They were glued on a rodlike sample holder of a diameter of \SI{3.0}{\milli\meter} using two-component epoxy resin-based glue (Araldite Rapid, Novartis, Basel, Switzerland). Special care was taken to ensure that the samples were mounted perpendicularly to the surface of the sample holder to fit exactly into the window of the camera (see \autoref{fig:imaging setup} for imaging setup).
 
 \subsubsection{Image acquisition}
-The samples were scanned at an X-ray wave-length of \SI{1}{\angstrom} (corresponding to an energy of \SI{12.398}{\kilo\electronvolt}\graffito{This particular energy enables us to achieve a high contrast between the tissue and the background of the sample.}) at the beamline \ac{tomcat} at the \acf{sls} of the Paul Scherrer Institut (Villigen, Switzerland) \cite{Stampanoni2002,Stampanoni2007}. After penetration of the heavy metal stained sample, X-rays were converted into visible light by a thin Ce-doped \acs{yag} scintillator screen (Crismatec Saint-Gobain, Nemours, France). Projection images were further magnified by diffraction limited microscope optics and finally digitized by a high-resolution 2048$\times$2048 pixel \ac{ccd} camera. The $\times$10 lens was used, exposure time set to \SI{200}{\milli\second}, and 2 $\times$2 binning\graffito{Binning is the process of grouping together a certain number of input pixels to one output-pixel while recording the image; this is done to suppress the noise of the resulting image through averaging of four pixels to one (in the present case) and to reduce the file size.} was selected to improve the signal-to-noise ratio, resulting in isotropic voxels of \SI{1.4}{\micro\meter\cubed} for the reconstructed images.
+The samples were scanned at an X-ray wave-length of \SI{1}{\angstrom} (corresponding to an energy of \SI{12.398}{\kilo\electronvolt}\graffito{This particular energy enables us to achieve a high contrast between the tissue and the background of the sample.}) at the beamline \ac{tomcat} at the \acf{sls} of the Paul Scherrer Institut (Villigen, Switzerland) \cite{Stampanoni2002,Stampanoni2007}. After penetration of the heavy metal stained sample, X-rays were converted into visible light by a thin Ce-doped \acs{yag} scintillator screen (Crismatec Saint-Gobain, Nemours, France). Projection images were further magnified by diffraction limited microscope optics and finally digitized by a high-resolution 2048$\times$2048 pixel \ac{ccd} camera. The $\times$10 lens was used, exposure time set to \SI{200}{\milli\second}, and 2 $\times$2 binning\graffito{Binning is the process of grouping together a certain number of input pixels to one output-pixel while recording the image; this is done to suppress the noise of the resulting image through pixel averaging and to reduce the file size.} was selected to improve the signal-to-noise ratio, resulting in isotropic voxels of \SI{1.4}{\micro\meter\cubed} for the reconstructed images.
 
 To achieve a tomographic image for each sample, 1500 projections were obtained over a sample rotation of \SI{180}{\degree}. The projections were then reconstructed on a 16-node server farm (Pentium 4, \SI{2.8}{\gigahertz} processor, \SI{512}{\mega\byte} \acsu{ram}) using an optimized filtered back projection algorithm. This reconstruction results in an image stack of 1024 image slices in tif-format (a total size of \SI{2}{\giga\byte}). This image stack is later on referred to as the \emph{raw images}.
 
 \renewcommand{\imsize}{1.41\linewidth}%
-\begin{figure}%
+\begin{figure}[htb]%
 	\noindent\makebox[\textwidth]{%
 		\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-02}%
 	}%
@@ -154,8 +154,8 @@ Let us consider an example in which we want to apply a threshold of 123 for the 
 	\item[3. Surface smoothing II] The translation of the nodes as described in \emph{step 2} may in some cases lead to a distorted (concave) \ac{fe} surface. The distortion of the \ac{fe} nodes can be evaluated with their Jacobian value. The Jacobian value is a matrix of the derivation of global to local \ac{fe} interpolation function and the quality of any mesh can be directly evaluated by its Jacobian value~\cite{Bathe1995}. Distorted \acp{fe}, which are not suitable for subsequent numerical calculations, show a negative Jacobian. To optimize the Jacobian, we implemented the standard \ac{lst}~\cite{Freitag2000}). The \ac{lst} usually takes a few loops (repetitions of \emph{step 2}) over all \acp{fe} to achieve positive Jacobian values for all \acp{fe}. The results of applying the \ac{lst} for \threed and \twod cases are shown, respectively, in \autoref{subfig:tsuda-04d}, \emph{right} (``After \ac{lst}'').
 \end{description}
 
-\renewcommand{\imsize}{.75\linewidth}
-\begin{figure}
+\renewcommand{\imsize}{.9\linewidth}
+\begin{figure}[p]%
 	\noindent\makebox[\textwidth]{%
 		\subfloat[]{%
 			\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-04a}%
@@ -182,7 +182,7 @@ Let us consider an example in which we want to apply a threshold of 123 for the 
 	}%
 	\caption[Grid-based hexahedral algorithm]{Grid-based hexahedral algorithm. \subref{subfig:tsuda-04a}: \threed thresholded voxels (\emph{left}) and \twod representation of thresholded voxels (\emph{right}). The grayscale values are kept in the map of voxel. \subref{subfig:tsuda-04b}: step 1: generation of uniform \acl{fe} mesh over the voxel map. For simplicity, \ac{fe} nodes are positioned at the center of voxel. \threed \ac{fe} meshing (\emph{left}) and \twod \ac{fe} meshing (\emph{right}) are shown. Each node is assigned with the grayscale value from the corresponding voxel. \subref{subfig:tsuda-04c}: step 2: moving nodes on the surface due to trilinear interpolation in \threed case (\emph{left}) and bilinear interpolation in \twod case (\emph{right}). The location of surface boundary is shown in the middle image for \twod case. A fast sub \ac{fe}-voxel level algorithm is implemented to locate a surface boundary. White nodes are moving toward this surface boundary. \subref{subfig:tsuda-04d}: step 3: \acf{lst}. \threed and \twod before \ac{lst} (\emph{left}), \threed and \twod after \ac{lst} (\emph{right}).}
 	\label{fig:tsuda-04}
-\end{figure}
+\end{figure}%
 
 \subsection[Validation of Segmentation]{Validation of Segmentation and Image Processing}
 Once \threed reconstruction was performed with a certain tentative threshold value, the resulting \threed structure was evaluated against the gold standard, \ie, well-characterized morphometric data provided by \citet{Tschanz2003}. We calculated the volume density of tissue (V\textsubscript{VS}) and surface area density of air space (S\textsubscript{VS}~[\centimetresquared\per\centimetrecubed]) to determine if there was unacceptable discrepancy. If so, we readjusted the threshold level and repeated the segmentation process, mesh generation, and subsequent image analysis until our calculated morphological parameters were within $<$\SI{5}{\percent} difference of the gold standard (\autoref{fig:workflow}).
@@ -199,7 +199,7 @@ The samples were scanned with \ac{srxtm} and a stack of 1024 raw images was reco
 To facilitate further processing of the image, different subregions of interest were extracted from the original raw data (one exemplary \ac{roi} is the orange small cube in \autoref{subfig:tsuda-05a}, which is shown enlarged in \autoref{subfig:tsuda-05c}. This \ac{roi} has a size of 196$\times$196$\times$196 pixels (\ie, an edge length of $\sim$\SI{275}{\micro\meter}) and contains $\sim$7.5 million voxels. This is a reasonable size of data that can easily be handled by a standard \acsu{pc} (Duo Core 2 Pentium \SI{2.33}{\gigahertz}, \SI{2}{\giga\byte} \acs{ram}) for visualization and volume rendering. The aforementioned size is an intermediate \ac{roi}; depending on the need for visualization/volume rendering other sizes have been chosen. To validate the segmentation (see below), we split a big \ac{roi} inside the sample in the full dataset vertically into five subregions leading to a \ac{roi} size of 200$\times$200$\times$180 pixels.
 
 \renewcommand{\imsize}{0.705\linewidth}%
-\begin{figure}
+\begin{figure}[p]%
 	\noindent\makebox[\textwidth]{%
 		\subfloat[]{%
 			\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-05a}%
@@ -223,14 +223,14 @@ To facilitate further processing of the image, different subregions of interest 
 	}%
 	\caption[Overview of workflow for \acs{roi} selection]{Overview of workflow for the selection of a \acf{roi}. \subref{subfig:tsuda-05a}: full perspective view of the sample R108C60C-07e with 6 selected orthogonal slices and bounding box of the full sample in orange. The \ac{roi} selected for subfigures \subref{subfig:tsuda-05c} and \subref{subfig:tsuda-05d} is visible in the \emph{top left}. \subref{subfig:tsuda-05b}: close-up of one slice of the full dataset with selected \ac{roi} (side-length of 256 pixels). \subref{subfig:tsuda-05c}: \ac{roi} cut out of the full sample, 6 selected orthogonal slices are shown. \subref{subfig:tsuda-05d}: close-up of the \ac{roi} in subfigure \subref{subfig:tsuda-05b}.}
 	\label{fig:tsuda-05}
-\end{figure}
+\end{figure}%
 
 \subsection{Segmentation}
 As mentioned, the selection of a threshold level has significant affects on segmentation. To demonstrate this, we have segmented a small crop of the original data (\autoref{subfig:tsuda-06a}) with three different threshold values. With a low threshold level, for instance 130, the image would possess too many black voxels and the septa in the lung appear to be too thick (\autoref{subfig:tsuda-06b}). On the other hand, with a higher threshold level, for instance 148, the image would possess too many white voxels and the lung tissue appears to be very thin, with multiple erroneous holes in the septal walls (\autoref{subfig:tsuda-06d}). With an intermediate threshold, for instance 139, the lung structure appears to be reasonable, with a minor amount of holes (\autoref{subfig:tsuda-06c}). The optimal value of the threshold level was iteratively determined by performing a \emph{readjustment-recalculation} process to match some of the key morphological parameters in the resulting \threed reconstruction to the gold standard. This is explained below in detail.
 
-\renewcommand{\imsize}{0.47\linewidth}
-\setlength{\fboxsep}{-\fboxrule}
-\begin{figure}
+\renewcommand{\imsize}{0.47\linewidth}%
+\setlength{\fboxsep}{-\fboxrule}%
+\begin{figure}[htb]%
 	\noindent\makebox[\textwidth]{%
 		\subfloat[]{%
 			\pgfmathsetlength{\imagewidth}{\imsize}%
@@ -269,7 +269,7 @@ As mentioned, the selection of a threshold level has significant affects on segm
 	}%
 	\caption[Thresholding Influence]{\subref{subfig:tsuda-06a}: original slice from raw data. \subref{subfig:tsuda-06b}: thresholded with a value of 130, meaning that all pixels below 130 are set to black, all pixels with a value of 130 or greater are set to white. Resulting alveolar walls are too thick. \subref{subfig:tsuda-06c}: thresholded with a value of 139. Image looks correct. At this threshold the observed thickness of the septa was smaller than \SI{10}{\micro\meter}. In the same animals \cite{Roth2005} the thickness of the septa was determined as they appeared on electron microscopical images. They measured a mean of \SI{8}{\micro\meter}. \subref{subfig:tsuda-06d}: thresholded with a value of 148. Alveolar walls are too thin, and multiple erroneous holes (arrows) appear in the tissue.}
 	\label{fig:tsuda-06}
-\end{figure}
+\end{figure}%
 
 \subsection{FE \threed reconstruction}
 Prior to the \threed reconstruction, the \ was performed to screen small objects with unreasonable size; voxels of those unreasonably small objects were reclassified to match the surrounding voxels. After successful preprocessing, \threed reconstruction was performed using \ac{gbha}. The examples with three different values of threshold level (130, 139, 148), corresponding to those in \autoref{fig:tsuda-06}, are shown in \autoref{fig:tsuda-07}. As is expected, the \threed reconstructed object appears to have thick tissue walls with the lower threshold value of 130, while it appears to be too thin, with many holes with the higher threshold value of 148. With the intermediate threshold value of 139, the structure appears to be reasonable. This will be tested quantitatively next.
@@ -280,7 +280,7 @@ To perform a statistical analysis for the selection of the threshold value, five
 The surface area density of air space (S\textsubscript{VS} [\centimetresquared\per\centimetrecubed]) of each \ac{roi} sample was also calculated and plotted (\autoref{fig:VVSplot}). As we expected, however, S\textsubscript{VS} shows poor match with the reported value of \num[seperr]{904(84)}~(\acs{se}) over almost the entire range of threshold levels tested and especially at the threshold value of 139. The cause of this discrepancy will be discussed in detail in \autoref{sec:discussion}.
 
 \renewcommand{\imsize}{0.47\linewidth}
-\begin{figure}
+\begin{figure}[htb]%
 	\noindent\makebox[\textwidth]{%
 		\subfloat[]{%
 			\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-07a}%
@@ -312,15 +312,15 @@ The surface area density of air space (S\textsubscript{VS} [\centimetresquared\p
 	}%
 	\caption[\threed reconstruction of tissue]{Three-dimensional reconstruction of tissue. \subref{subfig:tsuda-07a} and \subref{subfig:tsuda-07d}: threshold 130. \subref{subfig:tsuda-07b} and \subref{subfig:tsuda-07e}: threshold 139. \subref{subfig:tsuda-07c} and \subref{subfig:tsuda-07f}: threshold 148.}
 	\label{fig:tsuda-07}
-\end{figure}
+\end{figure}%
 
-\renewcommand{\imsize}{\linewidth}
-\begin{figure}
+\renewcommand{\imsize}{\linewidth}%
+\begin{figure}[htb]%
 	\centering
 	\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-08}
 	\caption[Tissue volume- and airspace surface area-density]{Average volume density of tissue (V\textsubscript{VS}) and surface area density of air space (S\textsubscript{VS}) of \acp{roi}, plotted as a function of threshold level. Error bars represent standard error. Our V\textsubscript{VS} matches the gold standard value of 0.196 at a threshold value of 139. Bars include the standard error, n=5.}
 	\label{fig:VVSplot}
-\end{figure}
+\end{figure}%
 
 \subsection{FE \threed Reconstruction of Air Space}
 \threed air spaces, separated by tissues, in the \ac{roi} were also constructed (\autoref{fig:tsuda-09}). To demonstrate air space configuration more clearly, a small alveolated air section was isolated from the center of \ac{roi} and was enlarged in an inset of \autoref{fig:tsuda-09}. These \threed air objects packed with several million \threed 8-node \acp{fe} (a mixture of structured and unstructured cubic elements) can be readily used for \ac{fe} calculations, including airflow \ac{cfd}, in the future.
@@ -336,8 +336,8 @@ Optical sectioning permits faster, less invasive, more thorough digital analysis
 \subsection{srxtm}
 \ac{sr} is an electromagnetic wave emitted from electrons traveling near the speed of light when their path is bent by a magnetic field \cite{Iida2003}. A synchrotron facility is an excellent source of the most useful electromagnetic waves to explore materials and biological systems: X-ray ultraviolet and infrared light. Here we limit our discussion particularly to the application of \ac{sr} for X-ray tomographic microscopy (\autoref{fig:imaging setup}) highlighting the following superb features.
 
-\renewcommand{\imsize}{0.705\linewidth}
-\begin{figure}
+\renewcommand{\imsize}{0.705\linewidth}%
+\begin{figure}[htb]%
 	\noindent\makebox[\textwidth]{%
 		\subfloat[]{%
 			\includegraphics[width=\imsize]{img/Tsuda2008/Tsuda-09a}%
@@ -350,7 +350,7 @@ Optical sectioning permits faster, less invasive, more thorough digital analysis
 	}%
 	\caption[\threed reconstruction of air spaces]{\subref{subfig:tsuda-09a}: reconstruction of \threed air spaces separated by tissues from \ac{roi}. \subref{subfig:tsuda-09b}: enlargement of a small alveolated air section isolated from the center of the \ac{roi}.}
 	\label{fig:tsuda-09}
-\end{figure}
+\end{figure}%
 
 \subsubsection{High power and high brilliance}
 \ac{sr} is extremely powerful but even more important is that this radiation is emitted by a small source area and that this emission occurs within a narrow angular cone. Bending magnets or sophisticated insertion devices (called undulators or wigglers) produces therefore a high brilliant radiation that is several orders of magnitude more bright than conventional X-ray tubes (\autoref{fig:imaging setup}). This makes the usage of monochromators\graffito{A monochromator is a device in X-ray optics that is used to select a defined wavelength of the radiation for further use in a dedicated instrument or beamline.} particularly interesting since an extremely intense photon flux at a selected energy (or wavelength) can easily be extracted from the white beam emitted by the source (\autoref{fig:imaging setup}). The X-ray energy can be adjusted ad hoc to the sample, according to its absorption properties. The monochromaticity of the beam is an important feature of \ac{sr} application, critical for tomography applications since it automatically eliminates beam hardening artifacts from the tomographic reconstruction.
@@ -366,13 +366,13 @@ A unique aspect of our work is that segmentation was done iteratively by searchi
 
 The key morphological parameter we tried to match was the volume density of tissue (V\textsubscript{VS}). The V\textsubscript{VS} is an easy to calculate parameter (\ie, the sum of \ac{fe} volume belonging to tissue divided by the sum of all \ac{fe} volume) and is relatively insensitive to the resolution of the measurement technique. The calculated V\textsubscript{VS} decreases almost linearly with an increase in the threshold level (\ie, a fraction of air volume relative to tissue volume) around the gold standard value (V\textsubscript{VS}=0.196 in our case, see \autoref{fig:VVSplot}). At the threshold value of 139, the calculated V\textsubscript{VS} was within \SI{2}{\percent} difference of the gold standard.
 
-\renewcommand{\imsize}{\linewidth}
-\begin{figure}
+\renewcommand{\imsize}{\linewidth}%
+\begin{figure}[htb]%
 	\centering
 	\pgfmathsetlength{\imagewidth}{\imsize}%
 	\pgfmathsetlength{\imagescale}{\imagewidth/1500}%
-	\def\x{927}%
-	\def\y{800}% scalebar-y at 90% of height of y=1715px
+	\def\x{940}%
+	\def\y{1150}% scalebar-y at 90% of height of y=1715px
 	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{img/Tsuda2008/Tsuda-10_edit}};
 		% 95px = 0.01mm > 100px = 11um > 4752px = 500um, 950px = 100um
@@ -385,7 +385,7 @@ The key morphological parameter we tried to match was the volume density of tiss
 	\end{tikzpicture}%
 	\caption[\threed \acs{fe} shell model of a partial acinus]{Three-dimensional \ac{fe} shell model of acinus viewed from different angles. Top: \ac{roi}. Middle: top view (\emph{left}); side view (\emph{middle}); bottom view (\emph{right}). Bottom: alveolar inside views.}
 	\label{fig:alveolus}
-\end{figure}
+\end{figure}%
 
 We also calculated surface area density of air space (S\textsubscript{VS} [\centimetresquared\per\centimetrecubed]) and compared it with the value reported by \cite{Tschanz2003}. However, our calculated values were always lower than the reported value (S\textsubscript{VS}=904 [\centimetresquared\per\centimetrecubed]). This is because although the volume is relatively insensitive to the resolution of the measurement technique, the air-tissue boundary (surface area) is highly sensitive to how it is measured. S\textsubscript{VS} reported in \citet{Tschanz2003} was measured at a $\times$10 secondary magnification after recording the electron microscopical images at a primary magnification of $\times$1200 on a \SI{35}{\milli\meter} film (theoretical resolution of $\sim$\SI{70}{\nano\meter}), while the resolution of our \threed reconstruction is \SI{1.4}{\micro\meter}. The extent of surface complexity is recognized differently, depending on the resolution of the measuring instrument; the finer the resolution of the sample and the instrument, the more surface detail can be detected. This is similar to the problem when one measures the length of the British coastline with different yardsticks~\cite{Mandelbrot1967}.
 
