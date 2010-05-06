@@ -1,5 +1,5 @@
 \documentclass[%
-	%draft,%
+	draft,%
 	twoside,%
 	openright,%
 	titlepage,%
@@ -10,13 +10,13 @@
 	a4paper,%
 	BCOR5mm,%
 	footinclude,%
-	cleardoublepage=empty,%
+	cleardoublepage=empty,%	
 	abstract=false%
 	]{scrreprt}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Re-usable information
 %%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\myTitle}{Ultrahigh resolution tomographic imaging of the mammalian lung\xspace}
+\newcommand{\myTitle}{Ultra high resolution tomographic imaging of the mammalian lung\xspace}
 \newcommand{\myDegree}{A close look deep into the lung\xspace}
 \newcommand{\myName}{David Haberth\"ur\xspace}
 \newcommand{\myProf}{Prof.\ Dr.\ Johannes C.\ Schittny\xspace}
@@ -152,10 +152,11 @@
 % Frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%
 \include{FrontBackmatter/Titlepage}
-\cleardoublepage\include{FrontBackmatter/DirtyTitlepage}
-\cleardoublepage\include{FrontBackmatter/Titleback}
-\cleardoublepage\include{FrontBackmatter/Dedication}
-\cleardoublepage\include{FrontBackmatter/Abstract}
+%\cleardoublepage\include{FrontBackmatter/DirtyTitlepage}
+%\cleardoublepage\include{FrontBackmatter/Titleback}
+%\cleardoublepage\include{FrontBackmatter/Dedication}
+\cleardoublepage\include{FrontBackmatter/AbstractE}
+\cleardoublepage\include{FrontBackmatter/AbstractD}
 \cleardoublepage\include{FrontBackmatter/Acknowledgments}
 \pagestyle{scrheadings}
 \cleardoublepage\include{FrontBackmatter/Contents}
@@ -173,7 +174,7 @@
 \include{Chapters/XRM2008}
 \include{Chapters/Tsuda2008}
 \include{Chapters/Haberthuer2010}
-%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Discussion \& Outlook}\label{part:discussion}
 \include{Chapters/Discussion}
 \include{Chapters/Outlook}
@@ -185,5 +186,5 @@
 \cleardoublepage\include{FrontBackmatter/Bibliography}
 \cleardoublepage\include{FrontBackmatter/Declaration}
 \cleardoublepage\include{FrontBackmatter/Colophon}
-%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
+%%%%%%%%%%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
 \end{document}
