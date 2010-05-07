@@ -14,24 +14,22 @@
 This chapter presents a short rundown on the history of \ac{ct} and the underlying principles of the interaction of radiation with matter. Subsequently, the theory behind tomographic reconstruction is presented. The chapter ends with a short description of the machine that goes ``PING!''---the beamline for \ac{tomcat} at the \ac{sls} in Villigen, Switzerland---where all experiments of this thesis have been performed.
 
 \section{History}
-\acl{ct} has come a long way since the late 1970, where Sir Godfrey Hounsfield invented the first commercially available thanks to the upcoming availability of microcomputers~\cite{Hounsfield1976a}.
+\acl{ct} has come a long way since the late 1970, when---thanks to the upcoming availability of microcomputers---Sir Godfrey Hounsfield presented the first commercial tomograph~\cite{Hounsfield1976a}.
 
-The basic idea of todays tomography was already described in a patent granted to Gabriel \citet{Frank1942} in the 1940s and several experiments around 1960--1965 showed the feasibility of three-dimensional reconstruction of an object which has been penetrated by radiation~\cite{Hsieh2003}. The first tomographic imagers produced radiographic images of selected sections of tissue by moving the x-ray source and the film over and under the patient in the opposite direction. This approach blurred structures lying out of the selected region of interest. But this advance over conventional radiographies was insufficient to make two-dimensional tomographic images a useful diagnostic tool~\cite{Robb2003}.
+The basic idea of todays tomography was already described in a patent granted to Gabriel \citet{Frank1942} in 1942 and several experiments around 1960--1965 showed the feasibility of three-dimensional reconstruction of an object which has been penetrated by radiation~\cite{Hsieh2003}. The first tomographic imagers produced radiographic images of selected sections of tissue by moving the x-ray source and the film over and under the patient in the opposite direction. This approach blurred structures lying out of the selected region of interest. But this advance over conventional radiographies was insufficient to make two-dimensional tomographic images a useful diagnostic tool~\cite{Robb2003}.
 
 While observing the planning of radiotherapy treatments, Allan M.\ Cormack realized that these treatments would greatly benefit if the x-ray attenuation coefficient distribution in the body would be known. In 1963 \citet{Cormack1963} reported about the investigation of a cylindrical disk with a diameter of \SI{20}{\centi\meter} which was made of two concentric aluminum cylinders embedded in an oak annulus. Using a collimated \isotope[60]{Co} source and a Geiger counter as a detector, \citeauthor{Cormack1963} was able to detect the absorption coefficients of the materials in the cylinder and repeated this experiments with an asymmetrical phantom consisting of aluminum and plastic. But since the calculations necessary for the extraction of the attenuation coefficients were both time-consuming and difficult, the presented results never really caught on. Cormack remarked that \begin{quote} There was virtually no response. The most interesting request for a reprint came from a Swiss Centre for Avalanche Research\graffito{Sigi, this quote is especially for you!}. The method would work for deposits of snow on mountains if one could get either the detector or the source into the mountain under the snow! \cite{Cormack1979}\end{quote}
 
 In 1967, Godfrey N.\ Hounsfield started to develop the first clinical tomography scanners at the EMI Central Research Laboratories in the United Kingdom~\cite{Hsieh2003}. The first laboratory scanners took nine (!) days to acquire a scan of one slice of a cow brain~\cite{Hounsfield1976}, but paved the path to the first clinically available \ac{ct} machines in hospitals and the scientific community. In 1979 Cormack and Hounsfield shared the Nobel Prize for Physiology and Medicine for their pioneering work in \ac{ct}.
 
-From the early 1980s on, \ac{ct} imaging became an important tool to answer scientific questions both in medical and industrial applications.
-
-Even if these medical \ac{ct} scanners are in widespread use, their images suffer from relatively low spatial resolution in the sub-millimeter scale, which is often not enough to detect the finest details in biological samples. Since the radiation dose limitations imposed for medical scans often do not apply for biological samples which are dried, frozen or embedded in paraffin or plastic, more intense and collimated x-ray sources can be used. Using such radiation sources in \ac{uct} stations enables to reach resolutions in the sub-micrometer range~\cite{Bonse2008}. Due to the fact that synchrotron radiation is even more powerful than the x-ray tubes uses for \ac{uct}, \citet{Grodzins1983,Grodzins1983a} proposed the use of synchrotron sources for the production of highly intensive x-ray beams which were then used for microtomography applications.
+From the early 1980s on, \ac{ct} imaging became an important tool to answer scientific questions both in medical and industrial applications. Even if these medical \ac{ct} scanners are in widespread use, their images suffer from relatively low spatial resolution in the sub-millimeter scale, limiting their use for the detection of the finest details in biological samples. Since the radiation dose limitations imposed for medical scans often do not apply for biological samples which are dried, frozen or embedded in paraffin or plastic, more intense and collimated x-ray sources can be used. Using such radiation sources in \ac{uct} stations enables to reach resolutions in the sub-micrometer range~\cite{Bonse2008}. Due to the fact that synchrotron radiation is even more powerful than the x-ray tubes uses for \ac{uct}, \citet{Grodzins1983,Grodzins1983a} proposed the used of synchrotron sources for the production of highly intensive x-ray beams which were then used for microtomography applications.
 
 \section{Interaction of radiation with Matter}
 To be able to explain the physical principles of \ac{ct}, some important interactions of x-rays with matter have to be introduced. The energy of the x-ray photons available at \ac{tomcat}, where all the experiments of this work have been performed is in the range of 8--\SI{45}{\kilo\electronvolt}\graffito{The experiments presented in \autoref{part:results} have been performed between \SI{11.5}{\kilo\electronvolt} and \SI{12.6}{\kilo\electronvolt}.%
 % XRM 11.5 keV
 % Tsuda 12.398 keV
 % Haberthuer 12.6 keV
-}, we can thus limit the explanation to absorption, Rayleigh and Compton scattering. We neglect the description of electron-positron pair production, which occurs only for x-ray energies above \SI{1}{\mega\electronvolt}.
+}, we can thus limit the explanation to absorption, Rayleigh and Compton scattering and neglect the description of electron-positron pair production, which occurs only for x-ray energies above \SI{1}{\mega\electronvolt}.
 
 \subsection{Absorption}\label{sec:absorption}
 In the relevant absorption process---the so-called photoelectric effect---an incoming x-ray photon with energy $E_{\gamma}$ interacts with a bound atomic electron in a deep shell of the atom and is completely absorbed. This process only happens if $E_{\gamma}$ is greater than the binding energy $E_{Shell}$ of the shell electron and releases a photo-electron with the energy $\Delta E=E_{\gamma}-E_{Shell}$. This liberation creates a hole in the deep shell, which is immediately filled by electrons from outer shells of the atom. Since the electron from the outer shell is at a higher energy state than the inner shell electron, a cascade process is initiated which results in the emission of radiation which is characteristic for the absorbing atom.
@@ -55,7 +53,7 @@ Coherent or Rayleigh scattering is an interaction process where no ionization oc
 
 \def\width{0.5\linewidth}%
 \def\height{0.309\linewidth}% =0.8*0.618
-\begin{figure}%
+\begin{figure}[htb]%
 	\noindent\makebox[\textwidth]{%
 		\centering%
 		\subfloat[Overview]{%
@@ -69,6 +67,7 @@ Coherent or Rayleigh scattering is an interaction process where no ionization oc
 		}%
 	\caption[Interaction types]{Percentage of the different interaction types specified above as a function of the beam energy in water. \subref{subfig:Interaction-Big}: Overview over the full given energy range. \subref{subfig:Interaction-Small}: Detailed view. The lightgray region is the energy-range of \ac{tomcat}, the dark gray region marks the energy range of the experiments described in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010} of this thesis. Data from~\citet[Table 5-5]{Johns1983}.}%
 	\label{fig:InteractionPercentage}%
+	\todo[inline]{Ausrichtung!}
 \end{figure}%
 
 \subsection{Attenuation}
@@ -155,7 +154,7 @@ The corrected projections are then transformed into so-called sinograms, where t
 
 Sinograms inherit their name because the Radon transformation\graffito{The Radon transformation was described in 1917 by Johann \citet{Radon1917} and is the mathematical basis for tomographic imaging.} of a Dirac delta peak resembles a sine wave. The Radon transformation of a cluster of objects appears as an overlay of blurred sine waves with different amplitudes and phases, as shown in \autoref{subfig:sin}, since any object can be considered as a collection of many small points.
 
-One sinogram contains the total information of one plane or slice of the reconstructed tomographic image. We can thus reconstruct the $n$\textsuperscript{th} slice of the tomographic dataset from the $n$\textsuperscript{th} sinogram using different reconstructing algorithms, e.g.\ a standard filtered back-projection algorithm. In a reconstructed slice, the absorption properties of the sample at a certain height are encoded by the gray values of the image, as shown in \autoref{subfig:rec}. This virtual slice into a rat lung sample is part of a dataset permitting a fully three-dimensional, unrestricted view into the sample in a non-destructive way.
+One sinogram contains the total information of one plane or slice of the reconstructed tomographic image. We can thus reconstruct the $n$\textsuperscript{th} slice of the tomographic dataset from the $n$\textsuperscript{th} sinogram using different reconstructing algorithms, e.g.\ a standard filtered back-projection algorithm. In a reconstructed slice, the absorption properties of the sample at a certain height are encoded by the gray values of the image, as shown in \autoref{subfig:rec}\todo{Zahlen anders, damit H\"ohe besser stimmt}. This virtual slice into a rat lung sample is part of a dataset permitting a fully three-dimensional, unrestricted view into the sample in a non-destructive way.
 
 \renewcommand{\imsize}{0.705\linewidth}%sqrt(2)/2
 \begin{figure}[htb]%
@@ -186,13 +185,13 @@ The amount of scanned projections---the number of angles at which projections ha
 
 Paraphrased to tomographic imaging, the sampling theorem states that the minimal number of recorded angles along the rotation of the sample must be at least equal to twice the highest frequency used to scan the sample.
 
-From calculations in polar coordinates one can deduce that for a detector with the size $N$ $M=\frac{\pi}{n}N$ angular projections are required to fulfill the sampling theorem for tomographic reconstruction~\cite{Stampanoni2002a}. Generally, for well-balanced reconstructed image with a size of $N\times N$ pixels, recorded with a detector of the same size, the total number of projections should be roughly equal to $N$~\cite{Kak2002}. In in layman's terms, we can thus say that if we scan a sample with a detector of 1024$\times$1024 pixels, we need to record approximately 1000 projections over a sample rotation of \SI{180}{\degree}.
+From calculations in polar coordinates one can deduce that for a detector with the size $N$ $M=\frac{\pi}{n}N$ angular projections are required to fulfill the sampling theorem for tomographic reconstruction~\cite{Stampanoni2002a}. Generally, for well-balanced reconstructed image with a size of $N\times N$ pixels, recorded with a detector of the same size, the total number of projections should be roughly equal to $N$~\cite{Kak2002}. In layman's terms, we can thus say that if we scan a sample with a detector of 1024$\times$1024 pixels, we need to record approximately 1000 projections over a sample rotation of \SI{180}{\degree}.
 
 At \ac{tomcat} this rule of thumb is exactly obeyed in the case of a tomographic scan with a binned\graffito{Binning is the process where 2$\times$2 pixels on the camera are averaged to one pixel, both to reduce the image size and noise.} detector. For a standard scan with an unbinned detector---resulting in images with a size of 2048$\times$2048 pixels---only 1500 projections are acquired, thus violating the rule. But even with this seemingly undersampled data acquisition, reconstructions with very high quality are obtained.
 
 \autoref{ch:haberthuer2010} presents a scanning method where the sampling theorem is deliberately violated both to increase the field of view of \ac{tomcat} and to reduce the radiation dose imparted on the sample.
 
-For classic tomographic imaging, an x-ray tube is used as a source of radiation. In \ac{srxtm}, which was used to obtain the tomographic data for this thesis---as the name suggests---x-rays from a synchrotron are used as a radiation source. The following sections give a short overview over the underlying theory of the synchrotron radiation and a quick rundown on the \ac{sls} and the beamline where all the presented experiments have been carried out.
+For classic tomographic imaging, an x-ray tube is used as a source of radiation. In \ac{srxtm}, which was used to obtain the tomographic data for this thesis---as the name suggests---x-rays from a synchrotron are used as a radiation source. The following sections give a short overview over the underlying theory of the synchrotron radiation and a short rundown on the \ac{sls} and the beamline where all the presented experiments have been carried out.
 
 \section{Synchrotron Radiation}
 Synchrotron facilities use the fact that accelerated particles traveling on a curved trajectory emit radiation. If charged particles at relativistic speed undergo a change of direction (\ie in a magnetic field) so-called synchrotron radiation is emitted. 
@@ -221,8 +220,7 @@ Bending magnets\graffito{Such magnets are also used in traditional televisions, 
 		}
 	\caption[Bending magnet radiation]{Bending magnet radiation of wavelength $\lambda$ produced by a relativistic electron traveling in an uniform magnetic field. %
 		\subref{subfig:bend}: Electrons execute a circular motion with acceleration directed towards the center. The radiation is directed tangentially outward in a narrow radiation cone with an emission angle of typically $\frac{1}{\gamma}$ where $\gamma$ is the Lorentz contraction factor. %
-		\subref{subfig:bend-spectrum}: The radiation spectrum is very broad, analogous to a white light x-ray light bulb.%
-		Adapted from~\cite{Attwood2007}.}% http://is.gd/biHF4
+		\subref{subfig:bend-spectrum}: The radiation spectrum is very broad, analogous to a white light x-ray light bulb. Adapted from~\cite{Attwood2007}.}% http://is.gd/biHF4
 	\label{fig:bending magnets}
 \end{figure}%
 
@@ -241,9 +239,7 @@ Bending magnets\graffito{Such magnets are also used in traditional televisions, 
 			\label{subfig:undulator-spectrum}%
 			}%
 		}
-	\caption[Undulator radiation]{Undulator radiation is generated as a highly relativistic electron traverses a periodic magnetic field.%
-		\subref{subfig:undulator}: The magnetic field in an undulator is relatively weak and the resultant angular excursions of the electron are smaller than the angular width of the natural radiation cone, $\frac{1}{\gamma}$, normally associated with synchrotron radiation.%
-		\subref{subfig:undulator-spectrum}: The frequency spread of undulator radiation can be very narrow, and the radiation can be extremely bright and partially coherent, under certain circumstances. The characteristic emission angle is narrowed by a factor $\sqrt N$, where $N$ is the number of magnetic periods. Typically $N$ is of order 100. Depending on the magnet strength, harmonic radiation may be generated. Adapted from~\cite{Attwood2007}.}%http://is.gd/biHF4
+	\caption[Undulator radiation]{Undulator radiation is generated as a highly relativistic electron traverses a periodic magnetic field. \subref{subfig:undulator}: The magnetic field in an undulator is relatively weak and the resultant angular excursions of the electron are smaller than the angular width of the natural radiation cone, $\frac{1}{\gamma}$, normally associated with synchrotron radiation. \subref{subfig:undulator-spectrum}: The frequency spread of undulator radiation can be very narrow, and the radiation can be extremely bright and partially coherent, under certain circumstances. The characteristic emission angle is narrowed by a factor $\sqrt N$, where $N$ is the number of magnetic periods. Typically $N$ is of order 100. Depending on the magnet strength, harmonic radiation may be generated. Adapted from~\cite{Attwood2007}.}%http://is.gd/biHF4
 	\label{fig:undulator}%
 \end{figure}
 
@@ -268,7 +264,7 @@ Bending magnets\graffito{Such magnets are also used in traditional televisions, 
 	\label{fig:wiggler}
 \end{figure}%
 
-Undulators consist of periodic structures of dipole magnets with relatively weak fields. The alternating static magnetic field forces the electrons to harmonically oscillate as they move in the axial direction, resulting in an undulating motion of the particles inside the structure. The weak magnetic fields cause small amplitude undulation which leads to a narrow radiation cone as a result. Through coherent addition of the tightly confined electron beam, the produced radiation is emitted with small angular divergence and concentrated in narrow energy bands~\cite{Stampanoni2002a}.
+Undulators consist of periodic structures of dipole magnets with relatively weak fields. The alternating static magnetic field forces the electrons to harmonically oscillate as they move in the axial direction, resulting in an undulating motion of the particles inside the structure. The weak magnetic field causes small amplitude undulations which lead to a narrow radiation cone. Through coherent addition of the tightly confined electron beam, the produced radiation is emitted with small angular divergence and concentrated in narrow energy bands~\cite{Stampanoni2002a}.
 
 Wigglers are the strong brothers of the undulators. Due to stronger magnetic fields the oscillation amplitude of the electrons and the emitted radiation power are larger and the radiation cone is broader.
 
