@@ -20,7 +20,7 @@ The basic idea of todays tomography was already described in a patent granted to
 
 While observing the planning of radiotherapy treatments, Allan M.\ Cormack realized that these treatments would greatly benefit if the x-ray attenuation coefficient distribution in the body would be known. In 1963 \citet{Cormack1963} reported about the investigation of a cylindrical disk with a diameter of \SI{20}{\centi\meter} which was made of two concentric aluminum cylinders embedded in an oak annulus. Using a collimated \isotope[60]{Co} source and a Geiger counter as a detector, \citeauthor{Cormack1963} was able to detect the absorption coefficients of the materials in the cylinder and repeated this experiments with an asymmetrical phantom consisting of aluminum and plastic. But since the calculations necessary for the extraction of the attenuation coefficients were both time-consuming and difficult, the presented results never really caught on. Cormack remarked that \begin{quote} There was virtually no response. The most interesting request for a reprint came from a Swiss Centre for Avalanche Research\graffito{Sigi, this quote is especially for you!}. The method would work for deposits of snow on mountains if one could get either the detector or the source into the mountain under the snow! \cite{Cormack1979}\end{quote}
 
-In 1967, Godfrey N.\ Hounsfield started to develop the first clinical tomography scanners at the EMI Central Research Laboratories in the United Kingdom~\cite{Hsieh2003}. The first laboratory scanners took 9 days to acquire a scan of one slice of a cow brain~\cite{Hounsfield1976}, but paved the path to the first clinically available \ac{ct} machines in hospitals and the scientific community. In 1979 Cormack and Hounsfield shared the Nobel Prize for Physiology and Medicine for their pioneering work in \ac{ct}.
+In 1967, Godfrey N.\ Hounsfield started to develop the first clinical tomography scanners at the EMI Central Research Laboratories in the United Kingdom~\cite{Hsieh2003}. The first laboratory scanners took nine (!) days to acquire a scan of one slice of a cow brain~\cite{Hounsfield1976}, but paved the path to the first clinically available \ac{ct} machines in hospitals and the scientific community. In 1979 Cormack and Hounsfield shared the Nobel Prize for Physiology and Medicine for their pioneering work in \ac{ct}.
 
 From the early 1980s on, \ac{ct} imaging became an important tool to answer scientific questions both in medical and industrial applications.
 
@@ -67,7 +67,7 @@ Coherent or Rayleigh scattering is an interaction process where no ionization oc
 			\label{subfig:Interaction-Small}%
 			}%
 		}%
-	\caption[Interaction types]{Percentage of the different interaction types specified above as a function of the beam energy in water. \subref{subfig:Interaction-Big}: Overview over the full given energy range. \subref{subfig:Interaction-Small}: Detailed view. The lightgray region is the energy-range of \ac{tomcat}, the dark gray region marks the energy range of the experiments described in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010} of this thesis. Data from~\citet[Table 5-5]{Johns1983}, unfortunately data below \SI{10}{\kilo\electronvolt} is missing in the source.}%
+	\caption[Interaction types]{Percentage of the different interaction types specified above as a function of the beam energy in water. \subref{subfig:Interaction-Big}: Overview over the full given energy range. \subref{subfig:Interaction-Small}: Detailed view. The lightgray region is the energy-range of \ac{tomcat}, the dark gray region marks the energy range of the experiments described in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010} of this thesis. Data from~\citet[Table 5-5]{Johns1983}.}%
 	\label{fig:InteractionPercentage}%
 \end{figure}%
 
@@ -147,9 +147,8 @@ Before and after the scan, so-called dark ($I_{D}$) and flat images ($I_{F}$) ar
 			\label{subfig:cpr}%
 			}%
 	}%
-	\caption[Correction of the projections with flat images]{Correction of the raw recorded projections with the flat images. \subref{subfig:pi}: Recorded projection image. A set of these is the output of one tomographic scanning session. \subref{subfig:fi}: Flat image; obtained at the start of the scan to record the beam profile. \subref{subfig:cpr}: Corrected projection obtained after \autoref{eq:cpr} has been applied on the projection and flat image shown in panels \subref{subfig:pi} and \subref{subfig:fi}. All three images have a size of 1024$\times$1024 pixels with a size of \SI{1.48}{\micro\meter} each and are from a dataset of a rat lung.}
+	\caption[Correction of the projections with flat images]{Correction of the raw recorded projections with the flat images. \subref{subfig:pi}: Recorded projection image. A set of these is the output of one tomographic scanning session. \subref{subfig:fi}: Flat image; obtained at the start of the scan to record the beam profile. \subref{subfig:cpr}: Corrected projection obtained after \autoref{eq:cpr} has been applied on the projection and flat image shown in panels \subref{subfig:pi} and \subref{subfig:fi}. All three images have a size of 1024$\times$1024 pixels with a size of \SI{1.48}{\micro\meter} each and are from a dataset of a rat lung sample obtained at postnatal day eight.}
 	\label{fig:corrected projection}%
-	\todo[inline]{L-XXI-18, beamtime 2010a, Matthias Roth --> Add details in Caption}%
 \end{figure}%
 
 The corrected projections are then transformed into so-called sinograms, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of each projection. From one tomographic scan with 1500 projections recorded with a detector with a size of 2048$\times$2048 pixels, we get a set of 1024 sinograms with a size of 1024$\times$1500 pixels each.
@@ -181,7 +180,6 @@ One sinogram contains the total information of one plane or slice of the reconst
 	}%
 	\caption[Sinogram and Reconstruction]{Sinogram and Reconstruction of the projections of the rat lung sample shown in \autoref{fig:corrected projection}. \subref{subfig:sin}: The $n$\textsuperscript{th} sinogram has been obtained after reordering the $n$\textsuperscript{th} line of each of the 1501 corrected projections. The sinogram has been rescaled to a square format for display purposes, it would have a size of 1024$\times$1501 pixels. It doesn't really make sense to draw a scalebar on a sinogram, it has thus been omitted. \subref{subfig:rec}: The tomographic reconstruction of the complete set of sinograms results in a set of 1024 reconstructed slices with 1024$\times$1024 pixels of a size of \SI{1.48}{\micro\meter} each. A set of such slices is then used for further processing, measuring and three-dimensional visualization.}
 	\label{fig:Sin Rec}
-		\todo[inline]{L-XXI-18, beamtime 2010a, Matthias Roth --> Add details in Caption}%
 \end{figure}%
 
 The amount of scanned projections---the number of angles at which projections have been recorded---is defined by the so-called sampling theorem. The sampling theorem as defined by \citet{Shannon1949} states that: \begin{quote}If a function $f(t)$ contains no frequencies higher than $W$ cps, it is completely determined by giving its ordinates at a series of points spaced $1/2\ W$ seconds apart. \cite{Shannon1949}\end{quote}
@@ -274,7 +272,9 @@ Undulators consist of periodic structures of dipole magnets with relatively weak
 
 Wigglers are the strong brothers of the undulators. Due to stronger magnetic fields the oscillation amplitude of the electrons and the emitted radiation power are larger and the radiation cone is broader.
 
-The relativistic electrons inside the storage ring are usually produced by a hot filament and subsequently pre-accelerated and injected into the storage ring by a linear accelerator. Bending magnets along the storage ring keep the electrons on their circular path. Quadrupole magnets along the ring are used to improve the geometrical characteristics of the electron beam, \ie reduce the transverse section and angular spread of the beam, hence improving the so-called brightness of the source~\cite{Margaritondo2002}.
+The relativistic electrons inside the storage ring are usually produced by a hot filament and subsequently pre-accelerated and injected into the storage ring by a linear accelerator. Most third-generation synchrotron light sources are operated in the so-called top-up mode, where a steady current in the storage ring is maintained through periodical injection of small amounts of current from a booster ring or directly from the linear accelerator. 
+
+Bending magnets along the storage ring keep the electrons on their circular path. Quadrupole magnets along the ring are used to improve the geometrical characteristics of the electron beam, \ie reduce the transverse section and angular spread of the beam, hence improving the so-called brightness of the source~\cite{Margaritondo2002}.
 
 Using one of the three above mentioned structures, the radiation is then outcoupled of the storage ring and transferred into the measuring hut. At \ac{tomcat} the radiation is outcoupled using a very strong bending magnet, a so-called superbend, which is described in detail below.
 
@@ -285,7 +285,7 @@ The \ac{sls} at the \ac{psi} in Villigen, Switzerland is a third-generation sync
 \begin{figure}%
 	\centering
 	\includegraphics[width=\imsize]{img/sls_strahllinien_e_innererRing1108_crop_edit}
-	\caption[Beamlines at the \acs{sls}]{Beamlines at the \ac{sls}. Currently, 17 beamlines are in operation while 4 beamlines are under construction. Image from the \href{http://sls.web.psi.ch/view.php/beamlines/}{\ac{sls} Website}~\cite{wwwsls}.}
+	\caption[Beamlines at the \acs{sls}]{Beamlines at the \ac{sls}. Currently, 17 beamlines are in operation while four beamlines are under construction. Image from the \href{http://sls.web.psi.ch/view.php/beamlines/}{\ac{sls} Website}~\cite{wwwsls} (with permission).}
 	\label{fig:beamlines}
 \end{figure}%
 
@@ -325,14 +325,14 @@ The x-rays which penetrated the sample are detected using a combination of a sci
 		}%
 
 	}%
-	\caption[The \acs{tomcat} beamline]{The \ac{tomcat} beamline. \subref{subfig:TOMCATpano}: \SI{180}{\degree} panoramic view. The pipe in the center of the image in which the radiation is projected into the measuring hut is actually perfectly straight, it is just bent in this panoramic image. \subref{subfig:TOMCAT1}: Overview: The blue structure behind the control notebook is the sample stage with the sample holder on the rotation stage on top of it. The black structure above contains the scintillator, the microscope optics and the camera. The yellow contraption is the sample positioning robot used for unattended measurements. \subref{subfig:TOMCAT2}: Detail of the microscope optics: The sample rotation stage is visible in the middle of the image. The round black structure just behind the sample rotation stage contains the microscope objectives. The rectangle in the lower part of the objective revolver is the scintillator which is used to convert the x-ray beam into visible light, which after magnification is then recorded with the \ac{ccd}-camera. \subref{subfig:TOMCAT3}: Rat lung sample on top of sample holder reflected in the scintillator. The table on top of the sample holder where the sample is mounted on has a diameter of \SI{12}{\milli\meter}.}%
+	\caption[The \acs{tomcat} beamline]{The \ac{tomcat} beamline. \subref{subfig:TOMCATpano}: \SI{180}{\degree} panoramic view. The pipe in the center of the image in which the radiation is projected into the measuring hut is actually perfectly straight, it is just bent in this panoramic image. \subref{subfig:TOMCAT1}: Overview: The blue structure behind the control notebook is the sample stage with the sample holder on the rotation stage on top of it. The black structure above contains the scintillator, the microscope optics and the camera. The yellow contraption is the sample positioning robot used for unattended measurements. \subref{subfig:TOMCAT2}: Detail of the microscope optics: The sample rotation stage is visible in the middle of the image. The round black structure just behind the sample rotation stage contains the microscope objectives. The rectangle in the lower part of the objective revolver is the scintillator which is used to convert the x-ray beam into visible light, which after magnification is then recorded with the \ac{ccd}-camera. \subref{subfig:TOMCAT3}: Rat lung sample on top of sample holder reflected in the scintillator. The standard scanning electron microscopy table with the mounted sample on top has a diameter of \SI{12}{\milli\meter}.}%
 	\label{fig:tomcat}
 \end{figure}%
 
-The sample position in the beam and the parameters of the scan---like exposure time, amount of projections, name, etc.---are controlled from outside the measuring hut through an \ac{epics}.
+The sample position in the beam and the parameters of the scan---like exposure time, number of projections, name, etc.---are controlled from outside the measuring hut through an \ac{epics}.
 
-After the start has been started, sinograms are calculated on the fly and the tomographic reconstruction can be initialized using a web-based interface seconds after the scan has been finished. This interface and the general reconstruction workflow and management of the reconstruction cluster has been thoroughly described by \citet{Hintermueller2010}.
+After the scan has been started, sinograms are calculated on the fly and the tomographic reconstruction can be initialized using a web-based interface seconds after the scan has been finished. This interface and the general reconstruction workflow and management of the reconstruction cluster has been thoroughly described by \citet{Hintermueller2010}.
 
-The web-based interface is used to submit the reconstruction of the tomographic datasets to a computing cluster of five \SI{64}{\bit} Opteron machines with four cores and \SI{8}{\giga\byte} \acs{ram} each. Immediately after reconstruction on the cluster the resulting data is copied to an external disk which makes it possible that the recorded tomographic datasets can be taken to the home laboratory immediately after the beamtime shifts.
+The web-based interface is used to submit the reconstruction of the tomographic datasets to a computing cluster of seven \SI{64}{\bit} Opteron machines with four cores and \SI{8}{\giga\byte} \acs{ram} each. Immediately after reconstruction on the cluster the resulting data is copied to an external disk which makes it possible that the recorded tomographic datasets can be taken to the home laboratory immediately after the beamtime shifts.
 
-This is where the real work starts\ldots
+This is where the real work begins\ldots

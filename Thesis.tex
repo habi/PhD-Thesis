@@ -42,6 +42,7 @@
 \usepackage{tikz}
 	\usetikzlibrary{shapes,arrows,patterns}
 \usepackage{pgfplots}
+	\usetikzlibrary{pgfplotsclickable}
 \usepackage[version=3]{mhchem}
 \usepackage[alsoload=synchem,binary,obeyall]{siunitx}
 \usepackage{makeidx}
@@ -59,7 +60,7 @@
 	eulermath,%
 	%dottedtoc,%
 	parts]{classicthesis}
-%\usepackage[margin=1.3in]{geometry}\usepackage{setspace}\doublespacing
+\usepackage[margin=1.3in]{geometry}\usepackage{setspace}\doublespacing
 \usepackage[all]{hypcap}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Setup and Finetuning
@@ -152,9 +153,9 @@
 % Frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%
 \include{FrontBackmatter/Titlepage}
-%\cleardoublepage\include{FrontBackmatter/DirtyTitlepage}
-%\cleardoublepage\include{FrontBackmatter/Titleback}
-%\cleardoublepage\include{FrontBackmatter/Dedication}
+\cleardoublepage\include{FrontBackmatter/DirtyTitlepage}
+\cleardoublepage\include{FrontBackmatter/Titleback}
+\cleardoublepage\include{FrontBackmatter/Dedication}
 \cleardoublepage\include{FrontBackmatter/AbstractE}
 \cleardoublepage\include{FrontBackmatter/AbstractD}
 \cleardoublepage\include{FrontBackmatter/Acknowledgments}
@@ -171,9 +172,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Results}\label{part:results}
 \include{Chapters/Publications}
-%\include{Chapters/XRM2008}
-%\include{Chapters/Tsuda2008}
-%\include{Chapters/Haberthuer2010}
+\include{Chapters/XRM2008}
+\include{Chapters/Tsuda2008}
+\include{Chapters/Haberthuer2010}
 %%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Discussion \& Outlook}\label{part:discussion}
 \include{Chapters/Discussion}
@@ -184,7 +185,7 @@
 \cleardoublepage\myPart{Back Matter}\label{part:back matter}
 \cleardoublepage\include{FrontBackmatter/CurriculumVitae}
 \cleardoublepage\include{FrontBackmatter/Bibliography}
-%\cleardoublepage\include{FrontBackmatter/Declaration}
-%\cleardoublepage\include{FrontBackmatter/Colophon}
+\cleardoublepage\include{FrontBackmatter/Declaration}
+\cleardoublepage\include{FrontBackmatter/Colophon}
 %%%%%%%%%%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
 \end{document}
