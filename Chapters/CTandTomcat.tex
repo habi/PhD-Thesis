@@ -49,13 +49,12 @@ where $m_e$ stands for the electron mass and $c$ for the speed of light.
 \subsubsection{Coherent scattering}
 Coherent or Rayleigh scattering is an interaction process where no ionization occurs and no energy is converted into kinetic energy. The incident electromagnetic wave sets the electrons in the magnetic field into vibration with an oscillating electric field. The oscillating electrons emit coherent radiation, but since not all electrons are located at the same point inside the atom, the emitted radiation is not in phase~\cite{Hsieh2003,Stampanoni2002}.
 
-\autoref{fig:InteractionPercentage} shows the relative percentages of interaction for the different interaction types. Note that albeit pair production is shown in the plots, it has not been described, since it is only relevant for energies much higher than the energies used in the experiments in this thesis, performed around \SI{12}{\kilo\electronvolt}. For this energy, the photoelectric absorption is the major interaction process, even if it rapidly decreases for higher energies. Not only is the interaction rate higher for the photoelectric effect, but also the major part of the energy is transferred, since more energy is transferred in a photoelectric interaction than in a Compton interaction.
+\autoref{fig:InteractionPercentage} shows the relative percentages of interaction for the different interaction types. Note that albeit pair production is shown in the plots, it has not been described, since it is only relevant for energies much higher than the energies used in the experiments in this thesis, performed around \SI{12}{\kilo\electronvolt}. 
 
 \def\width{0.5\linewidth}%
-\def\height{0.309\linewidth}% =0.8*0.618
+\def\height{0.309\linewidth}% =0.5*0.618
 \begin{figure}[htb]%
 	\noindent\makebox[\textwidth]{%
-		\centering%
 		\subfloat[Overview]{%
 			\input{Plots/InteractionPercentage-Big}%
 			\label{subfig:Interaction-Big}%
@@ -67,23 +66,26 @@ Coherent or Rayleigh scattering is an interaction process where no ionization oc
 		}%
 	\caption[Interaction types]{Percentage of the different interaction types specified above as a function of the beam energy in water. \subref{subfig:Interaction-Big}: Overview over the full given energy range. \subref{subfig:Interaction-Small}: Detailed view. The lightgray region is the energy-range of \ac{tomcat}, the dark gray region marks the energy range of the experiments described in chapters~\ref{ch:xrm2008}--\ref{ch:haberthuer2010} of this thesis. Data from~\citet[Table 5-5]{Johns1983}.}%
 	\label{fig:InteractionPercentage}%
-	\todo[inline]{Ausrichtung!}
 \end{figure}%
 
+We see that for the energies used in this work (dark grey stripe in \autoref{fig:Interactionpercentage}), the photoelectric effect is the major interaction process, even if its amount rapidly decreases for higher energies. Not only is the interaction rate higher for the photoelectric effect, but also the major part of the beam energy is transferred, since more energy is transferred in a photoelectric interaction than in a Compton interaction.
+
 \subsection{Attenuation}
-The total effect of the three effects described above can be summarized with the total linear attenuation coefficient shown in \autoref{eq:linear attenuation}. This equation expresses the attenuation of a monochromatic\graffito{Monochromatic light is light of a single wavelength or energy, though in practice it often refers to a narrow wavelength range} beam as it passes through a material. The attenuation in a material of uniform density and atomic number can be expressed by an exponential relationship%
+The total effect of the three effects described above can be summarized with the total linear attenuation coefficient shown in \autoref{eq:linear attenuation}. This equation expresses the attenuation of a monochromatic\graffito{Monochromatic light is light of a single wavelength or energy, though in practice it often refers to a narrow wavelength range} beam as it passes through a material. The attenuation in a material of uniform density and atomic number can be expressed by an exponential relationship
 \begin{equation}%
 	I=I_{0}e^{-(\tau+\sigma_{C}+\sigma_{R})x}%
 	\label{eq:linear attenuation}%
 \end{equation}%
-where $I$ and $I_{0}$ are the incident and transmitted intensities of the x-rays and $x$ is the distance which the x-rays travel through the material. $\tau$, $\sigma_{C}$ and $\sigma_{R}$ are the attenuation coefficients of the photoelectric, incoherent (Compton) and coherent (Rayleigh) scattering interactions in the material, respectively. \autoref{eq:linear attenuation} is often expressed as
+where $I$ and $I_{0}$ are the transmitted and incident intensities of the x-rays and $x$ is the distance which the x-rays travel through the material. $\tau$, $\sigma_{C}$ and $\sigma_{R}$ are the attenuation coefficients of the photoelectric, incoherent (Compton) and coherent (Rayleigh) scattering interactions in the material, respectively.
+
+The so-called Beer-Lambert law as shown in \autoref{eq:beer-lambert} summarizes the single attenuation coefficients into one attenuation coefficient $\mu$, depending on the material and on the photon energy of the incident x-ray beam~\cite{Hsieh2003}:
 \begin{equation}
 	I/I_{0}=e^{-\mu x}
 	\label{eq:beer-lambert}
 \end{equation}%
-the so-called Beer-Lambert law, where $\mu$ is the attenuation coefficient of the material, which is depending on the incident x-ray photon energy~\cite{Hsieh2003}. 
+We can thus calculate the fraction of the transmitted to the incident beam intensities knowing the travel distance of the beam through the material and the attenuation coefficient of said material.
 
-\autoref{fig:yag attenuation} shows the composition of the attenuation coefficient for Cerium doped \ac{yag} (\cf{Y3Al5O12}), which is used as a material for converting the incident x-rays to visible light. This so-called scintillator is part of the microtomography station at \ac{tomcat} and is described in detail in \autoref{sec:tomcat}.
+As an example, \autoref{fig:yag attenuation} shows the composition of the attenuation coefficient for Cerium doped \ac{yag} (\cf{Y3Al5O12}), which can be used as a material for converting the incident x-rays to visible light. Ce:\ac{yag} is used as a so-called scintillator as a part of the microtomography station at \ac{tomcat} which is described in detail in \autoref{sec:tomcat}.
 
 \def\width{\linewidth}%
 \def\height{0.618\linewidth}%
@@ -101,7 +103,7 @@ In general, \ac{ct} refers to the cross-sectional imaging of a sample from trans
 
 In medical \ac{ct}-scanners, the transmission images are generally obtained while the radiation source and the detector rotate around the body part to be imaged. In micro-computed and synchrotron based tomography, the source and detector are fixed, while the sample to be imaged rotates around a chosen axis.
 
-During the imaging process multiple transmission images---essentially single radiographic images---are obtained at several equidistant angles over a \unit{180}{\degree} or \unit{360}{\degree} rotation. These projections can be understood as pictures of the distribution of the attenuation of the x-rays inside the sample. Regions with high attenuation show up as dark pixels, regions with low attenuation inside the sample show up as light pixels on the \ac{ccd}-chip of the camera.
+During the imaging process multiple transmission images---essentially single radiographic images---are obtained at several equidistant angles over a \unit{180}{\degree} or \unit{360}{\degree} rotation. These projections can be understood as pictures of the distribution of the attenuation of the x-rays inside the sample. Regions with high attenuation (\eg tissue) show up as dark pixels, regions with low attenuation (\eg airway lumens) show up as light pixels on the \acsu{ccd}-chip of the camera.
 
 Before and after the scan, so-called dark ($I_{D}$) and flat images ($I_{F}$) are recorded. The dark images record the camera noise and dark current, while the flat images record the beam profile. After baseline correction of the projections ($I_{P}$) the average of the dark images is subtracted. The projections are then normalized to the flat images as seen in \autoref{eq:cpr}, using the average dark and average flat images ($\overline{I_{D}}$ and $\overline{I_{F}}$, respectively) resulting in so-called corrected projections (CPR).%
 \begin{equation}%
@@ -154,7 +156,7 @@ The corrected projections are then transformed into so-called sinograms, where t
 
 Sinograms inherit their name because the Radon transformation\graffito{The Radon transformation was described in 1917 by Johann \citet{Radon1917} and is the mathematical basis for tomographic imaging.} of a Dirac delta peak resembles a sine wave. The Radon transformation of a cluster of objects appears as an overlay of blurred sine waves with different amplitudes and phases, as shown in \autoref{subfig:sin}, since any object can be considered as a collection of many small points.
 
-One sinogram contains the total information of one plane or slice of the reconstructed tomographic image. We can thus reconstruct the $n$\textsuperscript{th} slice of the tomographic dataset from the $n$\textsuperscript{th} sinogram using different reconstructing algorithms, e.g.\ a standard filtered back-projection algorithm. In a reconstructed slice, the absorption properties of the sample at a certain height are encoded by the gray values of the image, as shown in \autoref{subfig:rec}\todo{Zahlen anders, damit H\"ohe besser stimmt}. This virtual slice into a rat lung sample is part of a dataset permitting a fully three-dimensional, unrestricted view into the sample in a non-destructive way.
+One sinogram contains the total information of one plane or slice of the reconstructed tomographic image. We can thus reconstruct the $n$\textsuperscript{th} slice of the tomographic dataset from the $n$\textsuperscript{th} sinogram using different reconstructing algorithms, e.g.\ a standard filtered back-projection algorithm. In a reconstructed slice, the absorption properties of the sample at a certain height are encoded by the gray values of the image, as shown in \autoref{subfig:rec}. This virtual slice into a rat lung sample is part of a dataset permitting a fully three-dimensional, unrestricted view into the sample in a non-destructive way.
 
 \renewcommand{\imsize}{0.705\linewidth}%sqrt(2)/2
 \begin{figure}[htb]%
@@ -177,7 +179,7 @@ One sinogram contains the total information of one plane or slice of the reconst
 			\label{subfig:rec}%
 		}%
 	}%
-	\caption[Sinogram and Reconstruction]{Sinogram and Reconstruction of the projections of the rat lung sample shown in \autoref{fig:corrected projection}. \subref{subfig:sin}: The $n$\textsuperscript{th} sinogram has been obtained after reordering the $n$\textsuperscript{th} line of each of the 1501 corrected projections. The sinogram has been rescaled to a square format for display purposes, it would have a size of 1024$\times$1501 pixels. It doesn't really make sense to draw a scalebar on a sinogram, it has thus been omitted. \subref{subfig:rec}: The tomographic reconstruction of the complete set of sinograms results in a set of 1024 reconstructed slices with 1024$\times$1024 pixels of a size of \SI{1.48}{\micro\meter} each. A set of such slices is then used for further processing, measuring and three-dimensional visualization.}
+	\caption[Sinogram and Reconstruction]{Sinogram and Reconstruction of the projections of the rat lung sample shown in \autoref{fig:corrected projection}. \subref{subfig:sin}: The $n$\textsuperscript{th} sinogram has been obtained after reordering the $n$\textsuperscript{th} line of each of the 1501 corrected projections. The sinogram has been rescaled to a square format for display purposes, it would have a size of 1024$\times$1501 pixels. \subref{subfig:rec}: The tomographic reconstruction of the complete set of sinograms results in a set of 1024 reconstructed slices with 1024$\times$1024 pixels of a size of \SI{1.48}{\micro\meter} each. A set of such slices is then used for further processing, measuring and three-dimensional visualization.}
 	\label{fig:Sin Rec}
 \end{figure}%
 
@@ -201,19 +203,19 @@ Synchrotron radiation was first observed as energy loss in electron storage ring
 \subsection{Bending Magnets, Undulators and Wigglers}
 The three magnetic structures used in synchrotron facilities are bending magnets, undulators and wigglers. All three emit radiation with different characteristics and intensities.
 
-Bending magnets\graffito{Such magnets are also used in traditional televisions, which contain a cathode ray tube, which is essentially a small particle accelerator. They move the electron beam over the screen of the TV tube in a controlled fashion.~\cite{wiki:dipolemagnet}} are used to create a homogeneous magnetic field over a defined distance. The magnetic field inside forces accelerated particles injected into the bending magnet to travel on a circular trajectory. The result is a fan of radiation in the tangential direction of the bend.
+Bending magnets\graffito{Such magnets are also used in traditional televisions, which contain a cathode ray tube, which is essentially a small particle accelerator. They move the electron beam over the screen of the TV tube in a controlled fashion.~\cite{wiki:dipolemagnet}} are used to create a homogeneous magnetic field over a defined distance. The magnetic field inside forces accelerated particles that are injected into the bending magnet to travel on a circular trajectory. The result is a fan of radiation in the tangential direction of the bend.
 
 \begin{figure}%
 	\noindent\makebox[\textwidth]{%
 		\centering%
-		\subfloat[]{%
+		\subfloat[Beam]{%
 			\input{TikZ-Files/Radiation-BendingMagnet}%
 			\label{subfig:bend}%
 			}%
 		\hspace{4mm}%
 		\def\width{.309\linewidth}%
 		\def\height{.309\linewidth}%
-		\subfloat[]{%
+		\subfloat[Spectrum]{%
 			\input{Plots/Plot-BendingMagnet}%
 			\label{subfig:bend-spectrum}%
 			}%
@@ -227,14 +229,14 @@ Bending magnets\graffito{Such magnets are also used in traditional televisions, 
 \begin{figure}%
 	\noindent\makebox[\textwidth]{%
 		\centering%
-		\subfloat[]{%
+		\subfloat[Beam]{%
 			\input{TikZ-Files/Radiation-Undulator}%
 			\label{subfig:undulator}%
 			}%
 		\hspace{4mm}%
 		\def\width{.309\linewidth}%
 		\def\height{.309\linewidth}%
-		\subfloat[]{%
+		\subfloat[Spectrum]{%
 			\input{Plots/Plot-Undulator}%
 			\label{subfig:undulator-spectrum}%
 			}%
@@ -246,14 +248,14 @@ Bending magnets\graffito{Such magnets are also used in traditional televisions, 
 \begin{figure}%
 	\noindent\makebox[\textwidth]{%
 		\centering
-		\subfloat[]{%
+		\subfloat[Beam]{%
 			\input{TikZ-Files/Radiation-Wiggler}%
 			\label{subfig:wiggler}%
 			}%
 		\hspace{4mm}%
 		\def\width{.309\linewidth}%
 		\def\height{.309\linewidth}%
-		\subfloat[]{%
+		\subfloat[Spectrum]{%
 			\input{Plots/Plot-Wiggler}%
 			\label{subfig:wiggler-spectrum}%
 			}%
