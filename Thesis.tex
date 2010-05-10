@@ -27,7 +27,7 @@
 \usepackage{tikz}
 	\usetikzlibrary{shapes,arrows,patterns}
 \usepackage{pgfplots}
-	\usetikzlibrary{pgfplotsclickable}
+	%\usetikzlibrary{pgfplotsclickable}
 \usepackage[version=3]{mhchem}
 \usepackage[alsoload=synchem,binary,obeyall]{siunitx}
 \usepackage{makeidx}
@@ -69,7 +69,7 @@
 \newcommand{\myUni}{\protect{University of Bern}\xspace}
 \newcommand{\myLocation}{Bern, Switzerland\xspace}
 \newcommand{\myTime}{Mai 2010\xspace}
-\newcommand{\myVersion}{\href{http://subversion.apache.org/}{\acs{svn}}-Revision: \svnkw{LastChangedRevision} -- Last commit on \svnyear-\svnmonth-\svnday\  \svnhour :\svnminute :\svnsecond\xspace}
+\newcommand{\myVersion}{\href{http://subversion.apache.org/}{\acs{svn}}-Revision: \svnkw{LastChangedRevision} -- Commited on \svnyear-\svnmonth-\svnday\  \svnhour :\svnminute :\svnsecond\xspace}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Setup and Finetuning
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -160,10 +160,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%
-\include{FrontBackmatter/DirtyTitlepage}
-\cleardoublepage\include{FrontBackmatter/Titlepage}
-\include{FrontBackmatter/Titleback}
-\cleardoublepage\include{FrontBackmatter/Dedication}
+%\include{FrontBackmatter/DirtyTitlepage}
+%\cleardoublepage\include{FrontBackmatter/Titlepage}
+%\include{FrontBackmatter/Titleback}
+%\cleardoublepage\include{FrontBackmatter/Dedication}
 \cleardoublepage\include{FrontBackmatter/AbstractE}
 \cleardoublepage\include{FrontBackmatter/AbstractD}
 \cleardoublepage\include{FrontBackmatter/Acknowledgments}
@@ -180,9 +180,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Results}\label{part:results}
 \include{Chapters/Publications}
-\include{Chapters/XRM2008}
-\include{Chapters/Tsuda2008}
-\include{Chapters/Haberthuer2010}
+%\include{Chapters/XRM2008}
+%\include{Chapters/Tsuda2008}
+%\include{Chapters/Haberthuer2010}
 %%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Discussion \& Outlook}\label{part:discussion}
 \include{Chapters/Discussion}
@@ -191,9 +191,9 @@
 % Backmatter
 %%%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Back Matter}\label{part:back matter}
-\cleardoublepage\include{FrontBackmatter/CurriculumVitae}
+%\cleardoublepage\include{FrontBackmatter/CurriculumVitae}
 \cleardoublepage\include{FrontBackmatter/Bibliography}
-\cleardoublepage\include{FrontBackmatter/Declaration}
-\cleardoublepage\include{FrontBackmatter/Colophon}
+%\cleardoublepage\include{FrontBackmatter/Declaration}
+%\cleardoublepage\include{FrontBackmatter/Colophon}
 %%%%%%%%%%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
 \end{document}
