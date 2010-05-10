@@ -27,7 +27,7 @@
 \newcommand{\myUni}{\protect{University of Bern}\xspace}
 \newcommand{\myLocation}{Bern, Switzerland\xspace}
 \newcommand{\myTime}{Mai 2010\xspace}
-\newcommand{\myVersion}{Version 2.6\xspace}
+\newcommand{\myVersion}{SVN-Revision: \svnkw{LastChangedRevision}} -- \svnkw{LastChangedDate}\xspace}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Packages with options that might require adjustments
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -50,6 +50,13 @@
 \usepackage{pdfpages}
 \usepackage{isotope}
 \usepackage{xfrac}
+\usepackage{svnmulti}
+	\svnidlong
+		{$HeadURL$}
+		{$LastChangedDate$}
+		{$LastChangedRevision$}
+		{$LastChangedBy$}
+\svnid{$Id$} 
 \usepackage[%
 	eulerchapternumbers,%
 	listings,%
@@ -126,7 +133,7 @@
 \hypersetup{% http://www.jkrieger.de/tools/latex/hyperref.html helps!
 	colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
 	% uncomment the following line for black links for printing
-	%colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,%
+	colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,%
 	breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
 	plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
 	hypertexnames=true, pdfhighlight=/O,%
@@ -152,13 +159,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%
-%\include{FrontBackmatter/Titlepage}
-%\cleardoublepage\include{FrontBackmatter/DirtyTitlepage}
-%\cleardoublepage\include{FrontBackmatter/Titleback}
-%\cleardoublepage\include{FrontBackmatter/Dedication}
-%\cleardoublepage\include{FrontBackmatter/AbstractE}
-%\cleardoublepage\include{FrontBackmatter/AbstractD}
-%\cleardoublepage\include{FrontBackmatter/Acknowledgments}
+\include{FrontBackmatter/DirtyTitlepage}
+\cleardoublepage\include{FrontBackmatter/Titlepage}
+\cleardoublepage\include{FrontBackmatter/Titleback}
+\cleardoublepage\include{FrontBackmatter/Dedication}
+\cleardoublepage\include{FrontBackmatter/AbstractE}
+\cleardoublepage\include{FrontBackmatter/AbstractD}
+\cleardoublepage\include{FrontBackmatter/Acknowledgments}
 \pagestyle{scrheadings}
 \cleardoublepage\include{FrontBackmatter/Contents}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -172,9 +179,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Results}\label{part:results}
 \include{Chapters/Publications}
-%\include{Chapters/XRM2008}
-%\include{Chapters/Tsuda2008}
-%\include{Chapters/Haberthuer2010}
+\include{Chapters/XRM2008}
+\include{Chapters/Tsuda2008}
+\include{Chapters/Haberthuer2010}
 %%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Discussion \& Outlook}\label{part:discussion}
 \include{Chapters/Discussion}
@@ -182,10 +189,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Backmatter
 %%%%%%%%%%%%%%%%%%%%%%%
-%\cleardoublepage\myPart{Back Matter}\label{part:back matter}
-%\cleardoublepage\include{FrontBackmatter/CurriculumVitae}
+\cleardoublepage\myPart{Back Matter}\label{part:back matter}
+\cleardoublepage\include{FrontBackmatter/CurriculumVitae}
 \cleardoublepage\include{FrontBackmatter/Bibliography}
-%\cleardoublepage\include{FrontBackmatter/Declaration}
-%\cleardoublepage\include{FrontBackmatter/Colophon}
+\cleardoublepage\include{FrontBackmatter/Declaration}
+\cleardoublepage\include{FrontBackmatter/Colophon}
 %%%%%%%%%%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
 \end{document}
