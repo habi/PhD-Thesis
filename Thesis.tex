@@ -14,21 +14,6 @@
 	abstract=false%
 	]{scrreprt}
 %%%%%%%%%%%%%%%%%%%%%%%
-% Re-usable information
-%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\myTitle}{Ultra high resolution tomographic imaging of the mammalian lung\xspace}
-\newcommand{\myDegree}{A close look deep into the lung\xspace}
-\newcommand{\myName}{David Haberth\"ur\xspace}
-\newcommand{\myProf}{Prof.\ Dr.\ Johannes C.\ Schittny\xspace}
-\newcommand{\myOtherProf}{Dr.\ Mauricio Reyes\xspace}
-\newcommand{\mySupervisor}{Prof.\ Dr.\ Martin Frenz\xspace}
-\newcommand{\myFaculty}{Faculty of Medicine\xspace}
-\newcommand{\myDepartment}{Institute of Anatomy\xspace}
-\newcommand{\myUni}{\protect{University of Bern}\xspace}
-\newcommand{\myLocation}{Bern, Switzerland\xspace}
-\newcommand{\myTime}{Mai 2010\xspace}
-\newcommand{\myVersion}{SVN-Revision: \svnkw{LastChangedRevision}} -- \svnkw{LastChangedDate}\xspace}
-%%%%%%%%%%%%%%%%%%%%%%%
 % Packages with options that might require adjustments
 %%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[utf8]{inputenc}
@@ -42,7 +27,7 @@
 \usepackage{tikz}
 	\usetikzlibrary{shapes,arrows,patterns}
 \usepackage{pgfplots}
-	%\usetikzlibrary{pgfplotsclickable}
+	\usetikzlibrary{pgfplotsclickable}
 \usepackage[version=3]{mhchem}
 \usepackage[alsoload=synchem,binary,obeyall]{siunitx}
 \usepackage{makeidx}
@@ -50,13 +35,7 @@
 \usepackage{pdfpages}
 \usepackage{isotope}
 \usepackage{xfrac}
-\usepackage{svnmulti}
-	\svnidlong
-		{$HeadURL$}
-		{$LastChangedDate$}
-		{$LastChangedRevision$}
-		{$LastChangedBy$}
-\svnid{$Id$} 
+\usepackage[groups]{svn-multi}
 \usepackage[%
 	eulerchapternumbers,%
 	listings,%
@@ -67,8 +46,30 @@
 	eulermath,%
 	%dottedtoc,%
 	parts]{classicthesis}
-%\usepackage[margin=1.3in]{geometry}\usepackage{setspace}\doublespacing
+\usepackage[margin=1.3in]{geometry}\usepackage{setspace}\doublespacing
 \usepackage[all]{hypcap}
+%%%%%%%%%%%%%%%%%%%%%%%
+% Re-usable information
+%%%%%%%%%%%%%%%%%%%%%%%
+\svnidlong
+	{$HeadURL$}
+	{$LastChangedDate$}
+	{$LastChangedRevision$}
+	{$LastChangedBy$}
+\svnid{$Id$}
+\svngroup{Thesis-Group}
+\newcommand{\myTitle}{Ultra high resolution tomographic imaging of the mammalian lung\xspace}
+\newcommand{\myDegree}{A close look deep into the lung\xspace}
+\newcommand{\myName}{David Haberth\"ur\xspace}
+\newcommand{\myProf}{Prof.\ Dr.\ Johannes C.\ Schittny\xspace}
+\newcommand{\myOtherProf}{Dr.\ Mauricio Reyes\xspace}
+\newcommand{\mySupervisor}{Prof.\ Dr.\ Martin Frenz\xspace}
+\newcommand{\myFaculty}{Faculty of Medicine\xspace}
+\newcommand{\myDepartment}{Institute of Anatomy\xspace}
+\newcommand{\myUni}{\protect{University of Bern}\xspace}
+\newcommand{\myLocation}{Bern, Switzerland\xspace}
+\newcommand{\myTime}{Mai 2010\xspace}
+\newcommand{\myVersion}{\href{http://subversion.apache.org/}{\acs{svn}}-Revision: \svnkw{LastChangedRevision} -- Last commit on \svnyear-\svnmonth-\svnday\  \svnhour :\svnminute :\svnsecond\xspace}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Setup and Finetuning
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -161,7 +162,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 \include{FrontBackmatter/DirtyTitlepage}
 \cleardoublepage\include{FrontBackmatter/Titlepage}
-\cleardoublepage\include{FrontBackmatter/Titleback}
+\include{FrontBackmatter/Titleback}
 \cleardoublepage\include{FrontBackmatter/Dedication}
 \cleardoublepage\include{FrontBackmatter/AbstractE}
 \cleardoublepage\include{FrontBackmatter/AbstractD}
