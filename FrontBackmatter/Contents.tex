@@ -19,51 +19,50 @@
 \clearpage
 
 \begingroup 
-    \let\clearpage\relax
-    \let\cleardoublepage\relax
-    \let\cleardoublepage\relax
-    %*******************************************************
-    % List of Figures
-    %*******************************************************    
-    %\phantomsection 
-    \refstepcounter{dummy}
-    %\addcontentsline{toc}{chapter}{\listfigurename}
-    \pdfbookmark[1]{\listfigurename}{lof}
-    \listoffigures
+	\let\clearpage\relax
+	\let\cleardoublepage\relax
+	\let\cleardoublepage\relax
+	%*******************************************************
+	% List of Figures
+	%*******************************************************    
+	%\phantomsection 
+	\refstepcounter{dummy}
+	%\addcontentsline{toc}{chapter}{\listfigurename}
+	\pdfbookmark[1]{\listfigurename}{lof}
+	\listoffigures
+	\newpage
+	%\vspace*{8ex}
 
-    \vspace*{8ex}
-
-    %*******************************************************
-    % List of Tables
-    %*******************************************************
-    %\phantomsection 
-    \refstepcounter{dummy}
-    %\addcontentsline{toc}{chapter}{\listtablename}
-    \pdfbookmark[1]{\listtablename}{lot}
-    \listoftables
-        
-    \vspace*{8ex}
-	%\newpage
+	%*******************************************************
+	% List of Tables
+	%*******************************************************
+	%\phantomsection 
+	\refstepcounter{dummy}
+	%\addcontentsline{toc}{chapter}{\listtablename}
+	\pdfbookmark[1]{\listtablename}{lot}
+	\listoftables
+	\newpage
+	%\vspace*{8ex}
     
 	%*******************************************************
 	% List of Listings
 	%*******************************************************      
 	%\phantomsection 
-%	\refstepcounter{dummy}
-    %\addcontentsline{toc}{chapter}{\lstlistlistingname}
-%    \pdfbookmark[1]{\lstlistlistingname}{lol}
-%    \lstlistoflistings 
-%    \vspace*{8ex}
-	\newpage
+	%\refstepcounter{dummy}
+	%\addcontentsline{toc}{chapter}{\lstlistlistingname}
+	%\pdfbookmark[1]{\lstlistlistingname}{lol}
+	%\lstlistoflistings 
+	%\vspace*{8ex}
+	%\newpage
 
-    %*******************************************************
-    % Acronyms
-    %*******************************************************
-    %\phantomsection
-    \refstepcounter{dummy}
-    \pdfbookmark[1]{Acronyms}{acronyms}
-    \markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
-    \chapter*{Acronyms}
+	%*******************************************************
+	% Acronyms
+	%*******************************************************
+	%\phantomsection
+	\refstepcounter{dummy}
+	\pdfbookmark[1]{Acronyms}{acronyms}
+	\markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
+	\chapter*{Acronyms}
 	\begin{acronym}[WF-SRXTM]
 		\acro{amd}[AMD]{Advanced Micro Devices, Inc.}
 		\acro{avv}[AVV]{I have no idea what an \acsu{avv} is, but it's used in a Monty Python sketch\ldots}
@@ -78,10 +77,12 @@
 		\acro{eeg}[EEG]{Electroencephalography}: The electrical activity of the brain can be measured with an \acs{eeg}.
 		\acro{epics}[EPICS]{Experimental Physics and Industrial Control System}: Control system by the national laboratory of \href{http://www.aps.anl.gov/epics/}{Argonne in the USA}, used to control \acs{tomcat}.
 		\acro{em}[EM]{Electron Microscopy}: An electron microscope produces an electronically magnified image of a specimen for detailed observation. The electron microscope uses an electron beam to illuminate the specimen and create a magnified image of it.
+		\acro{eth}[ETH]{Eidgenössische Technische Hochschule}
 		\acro{fe}[FE]{Finite Element}
 		\acro{fft}[FFT]{Fast Fourier Transform}
 		\acro{gbha}[GBHA]{Grid-Based Hexahedral Algorithm}
 		\acro{istb}[ISTB]{Institute for Surgical Technology \& Biomechanics}
+		\acro{it}[IT]{Information technology}
 		\acro{lm}[LM]{Light microscopy}
 		\acro{lst}[LST]{Laplacian Smoothing Technique}
 		\acro{uct}[\micro CT]{micro-Computed Tomography}
@@ -110,5 +111,3 @@
 		\acro{yag}[YAG]{Yttrium Aluminium Garnet}
 	\end{acronym}
 \endgroup
-
-\cleardoublepage

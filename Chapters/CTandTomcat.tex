@@ -5,7 +5,7 @@
 				Get the \acs{eeg}, the \acs{bp} monitor, and the \acs{avv}!\\
 				And get the machine that goes ``PING!''\\
 				And get the most \emph{expensive} machine in case the Administrator comes.} \\ \medskip
-	--- John Cleese \& Graham Chapman\\as Obstetricians in\defcitealias{TheMeaningOfLife}{The Meaning of Life}\citetalias{TheMeaningOfLife} \citep{TheMeaningOfLife}
+	--- John Cleese and Graham Chapman\\as Obstetricians in\defcitealias{TheMeaningOfLife}{The Meaning of Life}\citetalias{TheMeaningOfLife} \citep{TheMeaningOfLife}
 \end{flushright}
 \vspace{6cm}
 
@@ -68,7 +68,7 @@ Coherent or Rayleigh scattering is an interaction process where no ionization oc
 	\label{fig:InteractionPercentage}%
 \end{figure}%
 
-We see that for the energies used in this work (dark grey stripe in \autoref{fig:Interactionpercentage}), the photoelectric effect is the major interaction process, even if its amount rapidly decreases for higher energies. Not only is the interaction rate higher for the photoelectric effect, but also the major part of the beam energy is transferred, since more energy is transferred in a photoelectric interaction than in a Compton interaction.
+We see that for the energies used in this work (dark grey stripe in \autoref{fig:InteractionPercentage}), the photoelectric effect is the major interaction process, even if its amount rapidly decreases for higher energies. Not only is the interaction rate higher for the photoelectric effect, but also the major part of the beam energy is transferred, since more energy is transferred in a photoelectric interaction than in a Compton interaction.
 
 \subsection{Attenuation}
 The total effect of the three effects described above can be summarized with the total linear attenuation coefficient shown in \autoref{eq:linear attenuation}. This equation expresses the attenuation of a monochromatic\graffito{Monochromatic light is light of a single wavelength or energy, though in practice it often refers to a narrow wavelength range} beam as it passes through a material. The attenuation in a material of uniform density and atomic number can be expressed by an exponential relationship
@@ -103,7 +103,7 @@ In general, \ac{ct} refers to the cross-sectional imaging of a sample from trans
 
 In medical \ac{ct}-scanners, the transmission images are generally obtained while the radiation source and the detector rotate around the body part to be imaged. In micro-computed and synchrotron based tomography, the source and detector are fixed, while the sample to be imaged rotates around a chosen axis.
 
-During the imaging process multiple transmission images---essentially single radiographic images---are obtained at several equidistant angles over a \unit{180}{\degree} or \unit{360}{\degree} rotation. These projections can be understood as pictures of the distribution of the attenuation of the x-rays inside the sample. Regions with high attenuation (\eg tissue) show up as dark pixels, regions with low attenuation (\eg airway lumens) show up as light pixels on the \acsu{ccd}-chip of the camera.
+During the imaging process multiple transmission images---es\-sen\-tial\-ly single radiographic images---are obtained at several equidistant angles over a \unit{180}{\degree} or \unit{360}{\degree} rotation. These projections can be understood as pictures of the distribution of the attenuation of the x-rays inside the sample. Regions with high attenuation (\eg tissue) show up as dark pixels, regions with low attenuation (\eg airway lumens) show up as light pixels on the \acsu{ccd}-chip of the camera.
 
 Before and after the scan, so-called dark ($I_{D}$) and flat images ($I_{F}$) are recorded. The dark images record the camera noise and dark current, while the flat images record the beam profile. After baseline correction of the projections ($I_{P}$) the average of the dark images is subtracted. The projections are then normalized to the flat images as seen in \autoref{eq:cpr}, using the average dark and average flat images ($\overline{I_{D}}$ and $\overline{I_{F}}$, respectively) resulting in so-called corrected projections (CPR).%
 \begin{equation}%
@@ -193,7 +193,7 @@ At \ac{tomcat} this rule of thumb is exactly obeyed in the case of a tomographic
 
 \autoref{ch:haberthuer2010} presents a scanning method where the sampling theorem is deliberately violated both to increase the field of view of \ac{tomcat} and to reduce the radiation dose imparted on the sample.
 
-For classic tomographic imaging, an x-ray tube is used as a source of radiation. In \ac{srxtm}, which was used to obtain the tomographic data for this thesis---as the name suggests---x-rays from a synchrotron are used as a radiation source. The following sections give a short overview over the underlying theory of the synchrotron radiation and a short rundown on the \ac{sls} and the beamline where all the presented experiments have been carried out.
+For classic tomographic imaging, an x-ray tube is used as a source of radiation. X-rays from a synchrotron are used as a radiation source for \ac{srxtm}, which was used to obtain the tomographic data for this thesis. The following sections give a short overview over the underlying theory of the synchrotron radiation and a short rundown on the \ac{sls} and the beamline where all the presented experiments have been carried out.
 
 \section{Synchrotron Radiation}
 Synchrotron facilities use the fact that accelerated particles traveling on a curved trajectory emit radiation. If charged particles at relativistic speed undergo a change of direction (\ie in a magnetic field) so-called synchrotron radiation is emitted. 
@@ -299,7 +299,7 @@ After collimation, the beam travels through an evacuated pipe into the measuring
 The x-rays which penetrated the sample are detected using a combination of a scintillator, microscope optics and a \ac{ccd}-camera as shown in \autoref{subfig:TOMCAT3}. The scintillator\graffito{The latin word \emph{scintillare} can be translated with sparkling or flickering.} converts incident x-rays to visible light through fluorescence. Charged particles excite the scintillator material and this excitation energy is then subsequently emitted by fluorescence photons at a longer wavelength, which makes it possible to detect the incident beam using a \ac{ccd}-camera. The camera at \ac{tomcat} features a detector with 2048$\times$2048 pixels with a size of 7.4$\times$\SI{7.4}{\micro\meter} each and can read out a full frame \SI{14}{\bit} image in \SI{260}{\millisecond}. Between the scintillator and the \ac{ccd}-sensor interchangeable microscope objectives enable to easily vary the pixel size range of the resulting tomographic reconstructions from 350$\times$\SI{350}{\nano\meter} up to 5.6$\times$\SI{5.6}{\micro\meter}. Depending on the chosen pixel size, the resulting field of view of a standard scan varies between 0.75$\times$\SI{0.75}{\milli\meter\squared} and 11.45$\times$\SI{11.45}{\milli\meter\squared}\graffito{See \autoref{ch:haberthuer2010} for a method to increase the field of view of tomography endstations while keeping the small voxel size.}.
 
 \renewcommand{\imsize}{1.41\linewidth}%
-\begin{figure}[htb]%
+\begin{figure}[p]%
 	\noindent\makebox[\textwidth]{%
 		\subfloat[Panoramic view]{%
 			\includegraphics[width=\imsize]{img/TOMCAT_DSC_6725-DSC_6760_fused}%
@@ -334,3 +334,5 @@ After the scan has been started, sinograms are calculated on the fly and the tom
 The web-based interface is used to submit the reconstruction of the tomographic datasets to a computing cluster of seven \SI{64}{\bit} Opteron machines with four cores and \SI{8}{\giga\byte} \acs{ram} each. Immediately after reconstruction on the cluster the resulting data is copied to an external disk which makes it possible that the recorded tomographic datasets can be taken to the home laboratory immediately after the beamtime shifts.
 
 This is where the real work begins\ldots
+\bibliographystyle{unsrtnat}
+\bibliography{../../references}

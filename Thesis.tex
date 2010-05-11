@@ -1,5 +1,5 @@
 \documentclass[%
-	draft,%
+	%draft,%
 	twoside,%
 	openright,%
 	titlepage,%
@@ -16,9 +16,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Packages with options that might require adjustments
 %%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lipsum}
 \usepackage[utf8]{inputenc}
+\usepackage[square,numbers,sort&compress,sectionbib]{natbib}
+\usepackage{chapterbib}
 \usepackage[greek,ngerman,english]{babel}
-\usepackage[square,numbers,sort&compress]{natbib}
 \usepackage{multirow}
 \usepackage{lipsum}
 \usepackage{threeparttable}
@@ -37,16 +39,16 @@
 \usepackage{xfrac}
 \usepackage[groups]{svn-multi}
 \usepackage[%
+	listsseparated,%
 	eulerchapternumbers,%
-	listings,%
 	drafting,
-	%pdfspacing,%
+	pdfspacing,%
 	subfig,%
 	beramono,%
 	eulermath,%
 	%dottedtoc,%
 	parts]{classicthesis}
-\usepackage[margin=1.3in]{geometry}\usepackage{setspace}\doublespacing
+%\usepackage[margin=1.3in]{geometry}\usepackage{setspace}\doublespacing
 \usepackage[all]{hypcap}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Re-usable information
@@ -69,7 +71,7 @@
 \newcommand{\myUni}{\protect{University of Bern}\xspace}
 \newcommand{\myLocation}{Bern, Switzerland\xspace}
 \newcommand{\myTime}{Mai 2010\xspace}
-\newcommand{\myVersion}{\href{http://subversion.apache.org/}{\acs{svn}}-Revision: \svnkw{LastChangedRevision} -- Commited on \svnyear-\svnmonth-\svnday\  \svnhour :\svnminute :\svnsecond\xspace}
+\newcommand{\myVersion}{\href{http://subversion.apache.org/}{\acs{svn}}-Revision: \svnkw{LastChangedRevision} -- Commited on \svnyear-\svnmonth-\svnday\ \svnhour :\svnminute :\svnsecond\xspace}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Setup and Finetuning
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -79,6 +81,8 @@
 \newlength\imagewidth % needed for scalebars
 \newlength\imagescale % ditto
 \newcommand{\subfigureautorefname}{\figureautorefname} % to have subfigures named using \autoref
+\newcommand{\ie}{i.\,e.\ }
+\newcommand{\eg}{e.\,g.\ }
 %%%%%%%%%%%%%%%%%%%%%%%
 % Color (Re-Definition)
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -160,10 +164,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%
-%\include{FrontBackmatter/DirtyTitlepage}
-%\cleardoublepage\include{FrontBackmatter/Titlepage}
-%\include{FrontBackmatter/Titleback}
-%\cleardoublepage\include{FrontBackmatter/Dedication}
+\include{FrontBackmatter/DirtyTitlepage}
+\cleardoublepage\include{FrontBackmatter/Titlepage}
+\include{FrontBackmatter/Titleback}
+\cleardoublepage\include{FrontBackmatter/Dedication}
 \cleardoublepage\include{FrontBackmatter/AbstractE}
 \cleardoublepage\include{FrontBackmatter/AbstractD}
 \cleardoublepage\include{FrontBackmatter/Acknowledgments}
@@ -180,9 +184,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Results}\label{part:results}
 \include{Chapters/Publications}
-%\include{Chapters/XRM2008}
-%\include{Chapters/Tsuda2008}
-%\include{Chapters/Haberthuer2010}
+\include{Chapters/XRM2008}
+\include{Chapters/Tsuda2008}
+\include{Chapters/Haberthuer2010}
 %%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Discussion \& Outlook}\label{part:discussion}
 \include{Chapters/Discussion}
@@ -191,9 +195,9 @@
 % Backmatter
 %%%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\myPart{Back Matter}\label{part:back matter}
-%\cleardoublepage\include{FrontBackmatter/CurriculumVitae}
+\cleardoublepage\include{FrontBackmatter/CurriculumVitae}
 \cleardoublepage\include{FrontBackmatter/Bibliography}
-%\cleardoublepage\include{FrontBackmatter/Declaration}
-%\cleardoublepage\include{FrontBackmatter/Colophon}
+\cleardoublepage\include{FrontBackmatter/Declaration}
+\cleardoublepage\include{FrontBackmatter/Colophon}
 %%%%%%%%%%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
 \end{document}

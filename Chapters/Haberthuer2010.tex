@@ -6,8 +6,9 @@ David Haberthür\footremember{ana3}{Institute of Anatomy, University of Bern, Be
 Christoph Hintermüller\footremember{psi3}{Swiss Light Source, Paul Scherrer Institut, Switzerland}\textsuperscript{,}\footremember{eth3}{Institute for Biomedical Engineering, University and ETH Zürich, Switzerland}\\
 Federica Marone\footrecall{psi3}\\
 Johannes C. Schittny\footrecall{ana3}\\
-Marco Stampanoni\footrecall{psi3}\textsuperscript{,}\footrecall{eth3}\textsuperscript{,}\footnote{\href{mailto:marco.stampanoni@psi.ch}{marco.stampanoni@psi.ch}}\\\\
-Accepted for the \href{http://journals.iucr.org/s/}{Journal of Synchrotron Radiation}\\
+Marco Stampanoni\footrecall{psi3}\textsuperscript{,}\footrecall{eth3}\textsuperscript{,}\footnote{\href{mailto:marco.stampanoni@psi.ch}{marco.stampanoni@psi.ch}}\\
+\\
+Accepted for publication in the \href{http://journals.iucr.org/s/}{Journal of Synchrotron Radiation}\\
 %\href{http://journals.iucr.org/s/}{doi:10.1107/S101010}
 \vfill
 \section{Abstract}
@@ -37,12 +38,12 @@ The samples were postfixed with \SI{1}{\percent} osmium tetroxide (\cf{OsO4}) an
 The handling of animals before and during the experiments, as well as the experiments themselves, were approved and supervised by the Swiss Agency for the Environment, Forests and Landscape and the Veterinary Service of the Canton of Bern, Switzerland.
 
 \subsection{Synchrotron radiation tomographic microscopy}
-The experiments were performed at the \ac{tomcat} beamline at the \acl{sls}, Paul Scherrer Institut, Villigen, Switzerland. The samples were scanned at \SI{12.6}{\kilo\electronvolt}. After penetration through the sample, the x-rays were converted into visible light by a \acs{yag}:Ce scintillator (\SI{18}{\micro\meter} thickness, Crismatec Saint-Gobain, Nemours, France). Projections were magnified by diffraction limited microscope optics (10$\times$ magnification) and digitized by a high-resolution 2048$\times$2048 pixel \ac{ccd} camera (pco.2000, PCO AG, Kelheim, Germany) with 14 bit dynamic range. The detector was operated in 2$\times$2 binning mode. As a result, the pixel size was \SI{1.48}{\micro\meter} and the exposure time was \SI{175}{\milli\second}.
+The experiments were performed at the \ac{tomcat} beamline at the \acl{sls}, Paul Scherrer Institut, Villigen, Switzerland. The samples were scanned at \SI{12.6}{\kilo\electronvolt}. After penetration through the sample, the x-rays were converted into visible light by a \acs{yag}:Ce scintillator (\SI{18}{\micro\meter} thickness, Crismatec Saint-Gobain, Nemours, France). Projections were magnified by diffraction limited microscope optics (10$\times$ magnification) and digitized by a high-resolution 2048$\times$2048 pixel \acsu{ccd} camera (pco.2000, PCO AG, Kelheim, Germany) with 14 bit dynamic range. The detector was operated in 2$\times$2 binning mode. As a result, the pixel size was \SI{1.48}{\micro\meter} and the exposure time was \SI{175}{\milli\second}.
 
 Projections $I_{Pr}$ were recorded at equiangular positions between \SI{0}{\degree} and \SI{180}{\degree}. The exact number of angular projections depended on the selected scan protocol, as described in \autoref{subsec:increasing the field of view}. Additionally, for each protocol a set of dark ($I_{D}$) and flat images ($I_{F}$) were recorded for noise and baseline correction, respectively. Technical specifications of the beamline setup can be found in \cite{Stampanoni2006a}, the complete imaging and reconstruction workflow is described in \cite{Hintermueller2010}.
 
 \subsection{Increasing the field of view}\label{subsec:increasing the field of view}
-For parallel beam geometry, tomographic images are obtained at equidistant angles over a sample rotation of \SI{180}{\degree} as shown in \autoref{subfig:wfs180}. After reconstruction, the width of the image corresponds to the field of view of the camera.
+For parallel beam geometry, tomographic images are obtained at e\-qui\-dis\-tant angles over a sample rotation of \SI{180}{\degree} as shown in \autoref{subfig:wfs180}. After reconstruction, the width of the image corresponds to the field of view of the camera.
 
 Samples twice as large as the field of view can be imaged using scanning protocols based on a \SI{360}{\degree} off center sample rotation as shown in \autoref{subfig:wfs360}. Images recorded between \SI{180}{\degree} and \SI{360}{\degree} have to be flipped after acquisition: the projections obtained at angular position $\theta$ and $\theta$+\SI{180}{\degree} ($I_{Pr_{\theta}}$ and $I_{Pr_{\theta+\SI{180}{\degree}}}$) have to be stitched to one projection. The resulting images cover twice the field of view of the camera.
 
@@ -325,7 +326,7 @@ All parameters of each protocol and each subscan (sample-position in relation to
 \subsection{Projection merging and tomographic reconstruction}
 After acquisition of the three subscans per protocol, custom \ac{matlab} functions read the parameters of the single subscans (\eg sample name, amount of subscans, amount of dark and flat images) as well as the desired output-name and -suffix, and performed all necessary calculations, including: loading of the correct projections from each subscan; normalizing; interpolation; cutline detection; correct stitching of the images into wide field projections, and writing these merged projections as well as log files needed for the reconstruction to disk.
 
-The merged projections were subsequently rearranged into sinograms, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of every corrected projection. The $n$\textsuperscript{th} slice of the tomographic scan was reconstructed from the $n$\textsuperscript{th} sinogram using an \acs{fft}-based regridding algorithm~\cite{Dowd1999,Marone2008}. The 19 tomographic datasets were reconstructed on a computing cluster composed of five \SI{64}{\bit} Opteron machines with four cores and \SI{8}{\giga\byte} \acsu{ram} each. The reconstructions resulted in an image stack covering a large sample volume of 2792$\times$2792$\times$1024 pixels, a nine-fold increase from the standard volume of 1024$\times$1024$\times$1024 pixels for one conventional scan.
+The merged projections were subsequently rearranged into si\-no\-grams, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of every corrected projection. The $n$\textsuperscript{th} slice of the tomographic scan was reconstructed from the $n$\textsuperscript{th} sinogram using an \acs{fft}-based regridding algorithm~\cite{Dowd1999,Marone2008}. The 19 tomographic datasets were reconstructed on a computing cluster composed of five \SI{64}{\bit} Opteron machines with four cores and \SI{8}{\giga\byte} \acsu{ram} each. The reconstructions resulted in an image stack covering a large sample volume of 2792$\times$2792$\times$1024 pixels, a nine-fold increase from the standard volume of 1024$\times$1024$\times$1024 pixels for one conventional scan.
 
 \section{Results}\label{sec:Results}
 \subsection{Image Merging and Reconstruction}\label{sec:Image Merging and Reconstruction}
@@ -650,7 +651,6 @@ A method to increase the lateral field of view of tomographic imaging has been e
 Different optimized scanning protocols for covering a large field of view have been validated and are now provided for the end-users of the \ac{tomcat} beamline. End-users now have the possibility to choose suitable scanning protocols depending on a balance between acquisition time and expected reconstruction quality. Depending on this balance, a reduction of the image acquisition time by \SI{84}{\percent} is possible, while keeping the quality of the reconstructed tomographic dataset on a level still permitting automated segmentation of the lung structure and surrounding airspace, as shown in \autoref{subsec:comparison}. The reduction in acquisition time obviously reduces the time during which the sample is irradiated by synchrotron radiation and thus reduces the radiation dose inflicted on the sample.
 
 \section{Acknowledgments}
-This work has been funded by the grants 3100A0-109874 and 310030-125397 of the Swiss National Science Foundation. We thank Mohammed Ouanella for his excellent technical assistance and Volker Dicken from Fraunhofer MEVIS for the fruitful discussion concerning the euclidean distance transformation. Dan Ward kindly checked the English of the manuscript.
-%\bibliographystyle{plainnat}
-%\label{app:bibliography} 
-%\bibliography{../Bibliography,../../references,../Tsuda2008references}
+This work has been funded by the grants 3100A0-109874 and 310030-125397 of the Swiss National Science Foundation. We thank Mo\-ham\-med Ouanella for his excellent technical assistance and Volker Dicken from Fraunhofer MEVIS for the fruitful discussion concerning the euclidean distance transformation. Dan Ward kindly checked the English of the manuscript.
+\bibliographystyle{unsrtnat}
+\bibliography{../../references}
