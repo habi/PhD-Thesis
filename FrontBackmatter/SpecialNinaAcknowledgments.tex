@@ -2,37 +2,44 @@
 \pagestyle{empty}
 \hfill
 \vfill
-\newcommand{\coeur}[1][fill=red] % rouge par defaut
-{\draw [#1] (0,0)
- .. controls +(0,2)  and +(0,2)  .. (3,0)
- .. controls +(0,-2) and +(0,2)  .. (0,-4)
- .. controls +(0,2)  and +(0,-2) .. (-3,0)
- .. controls +(0,2)  and +(0,2)  .. (0,0);}
-
-\vfill
-Nina, I liebe Di!
-\centering
-\begin{tikzpicture}
-% mer
-\shade[top color=blue,bottom color=lightgray] (0,0) arc (105:75:20)--cycle;
-% quai
-\fill[rotate=12] (0,0)rectangle (1,0.2);
-% personnage
-\fill[rotate=12,shift={(0.8,0.3)}] (0,0) ellipse (0.12 and 0.25) (0,0.35) circle (0.1);
-\begin{scope} [shift={(8.4,0.4)},rotate=-10]
-  % barque
-  \fill (0,0)--(1,0)--(1.1,0.2)--(-0.1,0.1)--cycle;
-  % rames
-  \draw[line width=2pt] (-0.2,0.4)--(0.5,0.2)--(1.2,0.4);
-  % personnage
-  \fill[shift={(0.5,0.25)},rotate=-10]
-     (0,0)ellipse(0.12 and 0.25) (0,0.35)circle(0.1);
-\end{scope}
-% coeurs
-\coeur[shift={(1.3,2)},ball color=red,scale=0.35]
-\coeur[shift={(0.3,1.8)},ball color=blue,scale=0.2,rotate=30*rand]
-\coeur[shift={(2.2,1.6)},ball color=magenta,scale=0.2,rotate=30*rand]
-\coeur[shift={(1.8,2.5)},ball color=green,scale=0.25,rotate=30*rand]
-\coeur[shift={(2.7,2.1)},ball color=yellow,scale=0.15,rotate=30*rand]
-\end{tikzpicture}
+\begin{align*}
+	\textrm{Nina, } 9x-7i &> 3(3x-7u)\\
+	9x-7i &> 9x-21u\\
+	-7i &> -21u\\
+	i &< 3u\\
+	\textrm{Nina, } i &{\color{red}\heartsuit} u\\
+\end{align*}
+%\newcommand{\coeur}[1][fill=red] % rouge par defaut
+%{\draw [#1] (0,0)
+% .. controls +(0,2)  and +(0,2)  .. (3,0)
+% .. controls +(0,-2) and +(0,2)  .. (0,-4)
+% .. controls +(0,2)  and +(0,-2) .. (-3,0)
+% .. controls +(0,2)  and +(0,2)  .. (0,0);}
+%
+%\vfill
+%Nina, I liebe Di!
+%\centering
+%\begin{tikzpicture}
+%% mer
+%\shade[top color=blue,bottom color=lightgray] (0,0) arc (105:75:20)--cycle;
+%% quai
+%\fill[rotate=12] (0,0)rectangle (1,0.2);
+%% personnage
+%\fill[rotate=12,shift={(0.8,0.3)}] (0,0) ellipse (0.12 and 0.25) (0,0.35) circle (0.1);
+%\begin{scope} [shift={(8.4,0.4)},rotate=-10]
+%  % barque
+%  \fill (0,0)--(1,0)--(1.1,0.2)--(-0.1,0.1)--cycle;
+%  % rames
+%  \draw[line width=2pt] (-0.2,0.4)--(0.5,0.2)--(1.2,0.4);
+%  % personnage
+%  \fill[shift={(0.5,0.25)},rotate=-10]
+%     (0,0)ellipse(0.12 and 0.25) (0,0.35)circle(0.1);
+%\end{scope}
+%% coeurs
+%\coeur[shift={(1.3,2)},ball color=red,scale=0.35]
+%\coeur[shift={(0.3,1.8)},ball color=blue,scale=0.2,rotate=30*rand]
+%\coeur[shift={(2.2,1.6)},ball color=magenta,scale=0.2,rotate=30*rand]
+%\coeur[shift={(1.8,2.5)},ball color=green,scale=0.25,rotate=30*rand]
+%\coeur[shift={(2.7,2.1)},ball color=yellow,scale=0.15,rotate=30*rand]
+%\end{tikzpicture}
 \vfill
