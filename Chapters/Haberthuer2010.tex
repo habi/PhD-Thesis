@@ -43,7 +43,7 @@ The experiments were performed at the \ac{tomcat} beamline at the \acl{sls}, Pau
 Projections $I_{Pr}$ were recorded at equiangular positions between \SI{0}{\degree} and \SI{180}{\degree}. The exact number of angular projections depended on the selected scan protocol, as described in \autoref{subsec:increasing the field of view}. Additionally, for each protocol a set of dark ($I_{D}$) and flat images ($I_{F}$) were recorded for noise and baseline correction, respectively. Technical specifications of the beamline setup can be found in \cite{Stampanoni2006a}, the complete imaging and reconstruction workflow is described in \cite{Hintermueller2010}.
 
 \subsection{Increasing the field of view}\label{subsec:increasing the field of view}
-For parallel beam geometry, tomographic images are obtained at equidistant angles over a sample rotation of \SI{180}{\degree} as shown in \autoref{subfig:wfs180}. After reconstruction, the width of the image corresponds to the field of view of the camera.
+For parallel beam geometry, tomographic images are obtained at e\-qui\-dis\-tant angles over a sample rotation of \SI{180}{\degree} as shown in \autoref{subfig:wfs180}. After reconstruction, the width of the image corresponds to the field of view of the camera.
 
 Samples twice as large as the field of view can be imaged using scanning protocols based on a \SI{360}{\degree} off center sample rotation as shown in \autoref{subfig:wfs360}. Images recorded between \SI{180}{\degree} and \SI{360}{\degree} have to be flipped after acquisition: the projections obtained at angular position $\theta$ and $\theta$+\SI{180}{\degree} ($I_{Pr_{\theta}}$ and $I_{Pr_{\theta+\SI{180}{\degree}}}$) have to be stitched to one projection. The resulting images cover twice the field of view of the camera.
 
@@ -591,11 +591,13 @@ For comparison, the histogram of the euclidean distance transformation has been 
 \begin{figure}[htb]%
 	\noindent\makebox[\textwidth]{%
 		\subfloat{\input{img/Haberthuer2010/ROI-0523-0497-0743}}%
+		\hspace{3mm}%
 		\subfloat{\input{img/Haberthuer2010/ROI-1382-0546-0743}}%
 	}%
 	\\%
 	\noindent\makebox[\textwidth]{%
 		\subfloat{\input{img/Haberthuer2010/ROI-1324-0266-0289}}%
+		\hspace{3mm}%
 		\subfloat{\input{img/Haberthuer2010/ROI-1863-0237-0604}}%
 	}%
 	\caption[Histogram-Plots]{Histogram-Plots for each of the of four \acp{roi}, each showing the histogram of the distance transformation for the protocols B, L and~T.}%
@@ -617,7 +619,7 @@ The introduced artifacts in the three-dimensional reconstruction of the lung tis
 
 Comparing the reconstructions shown in \autoref{subfig:roiB}--\ref{subfig:roiT} we observe a change in size of these pores. The pore size is affected by both the introduced artifacts and the algorithmically chosen threshold in these reconstructions.
 
-Biologically interesting phenomena like emphysematic lung diseases introduce much larger defects in the lung tissue, where the size of the acinus is enlarged and the peripheral airways are collapsed \cite{Weibel2009}. Defects like these would still easily be detectable with an undersampled scan since the introduced artefacts are orders of magnitude smaller than the tissue alterations to be detected.
+Biologically interesting phenomena like emphysematic lung dis\-eases introduce much larger defects in the lung tissue, where the size of the acinus is enlarged and the peripheral airways are collapsed \cite{Weibel2009}. Defects like these would still easily be detectable with an undersampled scan since the introduced artefacts are orders of magnitude smaller than the tissue alterations to be detected.
 
 If other samples are to be observed using the proposed \ac{wf-srxtm} method, the desired level of image quality and therefore the corresponding reduction of the scanning time has to be defined according to the smallest structure present in the sample to detect.
 
@@ -651,7 +653,7 @@ A method to increase the lateral field of view of tomographic imaging has been e
 Different optimized scanning protocols for covering a large field of view have been validated and are now provided for the end-users of the \ac{tomcat} beamline. End-users now have the possibility to choose suitable scanning protocols depending on a balance between acquisition time and expected reconstruction quality. Depending on this balance, a reduction of the image acquisition time by \SI{84}{\percent} is possible, while keeping the quality of the reconstructed tomographic dataset on a level still permitting automated segmentation of the lung structure and surrounding airspace, as shown in \autoref{subsec:comparison}. The reduction in acquisition time obviously reduces the time during which the sample is irradiated by synchrotron radiation and thus reduces the radiation dose inflicted on the sample.
 
 \section{Acknowledgments}
-This work has been funded by the grants 3100A0-109874 and 310030-125397 of the Swiss National Science Foundation. We thank Mohammed Ouanella for his excellent technical assistance and Volker Dicken from Fraunhofer MEVIS for the fruitful discussion concerning the euclidean distance transformation. Dan Ward kindly checked the English of the manuscript.
+This work has been funded by the grants 3100A0-109874 and 310030-125397 of the Swiss National Science Foundation. We thank Mo\-ham\-med Ouanella for his excellent technical assistance and Volker Dicken from Fraunhofer MEVIS for the fruitful discussion concerning the euclidean distance transformation. Dan Ward kindly checked the English of the manuscript.
 
 % \renewcommand\bibname{Bibliography | Chapter 7}%
 % \bibliographystyle{unsrtnat}%
