@@ -9,12 +9,12 @@
 \pgfplotsset{every axis legend/.append style={at={(0.8,0.08)},anchor=base}}
 
 \begin{axis}[%
-	xmajorgrids,
-  	ymajorgrids,
-	width=1.41*\linewidth,
-	height=0.87138*\linewidth,%=1.41*.618
-	%scale only axis,
-	%xmin=0,%xmax=129,
+	xmajorgrids,%
+	ymajorgrids,%
+	width=\linewidth,%
+	height=0.618\linewidth,%=1.41*.618
+	scale only axis,%
+	xmin=0,%xmax=129,
 	ymin=0,%ymax=125,
   xlabel={Scanning Time [\%\ of Gold Standard]},%
 	ylabel={Expected Quality [\%], Quality$-E_{i_{norm}}$}%

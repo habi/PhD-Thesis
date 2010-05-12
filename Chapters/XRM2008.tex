@@ -23,7 +23,7 @@ The deposition sites of inhaled aerosols in the gas-exchange region of the lung 
 To study the deposition of sub-micron particles in the mammalian lung, we used \ac{srxtm} to record tomographic images of lung samples with high resolution (\SI{350}{\nano\meter}). In addition to \ac{srxtm}, we used conventional \ac{tem} to obtain high resolution images (resolution smaller than \SI{1}{\nano\meter}).
 
 \section{Materials and Methods}
-We applied \SI{200}{\nano\meter} and \SI{700}{\nano\meter} gold particles to rat lungs by intratracheal instillation. Thirty minutes after instillation, the lungs were fixed with \SI{2.5}{\%} glutaraldehyde by vascular perfusion, stained according to standard protocols for \ac{tem} and embedded in Epon. The samples were shaped to cylinders with a diameter of either 0.6 or \SI{1.2}{\milli\meter} and a length of several millimeters using a watchmakers lathe and then scanned at \ac{tomcat}~\cite{Stampanoni2007}, the beamline for \acl{tomcat} at the \acl{sls} at the Paul Scherrer Institute in Villigen, Switzerland. The samples were scanned at a wavelength of \SI{11.5}{\kilo\electronvolt}, post processed on a 20-node Linux cluster using filtered backprojection, resulting in an image stack of 2048$\times$2048$\times$2048 pixels with isotropic voxels of \SI{350}{\nano\meter} side length. The samples were visualized in three dimensions using an isosurface computed with Imaris x64 5.72 (Bitplane AG, Switzerland) on an \acsu{amd}~64-based windows computer~\cite{Tsuda2008}. After tomographic image acquisition serial sections of the sample were cut and processed for transmission electron microscopy~\cite{Mund2008}. 
+We applied \SI{200}{\nano\meter} and \SI{700}{\nano\meter} gold particles to rat lungs by intratracheal instillation. Thirty minutes after instillation, the lungs were fixed with \SI{2.5}{\%} glutaraldehyde by vascular perfusion, stained according to standard protocols for \ac{tem} and embedded in Epon. The samples were shaped to cylinders with a diameter of either 0.6 or \SI{1.2}{\milli\meter} and a length of several millimeters using a watchmakers lathe and then scanned at \ac{tomcat}~\cite{Stampanoni2007}, the beamline for \acl{tomcat} at the \acl{sls} at the Paul Scherrer Institute in Villigen, Switzerland. The samples were scanned at a wavelength of \SI{11.5}{\kilo\electronvolt}, post processed on a 20-node Linux cluster using filtered backprojection, resulting in an image stack of 2048$\times$2048$\times$2048 pixels with isotropic voxels of \SI{350}{\nano\meter} side length. The samples were visualized in three dimensions using an isosurface computed with Imaris x64 5.72 (Bitplane AG, Switzerland) on an \acsu{amd} 64-based windows computer~\cite{Tsuda2008}. After tomographic image acquisition serial sections of the sample were cut and processed for transmission electron microscopy~\cite{Mund2008}. 
 
 \section{Results}
 We have been able to observe single and clustered gold particles in alveoli, alveolar ducts, and small bronchioli while imaging them at a voxel side length of \SI{350}{\nano\meter} with the use of \ac{srxtm} (\autoref{subfig:imaris} and \ref{subfig:slice-srxtm}). We were able to verify the locations of the observed gold particles by \ac{tem} (\autoref{subfig:slice-em}). 
@@ -85,5 +85,8 @@ We are planning to use this method for the detection and localization of inhaled
 
 \section{Acknowledgments}
 We thank Christoph Hinterm\"uller and Federica Marone for expert help at \ac{tomcat} and Bettina De Breuyn as well as Christoph Lehmann for the preparation of the samples. This work has been supported by Swiss National Science Foundation grant 3100A0-109874 and by US National Heart, Lung, and Blood Institute grant HL-070542.
-\bibliographystyle{unsrtnat}
-\bibliography{../../references}
+
+% \renewcommand\bibname{Bibliography | Chapter 5}%
+% \bibliographystyle{unsrtnat}%
+% \bibliography{../../references}%
+% \addcontentsline{toc}{section}{\bibname}%

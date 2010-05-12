@@ -12,7 +12,7 @@ Accepted for publication in the \href{http://journals.iucr.org/s/}{Journal of Sy
 %\href{http://journals.iucr.org/s/}{doi:10.1107/S101010}
 \vfill
 \section{Abstract}
-Volumetric data at micrometer level resolution can be acquired within a few minutes using synchrotron radiation based tomographic microscopy. The field of view along the rotation axis of the sample can easily be increased by stacking several tomograms, allowing  the investigation of long and thin objects at high resolution. On the contrary, an extension of the field of view in the perpendicular direction is non trivial. This paper presents an acquisition protocol which increases the field of view of the tomographic dataset perpendicular to its rotation axis. The acquisition protocol can be tuned as a function of the reconstruction quality and scanning time. Since the scanning time is proportional to the radiation dose imparted to the sample, this method can be used to increase the field of view of tomographic microscopy instruments while optimizing the radiation dose for radiation sensitive samples and keeping the quality of the tomographic dataset on the required level. This approach, dubbed wide field synchrotron radiation tomographic microscopy, can increase the lateral field of view up to five times. The method has been successfully applied for the three-dimensional imaging of entire rat lung acini with a diameter of \SI{4.1}{\milli\meter} at a voxel size of \SI{1.48}{\micro\meter}.
+Volumetric data at micrometer level resolution can be acquired within a few minutes using synchrotron radiation based tomographic microscopy. The field of view along the rotation axis of the sample can easily be increased by stacking several tomograms, allowing the investigation of long and thin objects at high resolution. On the contrary, an extension of the field of view in the perpendicular direction is non trivial. This paper presents an acquisition protocol which increases the field of view of the tomographic dataset perpendicular to its rotation axis. The acquisition protocol can be tuned as a function of the reconstruction quality and scanning time. Since the scanning time is proportional to the radiation dose imparted to the sample, this method can be used to increase the field of view of tomographic microscopy instruments while optimizing the radiation dose for radiation sensitive samples and keeping the quality of the tomographic dataset on the required level. This approach, dubbed wide field synchrotron radiation tomographic microscopy, can increase the lateral field of view up to five times. The method has been successfully applied for the three-dimensional imaging of entire rat lung acini with a diameter of \SI{4.1}{\milli\meter} at a voxel size of \SI{1.48}{\micro\meter}.
 \clearpage
 \section{Introduction}
 The functional respiratory lung unit---the so-called acinus---is defined as the complex of alveolated airways distal of a last purely conducting airway, the terminal bronchiole~\cite{Rodriguez1987}. The total of all acini forms the lung parenchyma, the area where the pulmonary gas-exchange takes place. While the structural development of the gas-exchange region including the alveolar septa is quite well characterized~\cite{Schittny2007a,Schittny2008,Mund2008}, the development of the three-dimensional structure of its functional unit---of the acini---was not much studied due to the lack of suitable methods.
@@ -43,7 +43,7 @@ The experiments were performed at the \ac{tomcat} beamline at the \acl{sls}, Pau
 Projections $I_{Pr}$ were recorded at equiangular positions between \SI{0}{\degree} and \SI{180}{\degree}. The exact number of angular projections depended on the selected scan protocol, as described in \autoref{subsec:increasing the field of view}. Additionally, for each protocol a set of dark ($I_{D}$) and flat images ($I_{F}$) were recorded for noise and baseline correction, respectively. Technical specifications of the beamline setup can be found in \cite{Stampanoni2006a}, the complete imaging and reconstruction workflow is described in \cite{Hintermueller2010}.
 
 \subsection{Increasing the field of view}\label{subsec:increasing the field of view}
-For parallel beam geometry, tomographic images are obtained at e\-qui\-dis\-tant angles over a sample rotation of \SI{180}{\degree} as shown in \autoref{subfig:wfs180}. After reconstruction, the width of the image corresponds to the field of view of the camera.
+For parallel beam geometry, tomographic images are obtained at equidistant angles over a sample rotation of \SI{180}{\degree} as shown in \autoref{subfig:wfs180}. After reconstruction, the width of the image corresponds to the field of view of the camera.
 
 Samples twice as large as the field of view can be imaged using scanning protocols based on a \SI{360}{\degree} off center sample rotation as shown in \autoref{subfig:wfs360}. Images recorded between \SI{180}{\degree} and \SI{360}{\degree} have to be flipped after acquisition: the projections obtained at angular position $\theta$ and $\theta$+\SI{180}{\degree} ($I_{Pr_{\theta}}$ and $I_{Pr_{\theta+\SI{180}{\degree}}}$) have to be stitched to one projection. The resulting images cover twice the field of view of the camera.
 
@@ -71,7 +71,7 @@ Samples twice as large as the field of view can be imaged using scanning protoco
 			\fill [color=gray, nearly transparent] (0.5*\BeamLength+1,\startAtY+0.5) circle (0.5);
 			\fill (0.5*\BeamLength+1,\startAtY+0.5) circle (0.025);
 			\draw [thick] (0.5*\BeamLength+1,\startAtY+0.5) circle (0.5);
-			\draw [thick,->] (0.5*\BeamLength+1,\startAtY+0.25)   arc (-90:90:0.25);
+			\draw [thick,->] (0.5*\BeamLength+1,\startAtY+0.25) arc (-90:90:0.25);
 			\node [anchor=center] at (0.5*\BeamLength+1,\startAtY+1+0.25) {sample};
 		\end{tikzpicture}
 		\label{subfig:wfs180}
@@ -119,9 +119,9 @@ Samples twice as large as the field of view can be imaged using scanning protoco
 				{
 					\fill [color=\color, very nearly transparent] (0.5*\BeamLength+1,\y) circle (1.5);
 				}
-			\fill [color=magenta, semitransparent]   (0.5*\BeamLength+1,1) arc (90:-90:1.5) -- ++(0,1) arc (-90:90:0.5);
+			\fill [color=magenta, semitransparent] (0.5*\BeamLength+1,1) arc (90:-90:1.5) -- ++(0,1) arc (-90:90:0.5);
 			\pattern [pattern=checkerboard, pattern color=gray, semitransparent] (0.5*\BeamLength+1,1) arc (90:-90:1.5) -- ++(0,1) arc (-90:90:0.5);
-			\fill [color=cyan, semitransparent]  (0.5*\BeamLength+1,3) arc (90:270:1.5) -- ++(0,1) arc (270:90:0.5);
+			\fill [color=cyan, semitransparent] (0.5*\BeamLength+1,3) arc (90:270:1.5) -- ++(0,1) arc (270:90:0.5);
 			\fill [pattern=horizontal lines, pattern color=gray] (0.5*\BeamLength+1,1) arc (90:270:1.5) -- ++(0,1) arc (270:90:0.5);
 			\fill [color=yellow] (0.5*\BeamLength+1,1-0.5) circle (0.5);	
 			\foreach \y/\position/\color/\pattern in {\startAtY-0.5/1/magenta/checkerboard,\startAtY+0.5/2/yellow/,\startAtY+1.5/3/cyan/horizontal lines}
@@ -291,28 +291,28 @@ All parameters of each protocol and each subscan (sample-position in relation to
 	\begin{tabular}{ccccccc}
 		\toprule
 		\multirow{2}{*}{Protocol} & \multicolumn{3}{c}{Projections for Subscan} & Total Number & Time/Radiation & Simulated\\
-			& $\textrm{s}_{1}$ & $\textrm{s}_{2}$ & $\textrm{s}_{3}$        & of Projections & Dose [\%] & Quality [\%]\\
+		& $\textrm{s}_{1}$ & $\textrm{s}_{2}$ & $\textrm{s}_{3}$ & of Projections & Dose [\%] & Quality [\%]\\
 		\midrule
 		A\tnote{1} & & & & 13534 & 100 & \\
 		\rowcolor{lightgray} B\tnote{2} & 5244 & 5244 & 5244 & 15732 & 116 & 100\\
-		C & 5244 & 2622 & 5244 & 13110 &  97 & 89\\
-		D & 4370 & 4370 & 4370 & 13110 &  97 & 85\\
-		E & 4370 & 2185 & 4370 & 10925 &  81 & 87\\
-		F & 3934 & 3934 & 3934 & 11802 &  87 & 80\\
-		G & 3934 & 1967 & 3934 & 9835  &  73 & 84\\
-		H & 3496 & 3496 & 3496 & 10488 &  77 & 78\\
-		I & 3496 & 1748 & 3496 & 8740  &  65 & 80\\
-		J & 3060 & 3060 & 3060 & 9180  &  68 & 76\\
-		K & 3060 & 1530 & 3060 & 7650  &  57 & 75\\
-		\rowcolor{lightgray} L  & 2622 & 2622 & 2622 & 7866  &  58 & 72\\
-		M & 2622 & 1311 & 2622 & 6555  &  48 & 69\\
-		N & 2186 & 2186 & 2186 & 6558  &  48 & 67\\
-		O & 2185 & 1093 & 2185 & 5463  &  40 & 62\\
-		P & 1748 & 1748 & 1748 & 5244  &  39 & 61\\
-		Q & 1748 & 874  & 1748 & 4370  &  32 & 55\\
-		R & 1312 & 1312 & 1312 & 3936  &  29 & 46\\
-		S & 874  & 874  & 874  & 2622  &  19 & 21\\
-		\rowcolor{lightgray} T & 874  & 437  & 874  & 2185  &  16  & 20\\
+		C & 5244 & 2622 & 5244 & 13110 & 97 & 89\\
+		D & 4370 & 4370 & 4370 & 13110 & 97 & 85\\
+		E & 4370 & 2185 & 4370 & 10925 & 81 & 87\\
+		F & 3934 & 3934 & 3934 & 11802 & 87 & 80\\
+		G & 3934 & 1967 & 3934 & 9835  & 73 & 84\\
+		H & 3496 & 3496 & 3496 & 10488 & 77 & 78\\
+		I & 3496 & 1748 & 3496 & 8740  & 65 & 80\\
+		J & 3060 & 3060 & 3060 & 9180  & 68 & 76\\
+		K & 3060 & 1530 & 3060 & 7650  & 57 & 75\\
+		\rowcolor{lightgray} L & 2622 & 2622 & 2622 & 7866 & 58 & 72\\
+		M & 2622 & 1311 & 2622 & 6555  & 48 & 69\\
+		N & 2186 & 2186 & 2186 & 6558  & 48 & 67\\
+		O & 2185 & 1093 & 2185 & 5463  & 40 & 62\\
+		P & 1748 & 1748 & 1748 & 5244  & 39 & 61\\
+		Q & 1748 & 874  & 1748 & 4370  & 32 & 55\\
+		R & 1312 & 1312 & 1312 & 3936  & 29 & 46\\
+		S & 874  & 874  & 874  & 2622  & 19 & 21\\
+		\rowcolor{lightgray} T & 874 & 437 & 874 & 2185 & 16 & 20\\
 		\bottomrule
 	\end{tabular}
 	\begin{tablenotes}
@@ -323,10 +323,10 @@ All parameters of each protocol and each subscan (sample-position in relation to
 \end{threeparttable}
 }
 
-\subsection{Projection merging and tomographic reconstruction}
+\subsection[Projection merging \& tomographic reconstruction]{Projection merging and tomographic reconstruction}
 After acquisition of the three subscans per protocol, custom \ac{matlab} functions read the parameters of the single subscans (\eg sample name, amount of subscans, amount of dark and flat images) as well as the desired output-name and -suffix, and performed all necessary calculations, including: loading of the correct projections from each subscan; normalizing; interpolation; cutline detection; correct stitching of the images into wide field projections, and writing these merged projections as well as log files needed for the reconstruction to disk.
 
-The merged projections were subsequently rearranged into si\-no\-grams, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of every corrected projection. The $n$\textsuperscript{th} slice of the tomographic scan was reconstructed from the $n$\textsuperscript{th} sinogram using an \acs{fft}-based regridding algorithm~\cite{Dowd1999,Marone2008}. The 19 tomographic datasets were reconstructed on a computing cluster composed of five \SI{64}{\bit} Opteron machines with four cores and \SI{8}{\giga\byte} \acsu{ram} each. The reconstructions resulted in an image stack covering a large sample volume of 2792$\times$2792$\times$1024 pixels, a nine-fold increase from the standard volume of 1024$\times$1024$\times$1024 pixels for one conventional scan.
+The merged projections were subsequently rearranged into sinograms, where the $n$\textsuperscript{th} sinogram is composed of the $n$\textsuperscript{th} line of every corrected projection. The $n$\textsuperscript{th} slice of the tomographic scan was reconstructed from the $n$\textsuperscript{th} sinogram using an \acs{fft}-based regridding algorithm~\cite{Dowd1999,Marone2008}. The 19 tomographic datasets were reconstructed on a computing cluster composed of five \SI{64}{\bit} Opteron machines with four cores and \SI{8}{\giga\byte} \acsu{ram} each. The reconstructions resulted in an image stack covering a large sample volume of 2792$\times$2792$\times$1024 pixels, a nine-fold increase from the standard volume of 1024$\times$1024$\times$1024 pixels for one conventional scan.
 
 \section{Results}\label{sec:Results}
 \subsection{Image Merging and Reconstruction}\label{sec:Image Merging and Reconstruction}
@@ -398,7 +398,7 @@ The dashed circles on the reconstructed slice mark the start and the end of the 
 				%%%% big circle
 					\draw [dashed, ultra thick, color=red] (2792/2,992/2) circle (512);
 					\def\angle{35}
-					\draw [white, thick, <->] (2792/2,992/2) +(\angle:0) --  node (bigto) {} +(\angle:512); 
+					\draw [white, thick, <->] (2792/2,992/2) +(\angle:0) -- node (bigto) {} +(\angle:512); 
 					\node [white] (bigfrom) at (349,256){$\frac{1024}{2}$px};
 					\draw [white, ->, thick, densely dotted] (bigfrom) to [bend left=45] (bigto);
 				%%%% big circle
@@ -480,7 +480,7 @@ As expected, the calculated quality of the reconstructions representing the diff
 	\label{fig:NormalizedErrorPlot}%
 \end{figure}%
 
-\subsection{Three-dimensional visualization of different protocols}
+\subsection[\threed visualization of different protocols]{Three-dimensional visualization of different protocols}
 \label{subsec:comparison}
 The tomograms of the different protocols were three-dimensionally analyzed and visualized using MeVisLab (Version 2.0 (2009-06-09 Release), MeVis Medical Solutions AG and Fraunhofer MEVIS - Institute for Medical Image Computing, Bremen, Germany). Airway segments were extracted using a threshold interval based region growing algorithm~\cite{Zucker1976}. A seed point for the region growing algorithm was manually defined in the most proximal slice for each independent airway segment. The coordinates of the seed points were kept constant for protocol B--T, allowing direct comparison between the airway segment reconstructions of the different protocols. Airway segments extracted for protocol B, L and T are shown in \autoref{fig:BvsT}.
 
@@ -651,6 +651,9 @@ A method to increase the lateral field of view of tomographic imaging has been e
 Different optimized scanning protocols for covering a large field of view have been validated and are now provided for the end-users of the \ac{tomcat} beamline. End-users now have the possibility to choose suitable scanning protocols depending on a balance between acquisition time and expected reconstruction quality. Depending on this balance, a reduction of the image acquisition time by \SI{84}{\percent} is possible, while keeping the quality of the reconstructed tomographic dataset on a level still permitting automated segmentation of the lung structure and surrounding airspace, as shown in \autoref{subsec:comparison}. The reduction in acquisition time obviously reduces the time during which the sample is irradiated by synchrotron radiation and thus reduces the radiation dose inflicted on the sample.
 
 \section{Acknowledgments}
-This work has been funded by the grants 3100A0-109874 and 310030-125397 of the Swiss National Science Foundation. We thank Mo\-ham\-med Ouanella for his excellent technical assistance and Volker Dicken from Fraunhofer MEVIS for the fruitful discussion concerning the euclidean distance transformation. Dan Ward kindly checked the English of the manuscript.
-\bibliographystyle{unsrtnat}
-\bibliography{../../references}
+This work has been funded by the grants 3100A0-109874 and 310030-125397 of the Swiss National Science Foundation. We thank Mohammed Ouanella for his excellent technical assistance and Volker Dicken from Fraunhofer MEVIS for the fruitful discussion concerning the euclidean distance transformation. Dan Ward kindly checked the English of the manuscript.
+
+% \renewcommand\bibname{Bibliography | Chapter 7}%
+% \bibliographystyle{unsrtnat}%
+% \bibliography{../../references}%
+% \addcontentsline{toc}{section}{\bibname}%
