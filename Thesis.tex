@@ -1,5 +1,5 @@
 \documentclass[%
-	draft,%
+	%draft,%
 	twoside,%
 	openright,%
 	titlepage,%
@@ -48,6 +48,12 @@
 	eulermath,%
 	parts]{classicthesis}
 %\usepackage[margin=1.3in]{geometry}\usepackage{setspace}\doublespacing
+%%%%%%%%%%%Watermark
+%\usepackage[firstpage]{draftwatermark} % try firstpage as option
+%	\SetWatermarkLightness{0.618}
+%	\SetWatermarkScale{0.618}
+%	\SetWatermarkText{Special Edition}
+%%%%%%%%%%%Watermark
 \usepackage[all]{hypcap}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Re-usable information
@@ -199,5 +205,5 @@
 \cleardoublepage\include{FrontBackmatter/Bibliography}
 \cleardoublepage\include{FrontBackmatter/Declaration}
 \cleardoublepage\include{FrontBackmatter/Colophon}
-%%%%%%%%%%%%%%%%%%%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
+%%%%%%%%%%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
 \end{document}
