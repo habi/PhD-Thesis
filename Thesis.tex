@@ -1,5 +1,5 @@
 \documentclass[%
-	%draft,%
+	draft,%
 	twoside,%
 	openright,%
 	titlepage,%
@@ -31,7 +31,8 @@
 \usepackage{pgfplots}
 	%\usetikzlibrary{pgfplotsclickable}
 \usepackage[version=3]{mhchem}
-\usepackage[alsoload=synchem,binary,obeyall]{siunitx}
+\usepackage[load-configurations=abbreviations,load-configurations=binary,detect-all]{siunitx}
+	\DeclareSIUnit\Molar{\textsc{m}}
 \usepackage{makeidx}
 \usepackage[shadow]{todonotes}
 \usepackage{pdfpages}
@@ -86,8 +87,6 @@
 \newlength\imagewidth % needed for scalebars
 \newlength\imagescale % ditto
 \newcommand{\subfigureautorefname}{\figureautorefname} % to have subfigures named using \autoref
-\newcommand{\ie}{i.\,e.\ }
-\newcommand{\eg}{e.\,g.\ }
 %%%%%%%%%%%%%%%%%%%%%%%
 % Color (Re-Definition)
 %%%%%%%%%%%%%%%%%%%%%%%
