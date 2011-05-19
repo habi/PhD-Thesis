@@ -1,5 +1,5 @@
 \documentclass[%
-	draft,%
+	%draft,%
 	twoside,%
 	openright,%
 	titlepage,%
@@ -16,20 +16,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Packages with options that might require adjustments
 %%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{lipsum}
 \usepackage[utf8]{inputenc}
-%\usepackage[square,numbers,sort&compress,sectionbib]{natbib}\usepackage{chapterbib}% Chapter Bibliography
-\usepackage[square,numbers,sort&compress]{natbib}%normal Bibliography
 \usepackage[greek,ngerman,english]{babel}
+\usepackage[square,numbers,sort&compress]{natbib}%normal Bibliography
 \usepackage{multirow}
-\usepackage{lipsum}
 \usepackage{threeparttable}
 \usepackage[fleqn]{amsmath}
 \usepackage{classicthesis-ldpkg}
+\usepackage[dvipsnames]{xcolor} % needed by tikz, so loading it before
 \usepackage{tikz}
 	\usetikzlibrary{shapes,arrows,patterns}
 \usepackage{pgfplots}
-	%\usetikzlibrary{pgfplotsclickable}
+	%\usetikzlibrary{pgfplotsclickable} make plots clickable
 \usepackage[version=3]{mhchem}
 \usepackage[load-configurations=abbreviations,load-configurations=binary,detect-all]{siunitx}
 	\DeclareSIUnit\Molar{\textsc{m}}
@@ -40,7 +38,6 @@
 \usepackage{xfrac}
 \usepackage[groups]{svn-multi}
 \usepackage[%
-	listsseparated,%
 	eulerchapternumbers,%
 	%drafting,
 	pdfspacing,%
@@ -97,30 +94,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Captions look and feel
 %%%%%%%%%%%%%%%%%%%%%%%
-\captionsetup{format=hang, font=small}
-%%%%%%%%%%%%%%%%%%%%%%%
-% Index Generation
-%%%%%%%%%%%%%%%%%%%%%%%
-%\makeindex
-%%%%%%%%%%%%%%%%%%%%%%%
-% Listings setup
-%%%%%%%%%%%%%%%%%%%%%%%
-\lstset{%
-	language=MATLAB,%C++,
-	basicstyle=\ttfamily,
-	keywordstyle=\color{RoyalBlue},%\bfseries,
-	stringstyle=\rmfamily,
-	%identifierstyle=\color{Red},
-	commentstyle=\color{Green},
-	showspaces=false,
-	numbers=left,%
-	numberstyle=\tiny,
-	stepnumber=2,
-	numbersep=10pt,
-	breaklines=true,
-	backgroundcolor=\color{lightgray!20},
-	frame=leftline%,frameround=ftff
-}
+\captionsetup{format=hang,font=small}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Hack to make \graffito work in Acknowledgements, as per Mail from Andre Miede from 03.03.2010
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -158,11 +132,8 @@
 % GO!GO!GO! MOVE IT!
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-%\frenchspacing
 \raggedbottom
-\selectlanguage{english} % english ngerman
-%\renewcommand*{\bibname}{new name}
-%\setbibpreamble{}
+\selectlanguage{english} % english and ngerman are set up by babel
 \pagenumbering{roman}
 \pagestyle{plain}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -204,5 +175,5 @@
 \cleardoublepage\include{FrontBackmatter/Bibliography}
 \cleardoublepage\include{FrontBackmatter/Declaration}
 \cleardoublepage\include{FrontBackmatter/Colophon}
-%%%%%%%%%%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
+%%\cleardoublepage\include{FrontBackmatter/SpecialNinaAcknowledgments}
 \end{document}
