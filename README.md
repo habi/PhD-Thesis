@@ -1,6 +1,6 @@
 # PhD-Thesis
 
-This is my PhD-Thesis, typeset with [LaTeX] based on the [classicthesis] theme by [Andrè Miede][miede].
+This is my PhD-Thesis, typeset with [LaTeX] based on the [classicthesis] theme by [André Miede][miede].
 
 The progress of writing the thesis was tracked using SVN and has been migrated to GitHub for safe-keeping after I finished my work at the [Institute of Anatomy][ana] of the [University of Bern][unibe] in Switzerland.
 
