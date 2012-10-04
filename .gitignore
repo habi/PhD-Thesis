@@ -1,0 +1,10 @@
+/Chapters/*.aux
+/FrontBackmatter/*.aux
+/*.aux
+/Thesis.lof
+/Thesis.lot
+/Thesis.synctex.gz
+/Thesis.toc
+/Thesis.log
+/Thesis.out
+/Thesis.blg

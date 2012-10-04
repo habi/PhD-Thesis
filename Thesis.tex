@@ -1,5 +1,5 @@
 \documentclass[%
-	%draft,%
+	draft,%
 	twoside,%
 	openright,%
 	titlepage,%
@@ -74,7 +74,6 @@
 \newcommand{\myUni}{\protect{University of Bern}\xspace}
 \newcommand{\myLocation}{Bern, Switzerland\xspace}
 \newcommand{\myTime}{May 2010\xspace}
-\newcommand{\myVersion}{\href{http://subversion.apache.org/}{\acs{svn}}-Revision  \svnkw{LastChangedRevision}\xspace}
 %%%%%%%%%%%%%%%%%%%%%%%
 % Setup and Finetuning
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -95,21 +94,6 @@
 % Captions look and feel
 %%%%%%%%%%%%%%%%%%%%%%%
 \captionsetup{format=hang,font=small}
-%%%%%%%%%%%%%%%%%%%%%%%
-% Hack to make \graffito work in Acknowledgements, as per Mail from Andre Miede from 03.03.2010
-%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\let\graffito\relax
-\def\graffito@setup{%
-	\slshape\footnotesize%
-	\parindent=0pt \lineskip=0pt \lineskiplimit=0pt %
-	\tolerance=2000 \hyphenpenalty=300 \exhyphenpenalty=300
-	\doublehyphendemerits=100000
-	\finalhyphendemerits=\doublehyphendemerits}
-\DeclareRobustCommand{\graffito}[1]{\marginpar
-	[\graffito@setup\raggedleft\hspace{0pt}{#1}]
-	{\graffito@setup\raggedright\hspace{0pt}{#1}}}
-\makeatother
 %%%%%%%%%%%%%%%%%%%%%%%
 % Hyperreferences
 %%%%%%%%%%%%%%%%%%%%%%%

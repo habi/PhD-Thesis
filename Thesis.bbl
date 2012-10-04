@@ -1,0 +1,1184 @@
+\begin{thebibliography}{156}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Wikipedia(2010{\natexlab{a}})]{Cash}
+Wikipedia.
+\newblock {You'll Never Walk Alone (song) --- Wikipedia{,} The Free
+  Encyclopedia}, 2010{\natexlab{a}}.
+\newblock URL
+  \url{http://en.wikipedia.org/w/index.php?title=You%27ll_Never_Walk_Alone_(song)&oldid=360900902}.
+\newblock [Online; accessed 11-May-2010].
+
+\bibitem[Watterson(1996)]{Watterson1996}
+Bill Watterson.
+\newblock \emph{It's A Magical World: A Calvin and Hobbes Collection}.
+\newblock Andrews McMeel Publishing, original edition, 9 1996.
+\newblock ISBN 9780836221367.
+\newblock URL
+  \url{http://books.google.com/books?id=wmjG5g4Yx7gC&lpg=PA4&pg=PA481}.
+
+\bibitem[Downing et~al.(2007)Downing, Sui, Auer, and Manfred]{Downing2007}
+Kenneth~H. Downing, Haixin Sui, Auer, and Manfred.
+\newblock Electron tomography: A 3d view of the subcellular world.
+\newblock \emph{Analytical Chemistry}, 79\penalty0 (21):\penalty0 7949--7957,
+  November 2007.
+\newblock ISSN 0003-2700.
+\newblock URL \url{http://dx.doi.org/10.1021/ac071982u}.
+
+\bibitem[Stampanoni et~al.(2010)Stampanoni, Mokso, Marone, Vila-Comamala,
+  Gorelick, Trtik, Jefimovs, and David]{Stampanoni2010}
+Marco Stampanoni, Rajmund Mokso, Federica Marone, Joan Vila-Comamala, Sergey
+  Gorelick, Pavel Trtik, Konstantin Jefimovs, and Christian David.
+\newblock Phase-contrast tomography at the nanoscale using hard x rays.
+\newblock \emph{Phys. Rev. B}, 81\penalty0 (14):\penalty0 140105, Apr 2010.
+\newblock URL \url{http://dx.doi.org/10.1103/PhysRevB.81.140105}.
+
+\bibitem[Woodward and Maina(2005)]{Woodward2005}
+J.D. Woodward and J.N. Maina.
+\newblock {A 3D digital reconstruction of the components of the gas exchange
+  tissue of the lung of the muscovy duck, Cairina moschata}.
+\newblock \emph{J.Anat.}, 206\penalty0 (5):\penalty0 477--492, May 2005.
+\newblock URL \url{http://dx.doi.org/10.1111/j.1469-7580.2005.00413.x}.
+
+\bibitem[Marvin(1961)]{Minsky1961}
+Minsky Marvin.
+\newblock Microscopy apparatus, December 1961.
+\newblock URL \url{http://www.freepatentsonline.com/3013467.html}.
+
+\bibitem[Hounsfield(1976{\natexlab{a}})]{Hounsfield1976a}
+GN~Hounsfield.
+\newblock {Historical notes on computerized axial tomography.}
+\newblock \emph{Journal of the Canadian Association of Radiologists},
+  27\penalty0 (3):\penalty0 135, 1976{\natexlab{a}}.
+
+\bibitem[Bonse(2008)]{Bonse2008}
+Ulrich Bonse.
+\newblock X-ray imaging: past and present.
+\newblock volume 7078, page 707802. SPIE, 2008.
+\newblock URL \url{http://dx.doi.org/10.1117/12.794694}.
+
+\bibitem[Danovaro et~al.(2010)Danovaro, Dell'Anno, Pusceddu, Gambi, Heiner, and
+  Mobjerg~Kristensen]{Danovaro2010}
+Roberto Danovaro, Antonio Dell'Anno, Antonio Pusceddu, Cristina Gambi, Iben
+  Heiner, and Reinhardt Mobjerg~Kristensen.
+\newblock The first metazoa living in permanently anoxic conditions.
+\newblock \emph{BMC Biology}, 8\penalty0 (1):\penalty0 30, 2010.
+\newblock ISSN 1741-7007.
+\newblock URL \url{http://dx.doi.org/10.1186/1741-7007-8-30}.
+
+\bibitem[Weibel(2009)]{Weibel2009}
+Ewald~R Weibel.
+\newblock What makes a good lung?
+\newblock \emph{Swiss Med Wkly}, 139\penalty0 (27-28):\penalty0 375--386, Jul
+  2009.
+
+\bibitem[Schittny and Burri(2008)]{Schittny2007a}
+Johannes~C. Schittny and Peter~H. Burri.
+\newblock \emph{Development and Growth of the Lung}, chapter~5, pages 91--114.
+\newblock McGraw-Hill Professional, 2008.
+\newblock URL \url{http://books.google.com/books?id=3FjqNJI148oC&pg=PT150}.
+
+\bibitem[Hyde et~al.(2007)Hyde, Blozis, Avdalovic, Putney, Dettorre,
+  Quesenberry, Singh, and Tyler]{Hyde2007}
+Dallas~M. Hyde, Shelley~A. Blozis, Mark~V. Avdalovic, Lei~F. Putney, Rachel
+  Dettorre, Nathanial~J. Quesenberry, Paramjit Singh, and Nancy~K. Tyler.
+\newblock {Alveoli increase in number but not size from birth to adulthood in
+  rhesus monkeys}.
+\newblock \emph{Am J Physiol Lung Cell Mol Physiol}, 293\penalty0 (3):\penalty0
+  L570--579, 2007.
+\newblock URL \url{http://dx.doi.org/10.1152/ajplung.00467.2006}.
+
+\bibitem[Tsuda et~al.(2002)Tsuda, Rogers, Hydon, and Butler]{Tsuda2002}
+A.~Tsuda, R.A. Rogers, P.E. Hydon, and J.P. Butler.
+\newblock Chaotic mixing deep in the lung.
+\newblock \emph{Proceedings of the National Academy of Sciences of the United
+  States of America}, 99\penalty0 (15):\penalty0 10173--10178, July 2002.
+\newblock URL \url{http://dx.doi.org/10.1073/pnas.102318299}.
+
+\bibitem[Hoffman and Chon(2005)]{Hoffman2005}
+Eric~A. Hoffman and Deokiee Chon.
+\newblock {Computed Tomography Studies of Lung Ventilation and Perfusion}.
+\newblock \emph{Proc Am Thorac Soc}, 2\penalty0 (6):\penalty0 492--498, 2005.
+\newblock URL \url{http://dx.doi.org/10.1513/pats.200509-099DS}.
+
+\bibitem[Bayat et~al.(2006)Bayat, Porra, Suhonen, Nemoz, Suortti, and
+  Sovij\"{a}rvi]{Bayat2006}
+S.~Bayat, L.~Porra, H.~Suhonen, C.~Nemoz, P.~Suortti, and A.~R. Sovij\"{a}rvi.
+\newblock {{D}ifferences in the time course of proximal and distal airway
+  response to inhaled histamine studied by synchrotron radiation {C}{T}}.
+\newblock \emph{J. Appl. Physiol.}, 100:\penalty0 1964--1973, Jun 2006.
+\newblock URL \url{http://dx.doi.org/10.1152/japplphysiol.00594.2005}.
+
+\bibitem[Bayat et~al.(2009)Bayat, Porra, Suhonen, Suortti, and
+  Sovij\"{a}rvi]{Bayat2009}
+S.~Bayat, L.~Porra, H.~Suhonen, P.~Suortti, and A.~R. Sovij\"{a}rvi.
+\newblock {{P}aradoxical conducting airway responses and heterogeneous regional
+  ventilation after histamine inhalation in rabbit studied by synchrotron
+  radiation {C}{T}}.
+\newblock \emph{J. Appl. Physiol.}, 106:\penalty0 1949--1958, Jun 2009.
+\newblock URL \url{http://dx.doi.org/10.1152/japplphysiol.90550.2008}.
+
+\bibitem[Mund et~al.(2008)Mund, Stampanoni, and Schittny]{Mund2008}
+Sonja~I. Mund, Marco Stampanoni, and Johannes~C. Schittny.
+\newblock Developmental alveolarization of the mouse lung.
+\newblock \emph{Developmental Dynamics}, 237\penalty0 (8):\penalty0 2108--2116,
+  2008.
+\newblock URL \url{http://dx.doi.org/10.1002/dvdy.21633}.
+
+\bibitem[Schittny et~al.(2008)Schittny, Mund, and Stampanoni]{Schittny2008}
+Johannes~C. Schittny, Sonja~I. Mund, and Marco Stampanoni.
+\newblock Evidence and structural mechanism for late lung alveolarization.
+\newblock \emph{Am J Physiol Lung Cell Mol Physiol}, 294\penalty0 (2):\penalty0
+  L246--254, 2008.
+\newblock URL \url{http://dx.doi.org/10.1152/ajplung.00296.2007}.
+
+\bibitem[Tsuda et~al.(2008)Tsuda, Filipovic, Haberth\"{u}r, Dickie, Matsui,
+  Stampanoni, and Schittny]{Tsuda2008}
+A.~Tsuda, N.~Filipovic, D.~Haberth\"{u}r, R.~Dickie, Y.~Matsui, M.~Stampanoni,
+  and J.~C. Schittny.
+\newblock {Finite element 3D reconstruction of the pulmonary acinus imaged by
+  synchrotron X-ray tomography}.
+\newblock \emph{J Appl Physiol}, 105\penalty0 (3):\penalty0 964--976, 2008.
+\newblock URL \url{http://dx.doi.org/10.1152/japplphysiol.90546.2008}.
+
+\bibitem[Lynch(2010{\natexlab{a}})]{Alveoli}
+Patrick~J. Lynch.
+\newblock Bronchial anatomy detail of alveoli and lung circulation,
+  2010{\natexlab{a}}.
+\newblock URL \url{http://en.wikipedia.org/wiki/File:Bronchial_anatomy.jpg}.
+\newblock [Online; 20.04.2010].
+
+\bibitem[Burri et~al.(1974)Burri, Dbaly, and Weibel]{Burri1974}
+Peter~H. Burri, Jaroslav Dbaly, and Ewald~R. Weibel.
+\newblock {The postnatal growth of the rat lung. I. Morphometry}.
+\newblock \emph{The Anatomical Record}, 178\penalty0 (4):\penalty0 711--730,
+  1974.
+\newblock ISSN 1097-0185.
+\newblock URL \url{http://dx.doi.org/10.1002/ar.1091780405}.
+
+\bibitem[Verhoeven(2000)]{HollowMan}
+Paul Verhoeven.
+\newblock {Hollow Man}.
+\newblock Columbia Pictures Corporation, August 2000.
+\newblock URL \url{http://www.imdb.com/title/tt0164052}.
+
+\bibitem[Takahashi and Kiyono(1999)]{Takahashi1999}
+Ichiro Takahashi and Hiroshi Kiyono.
+\newblock {Gut as the Largest Immunologic Tissue}.
+\newblock \emph{JPEN J Parenter Enteral Nutr}, 23:\penalty0 S7--12, 1999.
+\newblock URL \url{http://dx.doi.org/10.1177/014860719902300503}.
+
+\bibitem[Haycock et~al.(1978)Haycock, Schwartz, and Wisotsky]{Haycock1978}
+G.B. Haycock, G.J. Schwartz, and D.H. Wisotsky.
+\newblock {Geometric method for measuring body surface area: A height-weight
+  formula validated in infants, children, and adults+}.
+\newblock \emph{The Journal of Pediatrics}, 93\penalty0 (1):\penalty0 62--66,
+  1978.
+\newblock URL \url{http://dx.doi.org/10.1016/S0022-3476(78)80601-5}.
+
+\bibitem[Richardson(1961)]{Richardson1961}
+Lewis~F. Richardson.
+\newblock \emph{{The problem of contiguity: An appendix to Statistic of Deadly
+  Quarrels}}, volume~6, pages 139--187.
+\newblock Ann Arbor, Mich. : The Society, 1961.
+
+\bibitem[Mandelbrot(1967)]{Mandelbrot1967}
+B.~Mandelbrot.
+\newblock {How long is the coast of Britain? Statistical self-similarity and
+  fractional dimension}.
+\newblock \emph{Science}, 156\penalty0 (3775):\penalty0 636, 1967.
+\newblock URL \url{http://dx.doi.org/10.1126/science.156.3775.636}.
+
+\bibitem[Schittny and Burri(2004)]{Schittny2004}
+J.C. Schittny and P.H. Burri.
+\newblock \emph{Morphogenesis of the Mammalian Lung: Aspects of Structure and
+  Extracellular Matrix Components}, pages 275--317.
+\newblock Marcel Dekker Inc, 2004.
+
+\bibitem[Rodriguez et~al.(1987)Rodriguez, Bur, Favre, and
+  Weibel]{Rodriguez1987}
+M.~Rodriguez, S.~Bur, A.~Favre, and E.~R. Weibel.
+\newblock Pulmonary acinus: Geometry and morphometry of the peripheral airway
+  system in rat and rabbit.
+\newblock \emph{American Journal of Anatomy}, 180\penalty0 (2):\penalty0
+  143--155, 1987.
+\newblock URL \url{http://dx.doi.org/10.1002/aja.1001800204}.
+
+\bibitem[Burri(1999)]{Burri1999}
+P.H. Burri.
+\newblock \emph{Lung Disease}, chapter Lung development and pulmonary
+  angiogenesis, pages 122--151.
+\newblock Oxford University Press, New York., 1999.
+
+\bibitem[Haefeli-Bleuer and Weibel(1988{\natexlab{a}})]{Haefeli-Bleuer1988}
+Beatrice Haefeli-Bleuer and Ewald~R. Weibel.
+\newblock Morphometry of the human pulmonary acinus.
+\newblock \emph{The Anatomical Record}, 220\penalty0 (4):\penalty0 401--414,
+  1988{\natexlab{a}}.
+\newblock URL \url{http://dx.doi.org/10.1002/ar.1092200410}.
+
+\bibitem[Weibel(1963)]{Weibel1963}
+Ewald~R Weibel.
+\newblock \emph{Morphometry of the human lung}.
+\newblock Springer-Verlag, Berlin, G\"{o}ttingen, etc., 1963.
+
+\bibitem[Lynch(2010{\natexlab{b}})]{LungDiagram}
+Patrick~J. Lynch.
+\newblock Lungs diagram with internal detail, 2010{\natexlab{b}}.
+\newblock URL
+  \url{http://en.wikipedia.org/wiki/File:Lungs_diagram_detailed.svg}.
+\newblock [Online; 18.03.2010].
+
+\bibitem[Massaro et~al.(1985)Massaro, Teich, Maxwell, Massaro, and
+  Whitney]{Massaro1985}
+D.~Massaro, N.~Teich, S.~Maxwell, G.~D. Massaro, and P.~Whitney.
+\newblock Postnatal development of alveoli. regulation and evidence for a
+  critical period in rats.
+\newblock \emph{J Clin Invest}, 76\penalty0 (4):\penalty0 1297--1305, Oct 1985.
+\newblock URL \url{http://dx.doi.org/10.1172/JCI112103}.
+
+\bibitem[Ochs(2006)]{Ochs2006}
+Matthias Ochs.
+\newblock A brief update on lung stereology.
+\newblock \emph{Journal of Microscopy}, 222\penalty0 (3):\penalty0 188--200,
+  2006.
+\newblock URL \url{http://dx.doi.org/10.1111/j.1365-2818.2006.01587.x}.
+
+\bibitem[Hsia et~al.(2010)Hsia, Hyde, Ochs, and Weibel]{Hsia2010}
+Connie C.~W. Hsia, Dallas~M. Hyde, Matthias Ochs, and Ewald~R. Weibel.
+\newblock {An Official Research Policy Statement of the American Thoracic
+  Society/European Respiratory Society: Standards for Quantitative Assessment
+  of Lung Structure}.
+\newblock \emph{Am. J. Respir. Crit. Care Med.}, 181\penalty0 (4):\penalty0
+  394--418, 2010.
+\newblock URL \url{http://dx.doi.org/10.1164/rccm.200809-1522ST}.
+
+\bibitem[Hinterm{\"{u}}ller et~al.(2010)Hinterm{\"{u}}ller, Marone, Isenegger,
+  and Stampanoni]{Hintermueller2010}
+C.~Hinterm{\"{u}}ller, F.~Marone, A.~Isenegger, and M.~Stampanoni.
+\newblock {Image processing pipeline for synchrotron-radiation-based
+  tomographic microscopy}.
+\newblock \emph{Journal of Synchrotron Radiation}, 17\penalty0 (4), Jul 2010.
+\newblock URL \url{http://dx.doi.org/10.1107/S0909049510011830}.
+
+\bibitem[Chapman et~al.(1983)Chapman, Cleese, Gilliam, Idle, Jones, and
+  Palin]{TheMeaningOfLife}
+Graham Chapman, John Cleese, Terry Gilliam, Eric Idle, Terry Jones, and Michael
+  Palin.
+\newblock {The Meaning of Life}.
+\newblock Celandine Films, March 1983.
+\newblock URL \url{http://is.gd/bpLvW}.
+
+\bibitem[{Stampanoni} et~al.(2006){Stampanoni}, {Groso}, {Isenegger},
+  {Mikuljan}, {Chen}, {Bertrand}, {Henein}, {Betemps}, {Frommherz},
+  {B{\"{o}}hler}, {Meister}, {Lange}, and {Abela}]{Stampanoni2006a}
+M.~{Stampanoni}, A.~{Groso}, A.~{Isenegger}, G.~{Mikuljan}, Q.~{Chen},
+  A.~{Bertrand}, S.~{Henein}, R.~{Betemps}, U.~{Frommherz}, P.~{B{\"{o}}hler},
+  D.~{Meister}, M.~{Lange}, and R.~{Abela}.
+\newblock {Trends in synchrotron-based tomographic imaging: the SLS
+  experience}.
+\newblock In \emph{Society of Photo-Optical Instrumentation Engineers (SPIE)
+  Conference Series}, volume 6318 of \emph{Society of Photo-Optical
+  Instrumentation Engineers (SPIE) Conference Series}, Aug. 2006.
+\newblock URL \url{http://dx.doi.org/10.1117/12.679497}.
+
+\bibitem[Frank(1942)]{Frank1942}
+Gabriel Frank.
+\newblock X-ray apparatus, May 1942.
+\newblock URL \url{http://www.freepatentsonline.com/2281931.html}.
+
+\bibitem[Hsieh(2003)]{Hsieh2003}
+J.~Hsieh.
+\newblock \emph{{Computed tomography: Principles, design, artifacts, and recent
+  advances}}.
+\newblock SPIE press, 2003.
+\newblock URL \url{http://books.google.com/books?id=JX__lLLXFHkC}.
+
+\bibitem[Robb(2003)]{Robb2003}
+W.L. Robb.
+\newblock {Perspective on the first 10 years of the CT scanner industry}.
+\newblock \emph{Academic Radiology}, 10\penalty0 (7):\penalty0 756--760, 2003.
+\newblock URL \url{http://dx.doi.org/10.1016/S1076-6332(03)80121-6}.
+
+\bibitem[Cormack(1963)]{Cormack1963}
+AM~Cormack.
+\newblock {Representation of a Function by Its Line Integrals, with Some
+  Radiological Applications}.
+\newblock \emph{Journal of Applied Physics}, 34:\penalty0 2722, 1963.
+\newblock URL \url{http://dx.doi.org/10.1063/1.1729798}.
+
+\bibitem[Cormack(1979)]{Cormack1979}
+AM~Cormack.
+\newblock {Nobel lecture}, 1979.
+\newblock URL
+  \url{http://nobelprize.org/nobel_prizes/medicine/laureates/1979/cormack-lecture.pdf}.
+
+\bibitem[Hounsfield(1976{\natexlab{b}})]{Hounsfield1976}
+EN) Hounsfield, Godfrey Newbold~(Newark.
+\newblock Apparatus for examining objects by means of penetrating radiation,
+  February 1976{\natexlab{b}}.
+\newblock URL \url{http://www.freepatentsonline.com/3940625.html}.
+
+\bibitem[Grodzins(1983{\natexlab{a}})]{Grodzins1983}
+L.~Grodzins.
+\newblock {Optimum energies for x-ray transmission tomography of small
+  samples:: Applications of synchrotron radiation to computerized tomography
+  I}.
+\newblock \emph{Nuclear Instruments and Methods in Physics Research},
+  206\penalty0 (3):\penalty0 541--545, 1983{\natexlab{a}}.
+\newblock URL \url{http://dx.doi.org/10.1016/0167-5087(83)90393-9}.
+
+\bibitem[Grodzins(1983{\natexlab{b}})]{Grodzins1983a}
+L.~Grodzins.
+\newblock {Critical absorption tomography of small samples:: Proposed
+  applications of synchrotron radiation to computerized tomography II}.
+\newblock \emph{Nuclear Instruments and Methods in Physics Research},
+  206\penalty0 (3):\penalty0 547--552, 1983{\natexlab{b}}.
+\newblock URL \url{http://dx.doi.org/10.1016/0167-5087(83)90394-0}.
+
+\bibitem[Compton(1923)]{Compton1923}
+Arthur~H. Compton.
+\newblock A quantum theory of the scattering of x-rays by light elements.
+\newblock \emph{Phys. Rev.}, 21\penalty0 (5):\penalty0 483--502, May 1923.
+\newblock URL \url{http://ds.doi.org/10.1103/PhysRev.21.483}.
+
+\bibitem[Stampanoni et~al.(2002)Stampanoni, Borchert, Wyss, Abela, Patterson,
+  Hunt, Vermeulen, and Ruegsegger]{Stampanoni2002}
+Marco Stampanoni, Gunther Borchert, Peter Wyss, Rafael Abela, Bruce Patterson,
+  Steven Hunt, Detlef Vermeulen, and Peter Ruegsegger.
+\newblock High resolution x-ray detector for synchrotron-based microtomography.
+\newblock \emph{Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment},
+  491\penalty0 (1-2):\penalty0 291--301, September 2002.
+\newblock URL \url{http://dx.doi.org/10.1016/S0168-9002(02)01167-1}.
+
+\bibitem[Johns and Cunningham(1983)]{Johns1983}
+Harold~Elford Johns and John~Robert Cunningham.
+\newblock \emph{Physics of Radiology, Fourth Edition}.
+\newblock Charles C. Thomas Publisher, 4 sub edition, 2 1983.
+\newblock ISBN 9780398046699.
+\newblock URL \url{http://amazon.com/o/ASIN/0398046697/}.
+
+\bibitem[Berger et~al.(1998)Berger, Hubbell, Seltzer, Chang, Coursey, Sukumar,
+  and Zucker]{XCOM}
+MJ~Berger, JH~Hubbell, SM~Seltzer, J.~Chang, JS~Coursey, R.~Sukumar, and
+  DS~Zucker.
+\newblock {XCOM: photon cross sections database}.
+\newblock \emph{NIST Standard Reference Database}, 8:\penalty0 87--3597, 1998.
+\newblock URL \url{http://physics.nist.gov/PhysRefData/Xcom/Text/XCOM.html}.
+
+\bibitem[Kak and Slaney(1988)]{Kak2002}
+Avinash~C. Kak and Malcolm Slaney.
+\newblock \emph{{Principles of computerized tomographic imaging}}.
+\newblock IEEE Press, 1988.
+\newblock URL \url{http://www.slaney.org/pct/}.
+
+\bibitem[Radon(1917)]{Radon1917}
+Johann Radon.
+\newblock {{\"{U}}ber die Bestimmung von Funktionen durch ihre Integralwerte
+  l{\"{a}}ngs gewisser Mannigfaltigkeiten}.
+\newblock \emph{Berichte S{\"{a}}chsische Akademie der Wissenschaften},
+  69:\penalty0 262--277, 1917.
+
+\bibitem[Shannon(1949)]{Shannon1949}
+CE~Shannon.
+\newblock {Communication in the presence of noise}.
+\newblock \emph{Proceedings of the IRE}, 37\penalty0 (1):\penalty0 10--21,
+  1949.
+
+\bibitem[Stampanoni(2002)]{Stampanoni2002a}
+Marco Stampanoni.
+\newblock \emph{A novel approach towards hard X-ray submicrometer computer
+  tomography with synchrotron radiation}.
+\newblock PhD thesis, ETH Z\"{u}rich, 2002.
+\newblock URL \url{http://dx.doi.org/10.3929/ethz-a-004494073}.
+
+\bibitem[Margaritondo(2002)]{Margaritondo2002}
+Giorgio Margaritondo.
+\newblock \emph{Elements of Synchrotron Light: For Biology, Chemistry, and
+  Medical Research (Physics)}.
+\newblock Oxford University Press, USA, 2002.
+\newblock ISBN 0198509316.
+
+\bibitem[{SLS Web Site}(2010)]{wwwsls}
+{SLS Web Site}.
+\newblock {Description}, 2010.
+\newblock URL \url{http://sls.web.psi.ch/}.
+\newblock [Online; accessed 15-February-2010].
+
+\bibitem[Wikipedia(2009)]{wiki:dipolemagnet}
+Wikipedia.
+\newblock {Dipole magnet --- Wikipedia{,} The Free Encyclopedia}, 2009.
+\newblock URL
+  \url{http://en.wikipedia.org/w/index.php?title=Dipole_magnet&oldid=332257500}.
+\newblock [Online; accessed 15-April-2010].
+
+\bibitem[Attwood(2007)]{Attwood2007}
+David Attwood.
+\newblock \emph{Soft X-Rays and Extreme Ultraviolet Radiation: Principles and
+  Applications}.
+\newblock Cambridge University Press, 2007.
+\newblock ISBN 9780521029971.
+
+\bibitem[Coen and Coen(1998)]{TheBigLebowski}
+Joel Coen and Ethan Coen.
+\newblock {The Big Lebowski}.
+\newblock Polygram Filmed Entertainment, March 1998.
+\newblock URL \url{http://www.imdb.com/title/tt0118715/}.
+
+\bibitem[Massaro and Massaro(1992)]{Massaro1992}
+G.~D. Massaro and D.~Massaro.
+\newblock Formation of alveoli in rats: postnatal effect of prenatal
+  dexamethasone.
+\newblock \emph{Am J Physiol}, 263\penalty0 (1 Pt 1):\penalty0 L37--L41, Jul
+  1992.
+
+\bibitem[Stampanoni et~al.(2007)Stampanoni, Groso, Isenegger, Mikuljan, Chen,
+  Meister, Lange, Betemps, Henein, and Abela]{Stampanoni2007}
+M.~Stampanoni, A.~Groso, A.~Isenegger, G.~Mikuljan, Q.~Chen, D.~Meister,
+  M.~Lange, R.~Betemps, S.~Henein, and R.~Abela.
+\newblock {TOMCAT: A beamline for TOmographic Microscopy and Coherent rAdiology
+  experimenTs}.
+\newblock \emph{AIP Conference Proceedings}, 879\penalty0 (1):\penalty0
+  848--851, 2007.
+\newblock URL \url{http://dx.doi.org/10.1063/1.2436193}.
+
+\bibitem[Tschanz et~al.(2003)Tschanz, Makanya, Haenni, and Burri]{Tschanz2003}
+Stefan~A Tschanz, Andrew~N Makanya, Beat Haenni, and Peter~H Burri.
+\newblock Effects of neonatal high-dose short-term glucocorticoid treatment on
+  the lung: a morphologic and morphometric study in the rat.
+\newblock \emph{Pediatr Res}, 53\penalty0 (1):\penalty0 72--80, Jan 2003.
+\newblock URL \url{http://dx.doi.org/10.1203/01.PDR.0000041513.93422.C8}.
+
+\bibitem[Aykac et~al.(2003)Aykac, Hoffman, McLennan, and Reinhardt]{Aykac2003}
+D.~Aykac, E.A. Hoffman, G.~McLennan, and J.M. Reinhardt.
+\newblock {Segmentation and analysis of the human airway tree from
+  three-dimensional X-ray CT images}.
+\newblock \emph{IEEE transactions on medical imaging}, 22\penalty0
+  (8):\penalty0 940--950, 2003.
+\newblock URL \url{http://dx.doi.org/10.1109/TMI.2003.815905}.
+
+\bibitem[Chaturvedi and Lee(2005)]{Chaturvedi2005}
+A.~Chaturvedi and Z.~Lee.
+\newblock {Three-dimensional segmentation and skeletonization to build an
+  airway tree data structure for small animals}.
+\newblock \emph{Physics in Medicine and Biology}, 50\penalty0 (7):\penalty0
+  1405--1419, 2005.
+\newblock URL \url{http://dx.doi.org/10.1088/0031-9155/50/7/005}.
+
+\bibitem[Cheng et~al.(2007)Cheng, Nilufar, Flores-Mir, and Basu]{Cheng2007}
+I.~Cheng, S.~Nilufar, C.~Flores-Mir, and A.~Basu.
+\newblock {Airway segmentation and measurement in CT images}.
+\newblock In \emph{Engineering in Medicine and Biology Society, 2007. EMBS
+  2007. 29th Annual International Conference of the IEEE}, pages 795--799,
+  2007.
+
+\bibitem[Chooi and Morcos(2004)]{Chooi2004}
+WK~Chooi and SK~Morcos.
+\newblock {High resolution volume imaging of airways and lung parenchyma with
+  multislice CT}.
+\newblock \emph{British Journal of Radiology}, 77\penalty0 (Special Issue
+  1):\penalty0 S98, 2004.
+\newblock URL \url{http://dx.doi.org/10.1259/bjr/27596725}.
+
+\bibitem[Dame~Carroll et~al.(2006)Dame~Carroll, Chandra, Jones, Berend,
+  Magnussen, and King]{Dame2006}
+JR~Dame~Carroll, A.~Chandra, AS~Jones, N.~Berend, JS~Magnussen, and GG~King.
+\newblock {Airway dimensions measured from micro-computed tomography and
+  high-resolution computed tomography}.
+\newblock \emph{European Respiratory Journal}, 28\penalty0 (4):\penalty0 712,
+  2006.
+\newblock URL \url{http://dx.doi.org/10.1183/09031936.06.00012405}.
+
+\bibitem[Driehuys et~al.(2007)Driehuys, Walker, Pollaro, Cofer, Mistry,
+  Schwartz, and Johnson]{Driehuys2007}
+B.~Driehuys, J.~Walker, J.~Pollaro, G.P. Cofer, N.~Mistry, D.~Schwartz, and
+  G.A. Johnson.
+\newblock {\textsuperscript{3}He MRI in mouse models of asthma}.
+\newblock \emph{Magnetic resonance in medicine: official journal of the Society
+  of Magnetic Resonance in Medicine/Society of Magnetic Resonance in Medicine},
+  58\penalty0 (5):\penalty0 893, 2007.
+\newblock URL \url{http://dx.doi.org/10.1002/mrm.21306}.
+
+\bibitem[Kvistedal et~al.(2006)Kvistedal, Tawhai, Hunter, and
+  Nielsen]{Kvistedal2006}
+YA~Kvistedal, M.~Tawhai, P.~Hunter, and PMF Nielsen.
+\newblock {High resolution 3D imaging of lung tissue using structured light
+  microscopy}.
+\newblock In \emph{Engineering in Medicine and Biology Society, 2005. IEEE-EMBS
+  2005. 27th Annual International Conference of the}, pages 193--195. IEEE,
+  2006.
+
+\bibitem[Ley-Zaporozhan et~al.(2008)Ley-Zaporozhan, Ley, and Kauczor]{Ley2008}
+J.~Ley-Zaporozhan, S.~Ley, and H.U. Kauczor.
+\newblock {Morphological and functional imaging in COPD with CT and MRI:
+  present and future}.
+\newblock \emph{European Radiology}, 18\penalty0 (3):\penalty0 510--521, 2008.
+\newblock URL \url{http://dx.doi.org/10.1007/s00330-007-0772-1}.
+
+\bibitem[Scadeng et~al.(2007)Scadeng, Rossiter, Dubowitz, and
+  Breen]{Scadeng2007}
+M.~Scadeng, H.B. Rossiter, D.J. Dubowitz, and E.C. Breen.
+\newblock {High-resolution three-dimensional magnetic resonance imaging of
+  mouse lung in situ}.
+\newblock \emph{Investigative radiology}, 42\penalty0 (1):\penalty0 50, 2007.
+\newblock URL \url{http://dx.doi.org/10.1097/01.rli.0000248850.13221.61}.
+
+\bibitem[Sera et~al.(2003)Sera, Fujioka, Yokota, Makinouchi, Himeno, Schroter,
+  and Tanishita]{Sera2003}
+T.~Sera, H.~Fujioka, H.~Yokota, A.~Makinouchi, R.~Himeno, R.C. Schroter, and
+  K.~Tanishita.
+\newblock {Three-dimensional visualization and morphometry of small airways
+  from microfocal X-ray computed tomography}.
+\newblock \emph{Journal of biomechanics}, 36\penalty0 (11):\penalty0
+  1587--1594, 2003.
+\newblock URL \url{http://dx.doi.org/10.1016/S0021-9290(03)00179-9}.
+
+\bibitem[Tawhai et~al.(2004)Tawhai, Hunter, Tschirren, Reinhardt, McLennan, and
+  Hoffman]{Tawhai2004}
+M.H. Tawhai, P.~Hunter, J.~Tschirren, J.~Reinhardt, G.~McLennan, and E.A.
+  Hoffman.
+\newblock {CT-based geometry analysis and finite element models of the human
+  and ovine bronchial tree}.
+\newblock \emph{Journal of Applied Physiology}, 97\penalty0 (6):\penalty0 2310,
+  2004.
+\newblock URL \url{http://dx.doi.org/10.1152/japplphysiol.00520.2004}.
+
+\bibitem[van Ertbruggen et~al.(2005)van Ertbruggen, Hirsch, and
+  Paiva]{VanErtbruggen2005}
+C.~van Ertbruggen, C.~Hirsch, and M.~Paiva.
+\newblock {Anatomically based three-dimensional model of airways to simulate
+  flow and particle transport using computational fluid dynamics}.
+\newblock \emph{Journal of Applied Physiology}, 98\penalty0 (3):\penalty0 970,
+  2005.
+\newblock URL \url{http://dx.doi.org/10.1152/japplphysiol.00795.2004}.
+
+\bibitem[Gehr et~al.(1978)Gehr, Bachofen, and Weibel]{Gehr1978}
+Peter Gehr, Marianne Bachofen, and Ewald~R. Weibel.
+\newblock The normal human lung - ultrastructure and morphometric estimation of
+  diffusion capacity.
+\newblock \emph{Respiration Physiology}, 32:\penalty0 121--140, Feb. 1978.
+
+\bibitem[Cookson et~al.(1993)Cookson, Davies, Entwistle, and
+  Whimster]{Cookson1993}
+MJ~Cookson, CJ~Davies, A.~Entwistle, and WF~Whimster.
+\newblock {The microanatomy of the alveolar duct of the human lung imaged by
+  confocal microscpy and visualised with computer-based 3D reconstruction}.
+\newblock \emph{Computerized medical imaging and graphics}, 17\penalty0
+  (3):\penalty0 201--210, 1993.
+\newblock URL \url{http://dx.doi.org/10.1016/0895-6111(93)90044-N}.
+
+\bibitem[Berend et~al.(1991)Berend, Rynell, and Ward]{Berend1991}
+N.~Berend, AC~Rynell, and HE~Ward.
+\newblock {Structure of a human pulmonary acinus.}
+\newblock \emph{British Medical Journal}, 46\penalty0 (2):\penalty0 117, 1991.
+\newblock URL \url{http://dx.doi.org/10.1136/thx.46.2.117}.
+
+\bibitem[Honda et~al.(2002)Honda, Ota, Arai, Hayama, Fujimoto, Yamazaki, and
+  Haniuda]{Honda2002}
+T.~Honda, H.~Ota, K.~Arai, M.~Hayama, K.~Fujimoto, Y.~Yamazaki, and M.~Haniuda.
+\newblock {Three-dimensional analysis of alveolar structure in usual
+  interstitial pneumonia}.
+\newblock \emph{Virchows Archiv}, 441\penalty0 (1):\penalty0 47--52, 2002.
+\newblock URL \url{http://dx.doi.org/10.1007/s00428-001-0567-8}.
+
+\bibitem[Litzlbauer et~al.(2006)Litzlbauer, Neuhaeuser, Moell, Greschus,
+  Breithecker, Franke, Kummer, and Rau]{Litzlbauer2006}
+H.D. Litzlbauer, C.~Neuhaeuser, A.~Moell, S.~Greschus, A.~Breithecker, F.E.
+  Franke, W.~Kummer, and W.S. Rau.
+\newblock {Three-dimensional imaging and morphometric analysis of alveolar
+  tissue from microfocal X-ray-computed tomography}.
+\newblock \emph{American Journal of Physiology- Lung Cellular and Molecular
+  Physiology}, 291\penalty0 (3):\penalty0 L535, 2006.
+\newblock URL \url{http://dx.doi.org/10.1152/ajplung.00088.2005}.
+
+\bibitem[Mercer et~al.(1987)Mercer, Laco, and Crapo]{Mercer1987}
+RR~Mercer, JM~Laco, and JD~Crapo.
+\newblock {Three-dimensional reconstruction of alveoli in the rat lung for
+  pressure-volume relationships}.
+\newblock \emph{Journal of Applied Physiology}, 62\penalty0 (4):\penalty0 1480,
+  1987.
+
+\bibitem[Randell et~al.(1989)Randell, Mercer, and Young]{Randell1989}
+SH~Randell, RR~Mercer, and SL~Young.
+\newblock {Postnatal growth of pulmonary acini and alveoli in normal and
+  oxygen-exposed rats studied by serial section reconstructions}.
+\newblock \emph{American Journal of Anatomy}, 186\penalty0 (1):\penalty0
+  55--68, 1989.
+\newblock URL \url{http://dx.doi.org/10.1002/aja.1001860105}.
+
+\bibitem[Stelter et~al.(1966)Stelter, Hansen, and Fairchild]{Stelter1966}
+GP~Stelter, JE~Hansen, and DG~Fairchild.
+\newblock {A three-dimensional reconstruction of lung parenchyma.}
+\newblock \emph{The American review of respiratory disease}, 94\penalty0
+  (1):\penalty0 79, 1966.
+
+\bibitem[Watz et~al.(2005)Watz, Breithecker, Rau, and Kriete]{Watz2005}
+Henrik Watz, Andreas Breithecker, Wigbert~Stephan Rau, and Andres Kriete.
+\newblock {Micro-CT of the Human Lung: Imaging of Alveoli and Virtual Endoscopy
+  of an Alveolar Duct in a Normal Lung and in a Lung with Centrilobular
+  Emphysema--Initial Observations}.
+\newblock \emph{Radiology}, 236\penalty0 (3):\penalty0 1053--1058, 2005.
+\newblock URL \url{http://dx.doi.org/10.1148/radiol.2363041142}.
+
+\bibitem[Schittny et~al.(1997)Schittny, Paulsson, Vallan, Burri, Kedei, and
+  Aeschlimann]{Schittny1997}
+J.C. Schittny, M.~Paulsson, C.~Vallan, P.~H. Burri, N.~Kedei, and
+  D.~Aeschlimann.
+\newblock Protein cross-linking mediated by tissue transglutaminase correlates
+  with the maturation of extracellular matrices during lung development.
+\newblock \emph{Am J Respir Cell Mol Biol}, 17\penalty0 (3):\penalty0 334--343,
+  Sep 1997.
+
+\bibitem[Schittny et~al.(1998)Schittny, Djonov, Fine, and Burri]{Schittny1998}
+J.C. Schittny, V.~Djonov, L.~Fine, and P.H. Burri.
+\newblock Programmed cell death contributes to postnatal lung development.
+\newblock \emph{American Journal of Respiratory Cell and Molecular Biology},
+  18\penalty0 (6):\penalty0 786--793, June 1998.
+\newblock URL
+  \url{http://ajrcmb.atsjournals.org/cgi/content/abstract/18/6/786}.
+
+\bibitem[Scherle(1970)]{Scherle1970}
+W.~Scherle.
+\newblock A simple method for volumetry of organs in quantitative stereology.
+\newblock \emph{Mikroskopie}, 26\penalty0 (1):\penalty0 57--60, Jun 1970.
+
+\bibitem[Ballard and Brown(1982)]{Ballard1982}
+D.H. Ballard and C.M. Brown.
+\newblock {Computer Vision Prentice-Hall}.
+\newblock \emph{Englewood Cliffs, NJ, USA}, 1982.
+
+\bibitem[ER(1990)]{Davies1990}
+Davies ER.
+\newblock \emph{{Machine vision: theory, algorithms, practicalities}}.
+\newblock Academics Press, 1990.
+
+\bibitem[Gonzalez and Richard(1992)]{Gonzalez1992}
+R.C. Gonzalez and E.~Richard.
+\newblock {Woods, Digital image processing}.
+\newblock \emph{Addison Wisley}, 1992.
+
+\bibitem[Schneiders(1996)]{Schneiders1996}
+R~Schneiders.
+\newblock A grid-based algorithm for the generation of hexahedral element
+  meshes.
+\newblock \emph{Engineering with Computers}, 12\penalty0 (3-4):\penalty0
+  168--177, 1996.
+\newblock URL \url{http://dx.doi.org/10.1007/BF01198732}.
+
+\bibitem[Bathe(1995)]{Bathe1995}
+KJ~Bathe.
+\newblock {Finite element procedures. 1995}, 1995.
+
+\bibitem[Freitag and Plassmann(2000)]{Freitag2000}
+L.A. Freitag and P.~Plassmann.
+\newblock {Local optimization-based simplicial mesh untangling and
+  improvement}.
+\newblock \emph{International Journal for Numerical Methods in Engineering},
+  49\penalty0 (1):\penalty0 109--125, 2000.
+
+\bibitem[Roth-Kleiner et~al.(2005)Roth-Kleiner, Berger, Tarek, Burri, and
+  Schittny]{Roth2005}
+M.~Roth-Kleiner, T.M. Berger, M.R. Tarek, P.H. Burri, and J.C. Schittny.
+\newblock {Neonatal dexamethasone induces premature microvascular maturation of
+  the alveolar capillary network}.
+\newblock \emph{Developmental Dynamics}, 233\penalty0 (4):\penalty0 1261--1271,
+  2005.
+\newblock URL \url{http://dx.doi.org/10.1002/dvdy.20447}.
+
+\bibitem[Boyden(1971)]{Boyden1971}
+E.A. Boyden.
+\newblock {The structure of the pulmonary acinus in a child of six years and
+  eight months}.
+\newblock \emph{American Journal of Anatomy}, 132\penalty0 (3):\penalty0
+  275--299, 1971.
+
+\bibitem[Haefeli-Bleuer and Weibel(1988{\natexlab{b}})]{Haefeli1988}
+B.~Haefeli-Bleuer and E.R. Weibel.
+\newblock {Morphometry of the human pulmonary acinus}.
+\newblock \emph{The Anatomical Record}, 220\penalty0 (4):\penalty0 401--414,
+  1988{\natexlab{b}}.
+
+\bibitem[Schreider and Raabe(1981)]{Schreider1981}
+J.P. Schreider and O.G. Raabe.
+\newblock {Structure of the human respiratory acinus}.
+\newblock \emph{American Journal of Anatomy}, 162\penalty0 (3):\penalty0
+  221--232, 1981.
+
+\bibitem[Hansen and Ampaya(1975)]{Hansen1975}
+JE~Hansen and EP~Ampaya.
+\newblock {Human air space shapes, sizes, areas, and volumes}.
+\newblock \emph{Journal of Applied Physiology}, 38\penalty0 (6):\penalty0 990,
+  1975.
+
+\bibitem[Hansen et~al.(1975)Hansen, Ampaya, Bryant, and Navin]{Hansen1975a}
+JE~Hansen, EP~Ampaya, GH~Bryant, and JJ~Navin.
+\newblock {Branching pattern of airways and air spaces of a single human
+  terminal bronchiole}.
+\newblock \emph{Journal of Applied Physiology}, 38\penalty0 (6):\penalty0 983,
+  1975.
+
+\bibitem[Parker et~al.(1971)Parker, Horsfield, and Cumming]{Parker1971}
+H.~Parker, K.~Horsfield, and G.~Cumming.
+\newblock {Morphology of distal airways in the human lung}.
+\newblock \emph{J Appl Physiol}, 31\penalty0 (3):\penalty0 386--391, 1971.
+
+\bibitem[Hoffman and Gefter(1990)]{Hoffman1990}
+EA~Hoffman and WB~Gefter.
+\newblock {Multimodality imaging of the upper airway: MRI, MR spectroscopy, and
+  ultrafast X-ray CT.}
+\newblock \emph{Progress in clinical and biological research}, 345:\penalty0
+  291, 1990.
+
+\bibitem[Sundaramoorthy et~al.(1995)Sundaramoorthy, Hoford, Hoffman, and
+  Higgins]{Sundaramoorthy1995}
+G.~Sundaramoorthy, JD~Hoford, EA~Hoffman, and WE~Higgins.
+\newblock {Impromptu: a system for automatic 3D medical image-analysis}.
+\newblock \emph{Computerized medical imaging and graphics}, 19\penalty0
+  (1):\penalty0 131--143, 1995.
+\newblock URL \url{http://dx.doi.org/10.1016/0895-6111(94)00042-5}.
+
+\bibitem[Hanna et~al.(2005)Hanna, Saltzman, Mukai, Chen, Sasse, Milliken, Guo,
+  Jung, Colt, and Brenner]{Hanna2005}
+N.~Hanna, D.~Saltzman, D.~Mukai, Z.~Chen, S.~Sasse, J.~Milliken, S.~Guo,
+  W.~Jung, H.~Colt, and M.~Brenner.
+\newblock {Two-dimensional and 3-dimensional optical coherence tomographic
+  imaging of the airway, lung, and pleura}.
+\newblock \emph{The Journal of Thoracic and Cardiovascular Surgery},
+  129\penalty0 (3):\penalty0 615--622, 2005.
+\newblock URL \url{http://dx.doi.org/10.1016/j.jtcvs.2004.10.022}.
+
+\bibitem[van Beek and Hoffman(2008)]{VanBeek2008}
+E.J.R. van Beek and E.A. Hoffman.
+\newblock {Functional imaging: CT and MRI}.
+\newblock \emph{Clinics in chest medicine}, 29\penalty0 (1):\penalty0 195--216,
+  2008.
+\newblock URL \url{http://dx.doi.org/10.1016/j.ccm.2007.12.003}.
+
+\bibitem[Bonse and Busch(1996)]{Bonse1996}
+U.~Bonse and F.~Busch.
+\newblock {X-ray computed microtomography ($\mu$CT) using synchrotron radiation
+  (SR)}.
+\newblock \emph{Progress in biophysics and molecular biology}, 65\penalty0
+  (1-2):\penalty0 133--169, 1996.
+
+\bibitem[Pena et~al.(2007)Pena, Fabre, Debarre, Marchal-Somme, Crestani,
+  Martin, Beaurepaire, and Schanne-Klein]{Pena2007}
+A.M. Pena, A.~Fabre, D.~Debarre, J.~Marchal-Somme, B.~Crestani, J.L. Martin,
+  E.~Beaurepaire, and M.C. Schanne-Klein.
+\newblock {Three-dimensional investigation and scoring of extracellular matrix
+  remodeling during lung fibrosis using multiphoton microscopy}.
+\newblock \emph{Microscopy Research and Technique}, 70\penalty0 (2):\penalty0
+  162, 2007.
+\newblock URL \url{http://dx.doi.org/10.1002/jemt.20400}.
+
+\bibitem[Whimster(1970)]{Whimster1970}
+WF~Whimster.
+\newblock {The microanatomy of the alveolar duct system}.
+\newblock \emph{British Medical Journal}, 25\penalty0 (2):\penalty0 141, 1970.
+\newblock URL \url{http://dx.doi.org/10.1136/thx.25.2.141}.
+
+\bibitem[Brown et~al.(1991)Brown, Herold, Hirshman, Zerhouni, and
+  Mitzner]{Brown1991}
+RH~Brown, CJ~Herold, CA~Hirshman, EA~Zerhouni, and W.~Mitzner.
+\newblock {In vivo measurements of airway reactivity using high-resolution
+  computed tomography.}
+\newblock \emph{The American review of respiratory disease}, 144\penalty0
+  (1):\penalty0 208, 1991.
+
+\bibitem[McNamara et~al.(1992)McNamara, Muller, Okazawa, Arntorp, Wiggs, and
+  Pare]{Mcnamara1992}
+AE~McNamara, NL~Muller, M.~Okazawa, J.~Arntorp, BR~Wiggs, and PD~Pare.
+\newblock {Airway narrowing in excised canine lungs measured by high-resolution
+  computed tomography}.
+\newblock \emph{Journal of Applied Physiology}, 73\penalty0 (1):\penalty0 307,
+  1992.
+
+\bibitem[Higgins et~al.(1998)Higgins, Ramaswamy, Swift, McLennan, and
+  Hoffman]{Higgins1998}
+WE~Higgins, K.~Ramaswamy, RD~Swift, G.~McLennan, and EA~Hoffman.
+\newblock {Virtual bronchoscopy for three--dimensional pulmonary image
+  assessment: state of the art and future needs.}
+\newblock \emph{Radiographics}, 18\penalty0 (3):\penalty0 761, 1998.
+
+\bibitem[Park et~al.(1998)Park, Hoffman, and Sonka]{Park1998}
+W.~Park, E.A. Hoffman, and M.~Sonka.
+\newblock {Segmentation of intrathoracic airway trees: a fuzzy logic approach}.
+\newblock \emph{IEEE Transactions on Medical Imaging}, 17\penalty0
+  (4):\penalty0 489--497, 1998.
+\newblock URL \url{http://dx.doi.org/10.1109/42.730394}.
+
+\bibitem[Reinhardt et~al.(1997)Reinhardt, D'Souza, and Hoffman]{Reinhardt1997}
+JM~Reinhardt, N.~D'Souza, and EA~Hoffman.
+\newblock {Accurate measurement of intrathoracic airways}.
+\newblock \emph{IEEE transactions on medical imaging}, 16\penalty0
+  (6):\penalty0 820--827, 1997.
+\newblock URL \url{http://dx.doi.org/10.1109/42.650878}.
+
+\bibitem[Sauret et~al.(2002)Sauret, Halson, Brown, Fleming, and
+  Bailey]{Sauret2002}
+V.~Sauret, PM~Halson, IW~Brown, JS~Fleming, and AG~Bailey.
+\newblock {Study of the three-dimensional geometry of the central conducting
+  airways in man using computed tomographic (CT) images}.
+\newblock \emph{Journal of Anatomy}, 200\penalty0 (2):\penalty0 123, 2002.
+\newblock URL \url{http://dx.doi.org/10.1046/j.0021-8782.2001.00018.x}.
+
+\bibitem[Wood et~al.(1995{\natexlab{a}})Wood, Hoford, Hoffman, Zerhouni, and
+  Mitzner]{Wood1995}
+SA~Wood, JD~Hoford, EA~Hoffman, E.~Zerhouni, and W.~Mitzner.
+\newblock {A method for measurement of cross sectional area, segment length,
+  and branching angle of airway tree structures in situ}.
+\newblock \emph{Computerized medical imaging and graphics}, 19\penalty0
+  (1):\penalty0 145--152, 1995{\natexlab{a}}.
+\newblock URL \url{http://dx.doi.org/10.1016/0895-6111(94)00034-4}.
+
+\bibitem[Wood et~al.(1995{\natexlab{b}})Wood, Zerhouni, Hoford, Hoffman, and
+  Mitzner]{Wood1995a}
+SA~Wood, EA~Zerhouni, JD~Hoford, EA~Hoffman, and W.~Mitzner.
+\newblock {Measurement of three-dimensional lung tree structures by using
+  computed tomography}.
+\newblock \emph{Journal of Applied Physiology}, 79\penalty0 (5):\penalty0 1687,
+  1995{\natexlab{b}}.
+
+\bibitem[Langheinrich et~al.(2004{\natexlab{a}})Langheinrich, Bohle,
+  Breithecker, Lommel, and Rau]{Langheinrich2004}
+A.~C. Langheinrich, R.~M. Bohle, A.~Breithecker, D.~Lommel, and W.~S. Rau.
+\newblock Micro-computed tomography of the vasculature in parenchymal organs
+  and lung alveoli.
+\newblock \emph{Rofo}, 176\penalty0 (9):\penalty0 1219--1225, Sep
+  2004{\natexlab{a}}.
+\newblock URL \url{http://dx.doi.org/10.1055/s-2004-813403}.
+
+\bibitem[IIda(2003)]{Iida2003}
+Atsuo IIda.
+\newblock {X-ray analysis by synchrotron radiation-X-ray fluorescence analysis
+  and XAFS}.
+\newblock \emph{Biomed Res}, 14\penalty0 (3):\penalty0 188--195, 2003.
+
+\bibitem[Jorgensen et~al.(1998)Jorgensen, Demirkaya, and Ritman]{Jorgensen1998}
+S.M. Jorgensen, O.~Demirkaya, and E.L. Ritman.
+\newblock {Three-dimensional imaging of vasculature and parenchyma in intact
+  rodent organs with X-ray micro-CT}.
+\newblock \emph{American Journal of Physiology- Heart and Circulatory
+  Physiology}, 275\penalty0 (3):\penalty0 H1103, 1998.
+
+\bibitem[Jheon et~al.(2006)Jheon, Youn, Kim, Choi, and Kim]{Jheon2006}
+S.~Jheon, H.S. Youn, H.T. Kim, G.H. Choi, and J.K. Kim.
+\newblock {High-resolution X-ray refraction imaging of rat lung and
+  histological correlations}.
+\newblock \emph{Microscopy research and technique}, 69\penalty0 (8):\penalty0
+  656--659, 2006.
+\newblock URL \url{http://dx.doi.org/10.1002/jemt.20335}.
+
+\bibitem[Monfraix et~al.(2005)Monfraix, Bayat, Porra, Berruyer, Nemoz,
+  Thomlinson, Suortti, and Sovij\"{a}rvi]{Monfraix2005}
+S.~Monfraix, S.~Bayat, L.~Porra, G.~Berruyer, C.~Nemoz, W.~Thomlinson,
+  P.~Suortti, and A.R.A. Sovij\"{a}rvi.
+\newblock {Quantitative measurement of regional lung gas volume by synchrotron
+  radiation computed tomography}.
+\newblock \emph{Physics in medicine \& biology(Print)}, 50\penalty0
+  (1):\penalty0 1--11, 2005.
+\newblock URL \url{http://dx.doi.org/10.1088/0031-9155/50/1/001}.
+
+\bibitem[Sera et~al.(2007)Sera, Uesugi, Himeno, and Yagi]{Sera2007}
+T.~Sera, K.~Uesugi, R.~Himeno, and N.~Yagi.
+\newblock {Small airway changes in healthy and ovalbumin-treated mice during
+  quasi-static lung inflation}.
+\newblock \emph{Respiratory Physiology \& Neurobiology}, 156\penalty0
+  (3):\penalty0 304--311, 2007.
+\newblock URL \url{http://dx.doi.org/10.1016/j.resp.2006.11.006}.
+
+\bibitem[Sera et~al.(2005)Sera, Uesugi, and Yagi]{Sera2005}
+T.~Sera, K.~Uesugi, and N.~Yagi.
+\newblock {Morphometric deformations of small airways and alveoli under
+  quasi-static inflation process}.
+\newblock \emph{Journal of PHYSIOLOGICAL ANTHROPOLOGY and Applied Human
+  Science}, 24\penalty0 (4):\penalty0 465--468, 2005.
+\newblock URL \url{http://dx.doi.org/10.2114/jpa.24.465}.
+
+\bibitem[Ikura et~al.(2004)Ikura, Shimizu, Ikezoe, Nagareda, and
+  Yagi]{Ikura2004}
+H.~Ikura, K.~Shimizu, J.~Ikezoe, T.~Nagareda, and N.~Yagi.
+\newblock {In vitro evaluation of normal and abnormal lungs with
+  ultra-high-resolution CT}.
+\newblock \emph{Journal of Thoracic Imaging}, 19\penalty0 (1):\penalty0 8,
+  2004.
+
+\bibitem[Tschanz and Burri(2002)]{Tschanz2002}
+Stefan~A Tschanz and Peter~H Burri.
+\newblock A new approach to detect structural differences in lung parenchyma
+  using digital image analysis.
+\newblock \emph{Experimental Lung Research}, 28\penalty0 (6):\penalty0
+  457--471, September 2002.
+\newblock URL \url{http://dx.doi.org/10.1080/01902140290096719}.
+
+\bibitem[Luyet et~al.(2002)Luyet, Burri, and Schittny]{Luyet2002}
+Cedric Luyet, Peter~H Burri, and Johannes~C Schittny.
+\newblock {Suppression of cell proliferation and programmed cell death by
+  dexamethasone during postnatal lung development}.
+\newblock \emph{American Journal of Physiology- Lung Cellular and Molecular
+  Physiology}, 282\penalty0 (3):\penalty0 477--483, 2002.
+\newblock URL \url{http://dx.doi.org/10.1152/ajplung.00406.2000}.
+
+\bibitem[Shepp and Logan(1974)]{Shepp1974}
+LA~Shepp and BF~Logan.
+\newblock {The Fourier reconstruction of a head section}.
+\newblock \emph{IEEE Trans. Nucl. Sci}, 21\penalty0 (1):\penalty0 21--43, 1974.
+
+\bibitem[{Dowd} et~al.(1999){Dowd}, {Campbell}, {Marr}, {Nagarkar}, {Tipnis},
+  {Axe}, and {Siddons}]{Dowd1999}
+B.~A. {Dowd}, G.~H. {Campbell}, R.~B. {Marr}, V.~V. {Nagarkar}, S.~V. {Tipnis},
+  L.~{Axe}, and D.~P. {Siddons}.
+\newblock {Developments in synchrotron x-ray computed microtomography at the
+  National Synchrotron Light Source}.
+\newblock \emph{SPIE Developments in X-Ray Tomography II, Denver, CO (US),
+  07/18/1999--07/23/1999}, 3772:\penalty0 224--236, September 1999.
+\newblock URL \url{http://dx.doi.org/10.1117/12.363725}.
+
+\bibitem[Marone et~al.(2008)Marone, Hinterm\"{u}ller, Geus, and
+  Stampanoni]{Marone2008}
+Federica Marone, Christoph Hinterm\"{u}ller, Roman Geus, and Marco Stampanoni.
+\newblock {Towards real-time tomography: Fast reconstruction algorithms and GPU
+  implementation}.
+\newblock In \emph{IEEE Nuclear Science Symposium Conference Record, 2008.
+  NSS'08}, pages 555--561. IEEE, 2008.
+
+\bibitem[Otsu(1979)]{Otsu1979}
+Nobuyuki Otsu.
+\newblock {A threshold selection method from gray-level histograms}.
+\newblock \emph{IEEE Transactions on Systems, Man, and Cybernetics}, 9\penalty0
+  (1):\penalty0 62--66, 1979.
+
+\bibitem[Zucker(1976)]{Zucker1976}
+S.W. Zucker.
+\newblock {Region growing: Childhood and adolescence}.
+\newblock \emph{Computer graphics and image processing}, 5\penalty0
+  (3):\penalty0 382--399, 1976.
+
+\bibitem[Danielsson(1980)]{Danielsson1980}
+P.E. Danielsson.
+\newblock {Euclidean distance mapping}.
+\newblock \emph{Computer Graphics and image processing}, 14\penalty0
+  (227-248):\penalty0 6--8, 1980.
+
+\bibitem[Kohn(1893)]{Kohn1893}
+Hans~Nathan Kohn.
+\newblock {Zur Histologie der indurirenden fibrin\"{o}sen Pneumonie}.
+\newblock \emph{M\"{u}nchener Medicinische Wochenschrift}, 40:\penalty0 42--45,
+  1893.
+
+\bibitem[Van~Meir(1991)]{Vanmeir1991}
+F.~Van~Meir.
+\newblock {The alveolar pores of Kohn in young postnatal rat lungs and their
+  relation with type II pneumocytes.}
+\newblock \emph{Histology and histopathology}, 6\penalty0 (1):\penalty0 55,
+  1991.
+
+\bibitem[Wikipedia(2010{\natexlab{b}})]{Zim}
+Wikipedia.
+\newblock {Invader Zim --- Wikipedia{,} The Free Encyclopedia},
+  2010{\natexlab{b}}.
+\newblock URL
+  \url{http://en.wikipedia.org/w/index.php?title=Invader_Zim&oldid=359199292}.
+\newblock [Online; accessed 29-April-2010].
+
+\bibitem[Martone et~al.(2002)Martone, Gupta, Wong, Qian, Sosinsky,
+  Lud{\"a}scher, and Ellisman]{Martone2002}
+Maryann~E. Martone, Amarnath Gupta, Mona Wong, Xufei Qian, Gina Sosinsky,
+  Bertram Lud{\"a}scher, and Mark~H. Ellisman.
+\newblock A cell-centered database for electron tomographic data.
+\newblock \emph{Journal of Structural Biology}, 138\penalty0 (1-2):\penalty0
+  145 -- 155, 2002.
+\newblock ISSN 1047-8477.
+\newblock URL \url{http://dx.doi.org/10.1016/S1047-8477(02)00006-0}.
+
+\bibitem[Lu\u{c}i\'{c} et~al.(2005)Lu\u{c}i\'{c}, F\"{o}rster, and
+  Baumeister]{Lucic2005}
+Vladan Lu\u{c}i\'{c}, Friedrich F\"{o}rster, and Wolfgang Baumeister.
+\newblock {Structural Studies by Electron Tomography: From Cells to Molecules}.
+\newblock \emph{Annual Review of Biochemistry}, 74\penalty0 (1):\penalty0
+  833--865, 2005.
+\newblock URL \url{http://dx.doi.org/10.1146/annurev.biochem.73.011303.074112}.
+
+\bibitem[Langheinrich et~al.(2004{\natexlab{b}})Langheinrich, Leith\"{a}user,
+  Greschus, von Gerlach, Breithecker, Matthias, Rau, and
+  Bohle]{Langheinrich2004a}
+A.C. Langheinrich, B.~Leith\"{a}user, S.~Greschus, S.~von Gerlach,
+  A.~Breithecker, F.R. Matthias, W.S. Rau, and R.M. Bohle.
+\newblock {Acute rat lung injury: feasibility of assessment with micro-CT}.
+\newblock \emph{Radiology}, 233\penalty0 (1):\penalty0 165, 2004{\natexlab{b}}.
+\newblock URL \url{http://dx.doi.org/10.1148/radiol.2331031340}.
+
+\bibitem[Sharif et~al.(2010)Sharif, Lam, Ouriadov, Holdsworth, and
+  Santyr]{Sharif2010}
+M.~Reza~Akhavan Sharif, Wilfred~W. Lam, Alexei~V. Ouriadov, David~W.
+  Holdsworth, and Giles~E. Santyr.
+\newblock {Comparison of hyperpolarized \textsuperscript{3}He MRI rat lung
+  volume measurement with micro-computed tomography}.
+\newblock \emph{NMR in Biomedicine}, 23\penalty0 (4):\penalty0 359--367, 2010.
+\newblock URL \url{http://dx.doi.org/10.1002/nbm.1470}.
+
+\bibitem[Ritman(2005)]{Ritman2005}
+Erik~L. Ritman.
+\newblock {Micro-Computed Tomography of the Lungs and Pulmonary-Vascular
+  System}.
+\newblock \emph{Proc Am Thorac Soc}, 2\penalty0 (6):\penalty0 477--480, 2005.
+\newblock URL \url{http://dx.doi.org/10.1513/pats.200508-080DS}.
+
+\bibitem[Haberth\"{u}r(2010)]{Haberthuer2010}
+David Haberth\"{u}r.
+\newblock \emph{High resolution tomographic imaging of the alveolar region of
+  the mammalian lung}.
+\newblock PhD thesis, University of Bern, Switzerland, May 2010.
+\newblock URL \url{http://is.gd/fzFXh}.
+
+\bibitem[M\"{u}hlfeld et~al.(2008)M\"{u}hlfeld, Rothen-Rutishauser, Blank,
+  Vanhecke, Ochs, and Gehr]{Muhlfeld2008}
+Christian M\"{u}hlfeld, Barbara Rothen-Rutishauser, Fabian Blank, Dimitri
+  Vanhecke, Matthias Ochs, and Peter Gehr.
+\newblock {Interactions of nanoparticles with pulmonary structures and cellular
+  responses}.
+\newblock \emph{Am J Physiol Lung Cell Mol Physiol}, 294\penalty0 (5):\penalty0
+  L817--829, 2008.
+\newblock URL \url{http://dx.doi.org/10.1152/ajplung.00442.2007}.
+
+\bibitem[Wikipedia(2010{\natexlab{c}})]{YawPitchRoll}
+Wikipedia.
+\newblock {Yaw, pitch, and roll --- Wikipedia{,} The Free Encyclopedia},
+  2010{\natexlab{c}}.
+\newblock URL
+  \url{http://en.wikipedia.org/w/index.php?title=Yaw,_pitch,_and_roll&oldid=354392227}.
+\newblock [Online; accessed 3-May-2010].
+
+\bibitem[Barr\'e(2009)]{Barre2009}
+Sebastien Barr\'e.
+\newblock Multimodal imaging of lung tissue.
+\newblock Master's thesis, Biomedical Engineering, University of Bern,
+  September 2009.
+
+\bibitem[Sznitman et~al.(2007)Sznitman, Heimsch, Heimsch, Rusch, and
+  R\"{o}sgen]{Sznitman2007}
+Josu\'{e} Sznitman, Fabian Heimsch, Thomas Heimsch, Daniel Rusch, and Thomas
+  R\"{o}sgen.
+\newblock {Three-Dimensional Convective Alveolar Flow Induced by Rhythmic
+  Breathing Motion of the Pulmonary Acinus}.
+\newblock \emph{Journal of Biomechanical Engineering}, 129\penalty0
+  (5):\penalty0 658--665, 2007.
+\newblock URL \url{http://dx.doi.org/10.1115/1.2768109}.
+
+\bibitem[Sznitman et~al.(2009)Sznitman, Heimsch, Wildhaber, Tsuda, and
+  R\"{o}sgen]{Sznitman2009}
+Josu\'{e} Sznitman, Thomas Heimsch, Johannes~H. Wildhaber, Akira Tsuda, and
+  Thomas R\"{o}sgen.
+\newblock Respiratory flow phenomena and gravitational deposition in a
+  three-dimensional space-filling model of the pulmonary acinar tree.
+\newblock \emph{Journal of Biomechanical Engineering}, 131\penalty0
+  (3):\penalty0 031010, 2009.
+\newblock URL \url{http://dx.doi.org/10.1115/1.3049481}.
+
+\bibitem[Filipovic et~al.(2010)Filipovic, Haberth\"{u}r, Henry, Milasinovic,
+  Nikolic, Schittny, and Tsuda]{Filipovic2010}
+Nenad Filipovic, David Haberth\"{u}r, Frank~S. Henry, Danko Milasinovic,
+  Dalibor Nikolic, Johannes~C. Schittny, and Akira Tsuda.
+\newblock {Recirculation Identified In A 3D Alveolar Duct Reconstructed Using
+  Synchrotron Radiation Based X-ray Tomographic Microscopy}.
+\newblock \emph{Am. J. Respir. Crit. Care Med.}, 181\penalty0
+  (1-MeetingAbstracts):\penalty0 A2192--, 2010.
+\newblock URL
+  \url{http://ajrccm.atsjournals.org/cgi/reprint/181/1_MeetingAbstracts/A2192.pdf}.
+\newblock Poster: \url{http://is.gd/fzBpU}.
+
+\bibitem[Wikipedia(2008)]{wiki:regiongrowing}
+Wikipedia.
+\newblock {Region growing --- Wikipedia{,} The Free Encyclopedia}, 2008.
+\newblock URL
+  \url{http://en.wikipedia.org/w/index.php?title=Region_growing&oldid=260474814}.
+\newblock [Online; accessed 11-March-2009].
+
+\bibitem[Bitter et~al.(2007)Bitter, Uitert, Wolf, Ib{\'a}{\~n}ez, and
+  Kuhnigk]{Bitter2007}
+Ingmar Bitter, Robert~Van Uitert, Ivo Wolf, Luis Ib{\'a}{\~n}ez, and Jan-Martin
+  Kuhnigk.
+\newblock {Comparison of Four Freely Available Frameworks for Image Processing
+  and Visualization That Use ITK}.
+\newblock \emph{IEEE Trans Vis Comput Graph}, 13\penalty0 (3):\penalty0
+  483--493, 2007.
+\newblock URL \url{http://dx.doi.org/10.1109/TVCG.2007.1001}.
+
+\bibitem[Blum(1967)]{Blum1967}
+H.~A. Blum.
+\newblock \emph{{Models for the Perception of Speech and Visual Form}}, chapter
+  {Transformation for Extracting New Descriptors of Shapes}, pages 362--380.
+\newblock MIT Press, Cambridge, MA, 1967.
+
+\bibitem[Selle et~al.(2002)Selle, Preim, Schenk, and Peitgen]{Selle2002}
+D.~Selle, B.~Preim, A.~Schenk, and H.-O. Peitgen.
+\newblock Analysis of vasculature for liver surgical planning.
+\newblock \emph{Medical Imaging, IEEE Transactions on}, 21\penalty0
+  (11):\penalty0 1344--1357, Nov. 2002.
+\newblock ISSN 0278-0062.
+\newblock URL \url{http://dx.doi.org/10.1109/TMI.2002.801166}.
+
+\bibitem[Boskamp et~al.(2004)Boskamp, Rinck, Link, Kummerlen, Stamm, and
+  Mildenberger]{Boskamp2004}
+Tobias Boskamp, Daniel Rinck, Florian Link, Bernd Kummerlen, Georg Stamm, and
+  Peter Mildenberger.
+\newblock {New Vessel Analysis Tool for Morphometric Quantification and
+  Visualization of Vessels in CT and MR Imaging Data Sets}.
+\newblock \emph{Radiographics}, 24\penalty0 (1):\penalty0 287--297, 2004.
+\newblock URL \url{http://dx.doi.org/10.1148/rg.241035073}.
+
+\bibitem[Vanhecke et~al.(2007)Vanhecke, Studer, and Ochs]{Vanhecke2007}
+Dimitri Vanhecke, Daniel Studer, and Matthias Ochs.
+\newblock Stereology meets electron tomography: Towards quantitative 3d
+  electron microscopy.
+\newblock \emph{Journal of Structural Biology}, In Press, Corrected
+  Proof:\penalty0 --, 2007.
+\newblock URL \url{http://dx.doi.org/10.1016/j.jsb.2007.05.003}.
+
+\bibitem[Hyde et~al.(2004)Hyde, Tyler, Putney, Singh, and Gundersen]{Hyde2004}
+D.~M. Hyde, N.~K. Tyler, L.~F. Putney, P.~Singh, and H.~J~G Gundersen.
+\newblock Total number and mean size of alveoli in mammalian lung estimated
+  using fractionator sampling and unbiased estimates of the euler
+  characteristic of alveolar openings.
+\newblock \emph{Anat Rec A Discov Mol Cell Evol Biol}, 277\penalty0
+  (1):\penalty0 216--226, Mar 2004.
+\newblock URL \url{http://dx.doi.org/10.1002/ar.a.20012}.
+
+\bibitem[Ochs et~al.(2004)Ochs, Nyengaard, Jung, Knudsen, Voigt, Wahlers,
+  Richter, and rgen G~Gundersen]{Ochs2004}
+Matthias Ochs, Jens~R Nyengaard, Anja Jung, Lars Knudsen, Marion Voigt,
+  Thorsten Wahlers, Joachim Richter, and Hans~J\o rgen G~Gundersen.
+\newblock The number of alveoli in the human lung.
+\newblock \emph{Am J Respir Crit Care Med}, 169\penalty0 (1):\penalty0
+  120--124, Jan 2004.
+\newblock URL \url{http://dx.doi.org/10.1164/rccm.200308-1107OC}.
+
+\bibitem[Sterio(1984)]{Sterio1984}
+D.~C. Sterio.
+\newblock The unbiased estimation of number and sizes of arbitrary particles
+  using the disector.
+\newblock \emph{J Microsc}, 134\penalty0 (Pt 2):\penalty0 127--136, May 1984.
+
+\bibitem[Adams(1984)]{Adams1984}
+Douglas Adams.
+\newblock \emph{{So Long, and Thanks for All the Fish (The Hitch Hiker's Guide
+  to the Galaxy IV)}}.
+\newblock Pan Books, 1984.
+\newblock ISBN 0-330-28700-1.
+\newblock URL
+  \url{http://en.wikipedia.org/w/index.php?title=So_Long,_and_Thanks_for_All_the_Fish&direction=next&oldid=351175356}.
+
+\bibitem[Bringhurst(2002)]{bringhurst:2002}
+Robert Bringhurst.
+\newblock \emph{The Elements of Typographic Style}.
+\newblock Version 2.5. Hartley \& Marks, Publishers, Point Roberts, WA, USA,
+  2002.
+\newblock URL
+  \url{http://en.wikipedia.org/w/index.php?title=The_Elements_of_Typographic_Style&oldid=349204139}.
+
+\end{thebibliography}
