@@ -10,7 +10,7 @@ The thesis contains four parts:
   - An overview over the mammalian lung development
   - An explanation of the most important concepts in computed tomography and an overview of the TOMCAT beamline at the Swiss Light Source at the Paul Scherrer Institute in Switzerland
 2. Publications (which were re-typeset from their original sources for integration into the thesis)
-  - [A proceeding written for the 9 thInternational Conference on X-Ray Microscopy in Z�rich, Switzerland][xrm]
+  - [A proceeding written for the 9th International Conference on X-Ray Microscopy in Zürich, Switzerland][xrm]
   - [A paper published in the Journal of Applied Physiology][jap]
   - [A paper published in the Journal of Synchrotron Radiation][jsr].
 3. Discussion and Outlook
