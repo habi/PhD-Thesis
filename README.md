@@ -1,6 +1,6 @@
 # PhD-Thesis
 
-This is my PhD-Thesis, typeset with [LaTeX] based on the [classicthesis] theme by [Andr� Miede][miede].
+This is my PhD-Thesis, typeset with [LaTeX] based on the [classicthesis] theme by  [André Miede][miede].
 
 The progress of writing the thesis was tracked using SVN and has been migrated to GitHub for safe-keeping after I finished my work at the [Institute of Anatomy][ana] of the [University of Bern][unibe] in Switzerland.
 
@@ -15,12 +15,11 @@ The thesis contains four parts:
   - [A paper published in the Journal of Synchrotron Radiation][jsr].
 3. Discussion and Outlook
 4. Back Matter
-  - Curriculum Vit�
+  - Curriculum Vitae
   - Bibliography
   - necessary documents for the Graduate School for Cellular and Biomedical Sciences.
 
-A low resolution PDF of the final result can be viewed [here] (3.4 MB).
-
+A low resolution PDF of the final result can be viewed [here] [] (3.4 MB).
 [LaTeX]: http://www.latex-project.org/
 [classicthesis]: http://www.ctan.org/tex-archive/macros/latex/contrib/classicthesis/
 [miede]: http://www.miede.de
